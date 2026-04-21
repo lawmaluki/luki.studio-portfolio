@@ -1,3 +1,4 @@
+
 export type ProjectCategory = 'Project' | 'Spotlight' | 'Reading' | 'DopenS';
 
 export interface Project {
