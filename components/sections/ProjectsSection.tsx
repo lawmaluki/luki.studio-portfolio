@@ -41,40 +41,65 @@ export const ProjectsSection: React.FC = () => {
                 })}
             </div>
 
-            {/* Grid */}
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {filtered.map((project) => (
-                    <Link
-                        key={project.slug}
-                        href={`/projects/${project.slug}`}
-                        className="group relative overflow-hidden rounded-2xl border border-border bg-muted aspect-[4/3] block"
-                    >
-                        {project.image ? (
-                            <Image
-                                src={project.image}
-                                alt={project.title}
-                                fill
-                                className="object-cover transition-transform duration-500 group-hover:scale-105"
-                            />
-                        ) : (
-                            <div className="absolute inset-0 bg-muted" />
-                        )}
+            {/* Grid — projects with a slug */}
+            {filtered.some((p) => p.slug) && (
+                <div className="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                    {filtered.filter((p) => p.slug).map((project) => (
+                        <Link
+                            key={project.slug}
+                            href={`/projects/${project.slug}`}
+                            className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-muted transition-colors hover:border-foreground/30"
+                        >
+                            {/* Image */}
+                            <div className="relative aspect-video w-full overflow-hidden bg-muted">
+                                <Image
+                                    src={project.image!}
+                                    alt={project.title}
+                                    fill
+                                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                />
+                            </div>
 
-                        {/* Hover overlay */}
-                        <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/70 via-black/20 to-transparent p-5 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                            <span className="mb-1 text-xs font-mono text-white/70 uppercase tracking-wide">
-                                {project.category} · {project.year}
-                            </span>
-                            <h3 className="text-base font-semibold text-white leading-snug">
-                                {project.title}
-                            </h3>
-                            <p className="mt-1 text-xs text-white/80 line-clamp-2">
-                                {project.summary}
-                            </p>
-                        </div>
-                    </Link>
-                ))}
-            </div>
+                            {/* Content */}
+                            <div className="flex flex-col gap-1.5 p-4">
+                                <span className="font-mono text-xs uppercase tracking-wide text-muted-foreground">
+                                    {project.category} · {project.year}
+                                </span>
+                                <h3 className="text-sm font-semibold leading-snug text-foreground">
+                                    {project.title}
+                                </h3>
+                                <p className="line-clamp-2 text-xs text-muted-foreground">
+                                    {project.summary}
+                                </p>
+                            </div>
+                        </Link>
+                    ))}
+                </div>
+            )}
+
+            {/* List — projects without a slug */}
+            {filtered.some((p) => !p.slug) && (
+                <ul className="divide-y divide-border">
+                    {filtered.filter((p) => !p.slug).map((project) => (
+                        <li key={project.slug}>
+                            <Link
+                                href={`/projects/${project.slug}`}
+                                className="group flex items-center justify-between py-4 text-foreground transition-colors hover:text-muted-foreground"
+                            >
+                                <div className="flex items-center gap-3">
+                                    <span className="font-mono text-xs text-muted-foreground uppercase tracking-wide w-10 shrink-0">
+                                        {project.year}
+                                    </span>
+                                    <span className="text-sm font-medium">{project.title}</span>
+                                </div>
+                                <span className="font-mono text-xs text-muted-foreground uppercase tracking-wide opacity-0 transition-opacity group-hover:opacity-100">
+                                    View →
+                                </span>
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+            )}
 
             {filtered.length === 0 && (
                 <p className="py-16 text-center text-sm text-muted-foreground">

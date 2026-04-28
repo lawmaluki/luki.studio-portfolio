@@ -78,9 +78,10 @@ export default async function ProjectPage({ params }: Props) {
                 </p>
 
                 {/* Full description */}
-                <p className="mb-10 text-base text-muted-foreground leading-relaxed whitespace-pre-line">
-                    {project.description}
-                </p>
+                <div
+                    className="mb-10 text-base text-muted-foreground leading-relaxed prose prose-sm dark:prose-invert max-w-none"
+                    dangerouslySetInnerHTML={{ __html: project.description }}
+                />
 
                 {/* External link */}
                 {project.link && (
