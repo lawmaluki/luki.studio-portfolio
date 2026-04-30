@@ -11,7 +11,7 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-    return projects.map((p) => ({ slug: p.slug }));
+    return projects.filter((p) => p.slug).map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
