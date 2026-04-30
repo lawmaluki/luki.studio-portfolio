@@ -78,8 +78,8 @@ function InfoDietView({ items }: { items: Project[] }) {
         <div>
             {/* Header */}
             <div className="mb-6">
-                <h2 className="font-mono text-3xl font-bold tracking-tight text-foreground">Info Diet</h2>
-                <p className="mt-1 font-mono text-xs uppercase tracking-widest text-muted-foreground">
+                <h2 className="text-3xl font-bold tracking-tight text-foreground">Info Diet</h2>
+                <p className="mt-1 text-xs uppercase tracking-widest text-muted-foreground">
                     Content I consume regularly — {items.length} sources across {categoryCount} categories.
                 </p>
             </div>
@@ -93,7 +93,7 @@ function InfoDietView({ items }: { items: Project[] }) {
                             key={f}
                             type="button"
                             onClick={() => setFilter(f)}
-                            className={`rounded-full px-3.5 py-1 font-mono text-xs uppercase tracking-widest transition-colors ${
+                            className={`rounded-full px-3.5 py-1 text-xs uppercase tracking-widest transition-colors ${
                                 isActive
                                     ? 'bg-lime-200 text-lime-900 dark:bg-lime-300 dark:text-lime-950'
                                     : 'bg-gray-100 text-muted-foreground hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700'
@@ -116,8 +116,8 @@ function InfoDietView({ items }: { items: Project[] }) {
                             className="group flex items-center justify-between py-4 transition-opacity hover:opacity-60"
                         >
                             <div className="flex items-center gap-3">
-                                <span className="font-mono text-base leading-relaxed text-foreground">{item.title}</span>
-                                <span className="rounded-full bg-gray-100 dark:bg-gray-800 px-2.5 py-0.5 font-mono text-xs uppercase tracking-widest text-muted-foreground">
+                                <span className="text-base leading-relaxed text-foreground">{item.title}</span>
+                                <span className="rounded-full bg-gray-100 dark:bg-gray-800 px-2.5 py-0.5 text-xs uppercase tracking-widest text-muted-foreground">
                                     {item.type}
                                 </span>
                             </div>
@@ -192,7 +192,7 @@ export const ProjectsSection: React.FC = () => {
                                             />
                                         </div>
                                         <div className="flex flex-col gap-1.5 p-4">
-                                            <span className="font-mono text-xs uppercase tracking-wide text-muted-foreground">
+                                            <span className="text-xs uppercase tracking-wide text-muted-foreground">
                                                 {project.category} · {project.year}
                                             </span>
                                             <h3 className="text-sm font-semibold leading-snug text-foreground">
@@ -242,12 +242,12 @@ export const ProjectsSection: React.FC = () => {
                                             className="group flex items-center justify-between py-4 text-foreground transition-colors hover:text-muted-foreground"
                                         >
                                             <div className="flex items-center gap-3">
-                                                <span className="font-mono text-xs text-muted-foreground uppercase tracking-wide w-10 shrink-0">
+                                                <span className="text-xs text-muted-foreground uppercase tracking-wide w-10 shrink-0">
                                                     {project.year}
                                                 </span>
                                                 <span className="text-sm font-medium">{project.title}</span>
                                             </div>
-                                            <span className="font-mono text-xs text-muted-foreground uppercase tracking-wide opacity-0 transition-opacity group-hover:opacity-100">
+                                            <span className="text-xs text-muted-foreground uppercase tracking-wide opacity-0 transition-opacity group-hover:opacity-100">
                                                 View →
                                             </span>
                                         </Link>

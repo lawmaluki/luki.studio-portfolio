@@ -804,7 +804,689 @@ export const projects: Project[] = [
 </section>`,
     link: '',
   },
-    
+  {
+    slug: 'chat-bubble-anatomy',
+    title: 'Chat Bubble Anatomy',
+    category: 'Project',
+    tags: ['UX Design', 'Case Study', 'Accessibility'],
+    image: 'https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/c88857242175915.69679e60234f3.png',
+    summary: 'Designing clear, usable, and accessible messaging interfaces.',
+    year: '2025',
+    role: 'UX Designer, Product Designer',
+    description: `<style>
+  .cb-study {
+    font-family: inherit;
+    font-size: 18px;
+    line-height: 1.65;
+    color: #4E4E4E;
+    --cb-text: #4E4E4E;
+    --cb-muted: #6b7280;
+    --cb-soft: #f6f6f6;
+    --cb-accent: #ff7700;
+  }
+
+  .cb-study * { box-sizing: border-box; }
+  .cb-study img { display: block; width: 100%; height: auto; }
+
+  .cb-hero { padding-top: 0; margin-bottom: 0; }
+  .cb-hero img { border-radius: 20px; }
+
+  .cb-content { max-width: 880px; margin: 0 auto; padding: 64px 0 0; }
+  .cb-content.cb-compact { padding-top: 48px; }
+  .cb-images { padding-top: 56px; }
+
+  .cb-eyebrow {
+    margin: 0 0 12px;
+    color: var(--cb-muted);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .cb-study h1 {
+    margin: 0;
+    font-size: clamp(36px, 7vw, 72px);
+    letter-spacing: -0.05em;
+    line-height: 1.15;
+    color: var(--cb-text);
+    font-weight: bold;
+  }
+
+  .cb-study h2 {
+    margin: 0 0 24px;
+    font-size: clamp(26px, 4vw, 40px);
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    color: var(--cb-text);
+    font-weight: bold;
+  }
+
+  .cb-study h3 {
+    margin: 36px 0 12px;
+    font-size: 22px;
+    line-height: 1.15;
+    color: var(--cb-text);
+    font-weight: bold;
+  }
+
+  .cb-study p { margin: 0 0 20px; color: var(--cb-text); }
+
+  .cb-subtitle {
+    max-width: 660px;
+    margin-top: 24px;
+    margin-bottom: 0;
+    color: var(--cb-muted);
+    font-size: clamp(18px, 2.5vw, 26px);
+    font-style: italic;
+    line-height: 1.4;
+  }
+
+  .cb-lead { font-size: 22px; line-height: 1.55; }
+
+  .cb-statement {
+    margin-top: 36px;
+    padding: 28px;
+    background: var(--cb-soft);
+    border-radius: 24px;
+  }
+  .cb-statement p:last-child { margin-bottom: 0; }
+
+  .cb-list {
+    display: grid;
+    gap: 10px;
+    margin: 20px 0 32px;
+    padding: 0;
+    list-style: none;
+  }
+  .cb-list li {
+    position: relative;
+    padding-left: 28px;
+    color: var(--cb-text);
+  }
+  .cb-list li::before {
+    content: "";
+    position: absolute;
+    top: 0.8em;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background: var(--cb-accent);
+    border-radius: 999px;
+    transform: translateY(-50%);
+  }
+
+  .cb-quote {
+    margin-top: 32px;
+    color: var(--cb-muted);
+    font-size: 24px;
+    font-style: italic;
+  }
+
+  .cb-image-grid { display: grid; grid-template-columns: 1fr; gap: 32px; }
+
+  .cb-image-card {
+    overflow: hidden;
+    background: var(--cb-soft);
+    border-radius: 28px;
+    margin: 0;
+  }
+
+  .cb-outcomes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px;
+  }
+
+  .cb-result {
+    margin-top: 32px;
+    padding: 28px;
+    color: var(--cb-text);
+    background: var(--cb-soft);
+    border-left: 5px solid var(--cb-accent);
+    border-radius: 20px;
+    font-size: 22px;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1.45;
+  }
+
+  .cb-workspace-link {
+    display: inline-block;
+    margin-top: 16px;
+    color: var(--cb-accent);
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    overflow-wrap: anywhere;
+  }
+
+  .cb-footer {
+    padding: 64px 0 32px;
+    color: var(--cb-muted);
+  }
+
+  @media (max-width: 720px) {
+    .cb-study { font-size: 16px; }
+    .cb-lead, .cb-quote, .cb-result { font-size: 19px; }
+    .cb-outcomes-grid { grid-template-columns: 1fr; gap: 8px; }
+  }
+
+  /* Dark mode */
+  .dark .cb-study {
+    --cb-text: #e5e7eb;
+    --cb-muted: #9ca3af;
+    --cb-soft: #1f2937;
+    color: #e5e7eb;
+  }
+  .dark .cb-study h1,
+  .dark .cb-study h2,
+  .dark .cb-study h3 { color: #f3f4f6; }
+  .dark .cb-study p { color: #d1d5db; }
+  .dark .cb-study .cb-list li { color: #d1d5db; }
+  .dark .cb-study .cb-result { color: #e5e7eb; }
+</style>
+
+<div class="cb-study">
+
+  <div class="cb-hero">
+    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/c88857242175915.69679e60234f3.png" alt="Chat Bubble Anatomy cover image" width="1400" height="700" loading="lazy" />
+  </div>
+
+  <div class="cb-content">
+    <p class="cb-eyebrow">UX Case Study</p>
+    <h1>Chat Bubble Anatomy</h1>
+    <p class="cb-subtitle">Designing clear, usable, and accessible messaging interfaces.</p>
+  </div>
+
+  <div class="cb-content">
+    <h2>Why?</h2>
+    <p class="cb-lead">
+      Chat interfaces are among the most frequently used UI patterns in modern digital products — from messaging apps and customer support tools to collaboration platforms and social networks.
+    </p>
+    <p>
+      Despite their familiarity, poorly designed chat bubbles can quickly introduce confusion, accessibility barriers, and cognitive overload.
+    </p>
+
+    <div class="cb-statement">
+      <h3>Problem Statement</h3>
+      <p>Most chat UIs look fine until you actually try to create, scale, and design them across real use cases.</p>
+      <ul class="cb-list">
+        <li>Message bubbles that stretch, shrink, and freestyle their sizes.</li>
+        <li>Contrast so low it feels like a guessing game.</li>
+        <li>"Wait, who sent this?" moments in busy conversations.</li>
+        <li>Layouts that panic when a message is longer than two words.</li>
+      </ul>
+      <p>
+        The result is a conversation experience that feels more like decoding a puzzle than communication — especially for users with visual, cognitive, or motor impairments.
+      </p>
+    </div>
+
+    <p class="cb-quote">Chats should flow. Not fight back.</p>
+  </div>
+
+  <div class="cb-content">
+    <h2>Goals &amp; Design Principles</h2>
+
+    <h3>Primary Goals</h3>
+    <ul class="cb-list">
+      <li>Improve conversation clarity.</li>
+      <li>Support scalable content across short messages, long messages, and system messages.</li>
+      <li>Ensure accessibility compliance.</li>
+      <li>Maintain visual balance without distracting from the message.</li>
+    </ul>
+
+    <h3>Design Principles</h3>
+    <ul class="cb-list">
+      <li><strong>Content-first layout:</strong> the message dictates the container, not the other way around.</li>
+      <li><strong>Consistency through variants:</strong> predictable patterns reduce cognitive load.</li>
+      <li><strong>Accessibility by default:</strong> contrast, spacing, and semantics are non-negotiable.</li>
+      <li><strong>Minimal but expressive:</strong> form should support function, not compete with it.</li>
+    </ul>
+  </div>
+
+  <div class="cb-images">
+    <div class="cb-image-grid">
+      <figure class="cb-image-card"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/8f37d0242175915.69679e6024681.png" alt="Chat bubble anatomy layout example" width="1200" height="675" loading="lazy" /></figure>
+      <figure class="cb-image-card"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/8cdc99242175915.69679e6024dd9.png" alt="Chat bubble spacing and sizing example" width="1200" height="675" loading="lazy" /></figure>
+      <figure class="cb-image-card"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/6ecaee242175915.69679e60252e7.png" alt="Chat bubble accessibility and contrast example" width="1200" height="675" loading="lazy" /></figure>
+    </div>
+  </div>
+
+  <div class="cb-content">
+    <h2>Outcome &amp; Learnings</h2>
+    <div class="cb-outcomes-grid">
+      <div>
+        <h3>Key Outcomes</h3>
+        <ul class="cb-list">
+          <li>Increased clarity in multi-message conversations.</li>
+          <li>Better scalability across devices and message lengths.</li>
+          <li>A stronger foundation for future features such as reactions, replies, and attachments.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Key Learnings</h3>
+        <ul class="cb-list">
+          <li>Small UI elements have outsized UX impact.</li>
+          <li>Consistency builds trust and reduces mental effort.</li>
+          <li>Accessibility improvements benefit all users, not only edge cases.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="cb-images">
+    <div class="cb-image-grid">
+      <figure class="cb-image-card"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/28665f242175915.69679e6023c5f.png" alt="Chat bubble UI presentation mockup" width="1200" height="675" loading="lazy" /></figure>
+      <figure class="cb-image-card"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/3b1cb2242175915.69f0b0982f1a3.png" alt="Chat bubble component variants" width="1200" height="675" loading="lazy" /></figure>
+      <figure class="cb-image-card"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/d89f30242175915.69f0b0982e8ca.png" alt="Chat bubble system design example" width="1200" height="675" loading="lazy" /></figure>
+      <figure class="cb-image-card"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/7c841f242175915.69f0b0982ded5.png" alt="Chat bubble design details" width="1200" height="675" loading="lazy" /></figure>
+      <figure class="cb-image-card"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/037c9c242175915.69f0b0982d689.png" alt="Chat bubble final UI system" width="1200" height="675" loading="lazy" /></figure>
+    </div>
+  </div>
+
+  <div class="cb-content cb-compact">
+    <h2>Conclusion</h2>
+    <p>Chat bubbles may appear simple, but their anatomy plays a critical role in how people communicate digitally.</p>
+    <p>By focusing on clarity, usability, and accessibility, a basic UI pattern can become a powerful, inclusive conversation tool.</p>
+    <p class="cb-result">
+      Result: smoother conversation flow with less visual noise, letting users focus on what matters — the message.
+    </p>
+  </div>
+
+  <div class="cb-images">
+    <figure class="cb-image-card">
+      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/994f95242175915.69679e602414d.png" alt="Chat Bubble Anatomy closing visual" width="1200" height="675" loading="lazy" />
+    </figure>
+  </div>
+
+  <div class="cb-content cb-compact">
+    <h2>Design Workspace</h2>
+    <p>View the full design file on Figma Community.</p>
+    <a class="cb-workspace-link" href="https://www.figma.com/community/file/1590820100189543293/chat-bubble-anatomy" target="_blank" rel="noopener noreferrer">
+      Open the Chat Bubble Anatomy design workspace
+    </a>
+  </div>
+
+</div>`,
+    link: 'https://www.figma.com/community/file/1590820100189543293/chat-bubble-anatomy',
+  },
+  {
+    slug: 'ai-key-concept',
+    title: 'A universal key for instant AI access on the keyboard.',
+    category: 'Project',
+    tags: ['UI Design', 'Concept', 'AI'],
+    image: 'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/86e1b8241728615.695e733222074.png',
+    summary: 'A universal key for instant AI access integrated into keyboards — enabling fast, seamless intelligence anywhere.',
+    year: '2024',
+    role: 'UI/UX Designer',
+    description: `<style>
+  .ak-study {
+    font-family: inherit;
+    line-height: 1.6;
+    color: #4E4E4E;
+  }
+
+  .ak-study h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    color: #4E4E4E;
+    font-weight: bold;
+  }
+
+  .ak-study p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #4E4E4E;
+  }
+
+  .ak-study .ak-section-title {
+    font-size: 22px;
+    margin-top: 60px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #191919;
+  }
+
+  .ak-study .ak-image {
+    margin: 40px 0;
+  }
+
+  .ak-study .ak-image img {
+    width: 100%;
+    border-radius: 14px;
+    display: block;
+  }
+
+  .ak-study ul {
+    padding-left: 20px;
+    font-size: 18px;
+    color: #4E4E4E;
+  }
+
+  .ak-study li {
+    margin-bottom: 12px;
+  }
+
+  .ak-study .ak-question {
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #4E4E4E;
+  }
+
+  .ak-study .ak-tag {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #6b7280;
+  }
+
+  .ak-study .ak-resources {
+    margin-top: 16px;
+  }
+
+  .ak-study .ak-resources a {
+    color: #1769ff;
+    text-decoration: none;
+    word-break: break-all;
+    font-size: 16px;
+  }
+
+  .ak-study .ak-footer {
+    margin-top: 5%;
+    font-size: 32px;
+    font-weight: bold;
+    color: #4E4E4E;
+  }
+
+  /* Dark mode overrides */
+  .dark .ak-study {
+    color: #d1d5db;
+  }
+
+  .dark .ak-study h1 {
+    color: #f3f4f6;
+  }
+
+  .dark .ak-study p {
+    color: #9ca3af;
+  }
+
+  .dark .ak-study .ak-section-title {
+    color: #f3f4f6;
+  }
+
+  .dark .ak-study ul {
+    color: #9ca3af;
+  }
+
+  .dark .ak-study .ak-question {
+    color: #e5e7eb;
+  }
+
+  .dark .ak-study .ak-tag {
+    color: #6b7280;
+  }
+
+  .dark .ak-study .ak-resources a {
+    color: #60a5fa;
+  }
+
+  .dark .ak-study .ak-footer {
+    color: #f3f4f6;
+  }
+</style>
+
+<section class="ak-study">
+
+  <h1>A universal key for instant AI access on the keyboard.</h1>
+
+  <div class="ak-image">
+    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/86e1b8241728615.695e733222074.png" alt="AI Key Concept" width="1200" height="675" loading="lazy" />
+  </div>
+
+  <p>
+    A universal key for instant AI access integrated into keyboards could reshape how we interact with software — enabling fast, seamless access to intelligence anywhere.
+  </p>
+
+  <p>
+    Instead of switching apps or contexts, AI becomes a native layer — triggered instantly from your keyboard.
+  </p>
+
+  <div class="ak-section-title">Design &amp; Placement</div>
+
+  <ul>
+    <li>Dedicated AI key, similar to "Fn" or "Windows"</li>
+    <li>Recognizable icon (AI symbol or light cue)</li>
+    <li>Customizable mapping (e.g. replacing Caps Lock)</li>
+  </ul>
+
+  <div class="ak-section-title">Core Features</div>
+
+  <ul>
+    <li>Instant AI access across any app</li>
+    <li>Voice activation support for hands-free interaction</li>
+    <li>Cross-platform functionality (OS + browser + apps)</li>
+  </ul>
+
+  <div class="ak-section-title">Challenges</div>
+
+  <ul>
+    <li>Privacy concerns and data handling</li>
+    <li>Standardization across hardware manufacturers</li>
+    <li>Avoiding accidental triggers</li>
+  </ul>
+
+  <div class="ak-image">
+    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/2596da241728615.695e733223dfe.png" alt="Keyboard Exploration" width="1200" height="675" loading="lazy" />
+  </div>
+
+  <div class="ak-image">
+    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/13112c241728615.695e7332235bb.png" alt="AI Key Detail" width="1200" height="675" loading="lazy" />
+  </div>
+
+  <div class="ak-image">
+    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/a56d89241728615.695e733222b11.png" alt="Wide Concept View" width="1200" height="675" loading="lazy" />
+  </div>
+
+  <div class="ak-question">
+    Would you envision this as a pure software shortcut, or a dedicated hardware key?
+    <div class="ak-tag">Designed in Figma</div>
+  </div>
+
+  <div class="ak-section-title">Resources</div>
+  <div class="ak-resources">
+    <a href="https://drive.google.com/drive/folders/1JMO2EJ4ll-NW_WmNkmJPu_nTNVgcvuXx?usp=drive_link" target="_blank" rel="noopener noreferrer">
+      View Project Files
+    </a>
+  </div>
+
+  <div class="ak-footer">Thank you for exploring this AI concept!</div>
+
+</section>`,
+    link: 'https://drive.google.com/drive/folders/1JMO2EJ4ll-NW_WmNkmJPu_nTNVgcvuXx?usp=drive_link',
+  },
+  {
+    slug: 'smart-control-schneider-electric',
+    title: 'Smart Control Concept [Schneider Electric]',
+    category: 'Project',
+    tags: ['UI Design', 'Concept', 'IoT'],
+    image: 'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/cfcb72241729233.695e7553bced2.png',
+    summary: 'Exploring elegance in everyday control.',
+    year: '2024',
+    role: 'UI/UX/Product Designer',
+    description: `<style>
+  .sc-study {
+    font-family: inherit;
+    line-height: 1.6;
+    color: #4E4E4E;
+  }
+
+  .sc-study p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #4E4E4E;
+  }
+
+  .sc-study .sc-highlight {
+    font-weight: bold;
+    color: #4E4E4E;
+  }
+
+  .sc-study h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #4E4E4E;
+    font-weight: bold;
+    line-height: 1.1;
+  }
+
+  .sc-study .sc-caption {
+    font-size: 20px;
+    color: #6b7280;
+    font-style: italic;
+    margin-bottom: 40px;
+  }
+
+  .sc-study .sc-section-title {
+    font-size: 22px;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #4E4E4E;
+  }
+
+  .sc-study .sc-section-subtle {
+    font-style: italic;
+    color: #9ca3af;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+
+  .sc-study .sc-image {
+    margin: 40px 0;
+  }
+
+  .sc-study .sc-image img {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+  }
+
+  .sc-study ul {
+    padding-left: 20px;
+    font-size: 18px;
+    color: #4E4E4E;
+  }
+
+  .sc-study li {
+    margin-bottom: 10px;
+  }
+
+  .sc-study .sc-reflection {
+    margin-top: 60px;
+  }
+
+  .sc-study .sc-emphasis {
+    color: #ff5f00;
+    font-weight: bold;
+  }
+
+  /* Dark mode overrides */
+  .dark .sc-study {
+    color: #d1d5db;
+  }
+
+  .dark .sc-study h1 {
+    color: #f3f4f6;
+  }
+
+  .dark .sc-study p {
+    color: #9ca3af;
+  }
+
+  .dark .sc-study .sc-highlight {
+    color: #e5e7eb;
+  }
+
+  .dark .sc-study .sc-caption {
+    color: #6b7280;
+  }
+
+  .dark .sc-study .sc-section-title {
+    color: #f3f4f6;
+  }
+
+  .dark .sc-study .sc-section-subtle {
+    color: #6b7280;
+  }
+
+  .dark .sc-study ul {
+    color: #9ca3af;
+  }
+</style>
+
+<section class="sc-study">
+
+  <h1>Smart Control Concept [Schneider Electric]</h1>
+  <div class="sc-caption">Exploring elegance in everyday control.</div>
+
+  <div class="sc-image">
+    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/cfcb72241729233.695e7553bced2.png" alt="Smart Control UI" width="1200" height="675" loading="lazy" />
+  </div>
+
+  <p>
+    This concept imagines a minimal wall interface that
+    <span class="sc-highlight">merges climate control</span> and
+    <span class="sc-highlight">real-time weather</span> into one clean surface.
+  </p>
+
+  <p>
+    Built around <span class="sc-highlight">Schneider Electric's design language</span>
+    — warm textures, subtle light cues, and quiet intelligence —
+    the interface blends digital clarity with tactile calm.
+  </p>
+
+  <div class="sc-section-title">Iterations</div>
+  <div class="sc-section-subtle">Exploration</div>
+
+  <ul>
+    <li>Ambient, wood-grain interface: physical warmth meets digital precision</li>
+    <li>Tap-based control with glowing state feedback</li>
+    <li>"On/Off" behavior visualized through light, not icons</li>
+    <li>Quick forecast integrated directly into the device</li>
+  </ul>
+
+  <div class="sc-image">
+    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/da5031241729233.695e7553bdc9d.png" alt="Iteration 1" width="1200" height="675" loading="lazy" />
+  </div>
+
+  <div class="sc-image">
+    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/756ff6241729233.695e7553be6ae.png" alt="Iteration 2" width="1200" height="675" loading="lazy" />
+  </div>
+
+  <div class="sc-image">
+    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/475094241729233.695e7553bd570.png" alt="Iteration 3" width="1200" height="675" loading="lazy" />
+  </div>
+
+  <div class="sc-reflection">
+    <div class="sc-section-title">Reflection</div>
+
+    <p>
+      Sometimes design is about balance between function, emotion, and form. This one leans heavily toward emotion, asking: "What if your thermostat looked so good you didn't care if it took two extra taps?"
+    </p>
+
+    <p class="sc-emphasis">
+      Anyway, while exploring simplicity, I might've butchered usability a little. But what if that's where beauty begins?
+    </p>
+  </div>
+
+</section>`,
+    link: '',
+  },
+
 ];
 
 export interface Testimonial {

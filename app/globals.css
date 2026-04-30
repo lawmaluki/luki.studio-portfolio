@@ -1,13 +1,31 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
+:root {
+  --color-background: #ffffff;
+  --color-foreground: #4E4E4E;
+  --color-muted: #f3f4f6;
+  --color-muted-foreground: #6b7280;
+  --color-border: #e5e7eb;
+}
+
+.dark {
+  --color-background: #111827;
+  --color-foreground: #d1d5db;
+  --color-muted: #1f2937;
+  --color-muted-foreground: #9ca3af;
+  --color-border: #374151;
+}
+
 @layer base {
   html {
     @apply scroll-smooth;
   }
-  
+
   body {
     @apply antialiased;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
   }
 }
 

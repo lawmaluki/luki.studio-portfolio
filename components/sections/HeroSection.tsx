@@ -25,7 +25,7 @@ export const HeroSection: React.FC = () => {
                 </h1>
 
                 <p className="mb-7 text-base text-muted-foreground">
-                    You&rsquo;ve got the idea. Great.<br />
+                    You&rsquo;ve got the idea. Great.
                     Leave the rest to me!
                 </p>
 
@@ -35,9 +35,9 @@ export const HeroSection: React.FC = () => {
                         href={SCHEDULE_URL}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 rounded-md border border-foreground bg-background px-4 py-2 font-mono text-sm uppercase tracking-wide text-foreground transition-colors hover:bg-foreground hover:text-background"
+                        className="inline-flex items-center gap-2 rounded-md border border-foreground bg-background px-4 py-2 font-mono text-sm text-foreground transition-colors hover:bg-foreground hover:text-background"
                     >
-                        SCHEDULE CALL
+                        Schedule Call
                         <ArrowUpRight className="h-4 w-4" />
                     </a>
 
@@ -45,10 +45,10 @@ export const HeroSection: React.FC = () => {
                     <button
                         type="button"
                         onClick={copyEmail}
-                        className="inline-flex items-center gap-2 rounded-md border border-foreground bg-background px-4 py-2 font-mono text-sm uppercase tracking-wide text-foreground transition-colors hover:bg-foreground hover:text-background"
+                        className="inline-flex items-center gap-2 rounded-md border border-foreground bg-background px-4 py-2 font-mono text-sm text-foreground transition-colors hover:bg-foreground hover:text-background"
                     >
                         <Plus className="h-3.5 w-3.5" />
-                        {copied ? 'COPIED!' : 'COPY EMAIL'}
+                        {copied ? 'Copied!' : 'Copy Email'}
                     </button>
 
                     {/* Terms */}
@@ -81,7 +81,7 @@ export const HeroSection: React.FC = () => {
                         href={DRIBBLE_URL}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 rounded-md bg-black px-4 py-2 font-mono text-sm text-white transition-opacity hover:opacity-80 dark:bg-white dark:text-black"
+                        className="inline-flex items-center gap-2 rounded-md bg-black px-4 py-2 font-mono text-sm text-white transition-opacity hover:opacity-80 dark:bg-gray-200 dark:text-gray-900"
                     >
                         Dribbble Profile
                         <ArrowUpRight className="h-4 w-4" />
@@ -91,7 +91,7 @@ export const HeroSection: React.FC = () => {
                         href={FIGMA_URL}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 rounded-md bg-black px-4 py-2 font-mono text-sm text-white transition-opacity hover:opacity-80 dark:bg-white dark:text-black"
+                        className="inline-flex items-center gap-2 rounded-md bg-black px-4 py-2 font-mono text-sm text-white transition-opacity hover:opacity-80 dark:bg-gray-200 dark:text-gray-900"
                     >
                         Figma Profile
                         <ArrowUpRight className="h-4 w-4" />

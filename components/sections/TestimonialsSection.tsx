@@ -33,7 +33,7 @@ export const TestimonialsSection: React.FC = () => {
                     Testimonials.
                 </h2>
 
-                <div className="flex items-center divide-x divide-black/10 overflow-hidden rounded-lg border border-black/10 bg-black/5 backdrop-blur-md dark:divide-white/20 dark:border-white/20 dark:bg-white/10">
+                <div className="flex items-center divide-x divide-[#D9D9D9] overflow-hidden rounded-lg border border-[#D9D9D9] bg-black/5 backdrop-blur-md dark:divide-white/20 dark:border-white/20 dark:bg-white/10">
                     <button
                         type="button"
                         onClick={prev}
@@ -56,7 +56,7 @@ export const TestimonialsSection: React.FC = () => {
             {/* Card */}
             <div
                 key={t.id}
-                className="animate-in fade-in duration-500 w-full overflow-hidden rounded-2xl border border-border bg-background shadow-sm"
+                className="animate-in fade-in duration-500 w-full overflow-hidden rounded-2xl border border-[#D9D9D9] bg-background dark:border-[#374151]"
             >
                 <div className="px-8 py-10">
                     <p className="text-center text-base leading-relaxed text-muted-foreground md:text-lg">
@@ -64,7 +64,7 @@ export const TestimonialsSection: React.FC = () => {
                     </p>
                 </div>
 
-                <div className="flex items-center justify-between border-t border-border bg-muted px-6 py-3 text-sm text-foreground">
+                <div className="flex items-center justify-between border-t border-[#D9D9D9] bg-[#F5F5F5] px-6 py-3 text-sm text-foreground dark:border-[#374151] dark:bg-[#1f2937]">
                     <span className="font-medium">{t.name}</span>
                     <span className="text-muted-foreground">{t.company}</span>
                 </div>
