@@ -1,12 +1,47 @@
 'use client';
 
-import { useState } from 'react';
-import { Bookmark, ArrowUpRight } from 'lucide-react';
+import { useState, useEffect, useCallback } from 'react';
+import { Bookmark, ArrowUpRight, X } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { projects, type ProjectCategory, type Project } from '@/config';
 
 const CATEGORIES: ProjectCategory[] = ['Project', 'Spotlight', 'Reading', 'DopenS'];
+
+function Lightbox({ src, onClose }: { src: string; onClose: () => void }) {
+    useEffect(() => {
+        const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
+        document.addEventListener('keydown', onKey);
+        return () => document.removeEventListener('keydown', onKey);
+    }, [onClose]);
+
+    const handleClose = useCallback((e: React.MouseEvent) => {
+        if (e.target === e.currentTarget) onClose();
+    }, [onClose]);
+
+    return (
+        <div
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+            onClick={handleClose}
+        >
+            <button
+                onClick={onClose}
+                className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
+                aria-label="Close"
+            >
+                <X className="h-5 w-5" />
+            </button>
+            <div className="relative max-h-[90vh] max-w-[90vw]">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                    src={src}
+                    alt="Spotlight"
+                    className="max-h-[90vh] max-w-[90vw] rounded-xl object-contain shadow-2xl"
+                />
+            </div>
+        </div>
+    );
+}
 
 type ReadingType = 'All' | 'Reading' | 'Newsletters' | 'Podcasts';
 const READING_FILTERS: ReadingType[] = ['All', 'Reading', 'Newsletters', 'Podcasts'];
@@ -43,8 +78,8 @@ function InfoDietView({ items }: { items: Project[] }) {
         <div>
             {/* Header */}
             <div className="mb-6">
-                <h2 className="text-3xl font-bold tracking-tight text-foreground">Info Diet</h2>
-                <p className="mt-1 text-sm text-muted-foreground">
+                <h2 className="font-mono text-3xl font-bold tracking-tight text-foreground">Info Diet</h2>
+                <p className="mt-1 font-mono text-xs uppercase tracking-widest text-muted-foreground">
                     Content I consume regularly — {items.length} sources across {categoryCount} categories.
                 </p>
             </div>
@@ -58,7 +93,7 @@ function InfoDietView({ items }: { items: Project[] }) {
                             key={f}
                             type="button"
                             onClick={() => setFilter(f)}
-                            className={`rounded-full px-3.5 py-1 text-sm font-medium transition-colors ${
+                            className={`rounded-full px-3.5 py-1 font-mono text-xs uppercase tracking-widest transition-colors ${
                                 isActive
                                     ? 'bg-lime-200 text-lime-900 dark:bg-lime-300 dark:text-lime-950'
                                     : 'bg-gray-100 text-muted-foreground hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700'
@@ -81,8 +116,8 @@ function InfoDietView({ items }: { items: Project[] }) {
                             className="group flex items-center justify-between py-4 transition-opacity hover:opacity-60"
                         >
                             <div className="flex items-center gap-3">
-                                <span className="font-medium text-foreground">{item.title}</span>
-                                <span className="rounded-full bg-gray-100 dark:bg-gray-800 px-2.5 py-0.5 text-xs text-muted-foreground">
+                                <span className="font-mono text-base leading-relaxed text-foreground">{item.title}</span>
+                                <span className="rounded-full bg-gray-100 dark:bg-gray-800 px-2.5 py-0.5 font-mono text-xs uppercase tracking-widest text-muted-foreground">
                                     {item.type}
                                 </span>
                             </div>
@@ -103,6 +138,7 @@ function InfoDietView({ items }: { items: Project[] }) {
 
 export const ProjectsSection: React.FC = () => {
     const [active, setActive] = useState<ProjectCategory>('Spotlight');
+    const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
 
     const filtered = projects.filter((p) => p.category === active);
     const readingItems = projects.filter((p) => p.category === 'Reading');
@@ -171,10 +207,35 @@ export const ProjectsSection: React.FC = () => {
                             </div>
                         )}
 
-                        {/* List — projects without a slug */}
-                        {filtered.some((p) => !p.slug) && (
+                        {/* Spotlight image grid — no slug, link is the image URL */}
+                        {filtered.some((p) => !p.slug && p.link) && (
+                            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                                {filtered.filter((p) => !p.slug && p.link).map((project, i) => (
+                                    <button
+                                        key={i}
+                                        type="button"
+                                        onClick={() => setLightboxSrc(project.link!)}
+                                        className="group relative aspect-video w-full overflow-hidden rounded-2xl bg-muted cursor-zoom-in"
+                                    >
+                                        <Image
+                                            src={project.link!}
+                                            alt={project.title || `Spotlight ${i + 1}`}
+                                            fill
+                                            className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                        />
+                                    </button>
+                                ))}
+                            </div>
+                        )}
+
+                        {lightboxSrc && (
+                            <Lightbox src={lightboxSrc} onClose={() => setLightboxSrc(null)} />
+                        )}
+
+                        {/* List — no slug, no link */}
+                        {filtered.some((p) => !p.slug && !p.link) && (
                             <ul className="divide-y divide-gray-300/40 dark:divide-gray-600/30">
-                                {filtered.filter((p) => !p.slug).map((project, i) => (
+                                {filtered.filter((p) => !p.slug && !p.link).map((project, i) => (
                                     <li key={i}>
                                         <Link
                                             href={`/projects/${project.slug}`}

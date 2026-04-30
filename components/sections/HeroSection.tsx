@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Bookmark, Plus } from 'lucide-react';
+import { Plus, ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 import { DRIBBLE_URL, EMAIL, FIGMA_URL, SCHEDULE_URL } from '@/config';
 
@@ -38,7 +38,7 @@ export const HeroSection: React.FC = () => {
                         className="inline-flex items-center gap-2 rounded-md border border-foreground bg-background px-4 py-2 font-mono text-sm uppercase tracking-wide text-foreground transition-colors hover:bg-foreground hover:text-background"
                     >
                         SCHEDULE CALL
-                        <Bookmark className="h-3.5 w-3.5" />
+                        <ArrowUpRight className="h-4 w-4" />
                     </a>
 
                     {/* Copy Email */}
@@ -84,7 +84,7 @@ export const HeroSection: React.FC = () => {
                         className="inline-flex items-center gap-2 rounded-md bg-black px-4 py-2 font-mono text-sm text-white transition-opacity hover:opacity-80 dark:bg-white dark:text-black"
                     >
                         Dribbble Profile
-                        <Bookmark className="h-3.5 w-3.5" />
+                        <ArrowUpRight className="h-4 w-4" />
                     </a>
 
                     <a
@@ -94,7 +94,7 @@ export const HeroSection: React.FC = () => {
                         className="inline-flex items-center gap-2 rounded-md bg-black px-4 py-2 font-mono text-sm text-white transition-opacity hover:opacity-80 dark:bg-white dark:text-black"
                     >
                         Figma Profile
-                        <Bookmark className="h-3.5 w-3.5" />
+                        <ArrowUpRight className="h-4 w-4" />
                     </a>
                 </div>
             </div>
