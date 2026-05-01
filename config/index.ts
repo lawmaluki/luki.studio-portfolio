@@ -512,297 +512,393 @@ export const projects: Project[] = [
     title: 'POSCO Smart Home Control Panel UI',
     category: 'Project',
     tags: ['UI/UX', 'Concept', 'Design System'],
-    image: 'https://res.cloudinary.com/dhlpswcjl/image/upload/v1777365855/Frame_32_hbl99t.png',
+    image: 'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/73062f242563769.696fa8e609cd6.png',
     summary: 'The Future of Atmospheric Living.',
     year: '2025',
     role: 'Product Designer & Frontend Engineer',
     description: `<style>
-  .case-study {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: clamp(24px, 5vw, 72px) clamp(16px, 4vw, 40px);
-    color: #f5f5f5;
-    line-height: 1.7;
+  .ps { font-family: inherit; line-height: 1.6; color: #4E4E4E; --ps-text: #4E4E4E; --ps-muted: #6b7280; --ps-soft: #8b8b8b; --ps-line: #eeeeee; }
+  .ps * { box-sizing: border-box; }
+  .ps img { display: block; width: 100%; height: auto; }
+  .ps h1, .ps h2, .ps h3, .ps p { margin: 0; }
+  .ps h1 { font-size: clamp(36px, 6vw, 68px); line-height: 0.95; letter-spacing: -0.055em; font-weight: 700; color: #2d2d2d; }
+  .ps h2 { margin-bottom: 20px; font-size: clamp(26px, 3.5vw, 40px); line-height: 1.05; letter-spacing: -0.04em; color: #2d2d2d; font-weight: bold; }
+  .ps h3 { margin: 34px 0 10px; font-size: 22px; line-height: 1.25; letter-spacing: -0.02em; color: #2d2d2d; font-weight: bold; }
+  .ps p { color: var(--ps-muted); font-size: clamp(16px, 1.6vw, 18px); line-height: 1.65; }
+  .ps strong { color: var(--ps-text); font-weight: 700; }
+  .ps .ps-eyebrow { margin: 0 0 12px; color: var(--ps-soft); font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase; }
+  .ps .ps-subtitle { margin-top: 18px; color: #2d2d2d; font-size: clamp(18px, 2vw, 26px); font-style: italic; line-height: 1.4; }
+  .ps .ps-hero { padding-bottom: 36px; }
+  .ps .ps-media { margin: 48px 0 12px; }
+  .ps .ps-media img { border-radius: 26px; object-fit: cover; }
+  .ps .ps-media-stack { display: grid; gap: 28px; margin: 48px 0 12px; }
+  .ps .ps-media-stack img { border-radius: 26px; object-fit: cover; }
+  .ps .ps-section { padding: 56px 0 24px; }
+  .ps .ps-copy-stack { display: grid; gap: 18px; }
+  .ps .ps-feature-list { display: grid; gap: 18px; margin-top: 18px; }
+  .ps .ps-feature-item { padding: 22px 0 0; border-top: 1px solid var(--ps-line); }
+  .ps .ps-feature-item p + p { margin-top: 8px; }
+  .ps .ps-impact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 28px; }
+  .ps .ps-impact-card { min-height: 180px; padding: 24px; border: 1px solid var(--ps-line); border-radius: 24px; background: #fafafa; }
+  .ps .ps-impact-card span { display: block; margin-bottom: 12px; color: var(--ps-soft); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; }
+  .ps .ps-impact-card p { color: var(--ps-text); font-size: 18px; line-height: 1.45; }
+  .ps .ps-note { margin-top: 12px; color: var(--ps-soft); font-size: 16px; font-style: italic; }
+  @media (max-width: 760px) { .ps .ps-impact-grid { grid-template-columns: 1fr; } .ps .ps-media img, .ps .ps-media-stack img { border-radius: 18px; } }
+  /* Dark mode */
+  .dark .ps { --ps-text: #e5e7eb; --ps-muted: #9ca3af; --ps-soft: #6b7280; --ps-line: #374151; color: #e5e7eb; }
+  .dark .ps h1, .dark .ps h2, .dark .ps h3 { color: #f3f4f6; }
+  .dark .ps p { color: #9ca3af; }
+  .dark .ps strong { color: #e5e7eb; }
+  .dark .ps .ps-subtitle { color: #d1d5db; }
+  .dark .ps .ps-impact-card { background: #1f2937; border-color: #374151; }
+  .dark .ps .ps-impact-card p { color: #e5e7eb; }
+</style>
+
+<div class="ps">
+
+  <div class="ps-hero">
+    <p class="ps-eyebrow">Smart Home Interface Concept</p>
+    <h1>POSCO Smart Home Control Panel UI</h1>
+    <p class="ps-subtitle">The Future of Atmospheric Living</p>
+  </div>
+
+  <div class="ps-media">
+    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/73062f242563769.696fa8e609cd6.png" alt="POSCO Smart Home Control Panel UI overview" width="1200" height="675" loading="lazy" />
+  </div>
+
+  <div class="ps-section">
+    <h2>My Vision</h2>
+    <div class="ps-copy-stack">
+      <p>Modern smart homes often feel like spreadsheets: cluttered, clinical, and overloaded with controls.</p>
+      <p><strong>Aurora Home OS</strong> is my concept for transforming home management into a more sensory, atmospheric experience.</p>
+      <p>The interface moves away from traditional control panels and toward living interfaces that adapt to the time of day, the home environment, and the mood of the people inside it.</p>
+    </div>
+
+    <h3>Design Language</h3>
+    <div class="ps-feature-list">
+      <div class="ps-feature-item">
+        <p><strong>Glassmorphism 2.0</strong></p>
+        <p>Deep blurs and soft outer glows create visual depth without adding unnecessary noise.</p>
+      </div>
+      <div class="ps-feature-item">
+        <p><strong>OLED-Optimized</strong></p>
+        <p>A true-black foundation helps reduce visual intrusion at night while giving the interface a calm, premium glow.</p>
+      </div>
+      <div class="ps-feature-item">
+        <p><strong>Tactile Digitalism</strong></p>
+        <p>High-fidelity digital dials are paired with large, physical-inspired touch zones for better accessibility and easier interaction.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ps-media">
+    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/2371db242563769.69f0bd0c6e3b8.png" alt="Smart home control panel interface preview" width="1200" height="675" loading="lazy" />
+  </div>
+
+  <div class="ps-section">
+    <h2>Functional Breakdown</h2>
+    <div class="ps-feature-list">
+      <div class="ps-feature-item">
+        <h3>1. The Glance Sidebar</h3>
+        <p>The left side of the interface is designed as a permanent status pillar, giving users quick access to high-frequency information such as time, weather, and lighting status.</p>
+        <p><strong>Dynamic Lighting:</strong> one-tap scene controls such as Gold, Beige, and White allow instant mood changes without forcing users into deeper menus.</p>
+      </div>
+      <div class="ps-feature-item">
+        <h3>2. The Smart Thermal Core</h3>
+        <p>Instead of standard plus and minus buttons, the climate controls use a progressive arc dial that feels more fluid and intentional.</p>
+        <p><strong>Visual Warmth:</strong> the arc responds with changing color temperature as the user adjusts the climate, giving immediate feedback.</p>
+        <p><strong>Centralized Modes:</strong> cooling, power, and ventilation are grouped within a focused touch zone for ergonomic ease.</p>
+      </div>
+      <div class="ps-feature-item">
+        <h3>3. The Hybrid Dock</h3>
+        <p>Because smart should never mean slow, three mission-critical actions — temperature, light, and security — remain available in a high-contrast bottom dock.</p>
+        <p><strong>High-Affordance Icons:</strong> large touch targets support low-light interactions when the user is drowsy, distracted, or in a hurry.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ps-media-stack">
+    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/0ed7c3242563769.69f0bd0c6d775.png" alt="Smart home lighting interface screen" width="1200" height="675" loading="lazy" />
+    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/a10942242563769.69f0bd0c6ddab.png" alt="Smart home temperature interface screen" width="1200" height="675" loading="lazy" />
+  </div>
+
+  <div class="ps-section">
+    <h2>Expected Impact</h2>
+    <p class="ps-note">The concept has not yet been validated through formal user testing. The following outcomes represent the intended product impact.</p>
+    <div class="ps-impact-grid">
+      <div class="ps-impact-card">
+        <span>Efficiency</span>
+        <p>Reduced time-to-task for climate adjustments through clearer hierarchy and fewer interaction steps.</p>
+      </div>
+      <div class="ps-impact-card">
+        <span>Sentiment</span>
+        <p>Designed to feel calming and premium rather than overly technological.</p>
+      </div>
+      <div class="ps-impact-card">
+        <span>Accessibility</span>
+        <p>High-contrast readouts make key information easier to see from a distance.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ps-media-stack">
+    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/350696242563769.696fa8e60a1db.png" alt="POSCO smart home interface layout" width="1200" height="675" loading="lazy" />
+    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/5bfd23242563769.69f0bd0c6d051.png" alt="Smart home control panel close up" width="1200" height="675" loading="lazy" />
+    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/f0e815242563769.69f0bd0c6c9e2.png" alt="Smart home control panel visual detail" width="1200" height="675" loading="lazy" />
+  </div>
+
+  <div class="ps-section">
+    <h2>Key Takeaway</h2>
+    <p>By prioritizing <strong>visual hierarchy</strong> and <strong>negative space</strong>, this concept positions the smart home interface as a piece of digital furniture rather than just another utility screen.</p>
+  </div>
+
+  <div class="ps-media">
+    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/5e1177242563769.696fa8e60aa7a.png" alt="Final POSCO Smart Home Control Panel UI showcase" width="1200" height="675" loading="lazy" />
+  </div>
+
+</div>`,
+    link: '',
+  },
+  {
+    slug: 'chat-bubble-variations',
+    title: 'Chat Bubble Variations',
+    category: 'Project',
+    tags: ['UI Design', 'Case Study', 'Design System'],
+    image: 'https://cdn.dribbble.com/userupload/46368263/file/8f35925d543bbd92427568f72196f2c5.png?resize=1600x900&vertical=center',
+    summary: 'Designing clear, accessible, and scalable conversations through thoughtful chat bubble structure.',
+    year: '2025',
+    role: 'UI/UX Designer',
+    description: `<style>
+  .cbv {
+    font-family: inherit;
+    line-height: 1.6;
+    color: #4E4E4E;
+    --cbv-text: #4E4E4E;
+    --cbv-muted: #6b7280;
+    --cbv-soft: #f6f7fb;
+    --cbv-border: #e5e7eb;
+    --cbv-accent: #126BAB;
+    --cbv-radius: 18px;
   }
 
-  .case-study h1 {
-    font-size: clamp(2rem, 6vw, 4.5rem);
+  .cbv * { box-sizing: border-box; }
+  .cbv img { display: block; width: 100%; height: auto; }
+
+  .cbv .cbv-eyebrow {
+    margin: 0 0 12px;
+    color: var(--cbv-accent);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .cbv h1 {
+    margin: 0;
+    font-size: clamp(36px, 6vw, 64px);
     line-height: 1.05;
-    margin-bottom: 18px;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.05em;
+    color: #2d2d2d;
+    font-weight: bold;
   }
 
-  .case-study h2 {
-    font-size: clamp(1.6rem, 4vw, 2.5rem);
-    margin: 64px 0 18px;
+  .cbv h2 {
+    margin: 0 0 16px;
+    font-size: clamp(22px, 3vw, 32px);
+    line-height: 1.12;
     letter-spacing: -0.03em;
+    color: #2d2d2d;
+    font-weight: bold;
   }
 
-  .case-study h3 {
-    font-size: clamp(1.15rem, 2vw, 1.45rem);
-    margin: 34px 0 10px;
-    color: #ffffff;
+  .cbv p { margin: 0 0 16px; color: var(--cbv-muted); font-size: clamp(16px, 1.6vw, 18px); line-height: 1.65; }
+  .cbv li { color: var(--cbv-muted); font-size: clamp(16px, 1.6vw, 18px); line-height: 1.65; }
+  .cbv strong { color: var(--cbv-text); font-weight: 700; }
+
+  .cbv .cbv-lead {
+    max-width: 700px;
+    margin-top: 16px;
+    margin-bottom: 0;
+    color: var(--cbv-muted);
+    font-size: clamp(18px, 2vw, 22px);
+    line-height: 1.5;
   }
 
-  .case-study p {
-    font-size: clamp(1rem, 1.4vw, 1.12rem);
-    color: rgba(255, 255, 255, 0.72);
-    margin: 0 0 18px;
+  .cbv .cbv-hero { padding-bottom: 28px; }
+
+  .cbv .cbv-media { margin: 36px 0; }
+  .cbv .cbv-media img { border-radius: 8px; object-fit: contain; }
+
+  .cbv .cbv-content { display: grid; gap: 18px; padding: 28px 0; }
+
+  .cbv .cbv-card {
+    padding: 30px;
+    border: 1px solid var(--cbv-border);
+    border-radius: var(--cbv-radius);
+    background: var(--cbv-soft);
   }
 
-  .case-study strong {
-    color: #ffffff;
+  .cbv .cbv-card ol {
+    display: grid;
+    gap: 10px;
+    margin: 0;
+    padding-left: 24px;
+  }
+
+  .cbv .cbv-result {
+    margin-top: 18px;
+    color: var(--cbv-text);
+    font-style: italic;
     font-weight: 700;
   }
 
-  .case-study em {
-    color: rgba(255, 255, 255, 0.58);
+  .cbv .cbv-palette-wrap {
+    margin: 12px 0 36px;
+    padding: 20px;
+    border: 1px solid var(--cbv-border);
+    border-radius: var(--cbv-radius);
   }
 
-  .hero-text {
-    max-width: 780px;
-    margin-bottom: 36px;
-  }
+  .cbv .cbv-palette-wrap h2 { font-size: 20px; margin-bottom: 14px; letter-spacing: -0.02em; }
 
-  .eyebrow {
-    display: inline-flex;
-    margin-bottom: 18px;
-    padding: 8px 14px;
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 999px;
-    background: rgba(255,255,255,0.06);
-    color: rgba(255,255,255,0.75);
-    font-size: 0.85rem;
-  }
-
-  .case-image,
-  .image-grid img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 28px;
-    object-fit: cover;
-    box-shadow: 0 24px 80px rgba(0,0,0,0.35);
-  }
-
-  figure {
-    margin: 32px 0;
-  }
-
-  .image-grid {
+  .cbv .cbv-palette {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: clamp(16px, 3vw, 28px);
-    margin: 36px 0;
+    grid-template-columns: repeat(7, 1fr);
+    overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid var(--cbv-border);
   }
 
-  .content-card {
-    padding: clamp(22px, 4vw, 36px);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 28px;
-    background:
-      radial-gradient(circle at top left, rgba(255, 196, 87, 0.12), transparent 35%),
-      rgba(255,255,255,0.045);
-    backdrop-filter: blur(16px);
-    margin: 28px 0;
+  .cbv .cbv-swatch {
+    min-height: 76px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    padding: 10px 6px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
   }
 
-  .feature-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 20px;
-    margin-top: 28px;
+  .cbv .cbv-image-grid { display: grid; grid-template-columns: 1fr; gap: 20px; margin: 36px 0; }
+  .cbv .cbv-image-grid img { border-radius: 12px; }
+
+  .cbv .cbv-workspace {
+    margin-top: 36px;
+    padding: 30px;
+    border: 1px solid var(--cbv-border);
+    border-radius: var(--cbv-radius);
+    background: var(--cbv-soft);
   }
 
-  .feature {
-    padding: 22px;
-    border-radius: 22px;
-    background: rgba(255,255,255,0.055);
-    border: 1px solid rgba(255,255,255,0.08);
+  .cbv .cbv-workspace a {
+    color: var(--cbv-text);
+    text-decoration: none;
+    border-bottom: 2px solid #ea64d9;
+    overflow-wrap: anywhere;
+    transition: opacity 0.2s ease;
+  }
+  .cbv .cbv-workspace a:hover { opacity: 0.72; }
+
+  @media (max-width: 760px) {
+    .cbv .cbv-card, .cbv .cbv-palette-wrap, .cbv .cbv-workspace { padding: 22px; }
+    .cbv .cbv-palette { grid-template-columns: repeat(2, 1fr); }
+    .cbv .cbv-swatch { min-height: 64px; }
   }
 
-  .impact-list {
-    display: grid;
-    gap: 14px;
-    margin-top: 20px;
+  /* Dark mode */
+  .dark .cbv {
+    --cbv-text: #e5e7eb;
+    --cbv-muted: #9ca3af;
+    --cbv-soft: #1f2937;
+    --cbv-border: #374151;
+    color: #e5e7eb;
   }
-
-  .impact-item {
-    padding: 18px 20px;
-    border-radius: 18px;
-    background: rgba(255,255,255,0.055);
-    border: 1px solid rgba(255,255,255,0.08);
-    color: rgba(255,255,255,0.78);
-  }
-
-  .thank-you {
-    text-align: center;
-    margin: 70px auto 32px;
-    max-width: 680px;
-  }
-
-  @media (max-width: 768px) {
-    .image-grid,
-    .feature-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .case-study h2 {
-      margin-top: 48px;
-    }
-
-    .case-image,
-    .image-grid img {
-      border-radius: 20px;
-    }
-  }
+  .dark .cbv h1, .dark .cbv h2 { color: #f3f4f6; }
+  .dark .cbv p, .dark .cbv li { color: #9ca3af; }
+  .dark .cbv strong { color: #e5e7eb; }
+  .dark .cbv .cbv-result { color: #e5e7eb; }
+  .dark .cbv .cbv-workspace a { color: #e5e7eb; }
 </style>
 
-<section class="case-study">
-  <div class="hero-text">
-    <span class="eyebrow">Smart Home UI · Product Design · Frontend Concept</span>
+<div class="cbv">
 
-    <h1>POSCO Smart Home Control Panel UI</h1>
-
-    <p>
-      <em>The Future of Atmospheric Living</em>
-    </p>
+  <div class="cbv-hero">
+    <p class="cbv-eyebrow">Exploring Messaging UI System</p>
+    <h1>Chat Bubble Variations</h1>
+    <p class="cbv-lead">Designing clear, accessible, and scalable conversations through thoughtful chat bubble structure.</p>
   </div>
 
-  <figure>
-    <img
-      class="case-image"
-      src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/73062f242563769.696fa8e609cd6.png"
-      alt="POSCO Smart Home Control Panel UI"
-      width="1200"
-      height="868"
-      loading="lazy"
-    >
-  </figure>
-
-  <div class="content-card">
-    <h2>My Vision</h2>
-
-    <p>
-      Modern smart homes often feel like spreadsheets — cluttered, clinical, and overly technical.
-    </p>
-
-    <p>
-      <strong>Aurora Home OS</strong> is my concept for transforming home management into a calm,
-      sensory experience. Instead of designing another traditional control panel, I focused on creating
-      a living interface that adapts to the time of day, mood, and comfort of the inhabitants.
-    </p>
+  <div class="cbv-media">
+    <img src="https://cdn.dribbble.com/userupload/46368263/file/8f35925d543bbd92427568f72196f2c5.png?resize=1600x900&vertical=center" alt="Chat Bubble Variations hero presentation" width="1600" height="900" loading="lazy" />
   </div>
 
-  <h2>Design Language</h2>
-
-  <div class="feature-grid">
-    <div class="feature">
-      <h3>Glassmorphism 2.0</h3>
-      <p>Deep blur, soft glow, and layered transparency create depth without visual noise.</p>
-    </div>
-
-    <div class="feature">
-      <h3>OLED-Optimized</h3>
-      <p>A true-black foundation reduces glare, saves energy, and feels elegant at night.</p>
-    </div>
-
-    <div class="feature">
-      <h3>Tactile Digitalism</h3>
-      <p>Large touch zones and physical-inspired controls make the interface easier to use.</p>
+  <div class="cbv-palette-wrap">
+    <h2>Color Palette</h2>
+    <div class="cbv-palette">
+      <div class="cbv-swatch" style="background:#010101;color:#fff;">#010101</div>
+      <div class="cbv-swatch" style="background:#126BAB;color:#fff;">#126BAB</div>
+      <div class="cbv-swatch" style="background:#FDFDFE;color:#111;">#FDFDFE</div>
+      <div class="cbv-swatch" style="background:#41475C;color:#fff;">#41475C</div>
+      <div class="cbv-swatch" style="background:#1689db;color:#fff;">#1689db</div>
+      <div class="cbv-swatch" style="background:#98A6B2;color:#111;">#98A6B2</div>
+      <div class="cbv-swatch" style="background:#517092;color:#fff;">#517092</div>
     </div>
   </div>
 
-  <h2>Functional Breakdown</h2>
+  <div class="cbv-content">
+    <p>Chat bubbles are one of the most common UI patterns, yet small design decisions can make or break conversation flow. This case study explores the anatomy of chat bubbles and how thoughtful structure improves clarity, usability, and accessibility in messaging interfaces.</p>
 
-  <div class="content-card">
-    <h3>1. The “Glance” Sidebar</h3>
-    <p>
-      Since users often check time, weather, and quick status first, the left section acts as a permanent
-      status pillar. One-tap lighting scenes such as Gold, Beige, and White allow instant mood changes
-      without navigating through menus.
-    </p>
-
-    <h3>2. The Smart Thermal Core</h3>
-    <p>
-      Instead of relying on basic plus and minus buttons, the climate system uses a progressive arc dial.
-      The interface visually responds as the user adjusts the temperature, creating a more intuitive
-      sense of warmth and comfort.
-    </p>
-
-    <h3>3. The Hybrid Dock</h3>
-    <p>
-      Key actions like Temperature, Light, and Security remain fixed in a high-contrast bottom dock.
-      This keeps essential controls accessible even in low-light moments or when the user is in a hurry.
-    </p>
-  </div>
-
-  <div class="image-grid">
-    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/8addef242563769.696fa8e49477d.png" alt="Smart home lighting scene interface" width="1200" height="675" loading="lazy">
-    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/205270242563769.696fa8e493f63.png" alt="Smart home temperature control interface" width="1200" height="675" loading="lazy">
-  </div>
-
-  <h2>The Impact</h2>
-
-  <p><em>No formal testing was conducted — these results are projected.</em></p>
-
-  <div class="impact-list">
-    <div class="impact-item">
-      <strong>35% projected reduction</strong> in time-to-task for climate adjustments.
-    </div>
-
-    <div class="impact-item">
-      <strong>User sentiment:</strong> Designed to feel calming and premium rather than overly technological.
-    </div>
-
-    <div class="impact-item">
-      <strong>Accessibility:</strong> High-contrast readouts improve visibility from a distance.
+    <div class="cbv-card">
+      <h2>The Problem</h2>
+      <p>Inconsistent sizing, poor contrast, and unclear sender distinction often disrupt readability and increase cognitive load, especially in long or fast-moving conversations.</p>
     </div>
   </div>
 
-  <figure>
-    <img
-      class="case-image"
-      src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/350696242563769.696fa8e60a1db.png"
-      alt="POSCO Smart Home Control Panel UI preview"
-      width="1200"
-      height="675"
-      loading="lazy"
-    >
-  </figure>
-
-  <div class="image-grid">
-    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/d2b285242563769.696fa8e5493e3.png" alt="Smart home control panel detail screen" width="1200" height="675" loading="lazy">
-    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/4fe5f2242563769.696fa8e54993b.png" alt="Smart home dashboard visual detail" width="1200" height="675" loading="lazy">
+  <div class="cbv-media">
+    <img src="https://cdn.dribbble.com/userupload/46368363/file/c6cd94fd3e237bc497621a2fd05787da.png?resize=1504x846&vertical=center" alt="Chat bubble structure and layout exploration" width="1504" height="846" loading="lazy" />
   </div>
 
-  <div class="content-card">
-    <h2>Key Takeaways</h2>
+  <div class="cbv-media">
+    <img src="https://cdn.dribbble.com/userupload/46368364/file/338052d44e9ba9b5c50b1eb69916eafa.png?resize=1504x846&vertical=center" alt="Chat bubble variants and state examples" width="1504" height="846" loading="lazy" />
+  </div>
 
+  <div class="cbv-media">
+    <img src="https://cdn.dribbble.com/userupload/46368365/file/b78d13a41ea33a111957573a64770f9f.png?resize=1504x846&vertical=center" alt="Chat bubble interaction and styling examples" width="1504" height="846" loading="lazy" />
+  </div>
+
+  <div class="cbv-content">
+    <div class="cbv-card">
+      <h2>Key Components</h2>
+      <ol>
+        <li>Message container that adapts to content.</li>
+        <li>Directional tail to reinforce ownership.</li>
+        <li>Readable text hierarchy for fast scanning.</li>
+        <li>Subtle metadata such as timestamps and status.</li>
+        <li>Flexible variants built with Auto Layout.</li>
+      </ol>
+      <p class="cbv-result">Result: smoother conversation flow with less visual noise, letting users focus on what matters: the message.</p>
+    </div>
+  </div>
+
+  <div class="cbv-image-grid">
+    <img src="https://cdn.dribbble.com/userupload/46368367/file/a6105287706de06c20f6cecc683df7b2.png?resize=1905x1072&vertical=center" alt="Additional preview one" width="1905" height="1072" loading="lazy" />
+    <img src="https://cdn.dribbble.com/userupload/46368366/file/14fadc56d935400974a3c492638123e1.png?resize=1905x1072&vertical=center" alt="Additional preview two" width="1905" height="1072" loading="lazy" />
+    <img src="https://cdn.dribbble.com/userupload/46368368/file/73b56f4d3b2eb2548cc71be276f5115e.png?resize=1905x1072&vertical=center" alt="Additional preview three" width="1905" height="1072" loading="lazy" />
+  </div>
+
+  <div class="cbv-workspace">
+    <h2>Link to the Design Workspace</h2>
     <p>
-      By prioritizing <strong>visual hierarchy</strong>, <strong>negative space</strong>, and
-      <strong>high-affordance controls</strong>, this concept shows how a smart home interface can become
-      digital furniture — not just another utility screen.
+      <a href="https://www.figma.com/community/file/1592807537519737559/chat-bubble-variations" target="_blank" rel="noopener noreferrer">
+        Open the Figma community file
+      </a>
     </p>
+    <p><strong>Thank you.</strong></p>
   </div>
 
-  <div class="thank-you">
-    <h2>Thank You</h2>
-    <p><strong>For more information about this project, feel free to reach out.</strong></p>
-  </div>
-
-  <figure>
-    <img
-      class="case-image"
-      src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/5e1177242563769.696fa8e60aa7a.png"
-      alt="Final POSCO Smart Home Control Panel UI showcase"
-      width="1200"
-      height="745"
-      loading="lazy"
-    >
-  </figure>
-</section>`,
-    link: '',
+</div>`,
+    link: 'https://www.figma.com/community/file/1592807537519737559/chat-bubble-variations',
   },
   {
     slug: 'chat-bubble-anatomy',
@@ -943,7 +1039,7 @@ export const projects: Project[] = [
     padding: 28px;
     color: var(--cb-text);
     background: var(--cb-soft);
-    border-left: 5px solid var(--cb-accent);
+
     border-radius: 20px;
     font-size: 22px;
     font-weight: 700;
@@ -1484,6 +1580,365 @@ export const projects: Project[] = [
   </div>
 
 </section>`,
+    link: '',
+  },
+  {
+    slug: 'app-workspace',
+    title: 'App Redesign',
+    category: 'Project',
+    tags: ['UI Design', 'Product Design', 'Figma'],
+    image: 'https://cdn.dribbble.com/userupload/47156033/file/a352e4430a36f81d71d082844f9a67d2.png?resize=1600x900&vertical=center',
+    summary: 'A clean, structured app workspace design built for clarity and scalability.',
+    year: '2026',
+    role: 'UI/UX Designer',
+    description: `<style>
+  .aw {
+    font-family: inherit;
+    line-height: 1.6;
+    color: #4E4E4E;
+    --aw-text: #4E4E4E;
+    --aw-muted: #6b7280;
+    --aw-border: #ececf2;
+    --aw-card-bg: #ffffff;
+    --aw-radius: 18px;
+    --aw-max-wide: 1024px;
+    --aw-max-content: 752px;
+  }
+
+  .dark .aw {
+    color: #d1d5db;
+    --aw-text: #d1d5db;
+    --aw-muted: #9ca3af;
+    --aw-border: #374151;
+    --aw-card-bg: #1f2937;
+  }
+
+  .aw * { box-sizing: border-box; }
+
+  .aw .aw-showcase {
+    display: grid;
+    gap: 36px;
+    width: 100%;
+  }
+
+  .aw .aw-media {
+    width: min(100%, var(--aw-max-content));
+    margin: 0 auto;
+  }
+
+  .aw .aw-media--wide {
+    width: min(100%, var(--aw-max-wide));
+  }
+
+  .aw .aw-media img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: contain;
+  }
+
+  .aw .aw-spacer {
+    height: 12px;
+  }
+
+  .aw .aw-card {
+    width: min(100%, var(--aw-max-content));
+    margin: 12px auto 0;
+    padding: 32px;
+    border: 1px solid var(--aw-border);
+    border-radius: var(--aw-radius);
+    background: var(--aw-card-bg);
+  }
+
+  .aw .aw-headline {
+    margin: 0 0 8px;
+    width: min(100%, var(--aw-max-content));
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    color: var(--aw-text);
+    font-weight: 700;
+  }
+
+  .aw .aw-card h1 {
+    margin: 0;
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.15;
+    letter-spacing: -0.04em;
+    color: var(--aw-text);
+  }
+
+  .aw .aw-card p {
+    margin: 16px 0 0;
+    color: var(--aw-muted);
+    font-size: 18px;
+  }
+
+  .aw .aw-card a {
+    color: var(--aw-text);
+    text-decoration: none;
+    border-bottom: 2px solid #ea64d9;
+    overflow-wrap: anywhere;
+    transition: opacity 0.2s ease;
+  }
+
+  .aw .aw-card a:hover {
+    opacity: 0.72;
+  }
+
+  @media (max-width: 760px) {
+    .aw .aw-showcase {
+      gap: 24px;
+    }
+
+    .aw .aw-card {
+      padding: 24px;
+    }
+  }
+</style>
+
+<div class="aw">
+  <section class="aw-showcase">
+    <h1 class="aw-headline">Design Improvements</h1>
+
+    <figure class="aw-media aw-media--wide">
+      <img src="https://cdn.dribbble.com/userupload/47156033/file/a352e4430a36f81d71d082844f9a67d2.png?resize=1600x900&vertical=center" alt="App workspace hero preview" loading="lazy" />
+    </figure>
+
+    <div class="aw-spacer"></div>
+
+    <figure class="aw-media">
+      <img src="https://cdn.dribbble.com/userupload/47156030/file/3995ef206c1ba8232810651cbbf474e5.png?resize=1504x423&vertical=center" alt="App workspace section divider one" loading="lazy" />
+    </figure>
+
+    <figure class="aw-media">
+      <img src="https://cdn.dribbble.com/userupload/47156031/file/57564531db8519adb1d8b4a039853f0d.png?resize=1504x472&vertical=center" alt="App workspace section divider two" loading="lazy" />
+    </figure>
+
+    <figure class="aw-media">
+      <img src="https://cdn.dribbble.com/userupload/47156036/file/c23917acfdb0ca0c9ddcc45fd6b7af1b.png?resize=1504x1350&vertical=center" alt="App workspace screen preview one" loading="lazy" />
+    </figure>
+
+    <figure class="aw-media">
+      <img src="https://cdn.dribbble.com/userupload/47156041/file/330001baff36eec2a037de255f51abe1.png?resize=1504x3449&vertical=center" alt="App workspace long screen flow" loading="lazy" />
+    </figure>
+
+    <figure class="aw-media">
+      <img src="https://cdn.dribbble.com/userupload/47156039/file/106f4f76401b561f7705f4f8a3e5ebb0.png?resize=1504x1968&vertical=center" alt="App workspace screen preview two" loading="lazy" />
+    </figure>
+
+    <figure class="aw-media">
+      <img src="https://cdn.dribbble.com/userupload/47156040/file/586d8d9b9b75e19a7607bbb129da2680.png?resize=1504x1623&vertical=center" alt="App workspace screen preview three" loading="lazy" />
+    </figure>
+
+    <figure class="aw-media">
+      <img src="https://cdn.dribbble.com/userupload/47156034/file/0dc9d096d86f84b67ba8ee67c6c1891d.png?resize=1504x1541&vertical=center" alt="App workspace screen preview four" loading="lazy" />
+    </figure>
+
+    <figure class="aw-media">
+      <img src="https://cdn.dribbble.com/userupload/47156037/file/418ae66c56df134738c92d44d65d33ba.png?resize=1504x2630&vertical=center" alt="App workspace tall screen preview" loading="lazy" />
+    </figure>
+
+    <figure class="aw-media">
+      <img src="https://cdn.dribbble.com/userupload/47156038/file/a97d6ebf9918d3c638e300edfb73efdb.png?resize=1504x1629&vertical=center" alt="App workspace screen preview five" loading="lazy" />
+    </figure>
+
+    <figure class="aw-media">
+      <img src="https://cdn.dribbble.com/userupload/47156035/file/b24c2c8f5740d0bf3af2c852505eb781.png?resize=1504x1386&vertical=center" alt="App workspace screen preview six" loading="lazy" />
+    </figure>
+
+    <figure class="aw-media">
+      <img src="https://cdn.dribbble.com/userupload/47156032/file/79b89b6f4040b38717cef17d57ac3716.png?resize=1504x505&vertical=center" alt="App workspace closing visual" loading="lazy" />
+    </figure>
+
+    <section class="aw-card">
+      <h1>App Workspace</h1>
+      <p>
+        View the working design file in Figma:
+        <a href="https://www.figma.com/design/QqGDuArtTu2g4gPVtUsL3R/Test-Assignment?node-id=0-1&t=wjnKHd27lyZb5SlA-1" target="_blank" rel="noopener noreferrer">
+          Open Figma workspace
+        </a>
+      </p>
+    </section>
+  </section>
+</div>`,
+    link: '',
+  },
+  {
+    slug: 'remote-control-design',
+    title: 'Remote Control Design',
+    category: 'Project',
+    tags: ['Product Design', 'Concept', 'Hardware UI'],
+    image: 'https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/9315aa241631277.695cc3c087dbf.png',
+    summary: 'Exploring the evolution of remote control design from button-heavy layouts to modern, intelligent touchscreen interfaces.',
+    year: '2025',
+    role: 'UI/UX Designer',
+    description: `<style>
+  .rc {
+    font-family: inherit;
+    line-height: 1.6;
+    color: #4E4E4E;
+    --rc-text: #4E4E4E;
+    --rc-muted: #6b7280;
+    --rc-accent: #0057ff;
+    --rc-border: #eee;
+    --rc-radius: 16px;
+  }
+
+  .dark .rc {
+    color: #d1d5db;
+    --rc-text: #d1d5db;
+    --rc-muted: #9ca3af;
+    --rc-border: #374151;
+  }
+
+  .rc * { box-sizing: border-box; }
+
+  .rc .rc-container {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 0 60px;
+  }
+
+  .rc h1 {
+    font-size: clamp(28px, 5vw, 44px);
+    margin: 0 0 20px;
+    color: var(--rc-text);
+    letter-spacing: -0.02em;
+  }
+
+  .rc h2 {
+    font-size: clamp(20px, 3vw, 28px);
+    margin: 0 0 10px;
+    color: var(--rc-text);
+    letter-spacing: -0.01em;
+  }
+
+  .rc p {
+    font-size: 18px;
+    color: var(--rc-muted);
+    margin: 0 0 20px;
+  }
+
+  .rc .rc-lead {
+    font-size: clamp(18px, 2.5vw, 22px);
+    color: var(--rc-muted);
+    margin-bottom: 40px;
+  }
+
+  .rc .rc-image {
+    margin: 50px 0;
+  }
+
+  .rc .rc-image img {
+    width: 100%;
+    border-radius: var(--rc-radius);
+    display: block;
+  }
+
+  .rc ul {
+    padding-left: 20px;
+    color: var(--rc-muted);
+    font-size: 18px;
+    margin: 0 0 20px;
+  }
+
+  .rc li {
+    margin-bottom: 10px;
+  }
+
+  .rc .rc-section {
+    margin-top: 60px;
+  }
+
+  .rc .rc-download {
+    margin-top: 80px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rc-border);
+  }
+
+  .rc .rc-download a {
+    color: var(--rc-accent);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .rc .rc-download a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .rc p, .rc ul {
+      font-size: 16px;
+    }
+  }
+</style>
+
+<div class="rc">
+  <div class="rc-container">
+
+    <h1>Remote Control Design (Concept)</h1>
+
+    <div class="rc-image">
+      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/9315aa241631277.695cc3c087dbf.png" alt="Remote control evolution design" loading="lazy" />
+    </div>
+
+    <p class="rc-lead">
+      This project explores the evolution of remote control design, transitioning from traditional button-heavy layouts to modern, intelligent interfaces.
+    </p>
+
+    <div class="rc-section">
+      <h2>Smart Remote with a Screen</h2>
+
+      <p>
+        The final concept introduces a touchscreen interface combined with minimal physical controls,
+        creating a more adaptive and user-focused experience.
+      </p>
+
+      <p>
+        Instead of fixed buttons, the interface becomes dynamic—allowing users to personalize
+        controls based on context and usage.
+      </p>
+
+      <ul>
+        <li>Quick-access shortcuts for streaming platforms</li>
+        <li>Essential physical controls (volume, playback, voice)</li>
+        <li>Integrated clock and contextual information display</li>
+      </ul>
+    </div>
+
+    <div class="rc-image">
+      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/7dc8cc241631277.695cc3c08904d.png" alt="Smart remote interface" loading="lazy" />
+    </div>
+
+    <div class="rc-section">
+      <h2>Impact</h2>
+
+      <p>
+        This evolution represents a shift from tool-driven design to a more intuitive,
+        experience-driven approach. By blending hardware and software, the remote becomes
+        more than a controller—it becomes an interface for interaction.
+      </p>
+    </div>
+
+    <div class="rc-image">
+      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/7f2d35241631277.695cc3c0884e0.png" alt="Remote UI concept" loading="lazy" />
+    </div>
+
+    <div class="rc-image">
+      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/9e8666241631277.695cc3c088a26.png" alt="Remote UI variation" loading="lazy" />
+    </div>
+
+    <div class="rc-download">
+      <p>Download high-resolution screens (4K):</p>
+      <a href="https://drive.google.com/drive/folders/1-8ligSMkWF_3HINeeVOAzp5IqK3pld86?usp=drive_link" target="_blank" rel="noopener noreferrer">
+        View Files →
+      </a>
+    </div>
+
+  </div>
+</div>`,
     link: '',
   },
 

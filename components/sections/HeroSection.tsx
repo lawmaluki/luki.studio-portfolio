@@ -17,7 +17,7 @@ export const HeroSection: React.FC = () => {
     };
 
     return (
-        <section className="mx-auto max-w-xl px-6 py-8 md:py-12">
+        <section className="mx-auto max-w-xl px-6 pt-8 pb-2 md:pt-12 md:pb-4">
             {/* — Block 1: headline + CTAs — */}
             <div className="mb-4">
                 <h1 className="mb-5 max-w-xl text-4xl font-bold leading-tight tracking-tight text-foreground md:text-5xl">
@@ -35,7 +35,7 @@ export const HeroSection: React.FC = () => {
                         href={SCHEDULE_URL}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 rounded-md border border-foreground bg-background px-4 py-2 font-mono text-sm text-foreground transition-colors hover:bg-foreground hover:text-background"
+                        className="inline-flex items-center gap-2 rounded-md border border-[#D9D9D9] bg-background px-4 py-2 font-mono text-sm text-foreground transition-colors hover:bg-foreground hover:text-background dark:border-[#374151]"
                     >
                         Schedule Call
                         <ArrowUpRight className="h-4 w-4" />
@@ -45,7 +45,7 @@ export const HeroSection: React.FC = () => {
                     <button
                         type="button"
                         onClick={copyEmail}
-                        className="inline-flex items-center gap-2 rounded-md border border-foreground bg-background px-4 py-2 font-mono text-sm text-foreground transition-colors hover:bg-foreground hover:text-background"
+                        className="inline-flex items-center gap-2 rounded-md border border-[#D9D9D9] bg-background px-4 py-2 font-mono text-sm text-foreground transition-colors hover:bg-foreground hover:text-background dark:border-[#374151]"
                     >
                         <Plus className="h-3.5 w-3.5" />
                         {copied ? 'Copied!' : 'Copy Email'}

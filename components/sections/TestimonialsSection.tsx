@@ -1,32 +1,19 @@
 'use client';
 
-import { useEffect, useRef, useState, useCallback } from 'react';
+import { useState } from 'react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { testimonials } from '@/config';
 
-const AUTO_SCROLL_INTERVAL = 4000;
-
 export const TestimonialsSection: React.FC = () => {
     const [current, setCurrent] = useState(0);
-    const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-    const goTo = useCallback((index: number) => {
-        setCurrent((index + testimonials.length) % testimonials.length);
-    }, []);
-
-    const prev = useCallback(() => goTo(current - 1), [current, goTo]);
-    const next = useCallback(() => goTo(current + 1), [current, goTo]);
-
-    // Auto-scroll
-    useEffect(() => {
-        timerRef.current = setTimeout(next, AUTO_SCROLL_INTERVAL);
-        return () => { if (timerRef.current) clearTimeout(timerRef.current); };
-    }, [next]);
+    const prev = () => setCurrent((current - 1 + testimonials.length) % testimonials.length);
+    const next = () => setCurrent((current + 1) % testimonials.length);
 
     const t = testimonials[current];
 
     return (
-        <section className = "mx-auto max-w-xl px-6 py-8 md:py-12" >
+        <section className="mx-auto max-w-xl px-6 pt-2 pb-8 md:pt-4 md:pb-12">
             {/* Header row */}
             <div className="mb-6 flex items-center justify-between">
                 <h2 className="text-2xl font-bold tracking-tight text-foreground">

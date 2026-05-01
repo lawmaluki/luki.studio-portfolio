@@ -80,7 +80,7 @@ const RootLayout = ({
             gtag('config', 'G-3ZZLHRNHSM');
           `}
         </Script>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           <ToastContainer position="top-right" autoClose={3000} />
           {children}
         </ThemeProvider>

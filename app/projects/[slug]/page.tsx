@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { ArrowLeft, ExternalLink } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import { projects } from '@/config';
 import { MainLayout } from '@/components/layouts';
@@ -43,18 +43,6 @@ export default async function ProjectPage({ params }: Props) {
                     dangerouslySetInnerHTML={{ __html: project.description }}
                 />
 
-                {/* External link */}
-                {project.link && (
-                    <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 rounded-lg bg-foreground px-5 py-2.5 font-mono text-sm text-background transition-opacity hover:opacity-80"
-                    >
-                        View Project
-                        <ExternalLink className="h-3.5 w-3.5" />
-                    </a>
-                )}
             </article>
         </MainLayout>
     );

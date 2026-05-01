@@ -144,7 +144,7 @@ export const ProjectsSection: React.FC = () => {
     const readingItems = projects.filter((p) => p.category === 'Reading');
 
     return (
-        <section className="w-full px-6 py-8 md:py-12">
+        <section className="w-full px-6 pt-2 pb-8 md:pt-4 md:pb-12">
             <section className="container mx-auto">
                 {/* Category tabs */}
                 <div className="mb-8 flex flex-wrap gap-2">
@@ -181,7 +181,7 @@ export const ProjectsSection: React.FC = () => {
                                     <Link
                                         key={project.slug}
                                         href={`/projects/${project.slug}`}
-                                        className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-muted transition-colors hover:border-foreground/30"
+                                        className="group flex flex-col overflow-hidden rounded-2xl border border-[#D9D9D9] bg-muted transition-colors hover:border-foreground/30 dark:border-[#374151]"
                                     >
                                         <div className="relative aspect-video w-full overflow-hidden bg-muted">
                                             <Image
