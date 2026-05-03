@@ -176,13 +176,13 @@ export const ProjectsSection: React.FC = () => {
                     <div className="max-w-2xl py-6">
                         <h2 className="text-2xl font-bold mb-6 text-foreground">DopenS: Design Open Source</h2>
                         <p className="text-muted-foreground mb-4 leading-relaxed">
-                            Over time, I've come to realize that design shouldn't live in isolation. A lot of the work we create ends up hidden in files, never really reaching the people who could learn from it, build on it, or be inspired by it.
+                            Over time, I&apos;ve come to realize that design shouldn&apos;t live in isolation. A lot of the work we create ends up hidden in files, never really reaching the people who could learn from it, build on it, or be inspired by it.
                         </p>
                         <p className="text-muted-foreground mb-4 leading-relaxed">
-                            That's why I started publishing some of my past projects on the Figma Community; not just as finished pieces, but as open resources. The platform itself is built around sharing UI kits, templates, and design systems that others can duplicate, remix, and learn from.
+                            That&apos;s why I started publishing some of my past projects on the Figma Community — not just as finished pieces, but as open resources. The platform itself is built around sharing UI kits, templates, and design systems that others can duplicate, remix, and learn from.
                         </p>
                         <p className="text-muted-foreground mb-4 leading-relaxed">
-                            For me, this is about contributing back to a space that has quietly shaped how many of us design. It's also about making my work more useful beyond its original context, turning it into something others can reuse, question, and improve.
+                            For me, this is about contributing back to a space that has quietly shaped how many of us design. It&apos;s also about making my work more useful beyond its original context — turning it into something others can reuse, question, and improve.
                         </p>
                         <p className="text-muted-foreground mb-8 leading-relaxed">
                             DopenS (Design Open Source) is my way of documenting that shift: moving isolated design files in my computer to public.
