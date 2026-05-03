@@ -1,11 +1,10 @@
 import "./globals.css"
-import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer } from 'react-toastify';
 import type { Metadata } from "next"
 import { DM_Sans } from "next/font/google";
 import Script from "next/script";
 import { site } from "@/config";
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import { ToastProvider } from "@/components/providers/toast-provider";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -81,7 +80,7 @@ const RootLayout = ({
           `}
         </Script>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
-          <ToastContainer position="top-right" autoClose={3000} />
+          <ToastProvider />
           {children}
         </ThemeProvider>
       </body>

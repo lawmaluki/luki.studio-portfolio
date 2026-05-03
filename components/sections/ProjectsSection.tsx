@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
-import { Bookmark, ArrowUpRight, X } from 'lucide-react';
+import { Diamond, Zap, Newspaper, ArrowUpRight, X } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { projects, type ProjectCategory, type Project } from '@/config';
@@ -161,7 +161,7 @@ export const ProjectsSection: React.FC = () => {
                                         : 'bg-gray-100 text-muted-foreground hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700'
                                 }`}
                             >
-                                <Bookmark className="h-3.5 w-3.5" />
+                                {cat === 'Spotlight' ? <Zap className="h-3.5 w-3.5" /> : cat === 'Reading' ? <Newspaper className="h-3.5 w-3.5" /> : <Diamond className="h-3.5 w-3.5" />}
                                 {cat}
                             </button>
                         );
@@ -170,6 +170,33 @@ export const ProjectsSection: React.FC = () => {
 
                 {/* Reading → Info Diet view */}
                 {active === 'Reading' && <InfoDietView items={readingItems} />}
+
+                {/* DopenS → about section */}
+                {active === 'DopenS' && (
+                    <div className="max-w-2xl py-6">
+                        <h2 className="text-2xl font-bold mb-6 text-foreground">DopenS: Design Open Source</h2>
+                        <p className="text-muted-foreground mb-4 leading-relaxed">
+                            Over time, I've come to realize that design shouldn't live in isolation. A lot of the work we create ends up hidden in files, never really reaching the people who could learn from it, build on it, or be inspired by it.
+                        </p>
+                        <p className="text-muted-foreground mb-4 leading-relaxed">
+                            That's why I started publishing some of my past projects on the Figma Community; not just as finished pieces, but as open resources. The platform itself is built around sharing UI kits, templates, and design systems that others can duplicate, remix, and learn from.
+                        </p>
+                        <p className="text-muted-foreground mb-4 leading-relaxed">
+                            For me, this is about contributing back to a space that has quietly shaped how many of us design. It's also about making my work more useful beyond its original context, turning it into something others can reuse, question, and improve.
+                        </p>
+                        <p className="text-muted-foreground mb-8 leading-relaxed">
+                            DopenS (Design Open Source) is my way of documenting that shift: moving isolated design files in my computer to public.
+                        </p>
+                        <a
+                            href="https://www.figma.com/@lawmaluki"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block rounded-xl bg-orange-500 px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-orange-600"
+                        >
+                            Check the Files
+                        </a>
+                    </div>
+                )}
 
                 {/* Other categories */}
                 {active !== 'Reading' && (

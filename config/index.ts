@@ -1967,7 +1967,7 @@ export const testimonials: Testimonial[] = [
   {
     id: 3,
     quote: "What sets Lawrence apart is how he thinks in systems rather than isolated screens. Every component, interaction, and flow is designed to scale and remain consistent over time. He brings a level of structure that makes collaboration with developers smooth and predictable. The end result is always cohesive and built to last.",
-    name: "Samuel Kariuki",
+    name: "Samuel Mwangi",
     company: "BitNorm",
   },
   {
