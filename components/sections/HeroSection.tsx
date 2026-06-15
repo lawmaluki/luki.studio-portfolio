@@ -64,15 +64,14 @@ export const HeroSection: React.FC = () => {
             <div className="max-w-xl">
                 <p className="mb-4 text-base text-foreground">
                     <strong>I design and build products that solves real problems.</strong>
-                    {' '} Over the last 6+ years, I've worked with startups, nonprofits, 
-                    community platforms, civic organizations, event platforms, healthcare products, 
-                    and global technology teams to design experiences that are intuitive, scalable, 
+                    {' '} Over the last 6+ years, I&apos;ve worked with startups, nonprofits,
+                    community platforms, civic organizations, event platforms, healthcare products,
+                    and global technology teams to design experiences that are intuitive, scalable,
                     and impactful.
                 </p>
 
                 <p className="mb-8 text-base text-muted-foreground">
-
-I don't just design screens; I design systems, workflows, and experiences that help products grow.
+                    I don&apos;t just design screens; I design systems, workflows, and experiences that help products grow.
                 </p>
 
                 <div className="flex flex-wrap gap-3">
