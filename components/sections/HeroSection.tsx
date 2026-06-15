@@ -21,12 +21,11 @@ export const HeroSection: React.FC = () => {
             {/* — Block 1: headline + CTAs — */}
             <div className="mb-4">
                 <h1 className="mb-5 max-w-xl text-4xl font-bold leading-tight tracking-tight text-foreground md:text-5xl">
-                    Design Partner For Ambitious Tech Startups and Founders
+                    Design Partner for Mission-Driven Products, Startups & Communities
                 </h1>
 
                 <p className="mb-7 text-base text-muted-foreground">
-                    You&rsquo;ve got the idea. Great.
-                    Leave the rest to me!
+                 Build products that people love using and teams love building.
                 </p>
 
                 <div className="flex flex-wrap items-center gap-3">
@@ -64,16 +63,16 @@ export const HeroSection: React.FC = () => {
             {/* — Block 2: about + profile links — */}
             <div className="max-w-xl">
                 <p className="mb-4 text-base text-foreground">
-                    <strong>I design and build products end-to-end.</strong>
-                    {' '}Over the past 5 years, I&rsquo;ve worked across Peak, IBM&rsquo;s Weather Channel,
-                    YC-backed Dojah, Antler-backed Souk, and Techstars-backed Voyance.
-                    In my most recent roles, I didn&rsquo;t just design&mdash;I shipped the code too.
+                    <strong>I design and build products that solves real problems.</strong>
+                    {' '} Over the last 6+ years, I've worked with startups, nonprofits, 
+                    community platforms, civic organizations, event platforms, healthcare products, 
+                    and global technology teams to design experiences that are intuitive, scalable, 
+                    and impactful.
                 </p>
 
                 <p className="mb-8 text-base text-muted-foreground">
-                    I come from a design-first perspective, which most engineers don&rsquo;t. That changes
-                    how I think, build, and prioritize. With AI agents in my workflow, I can go from
-                    Figma to production, shipping real products for real users, fast.
+
+I don't just design screens; I design systems, workflows, and experiences that help products grow.
                 </p>
 
                 <div className="flex flex-wrap gap-3">
