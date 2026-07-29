@@ -561,11 +561,36 @@ export const projects: Project[] = [
   .ak li p.spacer { display: none; }
   .ak strong { font-weight: 700; color: var(--deep); }
   .ak em, .ak i { color: var(--deep); }
+  .ak .carousel { position: relative; width: min(752px, 100%); margin: 48px auto; }
+  .ak .carousel input[type="radio"] { display: none; }
+  .ak .carousel-slides { position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 16/9; box-shadow: 0 4px 24px rgba(13,12,34,0.08), 0 24px 64px rgba(13,12,34,0.06); }
+  .ak .carousel-slide { position: absolute; inset: 0; opacity: 0; transition: opacity 0.3s ease; }
+  .ak .carousel-slide img { width: 100%; height: 100%; object-fit: cover; }
+  .ak .carousel-thumbs { display: flex; gap: 8px; justify-content: center; margin-top: 12px; flex-wrap: wrap; }
+  .ak .carousel-thumbs label { width: clamp(56px, 15vw, 80px); height: clamp(35px, 9.375vw, 50px); border-radius: 6px; overflow: hidden; border: 2px solid transparent; opacity: 0.5; cursor: pointer; transition: opacity 0.2s, border-color 0.2s; display: block; flex-shrink: 0; }
+  .ak .carousel-thumbs label img { width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none; }
+  #ak-c1-1:checked ~ .carousel-slides .carousel-slide:nth-child(1) { opacity: 1; }
+  #ak-c1-2:checked ~ .carousel-slides .carousel-slide:nth-child(2) { opacity: 1; }
+  #ak-c1-3:checked ~ .carousel-slides .carousel-slide:nth-child(3) { opacity: 1; }
+  #ak-c1-1:checked ~ .carousel-thumbs label:nth-child(1) { border-color: var(--accent); opacity: 1; }
+  #ak-c1-2:checked ~ .carousel-thumbs label:nth-child(2) { border-color: var(--accent); opacity: 1; }
+  #ak-c1-3:checked ~ .carousel-thumbs label:nth-child(3) { border-color: var(--accent); opacity: 1; }
+  #ak-c2-1:checked ~ .carousel-slides .carousel-slide:nth-child(1) { opacity: 1; }
+  #ak-c2-2:checked ~ .carousel-slides .carousel-slide:nth-child(2) { opacity: 1; }
+  #ak-c2-3:checked ~ .carousel-slides .carousel-slide:nth-child(3) { opacity: 1; }
+  #ak-c2-4:checked ~ .carousel-slides .carousel-slide:nth-child(4) { opacity: 1; }
+  #ak-c2-5:checked ~ .carousel-slides .carousel-slide:nth-child(5) { opacity: 1; }
+  #ak-c2-1:checked ~ .carousel-thumbs label:nth-child(1) { border-color: var(--accent); opacity: 1; }
+  #ak-c2-2:checked ~ .carousel-thumbs label:nth-child(2) { border-color: var(--accent); opacity: 1; }
+  #ak-c2-3:checked ~ .carousel-thumbs label:nth-child(3) { border-color: var(--accent); opacity: 1; }
+  #ak-c2-4:checked ~ .carousel-thumbs label:nth-child(4) { border-color: var(--accent); opacity: 1; }
+  #ak-c2-5:checked ~ .carousel-thumbs label:nth-child(5) { border-color: var(--accent); opacity: 1; }
   .dark .ak { color: #d1d5db; --deep: #f3f4f6; }
   .dark .ak p, .dark .ak ul, .dark .ak ol { color: #9ca3af; }
   .dark .ak h1, .dark .ak h2, .dark .ak strong { color: #f3f4f6; }
   .dark .ak em, .dark .ak i { color: #e5e7eb; }
   .dark .ak .shot { box-shadow: 0 4px 24px rgba(0,0,0,0.3), 0 24px 64px rgba(0,0,0,0.2); }
+  .dark .ak .carousel-slides { box-shadow: 0 4px 24px rgba(0,0,0,0.3), 0 24px 64px rgba(0,0,0,0.2); }
 </style>
 
 <div class="ak">
@@ -617,11 +642,21 @@ export const projects: Project[] = [
   <p><em><i>Existing User Pain Points</i></em></p>
 </section>
 
-<figure class="shot"><a href="https://cdn.dribbble.com/userupload/48482782/file/502e7d17178bc19085f5a67f7db29d3b.png?resize=752x&amp;vertical=center" target="_blank" rel="noopener noreferrer"><img src="https://cdn.dribbble.com/userupload/48482782/file/502e7d17178bc19085f5a67f7db29d3b.png?resize=752x&amp;vertical=center" alt="User pain points"></a></figure>
-
-<figure class="shot"><a href="https://cdn.dribbble.com/userupload/48482783/file/9539f67d3072cc1c69c6f646d69bfb0a.png" target="_blank" rel="noopener noreferrer"><img src="https://cdn.dribbble.com/userupload/48482783/file/9539f67d3072cc1c69c6f646d69bfb0a.png" alt="Research insight"></a></figure>
-
-<figure class="shot"><a href="https://cdn.dribbble.com/userupload/48482784/file/8d0ae8f69138e15634e3834704d53589.png" target="_blank" rel="noopener noreferrer"><img src="https://cdn.dribbble.com/userupload/48482784/file/8d0ae8f69138e15634e3834704d53589.png" alt="Research data"></a></figure>
+<div class="carousel">
+  <input type="radio" id="ak-c1-1" name="ak-c1" checked>
+  <input type="radio" id="ak-c1-2" name="ak-c1">
+  <input type="radio" id="ak-c1-3" name="ak-c1">
+  <div class="carousel-slides">
+    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48482782/file/502e7d17178bc19085f5a67f7db29d3b.png?resize=752x&amp;vertical=center" alt="User pain points"></div>
+    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48482783/file/9539f67d3072cc1c69c6f646d69bfb0a.png" alt="Research insight"></div>
+    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48482784/file/8d0ae8f69138e15634e3834704d53589.png" alt="Research data"></div>
+  </div>
+  <div class="carousel-thumbs">
+    <label for="ak-c1-1"><img src="https://cdn.dribbble.com/userupload/48482782/file/502e7d17178bc19085f5a67f7db29d3b.png?resize=752x&amp;vertical=center" alt=""></label>
+    <label for="ak-c1-2"><img src="https://cdn.dribbble.com/userupload/48482783/file/9539f67d3072cc1c69c6f646d69bfb0a.png" alt=""></label>
+    <label for="ak-c1-3"><img src="https://cdn.dribbble.com/userupload/48482784/file/8d0ae8f69138e15634e3834704d53589.png" alt=""></label>
+  </div>
+</div>
 
 <section class="text-block">
   <p>During the research phase, I analyzed how major social platforms handle discussions:</p>
@@ -1098,15 +1133,27 @@ export const projects: Project[] = [
   <p>Each iteration brought the interface closer to the product vision.</p>
 </section>
 
-<figure class="shot"><a href="https://cdn.dribbble.com/userupload/48493772/file/c04f4c07666b7798cc1cc68c09969c80.png?resize=752x&amp;vertical=center" target="_blank" rel="noopener noreferrer"><img src="https://cdn.dribbble.com/userupload/48493772/file/c04f4c07666b7798cc1cc68c09969c80.png?resize=752x&amp;vertical=center" alt="Design exploration screens"></a></figure>
-
-<figure class="shot"><a href="https://cdn.dribbble.com/userupload/48493766/file/fd4f80c190b5ba4f8a723b151b2744f4.png?resize=752x&amp;vertical=center" target="_blank" rel="noopener noreferrer"><img src="https://cdn.dribbble.com/userupload/48493766/file/fd4f80c190b5ba4f8a723b151b2744f4.png?resize=752x&amp;vertical=center" alt="UI screens"></a></figure>
-
-<figure class="shot"><a href="https://cdn.dribbble.com/userupload/48493765/file/2eaf794aa57df75c1322611f1d51357c.png?resize=752x&amp;vertical=center" target="_blank" rel="noopener noreferrer"><img src="https://cdn.dribbble.com/userupload/48493765/file/2eaf794aa57df75c1322611f1d51357c.png?resize=752x&amp;vertical=center" alt="Design screens"></a></figure>
-
-<figure class="shot"><a href="https://cdn.dribbble.com/userupload/48493769/file/a7f87ad97c6e6fd206d3abad1b9d8b59.png?resize=752x514&amp;vertical=center" target="_blank" rel="noopener noreferrer"><img src="https://cdn.dribbble.com/userupload/48493769/file/a7f87ad97c6e6fd206d3abad1b9d8b59.png?resize=752x514&amp;vertical=center" alt="Akropolis screens"></a></figure>
-
-<figure class="shot"><a href="https://cdn.dribbble.com/userupload/48493763/file/5b30e973fb7ac2e89a95988666de568c.png?resize=752x&amp;vertical=center" target="_blank" rel="noopener noreferrer"><img src="https://cdn.dribbble.com/userupload/48493763/file/5b30e973fb7ac2e89a95988666de568c.png?resize=752x&amp;vertical=center" alt="Final UI screens"></a></figure>
+<div class="carousel">
+  <input type="radio" id="ak-c2-1" name="ak-c2" checked>
+  <input type="radio" id="ak-c2-2" name="ak-c2">
+  <input type="radio" id="ak-c2-3" name="ak-c2">
+  <input type="radio" id="ak-c2-4" name="ak-c2">
+  <input type="radio" id="ak-c2-5" name="ak-c2">
+  <div class="carousel-slides">
+    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48493772/file/c04f4c07666b7798cc1cc68c09969c80.png?resize=752x&amp;vertical=center" alt="Design exploration screens"></div>
+    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48493766/file/fd4f80c190b5ba4f8a723b151b2744f4.png?resize=752x&amp;vertical=center" alt="UI screens"></div>
+    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48493765/file/2eaf794aa57df75c1322611f1d51357c.png?resize=752x&amp;vertical=center" alt="Design screens"></div>
+    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48493769/file/a7f87ad97c6e6fd206d3abad1b9d8b59.png?resize=752x514&amp;vertical=center" alt="Akropolis screens"></div>
+    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48493763/file/5b30e973fb7ac2e89a95988666de568c.png?resize=752x&amp;vertical=center" alt="Final UI screens"></div>
+  </div>
+  <div class="carousel-thumbs">
+    <label for="ak-c2-1"><img src="https://cdn.dribbble.com/userupload/48493772/file/c04f4c07666b7798cc1cc68c09969c80.png?resize=752x&amp;vertical=center" alt=""></label>
+    <label for="ak-c2-2"><img src="https://cdn.dribbble.com/userupload/48493766/file/fd4f80c190b5ba4f8a723b151b2744f4.png?resize=752x&amp;vertical=center" alt=""></label>
+    <label for="ak-c2-3"><img src="https://cdn.dribbble.com/userupload/48493765/file/2eaf794aa57df75c1322611f1d51357c.png?resize=752x&amp;vertical=center" alt=""></label>
+    <label for="ak-c2-4"><img src="https://cdn.dribbble.com/userupload/48493769/file/a7f87ad97c6e6fd206d3abad1b9d8b59.png?resize=752x514&amp;vertical=center" alt=""></label>
+    <label for="ak-c2-5"><img src="https://cdn.dribbble.com/userupload/48493763/file/5b30e973fb7ac2e89a95988666de568c.png?resize=752x&amp;vertical=center" alt=""></label>
+  </div>
+</div>
 
 <section class="text-block">
   <p><strong>Video Recording</strong></p>
@@ -1770,6 +1817,35 @@ export const projects: Project[] = [
   .dark .lx .metric { background: #1f2937; border-color: #374151; }
   .dark .lx .callout { background: #1f2937; }
   .dark .lx .pill-list li { background: #374151; color: #d1d5db; }
+  .lx .carousel { position: relative; width: min(752px, 100%); margin-left: auto; margin-right: auto; }
+  .lx .carousel input[type="radio"] { display: none; }
+  .lx .carousel-slides { position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 16/9; box-shadow: 0 4px 24px rgba(17,24,20,0.1), 0 24px 64px rgba(17,24,20,0.08); }
+  .lx .carousel-slide { position: absolute; inset: 0; opacity: 0; transition: opacity 0.3s ease; }
+  .lx .carousel-slide img { width: 100%; height: 100%; object-fit: cover; }
+  .lx .carousel-thumbs { display: flex; gap: 8px; justify-content: center; margin-top: 12px; flex-wrap: wrap; }
+  .lx .carousel-thumbs label { width: clamp(56px, 15vw, 80px); height: clamp(35px, 9.375vw, 50px); border-radius: 6px; overflow: hidden; border: 2px solid transparent; opacity: 0.5; cursor: pointer; transition: opacity 0.2s, border-color 0.2s; display: block; flex-shrink: 0; }
+  .lx .carousel-thumbs label img { width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none; }
+  #lx-c1-1:checked ~ .carousel-slides .carousel-slide:nth-child(1) { opacity: 1; }
+  #lx-c1-2:checked ~ .carousel-slides .carousel-slide:nth-child(2) { opacity: 1; }
+  #lx-c1-1:checked ~ .carousel-thumbs label:nth-child(1) { border-color: var(--green); opacity: 1; }
+  #lx-c1-2:checked ~ .carousel-thumbs label:nth-child(2) { border-color: var(--green); opacity: 1; }
+  #lx-c2-1:checked ~ .carousel-slides .carousel-slide:nth-child(1) { opacity: 1; }
+  #lx-c2-2:checked ~ .carousel-slides .carousel-slide:nth-child(2) { opacity: 1; }
+  #lx-c2-1:checked ~ .carousel-thumbs label:nth-child(1) { border-color: var(--green); opacity: 1; }
+  #lx-c2-2:checked ~ .carousel-thumbs label:nth-child(2) { border-color: var(--green); opacity: 1; }
+  #lx-c3-1:checked ~ .carousel-slides .carousel-slide:nth-child(1) { opacity: 1; }
+  #lx-c3-2:checked ~ .carousel-slides .carousel-slide:nth-child(2) { opacity: 1; }
+  #lx-c3-3:checked ~ .carousel-slides .carousel-slide:nth-child(3) { opacity: 1; }
+  #lx-c3-4:checked ~ .carousel-slides .carousel-slide:nth-child(4) { opacity: 1; }
+  #lx-c3-5:checked ~ .carousel-slides .carousel-slide:nth-child(5) { opacity: 1; }
+  #lx-c3-6:checked ~ .carousel-slides .carousel-slide:nth-child(6) { opacity: 1; }
+  #lx-c3-1:checked ~ .carousel-thumbs label:nth-child(1) { border-color: var(--green); opacity: 1; }
+  #lx-c3-2:checked ~ .carousel-thumbs label:nth-child(2) { border-color: var(--green); opacity: 1; }
+  #lx-c3-3:checked ~ .carousel-thumbs label:nth-child(3) { border-color: var(--green); opacity: 1; }
+  #lx-c3-4:checked ~ .carousel-thumbs label:nth-child(4) { border-color: var(--green); opacity: 1; }
+  #lx-c3-5:checked ~ .carousel-thumbs label:nth-child(5) { border-color: var(--green); opacity: 1; }
+  #lx-c3-6:checked ~ .carousel-thumbs label:nth-child(6) { border-color: var(--green); opacity: 1; }
+  .dark .lx .carousel-slides { box-shadow: 0 4px 24px rgba(0,0,0,0.3), 0 24px 64px rgba(0,0,0,0.2); }
 </style>
 
 <div class="lx">
@@ -1810,13 +1886,17 @@ System & UI Design,
     </section>
 
     <section class="image-band">
-      <div class="wrap image-grid">
-        <figure>
-          <img src="https://cdn.dribbble.com/userupload/48415210/file/fa8d09b907576ea0c6ca884337911c26.png?resize=1024x768&amp;vertical=center" alt="LeverageX product screen mockup">
-        </figure>
-        <figure>
-          <img src="https://cdn.dribbble.com/userupload/48415211/file/edeeb0615d488c72cb8c5f3afcb53f44.png?resize=1024x768&amp;vertical=center" alt="LeverageX dashboard concept">
-        </figure>
+      <div class="carousel" style="max-width:752px;margin:0 auto;">
+        <input type="radio" id="lx-c1-1" name="lx-c1" checked>
+        <input type="radio" id="lx-c1-2" name="lx-c1">
+        <div class="carousel-slides">
+          <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48415210/file/fa8d09b907576ea0c6ca884337911c26.png?resize=1024x768&amp;vertical=center" alt="LeverageX product screen mockup"></div>
+          <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48415211/file/edeeb0615d488c72cb8c5f3afcb53f44.png?resize=1024x768&amp;vertical=center" alt="LeverageX dashboard concept"></div>
+        </div>
+        <div class="carousel-thumbs">
+          <label for="lx-c1-1"><img src="https://cdn.dribbble.com/userupload/48415210/file/fa8d09b907576ea0c6ca884337911c26.png?resize=1024x768&amp;vertical=center" alt=""></label>
+          <label for="lx-c1-2"><img src="https://cdn.dribbble.com/userupload/48415211/file/edeeb0615d488c72cb8c5f3afcb53f44.png?resize=1024x768&amp;vertical=center" alt=""></label>
+        </div>
       </div>
     </section>
 
@@ -1870,13 +1950,17 @@ System & UI Design,
           <li>Privacy</li>
         </ul>
       </div>
-      <div class="wrap gallery two" style="margin-top:48px">
-        <figure>
-          <img src="https://cdn.dribbble.com/userupload/48415216/file/74f072b157ac9786f4f08a43bdf665ad.png?resize=1024x559&amp;vertical=center" alt="LeverageX product goal diagram">
-        </figure>
-        <figure>
-          <img src="https://cdn.dribbble.com/userupload/48415209/file/a3870413b6267631b3bebe1369f12949.jpg?resize=1024x603&amp;vertical=center" alt="LeverageX product planning board">
-        </figure>
+      <div class="carousel" style="margin-top:48px">
+        <input type="radio" id="lx-c2-1" name="lx-c2" checked>
+        <input type="radio" id="lx-c2-2" name="lx-c2">
+        <div class="carousel-slides">
+          <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48415216/file/74f072b157ac9786f4f08a43bdf665ad.png?resize=1024x559&amp;vertical=center" alt="LeverageX product goal diagram"></div>
+          <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48415209/file/a3870413b6267631b3bebe1369f12949.jpg?resize=1024x603&amp;vertical=center" alt="LeverageX product planning board"></div>
+        </div>
+        <div class="carousel-thumbs">
+          <label for="lx-c2-1"><img src="https://cdn.dribbble.com/userupload/48415216/file/74f072b157ac9786f4f08a43bdf665ad.png?resize=1024x559&amp;vertical=center" alt=""></label>
+          <label for="lx-c2-2"><img src="https://cdn.dribbble.com/userupload/48415209/file/a3870413b6267631b3bebe1369f12949.jpg?resize=1024x603&amp;vertical=center" alt=""></label>
+        </div>
       </div>
     </section>
 
@@ -2007,25 +2091,29 @@ System & UI Design,
             <li>Repeat</li>
           </ul>
         </div>
-        <div class="gallery two" style="margin-top:48px">
-          <figure>
-            <img src="https://cdn.dribbble.com/userupload/48415221/file/5c5c67154300235fbf22aadc3de81dc6.png?resize=1024x954&amp;vertical=center" alt="App components screen one">
-          </figure>
-          <figure>
-            <img src="https://cdn.dribbble.com/userupload/48415222/file/f811daf963de5b49c40e7c4838cbee78.png?resize=1024x954&amp;vertical=center" alt="App components screen two">
-          </figure>
-          <figure>
-            <img src="https://cdn.dribbble.com/userupload/48415219/file/adea91bc0569262a5d5317430d82a02c.png?resize=1024x768&amp;vertical=center" alt="High fidelity LeverageX screen">
-          </figure>
-          <figure>
-            <img src="https://cdn.dribbble.com/userupload/48415220/file/f7ea3962326d9a79256fa7ac3097cd1a.png?resize=1024x768&amp;vertical=center" alt="High fidelity dashboard screen">
-          </figure>
-          <figure>
-            <img src="https://cdn.dribbble.com/userupload/48415225/file/d0815fec6fd837e955afe354f0a0990f.png?resize=1024x718&amp;vertical=center" alt="UI flow board">
-          </figure>
-          <figure>
-            <img src="https://cdn.dribbble.com/userupload/48415227/file/24deb10cda9bda432dfb0f4000102528.png?resize=1024x718&amp;vertical=center" alt="LeverageX user interface overview">
-          </figure>
+        <div class="carousel" style="margin-top:48px">
+          <input type="radio" id="lx-c3-1" name="lx-c3" checked>
+          <input type="radio" id="lx-c3-2" name="lx-c3">
+          <input type="radio" id="lx-c3-3" name="lx-c3">
+          <input type="radio" id="lx-c3-4" name="lx-c3">
+          <input type="radio" id="lx-c3-5" name="lx-c3">
+          <input type="radio" id="lx-c3-6" name="lx-c3">
+          <div class="carousel-slides">
+            <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48415221/file/5c5c67154300235fbf22aadc3de81dc6.png?resize=1024x954&amp;vertical=center" alt="App components screen one"></div>
+            <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48415222/file/f811daf963de5b49c40e7c4838cbee78.png?resize=1024x954&amp;vertical=center" alt="App components screen two"></div>
+            <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48415219/file/adea91bc0569262a5d5317430d82a02c.png?resize=1024x768&amp;vertical=center" alt="High fidelity LeverageX screen"></div>
+            <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48415220/file/f7ea3962326d9a79256fa7ac3097cd1a.png?resize=1024x768&amp;vertical=center" alt="High fidelity dashboard screen"></div>
+            <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48415225/file/d0815fec6fd837e955afe354f0a0990f.png?resize=1024x718&amp;vertical=center" alt="UI flow board"></div>
+            <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48415227/file/24deb10cda9bda432dfb0f4000102528.png?resize=1024x718&amp;vertical=center" alt="LeverageX user interface overview"></div>
+          </div>
+          <div class="carousel-thumbs">
+            <label for="lx-c3-1"><img src="https://cdn.dribbble.com/userupload/48415221/file/5c5c67154300235fbf22aadc3de81dc6.png?resize=1024x954&amp;vertical=center" alt=""></label>
+            <label for="lx-c3-2"><img src="https://cdn.dribbble.com/userupload/48415222/file/f811daf963de5b49c40e7c4838cbee78.png?resize=1024x954&amp;vertical=center" alt=""></label>
+            <label for="lx-c3-3"><img src="https://cdn.dribbble.com/userupload/48415219/file/adea91bc0569262a5d5317430d82a02c.png?resize=1024x768&amp;vertical=center" alt=""></label>
+            <label for="lx-c3-4"><img src="https://cdn.dribbble.com/userupload/48415220/file/f7ea3962326d9a79256fa7ac3097cd1a.png?resize=1024x768&amp;vertical=center" alt=""></label>
+            <label for="lx-c3-5"><img src="https://cdn.dribbble.com/userupload/48415225/file/d0815fec6fd837e955afe354f0a0990f.png?resize=1024x718&amp;vertical=center" alt=""></label>
+            <label for="lx-c3-6"><img src="https://cdn.dribbble.com/userupload/48415227/file/24deb10cda9bda432dfb0f4000102528.png?resize=1024x718&amp;vertical=center" alt=""></label>
+          </div>
         </div>
       </div>
     </section>
