@@ -3619,6 +3619,10 @@ System & UI Design,
   .mil .carousel-thumbs { display: flex; gap: 8px; justify-content: center; margin-top: 12px; flex-wrap: wrap; }
   .mil .carousel-thumbs label { width: clamp(56px, 15vw, 80px); height: clamp(35px, 9.375vw, 50px); border-radius: 6px; overflow: hidden; border: 2px solid transparent; opacity: 0.5; cursor: pointer; transition: opacity 0.2s, border-color 0.2s; display: block; flex-shrink: 0; }
   .mil .carousel-thumbs label img { width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none; }
+  #mil-c0-1:checked ~ .carousel-slides .carousel-slide:nth-child(1) { opacity: 1; }
+  #mil-c0-2:checked ~ .carousel-slides .carousel-slide:nth-child(2) { opacity: 1; }
+  #mil-c0-1:checked ~ .carousel-thumbs label:nth-child(1) { border-color: var(--accent); opacity: 1; }
+  #mil-c0-2:checked ~ .carousel-thumbs label:nth-child(2) { border-color: var(--accent); opacity: 1; }
   #mil-c1-1:checked ~ .carousel-slides .carousel-slide:nth-child(1) { opacity: 1; }
   #mil-c1-2:checked ~ .carousel-slides .carousel-slide:nth-child(2) { opacity: 1; }
   #mil-c1-3:checked ~ .carousel-slides .carousel-slide:nth-child(3) { opacity: 1; }
@@ -3808,9 +3812,17 @@ System & UI Design,
   <p>The learning journey was intentionally linear during early levels to reduce decision fatigue before gradually introducing more flexibility as learners progressed.</p>
 </section>
 
-<div class="image-grid">
-  <figure><img src="https://cdn.dribbble.com/userupload/48534459/file/6fbf4fa41d6cfbc2494cc5c9071c6c7b.png?resize=752x364&amp;vertical=center" alt="IA diagram 1" loading="lazy"></figure>
-  <figure><img src="https://cdn.dribbble.com/userupload/48534458/file/d8e6f515adfbd4b75ff4548bab72aa35.png?resize=752x364&amp;vertical=center" alt="IA diagram 2" loading="lazy"></figure>
+<div class="carousel">
+  <input type="radio" id="mil-c0-1" name="mil-c0" checked>
+  <input type="radio" id="mil-c0-2" name="mil-c0">
+  <div class="carousel-slides">
+    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534459/file/6fbf4fa41d6cfbc2494cc5c9071c6c7b.png?resize=752x364&amp;vertical=center" alt="IA diagram 1" loading="lazy"></div>
+    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534458/file/d8e6f515adfbd4b75ff4548bab72aa35.png?resize=752x364&amp;vertical=center" alt="IA diagram 2" loading="lazy"></div>
+  </div>
+  <div class="carousel-thumbs">
+    <label for="mil-c0-1"><img src="https://cdn.dribbble.com/userupload/48534459/file/6fbf4fa41d6cfbc2494cc5c9071c6c7b.png?resize=752x364&amp;vertical=center" alt=""></label>
+    <label for="mil-c0-2"><img src="https://cdn.dribbble.com/userupload/48534458/file/d8e6f515adfbd4b75ff4548bab72aa35.png?resize=752x364&amp;vertical=center" alt=""></label>
+  </div>
 </div>
 
 <section class="text-block">
