@@ -3616,34 +3616,35 @@ System & UI Design,
   .mil .carousel-slides { position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 16/9; box-shadow: 0 4px 24px rgba(28,21,16,0.08), 0 24px 64px rgba(28,21,16,0.06); }
   .mil .carousel-slide { position: absolute; inset: 0; opacity: 0; transition: opacity 0.3s ease; }
   .mil .carousel-slide img { width: 100%; height: 100%; object-fit: cover; }
-  .mil .carousel-thumbs { display: flex; gap: 8px; justify-content: center; margin-top: 12px; }
-  .mil .carousel-thumbs label { width: 8px; height: 8px; border-radius: 50%; background: #e5e7eb; cursor: pointer; transition: background 0.2s; display: block; }
+  .mil .carousel-thumbs { display: flex; gap: 8px; justify-content: center; margin-top: 12px; flex-wrap: wrap; }
+  .mil .carousel-thumbs label { width: clamp(56px, 15vw, 80px); height: clamp(35px, 9.375vw, 50px); border-radius: 6px; overflow: hidden; border: 2px solid transparent; opacity: 0.5; cursor: pointer; transition: opacity 0.2s, border-color 0.2s; display: block; flex-shrink: 0; }
+  .mil .carousel-thumbs label img { width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none; }
   #mil-c1-1:checked ~ .carousel-slides .carousel-slide:nth-child(1) { opacity: 1; }
   #mil-c1-2:checked ~ .carousel-slides .carousel-slide:nth-child(2) { opacity: 1; }
   #mil-c1-3:checked ~ .carousel-slides .carousel-slide:nth-child(3) { opacity: 1; }
-  #mil-c1-1:checked ~ .carousel-thumbs label:nth-child(1) { background: var(--accent); }
-  #mil-c1-2:checked ~ .carousel-thumbs label:nth-child(2) { background: var(--accent); }
-  #mil-c1-3:checked ~ .carousel-thumbs label:nth-child(3) { background: var(--accent); }
+  #mil-c1-1:checked ~ .carousel-thumbs label:nth-child(1) { border-color: var(--accent); opacity: 1; }
+  #mil-c1-2:checked ~ .carousel-thumbs label:nth-child(2) { border-color: var(--accent); opacity: 1; }
+  #mil-c1-3:checked ~ .carousel-thumbs label:nth-child(3) { border-color: var(--accent); opacity: 1; }
   #mil-c2-1:checked ~ .carousel-slides .carousel-slide:nth-child(1) { opacity: 1; }
   #mil-c2-2:checked ~ .carousel-slides .carousel-slide:nth-child(2) { opacity: 1; }
   #mil-c2-3:checked ~ .carousel-slides .carousel-slide:nth-child(3) { opacity: 1; }
   #mil-c2-4:checked ~ .carousel-slides .carousel-slide:nth-child(4) { opacity: 1; }
   #mil-c2-5:checked ~ .carousel-slides .carousel-slide:nth-child(5) { opacity: 1; }
-  #mil-c2-1:checked ~ .carousel-thumbs label:nth-child(1) { background: var(--accent); }
-  #mil-c2-2:checked ~ .carousel-thumbs label:nth-child(2) { background: var(--accent); }
-  #mil-c2-3:checked ~ .carousel-thumbs label:nth-child(3) { background: var(--accent); }
-  #mil-c2-4:checked ~ .carousel-thumbs label:nth-child(4) { background: var(--accent); }
-  #mil-c2-5:checked ~ .carousel-thumbs label:nth-child(5) { background: var(--accent); }
+  #mil-c2-1:checked ~ .carousel-thumbs label:nth-child(1) { border-color: var(--accent); opacity: 1; }
+  #mil-c2-2:checked ~ .carousel-thumbs label:nth-child(2) { border-color: var(--accent); opacity: 1; }
+  #mil-c2-3:checked ~ .carousel-thumbs label:nth-child(3) { border-color: var(--accent); opacity: 1; }
+  #mil-c2-4:checked ~ .carousel-thumbs label:nth-child(4) { border-color: var(--accent); opacity: 1; }
+  #mil-c2-5:checked ~ .carousel-thumbs label:nth-child(5) { border-color: var(--accent); opacity: 1; }
   #mil-c3-1:checked ~ .carousel-slides .carousel-slide:nth-child(1) { opacity: 1; }
   #mil-c3-2:checked ~ .carousel-slides .carousel-slide:nth-child(2) { opacity: 1; }
   #mil-c3-3:checked ~ .carousel-slides .carousel-slide:nth-child(3) { opacity: 1; }
   #mil-c3-4:checked ~ .carousel-slides .carousel-slide:nth-child(4) { opacity: 1; }
   #mil-c3-5:checked ~ .carousel-slides .carousel-slide:nth-child(5) { opacity: 1; }
-  #mil-c3-1:checked ~ .carousel-thumbs label:nth-child(1) { background: var(--accent); }
-  #mil-c3-2:checked ~ .carousel-thumbs label:nth-child(2) { background: var(--accent); }
-  #mil-c3-3:checked ~ .carousel-thumbs label:nth-child(3) { background: var(--accent); }
-  #mil-c3-4:checked ~ .carousel-thumbs label:nth-child(4) { background: var(--accent); }
-  #mil-c3-5:checked ~ .carousel-thumbs label:nth-child(5) { background: var(--accent); }
+  #mil-c3-1:checked ~ .carousel-thumbs label:nth-child(1) { border-color: var(--accent); opacity: 1; }
+  #mil-c3-2:checked ~ .carousel-thumbs label:nth-child(2) { border-color: var(--accent); opacity: 1; }
+  #mil-c3-3:checked ~ .carousel-thumbs label:nth-child(3) { border-color: var(--accent); opacity: 1; }
+  #mil-c3-4:checked ~ .carousel-thumbs label:nth-child(4) { border-color: var(--accent); opacity: 1; }
+  #mil-c3-5:checked ~ .carousel-thumbs label:nth-child(5) { border-color: var(--accent); opacity: 1; }
   .mil .footer { margin-top: 80px; padding: 40px; background: var(--panel); border-top: 1px solid var(--line); border-radius: var(--radius); }
   .mil .footer-meta { display: flex; gap: 40px; flex-wrap: wrap; margin-bottom: 32px; }
   .mil .footer-meta-item .footer-label { margin: 0 0 4px; color: #6b7280; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
@@ -3827,9 +3828,9 @@ System & UI Design,
     <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534464/file/abbefc90a4ca8e207ccce55a3d1e1f0a.png?resize=752x409&amp;vertical=center" alt="User flow 3" loading="lazy"></div>
   </div>
   <div class="carousel-thumbs">
-    <label for="mil-c1-1"></label>
-    <label for="mil-c1-2"></label>
-    <label for="mil-c1-3"></label>
+    <label for="mil-c1-1"><img src="https://cdn.dribbble.com/userupload/48534462/file/c5e48ebe17fd8b84cec0ea1fff7bc94b.png?resize=752x409&amp;vertical=center" alt=""></label>
+    <label for="mil-c1-2"><img src="https://cdn.dribbble.com/userupload/48534463/file/1e40292ad8e6c9457fa6c5b2dec29a61.png?resize=752x409&amp;vertical=center" alt=""></label>
+    <label for="mil-c1-3"><img src="https://cdn.dribbble.com/userupload/48534464/file/abbefc90a4ca8e207ccce55a3d1e1f0a.png?resize=752x409&amp;vertical=center" alt=""></label>
   </div>
 </div>
 
@@ -3876,11 +3877,11 @@ System & UI Design,
     <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534472/file/b29f0513c90400f056e63c362d3473c6.png?resize=752x423&amp;vertical=center" alt="Visual identity screen 5" loading="lazy"></div>
   </div>
   <div class="carousel-thumbs">
-    <label for="mil-c2-1"></label>
-    <label for="mil-c2-2"></label>
-    <label for="mil-c2-3"></label>
-    <label for="mil-c2-4"></label>
-    <label for="mil-c2-5"></label>
+    <label for="mil-c2-1"><img src="https://cdn.dribbble.com/userupload/48534470/file/425473bbfb164fe776347ea73253cadf.png?resize=752x423&amp;vertical=center" alt=""></label>
+    <label for="mil-c2-2"><img src="https://cdn.dribbble.com/userupload/48534469/file/074dad68fbd5c857900aedac57a606a9.png?resize=752x423&amp;vertical=center" alt=""></label>
+    <label for="mil-c2-3"><img src="https://cdn.dribbble.com/userupload/48534468/file/3dd59821efbf45ef63fd64108c3d402c.png?resize=752x423&amp;vertical=center" alt=""></label>
+    <label for="mil-c2-4"><img src="https://cdn.dribbble.com/userupload/48534471/file/4a182c240ddc9271013cad7f47c79850.png?resize=752x423&amp;vertical=center" alt=""></label>
+    <label for="mil-c2-5"><img src="https://cdn.dribbble.com/userupload/48534472/file/b29f0513c90400f056e63c362d3473c6.png?resize=752x423&amp;vertical=center" alt=""></label>
   </div>
 </div>
 
@@ -3977,11 +3978,11 @@ System & UI Design,
     <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534477/file/44d70529ee717a6dff0faf19adb42f01.png?resize=752x488&amp;vertical=center" alt="Final screen 5" loading="lazy"></div>
   </div>
   <div class="carousel-thumbs">
-    <label for="mil-c3-1"></label>
-    <label for="mil-c3-2"></label>
-    <label for="mil-c3-3"></label>
-    <label for="mil-c3-4"></label>
-    <label for="mil-c3-5"></label>
+    <label for="mil-c3-1"><img src="https://cdn.dribbble.com/userupload/48534473/file/11042c9abcde6734ecff37ab0196e478.png?resize=752x488&amp;vertical=center" alt=""></label>
+    <label for="mil-c3-2"><img src="https://cdn.dribbble.com/userupload/48534474/file/e8ffdf467bc261bc5ba1897d9f0f0b5a.png?resize=752x488&amp;vertical=center" alt=""></label>
+    <label for="mil-c3-3"><img src="https://cdn.dribbble.com/userupload/48534475/file/cae6d665401bf07604ce94316294bbcc.png?resize=752x488&amp;vertical=center" alt=""></label>
+    <label for="mil-c3-4"><img src="https://cdn.dribbble.com/userupload/48534476/file/59f19e99828762741709a6f07149e4ab.png?resize=752x488&amp;vertical=center" alt=""></label>
+    <label for="mil-c3-5"><img src="https://cdn.dribbble.com/userupload/48534477/file/44d70529ee717a6dff0faf19adb42f01.png?resize=752x488&amp;vertical=center" alt=""></label>
   </div>
 </div>
 
