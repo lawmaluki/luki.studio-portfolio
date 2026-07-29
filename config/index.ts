@@ -521,6 +521,429 @@ export const projects: Project[] = [
       link: 'https://ebooks.rahnuma.org/1690308873-Dune.pdf.html',
     },
   {
+    slug: 'akropolis',
+    title: 'Akropolis',
+    category: 'Project',
+    tags: ['Product Design', 'Social Platform', 'Mobile Design'],
+    image: 'https://cdn.dribbble.com/userupload/48481724/file/3f5bb96013f0c1ef7876abcd680c8581.png?resize=752x&vertical=center',
+    summary: 'A video-first social platform designed to encourage healthier online discussions by replacing text comments with authentic video responses.',
+    year: '2024',
+    role: 'Product Designer',
+    description: `<style>
+  .ak {
+    color: #4E4E4E;
+    font-size: 17px;
+    line-height: 1.7;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --ink: #2d2d2d;
+    --muted: #6b7280;
+    --line: #e5e7eb;
+    --panel: #ffffff;
+    --soft: #f3f4f6;
+    --accent: #3157d5;
+    --deep: #141b2f;
+    --radius: 10px;
+  }
+  .ak * { box-sizing: border-box; }
+  .ak img { display: block; width: 100%; height: auto; border-radius: var(--radius); }
+  .ak a { color: inherit; text-decoration: none; }
+  .ak .page { overflow: hidden; }
+  .ak .section { padding: 80px 24px; }
+  .ak .section.alt { background: var(--soft); }
+  .ak .wrap { width: min(1120px, 100%); margin: 0 auto; }
+  .ak .narrow { width: min(780px, 100%); margin: 0 auto; }
+  .ak .hero { padding: 64px 24px 48px; }
+  .ak .hero-cover { margin: 0; }
+  .ak .hero-cover img { border-radius: 0; max-height: 72vh; object-fit: cover; }
+  .ak .hero-inner { width: min(1120px, 100%); margin: 0 auto; }
+  .ak .eyebrow { margin: 0 0 18px; color: var(--accent); font-size: 13px; font-weight: 700; text-transform: uppercase; }
+  .ak h1, .ak h2, .ak h3 { margin: 0; line-height: 1.1; letter-spacing: 0; color: #2d2d2d; }
+  .ak h1 { max-width: 900px; font-size: clamp(48px, 7vw, 88px); font-weight: 800; }
+  .ak h2 { margin-bottom: 20px; font-size: clamp(26px, 3.8vw, 44px); font-weight: 700; }
+  .ak h3 { margin: 28px 0 10px; font-size: 20px; font-weight: 700; }
+  .ak p { margin: 0 0 16px; }
+  .ak ul, .ak ol { margin: 0 0 18px; padding-left: 26px; }
+  .ak li { margin-bottom: 6px; }
+  .ak strong { font-weight: 700; color: var(--ink); }
+  .ak .lead { max-width: 760px; margin-top: 22px; color: var(--muted); font-size: clamp(20px, 2.4vw, 28px); line-height: 1.36; }
+  .ak .section-label { margin: 0 0 12px; color: var(--muted); font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+  .ak .meta-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .ak .meta-item { min-height: 140px; padding: 24px 28px; background: var(--panel); }
+  .ak .meta-item span { display: block; margin-bottom: 10px; color: var(--muted); font-size: 13px; font-weight: 700; text-transform: uppercase; }
+  .ak .meta-item strong { display: block; font-size: 18px; line-height: 1.4; font-weight: 600; }
+  .ak .shot { overflow: hidden; border-radius: var(--radius); background: var(--panel); box-shadow: 0 18px 60px rgba(13, 12, 34, 0.08); margin-top: 36px; }
+  .ak .shot img { border-radius: 0; }
+  .ak .callout { margin: 28px 0; padding: 28px 32px; background: var(--soft); border-radius: var(--radius); font-size: 21px; line-height: 1.5; color: var(--deep); font-style: italic; }
+  .ak .loop { margin: 20px 0; padding: 22px 28px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); font-size: 15px; font-weight: 600; color: var(--accent); letter-spacing: 0.02em; }
+  /* Carousel */
+  .ak .carousel { margin-top: 36px; }
+  .ak .carousel input[type="radio"] { display: none; }
+  .ak .carousel-slides { position: relative; border-radius: var(--radius); overflow: hidden; background: var(--soft); box-shadow: 0 18px 60px rgba(13,12,34,0.08); }
+  .ak .carousel-slide { position: absolute; inset: 0; opacity: 0; transition: opacity 0.3s ease; }
+  .ak .carousel-slide img { width: 100%; height: 100%; object-fit: cover; border-radius: 0; }
+  .ak .carousel-thumbs { display: flex; gap: 8px; margin-top: 12px; justify-content: center; flex-wrap: wrap; }
+  .ak .carousel-thumbs label { cursor: pointer; border-radius: 6px; overflow: hidden; border: 2px solid transparent; transition: border-color 0.2s; }
+  .ak .carousel-thumbs label img { display: block; width: 80px; height: 54px; object-fit: cover; border-radius: 0; opacity: 0.5; transition: opacity 0.2s; }
+  .ak .carousel-thumbs label:hover img { opacity: 0.8; }
+  #ak-c1-1:checked ~ .carousel-slides .carousel-slide:nth-child(1),
+  #ak-c1-2:checked ~ .carousel-slides .carousel-slide:nth-child(2),
+  #ak-c1-3:checked ~ .carousel-slides .carousel-slide:nth-child(3) { opacity: 1; }
+  #ak-c1-1:checked ~ .carousel-thumbs label:nth-child(1),
+  #ak-c1-2:checked ~ .carousel-thumbs label:nth-child(2),
+  #ak-c1-3:checked ~ .carousel-thumbs label:nth-child(3) { border-color: var(--accent); }
+  #ak-c1-1:checked ~ .carousel-thumbs label:nth-child(1) img,
+  #ak-c1-2:checked ~ .carousel-thumbs label:nth-child(2) img,
+  #ak-c1-3:checked ~ .carousel-thumbs label:nth-child(3) img { opacity: 1; }
+  #ak-c2-1:checked ~ .carousel-slides .carousel-slide:nth-child(1),
+  #ak-c2-2:checked ~ .carousel-slides .carousel-slide:nth-child(2),
+  #ak-c2-3:checked ~ .carousel-slides .carousel-slide:nth-child(3),
+  #ak-c2-4:checked ~ .carousel-slides .carousel-slide:nth-child(4),
+  #ak-c2-5:checked ~ .carousel-slides .carousel-slide:nth-child(5) { opacity: 1; }
+  #ak-c2-1:checked ~ .carousel-thumbs label:nth-child(1),
+  #ak-c2-2:checked ~ .carousel-thumbs label:nth-child(2),
+  #ak-c2-3:checked ~ .carousel-thumbs label:nth-child(3),
+  #ak-c2-4:checked ~ .carousel-thumbs label:nth-child(4),
+  #ak-c2-5:checked ~ .carousel-thumbs label:nth-child(5) { border-color: var(--accent); }
+  #ak-c2-1:checked ~ .carousel-thumbs label:nth-child(1) img,
+  #ak-c2-2:checked ~ .carousel-thumbs label:nth-child(2) img,
+  #ak-c2-3:checked ~ .carousel-thumbs label:nth-child(3) img,
+  #ak-c2-4:checked ~ .carousel-thumbs label:nth-child(4) img,
+  #ak-c2-5:checked ~ .carousel-thumbs label:nth-child(5) img { opacity: 1; }
+  .ak .footer { padding: 80px 24px; background: var(--panel); border-top: 1px solid var(--line); text-align: center; }
+  .ak .footer h2 { color: var(--ink); }
+  .ak .footer p { width: min(720px, 100%); margin: 18px auto 0; color: var(--muted); }
+  @media (max-width: 880px) {
+    .ak .section { padding: 60px 20px; }
+    .ak .hero { padding: 48px 20px 36px; }
+    .ak .meta-grid { grid-template-columns: repeat(2, 1fr); }
+    .ak .meta-item { min-height: auto; }
+  }
+  .dark .ak { color: #d1d5db; --ink: #e5e7eb; --panel: #1f2937; --line: #374151; --muted: #9ca3af; --soft: #111827; }
+  .dark .ak h1, .dark .ak h2, .dark .ak h3 { color: #f3f4f6; }
+  .dark .ak p { color: #9ca3af; }
+  .dark .ak strong { color: #e5e7eb; }
+  .dark .ak .section.alt { background: #111827; }
+  .dark .ak .meta-item { background: #1f2937; }
+  .dark .ak .shot { background: #1f2937; box-shadow: 0 18px 60px rgba(0,0,0,0.4); }
+  .dark .ak .callout { background: #1f2937; color: #d1d5db; }
+  .dark .ak .loop { background: #1f2937; border-color: #374151; }
+</style>
+
+<div class="ak">
+  <main class="page">
+
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow">Product Design Case Study</p>
+        <h1>Akropolis</h1>
+        <p class="lead">How do you encourage healthier online discussions by replacing text with video while creating a sustainable engagement model?</p>
+      </div>
+    </header>
+
+    <figure class="hero-cover">
+      <img src="https://cdn.dribbble.com/userupload/48481724/file/3f5bb96013f0c1ef7876abcd680c8581.png?resize=752x&vertical=center" alt="Akropolis product overview">
+    </figure>
+
+    <section class="meta-grid" aria-label="Project details">
+      <div class="meta-item">
+        <span>Role</span>
+        <strong>Product Designer</strong>
+      </div>
+      <div class="meta-item">
+        <span>Timeline</span>
+        <strong>12 Weeks</strong>
+      </div>
+      <div class="meta-item">
+        <span>Platform</span>
+        <strong>Android &amp; iOS</strong>
+      </div>
+      <div class="meta-item">
+        <span>Responsibilities</span>
+        <strong>Product Strategy, UX Research, UI Design, Design System, Prototyping</strong>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="narrow">
+        <p class="section-label">The Problem</p>
+        <h2>Solving a Behavioral and Product Strategy Problem</h2>
+        <p>Online discussions have become increasingly reactive. Most conversations happen through short text comments that <strong>strip away tone, emotion, and intent</strong> — often leading to misunderstandings, hostility, and low-quality engagement.</p>
+        <p>Akropolis explores a different approach by replacing traditional text discussions with <strong>video responses</strong>. The goal was to design a platform where people communicate more authentically, rewarding thoughtful participation while creating healthier online communities.</p>
+        <div class="callout">How do you fix online discourse without building a ghost town?</div>
+        <div class="shot">
+          <img src="https://cdn.dribbble.com/userupload/48482781/file/9b44a828a51b9f1ff1a92645dfd225bf.png?resize=752x&vertical=center" alt="Akropolis platform screens">
+        </div>
+        <div class="shot">
+          <img src="https://cdn.dribbble.com/userupload/48482780/file/ac037490bc1c521eb896375ddc3be2b1.png?resize=752x&vertical=center" alt="Akropolis platform detail">
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="narrow">
+        <p class="section-label">Research</p>
+        <h2>Understanding the Pain Points</h2>
+        <p>Social media has made it easier than ever to share opinions, but much harder to have meaningful conversations. While existing platforms optimize for engagement through comments, likes, and shares, they often fail to encourage understanding.</p>
+        <p>Text removes emotional context. A sentence intended to be thoughtful can easily be interpreted as hostile. Combined with anonymity and rapid interactions, this creates <strong>environments where meaningful discussion becomes increasingly difficult.</strong></p>
+
+        <div class="carousel">
+          <input type="radio" name="ak-c1" id="ak-c1-1" checked>
+          <input type="radio" name="ak-c1" id="ak-c1-2">
+          <input type="radio" name="ak-c1" id="ak-c1-3">
+          <div class="carousel-slides" style="aspect-ratio:4/3">
+            <figure class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48482782/file/502e7d17178bc19085f5a67f7db29d3b.png?resize=752x&vertical=center" alt="User pain points analysis"></figure>
+            <figure class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48482783/file/9539f67d3072cc1c69c6f646d69bfb0a.png" alt="Research insights graphic"></figure>
+            <figure class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48482784/file/8d0ae8f69138e15634e3834704d53589.png" alt="Behavioural research graphic"></figure>
+          </div>
+          <div class="carousel-thumbs">
+            <label for="ak-c1-1"><img src="https://cdn.dribbble.com/userupload/48482782/file/502e7d17178bc19085f5a67f7db29d3b.png?resize=752x&vertical=center" alt="Slide 1"></label>
+            <label for="ak-c1-2"><img src="https://cdn.dribbble.com/userupload/48482783/file/9539f67d3072cc1c69c6f646d69bfb0a.png" alt="Slide 2"></label>
+            <label for="ak-c1-3"><img src="https://cdn.dribbble.com/userupload/48482784/file/8d0ae8f69138e15634e3834704d53589.png" alt="Slide 3"></label>
+          </div>
+        </div>
+
+        <h3>Moving Beyond Text-Based Discussions</h3>
+        <p>During research, I analyzed how major social platforms handle discussions. X (Twitter) optimizes for speed and virality. Reddit organizes conversations well but remains heavily text-dependent. TikTok excels at video consumption but isn't designed for deep threaded discussions. YouTube supports video but relies primarily on text comments for interaction.</p>
+        <p>None of these platforms were fundamentally designed around the idea that <strong>conversation itself could be video-first</strong>.</p>
+        <h2>What if online conversations were designed around human presence instead of written comments?</h2>
+        <p>This question became the foundation of Akropolis. Rather than treating video as a supplementary feature, Akropolis positions video as the <strong>primary language of communication</strong>. Every discussion, response, reaction, and reply is centered around video interactions.</p>
+
+        <div class="shot">
+          <img src="https://cdn.dribbble.com/userupload/48482779/file/cee1afb4bca4af284f35d7a4a57adb43.png?resize=752x&vertical=center" alt="Akropolis concept screens">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="narrow">
+        <p class="section-label">Opportunity</p>
+        <h2>Why Was This a Valuable Opportunity?</h2>
+
+        <h3>1. Increasing Authenticity</h3>
+        <p>Text allows people to hide emotion, intention, and accountability. Video introduces facial expressions, tone, and body language, which can increase perceived authenticity and reduce misunderstandings.</p>
+        <p>Through the <strong>Engagement and Emblem systems</strong>, users are encouraged to read and understand content, provide thoughtful responses, and build credibility within the community. Rather than rewarding the loudest voices, the system aims to reward meaningful participation.</p>
+
+        <h3>2. Creating a Healthier Community Model</h3>
+        <p>Traditional moderation models rely heavily on centralized review teams, making it difficult to scale while maintaining fairness. Akropolis explores a more community-driven approach where visibility is tied to engagement quality rather than anonymous outrage.</p>
+        <p>By combining video communication with reputation mechanics, users are encouraged to contribute more thoughtfully because their identity and presence are directly associated with their responses.</p>
+
+        <h3>3. Creator-Centric Growth</h3>
+        <p>The <strong>Emblem system</strong> introduced an alternative growth mechanism: users earn temporary visibility boosts through active participation. This creates a feedback loop where meaningful contributions lead to increased exposure, interactions, and reputation growth.</p>
+
+        <div class="shot">
+          <img src="https://cdn.dribbble.com/userupload/48482793/file/e4ba5249d17fc7e56b082b06c7b24651.png?resize=752x&vertical=center" alt="Akropolis engagement system">
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="narrow">
+        <p class="section-label">Understanding Users</p>
+        <h2>Research Objectives</h2>
+        <p>Before exploring layouts or interactions, we focused on a more fundamental question: <strong>why do online discussions often fail to create meaningful conversations?</strong></p>
+
+        <h3>1. Why do online conversations become hostile?</h3>
+        <p>We explored whether anonymity influences user behaviour, how the absence of facial expressions affects communication, and what makes users feel comfortable expressing opposing opinions. These findings established one of Akropolis' core principles: bringing human presence back into online conversations through video.</p>
+
+        <h3>2. What motivates people to participate?</h3>
+        <p>Many users consume content without responding, while others participate frequently. We explored what motivates someone to comment, why some creators consistently receive engagement, and how important visibility and reputation are within online communities. These questions shaped the engagement system where users earn points and Emblems through meaningful participation.</p>
+
+        <h3>3. Why do users abandon discussions?</h3>
+        <p>Long and cluttered comment threads, difficulty following multiple conversations, and lack of incentives to revisit discussions were key factors. These observations reinforced the need for structured, <strong>threaded video conversations that are easier to follow and more rewarding to participate in.</strong></p>
+
+        <h3>4. How is trust established online?</h3>
+        <p>We explored how users decide whether another person's opinion is credible — examining real identity versus anonymous accounts, visible expertise, tone, and authenticity conveyed through facial expressions. These findings supported making video the primary communication medium.</p>
+
+        <h3>5. Can video improve communication?</h3>
+        <p>Rather than asking how we could improve text comments, we explored whether visual communication could reduce misunderstandings, increase empathy, encourage accountability, and improve trust. <strong>This question ultimately became the foundation of the Akropolis product vision.</strong></p>
+
+        <div class="shot">
+          <img src="https://cdn.dribbble.com/userupload/48493088/file/ce17984d6ff10074b990d02a8ccfd6cb.png?resize=752x&vertical=center" alt="Research and user insights">
+        </div>
+        <div class="shot">
+          <img src="https://cdn.dribbble.com/userupload/48493087/file/4bf6343b7dabf6615cffacb628b77167.jpg?resize=752x&vertical=center" alt="Competitive analysis research">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="narrow">
+        <p class="section-label">Competitive Analysis</p>
+        <h2>How Existing Platforms Handle Discussion</h2>
+        <p>Before designing Akropolis, I analyzed how existing social media platforms encourage discussions and where they fall short. Platforms reviewed included Reddit, X (formerly Twitter), TikTok, YouTube, Facebook, and Threads. Each approaches community engagement differently.</p>
+
+        <h3>Discussion Structure</h3>
+        <p>Are discussions easy to follow? Can users maintain meaningful conversations? Does the structure encourage dialogue or simply reactions? This highlighted the opportunity for threaded video discussions that preserve conversational flow.</p>
+
+        <h3>Content Discovery</h3>
+        <p>Trending topics, personalised recommendations, categories, and search functionality were analyzed. This influenced the design of Akropolis' discussion feed, making it easier for users to discover conversations aligned with their interests.</p>
+
+        <h3>Community Moderation</h3>
+        <p>Findings supported the inclusion of community-driven moderation, where users collectively vote on flagged content — creating a more collaborative and scalable moderation process.</p>
+
+        <h3>Creator Incentives &amp; Engagement Loops</h3>
+        <p>Rather than rewarding passive scrolling, the core engagement loop encourages active and constructive contributions.</p>
+        <div class="loop">Read → Rate → Reply → Earn Engagement → Unlock Emblems → Gain Visibility → Encourage More Participation</div>
+
+        <div class="shot">
+          <img src="https://cdn.dribbble.com/userupload/48493086/file/76bd3d881ec507758d59b7bae3b8aa80.png?resize=752x&vertical=center" alt="Competitive analysis chart">
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="narrow">
+        <p class="section-label">User Research</p>
+        <h2>Interviews &amp; Behaviour Analysis</h2>
+
+        <h3>Key Interview Insights</h3>
+        <ul>
+          <li>Users often misunderstand intent when conversations rely only on text.</li>
+          <li>Many participants avoid commenting because discussions quickly become hostile.</li>
+          <li>Visible identity increases accountability.</li>
+          <li>People are more likely to trust someone they can see and hear.</li>
+          <li>Users appreciate recognition when they contribute meaningful content.</li>
+        </ul>
+
+        <h3>Key Behavioural Observations</h3>
+        <p><strong>Reactive participation</strong> — Users frequently respond immediately after reading emotionally charged content without considering alternative perspectives.</p>
+        <p><strong>Passive consumption</strong> — Most users consume significantly more content than they create, making participation a key challenge.</p>
+        <p><strong>Emotional content spreads faster</strong> — Content that evokes strong reactions receives more engagement than thoughtful discussions.</p>
+        <p><strong>Discussion fatigue</strong> — As conversations become longer and more fragmented, users abandon them entirely.</p>
+        <p><strong>Recognition drives participation</strong> — Users contribute consistently when they receive visible acknowledgment for thoughtful participation. This directly informed the design of the Engagement Level and Emblem systems.</p>
+
+        <h3>UX Strategy</h3>
+        <p>Every interaction within Akropolis was designed around one central question: <strong>How can the product make participating in meaningful discussions feel easier than simply scrolling past them?</strong></p>
+        <p>The experience principles that shaped the product:</p>
+        <ul>
+          <li>Every interaction should feel effortless.</li>
+          <li>Discovery comes before participation.</li>
+          <li>Creating a video response should feel natural.</li>
+          <li>Encourage positive behaviour through feedback.</li>
+          <li>Build trust through transparency.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="narrow">
+        <p class="section-label">Architecture</p>
+        <h2>Information Architecture</h2>
+        <p>The platform needed to support a discussion model where users consume, create, and respond through video rather than text. The architecture guides users naturally through the platform while supporting the product's core engagement loop:</p>
+        <div class="loop">Discover → Watch → Respond → Earn Recognition → Return</div>
+        <p>One of the biggest challenges in product design is determining <strong>what deserves to be built first</strong>. For Akropolis, the primary goal was not to build another feature-rich social media platform — it was to solve one core problem exceptionally well before expanding into additional functionality.</p>
+        <div class="shot">
+          <img src="https://cdn.dribbble.com/userupload/48493735/file/e5105c5005734c43bcb18c8ca4100d62.png?resize=752x&vertical=center" alt="Feature prioritization framework">
+        </div>
+        <div class="shot">
+          <img src="https://cdn.dribbble.com/userupload/48493764/file/5acab012166e58cfed1d91030ac2b15e.png?resize=752x&vertical=center" alt="Information architecture diagram">
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="narrow">
+        <p class="section-label">Design Exploration</p>
+        <h2>Transforming Strategy into User Experiences</h2>
+        <p>Unlike traditional social networks where conversations happen through text comments, Akropolis required users to navigate, consume, and participate through video — presenting unique interaction challenges that couldn't be solved with visual design alone.</p>
+
+        <h3>Phase 1 — Low-Fidelity Sketches</h3>
+        <p>Quick hand-drawn sketches and rough interface concepts explored home feed layouts, video discussion pages, recording flows, user profile structures, and navigation concepts. The earliest concepts revealed that replicating existing social media layouts made Akropolis feel like another TikTok clone, encouraging a rethink around conversations instead of content consumption.</p>
+
+        <h3>Phase 2 — Wireframing</h3>
+        <p>Wireframes validated navigation, content hierarchy, screen relationships, user journeys, and interaction flow — ensuring users could move naturally from discovering discussions to participating in them.</p>
+
+        <h3>Phase 3 — Layout Exploration</h3>
+        <p>A card-based feed with larger video previews allowed users to understand each discussion before opening it. Threaded video conversations (over a continuous reply feed) preserved conversational context. Recording was integrated directly into the discussion experience to reduce friction.</p>
+
+        <h3>Phase 4 — Navigation Exploration</h3>
+        <p>Traditional social media applications prioritise content consumption. Akropolis instead prioritises participation — a distinction that shaped every navigation decision.</p>
+
+        <h3>Phase 5 — Iteration</h3>
+        <p>The final interface was the result of many small improvements: simplifying discussion cards, increasing video thumbnail sizes, reducing unnecessary recording buttons, improving engagement indicators, and introducing clearer hierarchy between original discussions and replies.</p>
+
+        <div class="carousel">
+          <input type="radio" name="ak-c2" id="ak-c2-1" checked>
+          <input type="radio" name="ak-c2" id="ak-c2-2">
+          <input type="radio" name="ak-c2" id="ak-c2-3">
+          <input type="radio" name="ak-c2" id="ak-c2-4">
+          <input type="radio" name="ak-c2" id="ak-c2-5">
+          <div class="carousel-slides" style="aspect-ratio:3/2">
+            <figure class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48493772/file/c04f4c07666b7798cc1cc68c09969c80.png?resize=752x&vertical=center" alt="Design exploration screen 1"></figure>
+            <figure class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48493766/file/fd4f80c190b5ba4f8a723b151b2744f4.png?resize=752x&vertical=center" alt="Design exploration screen 2"></figure>
+            <figure class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48493765/file/2eaf794aa57df75c1322611f1d51357c.png?resize=752x&vertical=center" alt="Design exploration screen 3"></figure>
+            <figure class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48493769/file/a7f87ad97c6e6fd206d3abad1b9d8b59.png?resize=752x514&vertical=center" alt="Design exploration screen 4"></figure>
+            <figure class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48493763/file/5b30e973fb7ac2e89a95988666de568c.png?resize=752x&vertical=center" alt="Design exploration screen 5"></figure>
+          </div>
+          <div class="carousel-thumbs">
+            <label for="ak-c2-1"><img src="https://cdn.dribbble.com/userupload/48493772/file/c04f4c07666b7798cc1cc68c09969c80.png?resize=752x&vertical=center" alt="Slide 1"></label>
+            <label for="ak-c2-2"><img src="https://cdn.dribbble.com/userupload/48493766/file/fd4f80c190b5ba4f8a723b151b2744f4.png?resize=752x&vertical=center" alt="Slide 2"></label>
+            <label for="ak-c2-3"><img src="https://cdn.dribbble.com/userupload/48493765/file/2eaf794aa57df75c1322611f1d51357c.png?resize=752x&vertical=center" alt="Slide 3"></label>
+            <label for="ak-c2-4"><img src="https://cdn.dribbble.com/userupload/48493769/file/a7f87ad97c6e6fd206d3abad1b9d8b59.png?resize=752x514&vertical=center" alt="Slide 4"></label>
+            <label for="ak-c2-5"><img src="https://cdn.dribbble.com/userupload/48493763/file/5b30e973fb7ac2e89a95988666de568c.png?resize=752x&vertical=center" alt="Slide 5"></label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="narrow">
+        <p class="section-label">Video Recording &amp; Design System</p>
+        <h2>Reducing Hesitation, Building Consistency</h2>
+
+        <h3>Video Recording</h3>
+        <p>Recording videos requires more effort than typing text, and many users feel uncomfortable appearing on camera. The recording experience focuses on simplicity: large recording controls, live camera preview, a recording timer, a review screen, and simple editing tools. The design removes unnecessary complexity, making recording feel like a natural continuation of the conversation.</p>
+        <div class="shot">
+          <img src="https://cdn.dribbble.com/userupload/48493762/file/95aac2d4a06549e477a8118d28b32a66.png?resize=752x&vertical=center" alt="Video recording experience">
+        </div>
+
+        <h3>Design System</h3>
+        <p>As the application evolved, maintaining consistency across dozens of screens became increasingly important. A design system was developed with reusable components, clear visual rules, and interaction standards — not only to create a visually cohesive product but to streamline collaboration with developers and make future feature development more efficient.</p>
+        <div class="shot">
+          <img src="https://cdn.dribbble.com/userupload/48493767/file/1b164885401ad8d9218cef387c9737ba.png?resize=752x567&vertical=center" alt="Akropolis design system">
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="narrow">
+        <p class="section-label">Technical &amp; Success</p>
+        <h2>Designing with Engineering in Mind</h2>
+        <p>I considered the engineering implications behind each feature to ensure proposed solutions were not only desirable for users but also feasible for development. Video files require significantly more bandwidth, storage, and processing power than text or images — poor performance causes users to abandon the experience.</p>
+        <p>Akropolis is designed for both Android and iOS. Working with Flutter developers meant considering how design decisions would translate into implementation. Components, interaction states, spacing rules, and design specifications were organized to support efficient developer handoff.</p>
+
+        <h3>Measuring Success</h3>
+        <p>A successful product is measured by how effectively it solves user problems and supports business objectives over time. By focusing on behavioural and community metrics rather than vanity metrics, Akropolis can continuously evaluate whether it is delivering healthier, more engaging conversations while supporting sustainable platform growth.</p>
+        <div class="shot">
+          <img src="https://cdn.dribbble.com/userupload/48493792/file/3081220b28cb040834620b85a67e4d5c.png?resize=752x&vertical=center" alt="Success metrics dashboard">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="narrow">
+        <p class="section-label">Reflection</p>
+        <h2>What I Learned</h2>
+        <p><strong>Designing for Human Behaviour</strong> — One of the biggest lessons was that product design is fundamentally about influencing behaviour. Small decisions — how users are rewarded, how discussions are structured, how visibility is earned — can significantly shape the way people interact with one another.</p>
+        <p><strong>Thinking Beyond Individual Screens</strong> — The real challenge lay in connecting every part of the experience into a cohesive ecosystem. Each screen needed to contribute to the overall product vision, not just solve a single interface problem.</p>
+        <p><strong>Balancing User Needs with Business Goals</strong> — Design decisions around the Emblem system, community moderation, and creator visibility were all made with a clear understanding of how they would contribute to platform growth and retention.</p>
+        <p><strong>My Biggest Takeaway</strong> — Akropolis fundamentally changed the way I think about product design. This project demonstrated that great design doesn't simply design screens — it helps define product direction, connects user needs with business goals, anticipates technical realities, and creates scalable experiences built to grow.</p>
+        <div class="shot">
+          <img src="https://cdn.dribbble.com/userupload/48493793/file/568a4da5f45cd42e5f3f1ed447f309d5.png?resize=752x&vertical=center" alt="Final Akropolis screens">
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <h2>Thank You</h2>
+      <p>Akropolis is a product design case study exploring how video-first communication, reputation mechanics, and community-driven moderation can create healthier and more meaningful online discussions.</p>
+    </footer>
+
+  </main>
+</div>`,
+    link: '',
+  },
+  {
     slug: 'kyc-verification-flow',
     title: 'ID / Passport Verification Flow',
     category: 'Project',
@@ -602,6 +1025,44 @@ export const projects: Project[] = [
   .kyc .footer { padding: 80px 24px; background: var(--panel); border-top: 1px solid var(--line); text-align: center; }
   .kyc .footer h2 { color: var(--ink); }
   .kyc .footer p { width: min(720px, 100%); margin: 18px auto 0; color: var(--muted); }
+  .kyc .footer-sources { margin-top: 48px; }
+  .kyc .footer-sources-label { margin: 0 0 16px; color: var(--muted); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+  .kyc .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+  .kyc .footer-links a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); color: var(--ink); font-size: 14px; font-weight: 600; text-decoration: none; transition: border-color 0.15s; }
+  .kyc .footer-links a:hover { border-color: var(--blue); }
+  /* Carousel */
+  .kyc .carousel { margin-top: 34px; }
+  .kyc .carousel input[type="radio"] { display: none; }
+  .kyc .carousel-slides { position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 16/9; background: var(--soft); }
+  .kyc .carousel-slide { position: absolute; inset: 0; opacity: 0; transition: opacity 0.3s ease; }
+  .kyc .carousel-slide img { width: 100%; height: 100%; object-fit: cover; border-radius: 0; }
+  .kyc .carousel-thumbs { display: flex; gap: 8px; margin-top: 12px; justify-content: center; flex-wrap: wrap; }
+  .kyc .carousel-thumbs label { cursor: pointer; border-radius: 6px; overflow: hidden; border: 2px solid transparent; transition: border-color 0.2s; }
+  .kyc .carousel-thumbs label img { display: block; width: 80px; height: 54px; object-fit: cover; border-radius: 0; opacity: 0.5; transition: opacity 0.2s; }
+  .kyc .carousel-thumbs label:hover img { opacity: 0.8; }
+  /* Carousel 1 — 4 slides */
+  #kyc-c1-1:checked ~ .carousel-slides .carousel-slide:nth-child(1),
+  #kyc-c1-2:checked ~ .carousel-slides .carousel-slide:nth-child(2),
+  #kyc-c1-3:checked ~ .carousel-slides .carousel-slide:nth-child(3),
+  #kyc-c1-4:checked ~ .carousel-slides .carousel-slide:nth-child(4) { opacity: 1; }
+  #kyc-c1-1:checked ~ .carousel-thumbs label:nth-child(1),
+  #kyc-c1-2:checked ~ .carousel-thumbs label:nth-child(2),
+  #kyc-c1-3:checked ~ .carousel-thumbs label:nth-child(3),
+  #kyc-c1-4:checked ~ .carousel-thumbs label:nth-child(4) { border-color: var(--blue); }
+  #kyc-c1-1:checked ~ .carousel-thumbs label:nth-child(1) img,
+  #kyc-c1-2:checked ~ .carousel-thumbs label:nth-child(2) img,
+  #kyc-c1-3:checked ~ .carousel-thumbs label:nth-child(3) img,
+  #kyc-c1-4:checked ~ .carousel-thumbs label:nth-child(4) img { opacity: 1; }
+  /* Carousel 2 — 3 slides */
+  #kyc-c2-1:checked ~ .carousel-slides .carousel-slide:nth-child(1),
+  #kyc-c2-2:checked ~ .carousel-slides .carousel-slide:nth-child(2),
+  #kyc-c2-3:checked ~ .carousel-slides .carousel-slide:nth-child(3) { opacity: 1; }
+  #kyc-c2-1:checked ~ .carousel-thumbs label:nth-child(1),
+  #kyc-c2-2:checked ~ .carousel-thumbs label:nth-child(2),
+  #kyc-c2-3:checked ~ .carousel-thumbs label:nth-child(3) { border-color: var(--blue); }
+  #kyc-c2-1:checked ~ .carousel-thumbs label:nth-child(1) img,
+  #kyc-c2-2:checked ~ .carousel-thumbs label:nth-child(2) img,
+  #kyc-c2-3:checked ~ .carousel-thumbs label:nth-child(3) img { opacity: 1; }
   @media (max-width: 880px) {
     .kyc .section { padding: 64px 20px; }
     .kyc .hero { padding: 48px 20px 36px; }
@@ -665,17 +1126,6 @@ export const projects: Project[] = [
       </div>
     </section>
 
-    <section class="visual-band">
-      <div class="wrap visual-grid">
-        <figure>
-          <img src="https://cdn.dribbble.com/userupload/48405556/file/d4147a93c3812b6dacec89b995cce8c6.png?resize=1024x576&amp;vertical=center" alt="KYC verification overview screen">
-        </figure>
-        <figure>
-          <img src="https://cdn.dribbble.com/userupload/48405553/file/3588fa5bd02bdacf8af29c9174d14464.png?resize=1024x576&amp;vertical=center" alt="Identity verification mobile flow screens">
-        </figure>
-      </div>
-    </section>
-
     <section class="section alt">
       <div class="wrap">
         <p class="section-label">The Challenge</p>
@@ -717,10 +1167,8 @@ export const projects: Project[] = [
 
     <section class="section alt">
       <div class="wrap">
-        <div class="narrow">
-          <h2>Understanding the UI System Flow</h2>
-          <p>The verification journey is broken into clear stages so each screen answers one user question at a time.</p>
-        </div>
+        <h2>Understanding the UI System Flow</h2>
+        <p>The verification journey is broken into clear stages so each screen answers one user question at a time.</p>
         <div class="step-grid">
           <article class="step">
             <h3>Identity Selection</h3>
@@ -751,6 +1199,14 @@ export const projects: Project[] = [
             <p>The final stage compares the ID photo with the selfie and shows verification progress before confirming success.</p>
           </article>
         </div>
+        <div class="gallery two" style="margin-top:48px">
+          <figure>
+            <img src="https://cdn.dribbble.com/userupload/48405556/file/d4147a93c3812b6dacec89b995cce8c6.png?resize=1024x576&amp;vertical=center" alt="KYC verification overview screen">
+          </figure>
+          <figure>
+            <img src="https://cdn.dribbble.com/userupload/48405553/file/3588fa5bd02bdacf8af29c9174d14464.png?resize=1024x576&amp;vertical=center" alt="Identity verification mobile flow screens">
+          </figure>
+        </div>
       </div>
     </section>
 
@@ -760,19 +1216,23 @@ export const projects: Project[] = [
           <h2>Design Process</h2>
           <p>Key components included verification cards, scanner overlays, progress indicators, detection nodes, success toasts, face scanner patterns, step progress bars, and camera overlays.</p>
         </div>
-        <div class="gallery two">
-          <figure>
-            <img src="https://cdn.dribbble.com/userupload/48405560/file/e6961040719e91e10fe6b6937fe62d3e.png?resize=1024x576&amp;vertical=center" alt="Document verification component set">
-          </figure>
-          <figure>
-            <img src="https://cdn.dribbble.com/userupload/48405559/file/c6b7d734fa3d6aaa588a4487d0c62f5a.png?resize=1024x576&amp;vertical=center" alt="Camera scanner interaction screens">
-          </figure>
-          <figure>
-            <img src="https://cdn.dribbble.com/userupload/48405557/file/bf8e3fa939853ff4db2d278c125c2b2f.png?resize=1024x561&amp;vertical=center" alt="Selfie verification flow screens">
-          </figure>
-          <figure>
-            <img src="https://cdn.dribbble.com/userupload/48405558/file/223fcdafd186244f26951f6c829fffe1.png?resize=1024x561&amp;vertical=center" alt="KYC success and progress screens">
-          </figure>
+        <div class="carousel">
+          <input type="radio" name="kyc-c1" id="kyc-c1-1" checked>
+          <input type="radio" name="kyc-c1" id="kyc-c1-2">
+          <input type="radio" name="kyc-c1" id="kyc-c1-3">
+          <input type="radio" name="kyc-c1" id="kyc-c1-4">
+          <div class="carousel-slides">
+            <figure class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48405560/file/e6961040719e91e10fe6b6937fe62d3e.png?resize=1024x576&amp;vertical=center" alt="Document verification component set"></figure>
+            <figure class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48405559/file/c6b7d734fa3d6aaa588a4487d0c62f5a.png?resize=1024x576&amp;vertical=center" alt="Camera scanner interaction screens"></figure>
+            <figure class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48405557/file/bf8e3fa939853ff4db2d278c125c2b2f.png?resize=1024x561&amp;vertical=center" alt="Selfie verification flow screens"></figure>
+            <figure class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48405558/file/223fcdafd186244f26951f6c829fffe1.png?resize=1024x561&amp;vertical=center" alt="KYC success and progress screens"></figure>
+          </div>
+          <div class="carousel-thumbs">
+            <label for="kyc-c1-1"><img src="https://cdn.dribbble.com/userupload/48405560/file/e6961040719e91e10fe6b6937fe62d3e.png?resize=1024x576&amp;vertical=center" alt="Slide 1"></label>
+            <label for="kyc-c1-2"><img src="https://cdn.dribbble.com/userupload/48405559/file/c6b7d734fa3d6aaa588a4487d0c62f5a.png?resize=1024x576&amp;vertical=center" alt="Slide 2"></label>
+            <label for="kyc-c1-3"><img src="https://cdn.dribbble.com/userupload/48405557/file/bf8e3fa939853ff4db2d278c125c2b2f.png?resize=1024x561&amp;vertical=center" alt="Slide 3"></label>
+            <label for="kyc-c1-4"><img src="https://cdn.dribbble.com/userupload/48405558/file/223fcdafd186244f26951f6c829fffe1.png?resize=1024x561&amp;vertical=center" alt="Slide 4"></label>
+          </div>
         </div>
       </div>
     </section>
@@ -810,16 +1270,20 @@ export const projects: Project[] = [
           <p>The final experience transforms a traditionally frustrating KYC process into a guided, transparent, and confidence-building journey.</p>
           <p>By combining visual education, real-time feedback, automatic validation, and progressive disclosure, the flow minimizes user effort while improving trust and increasing the likelihood of successful verification on the first attempt.</p>
         </div>
-        <div class="gallery">
-          <figure>
-            <img src="https://cdn.dribbble.com/userupload/48405554/file/e5d4050b9cf1ba6dce1e01c8abd5411e.png?resize=1024x561&amp;vertical=center" alt="Final identity verification flow overview">
-          </figure>
-          <figure>
-            <img src="https://cdn.dribbble.com/userupload/48405555/file/5f8e1687d141af5e7391127f307164b5.png?resize=1024x561&amp;vertical=center" alt="Final passport verification flow overview">
-          </figure>
-          <figure>
-            <img src="https://cdn.dribbble.com/userupload/48405552/file/264c6d7653bae60e8ad3fe629b920f3f.png?resize=1024x576&amp;vertical=center" alt="KYC verification framework illustration">
-          </figure>
+        <div class="carousel">
+          <input type="radio" name="kyc-c2" id="kyc-c2-1" checked>
+          <input type="radio" name="kyc-c2" id="kyc-c2-2">
+          <input type="radio" name="kyc-c2" id="kyc-c2-3">
+          <div class="carousel-slides">
+            <figure class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48405554/file/e5d4050b9cf1ba6dce1e01c8abd5411e.png?resize=1024x561&amp;vertical=center" alt="Final identity verification flow overview"></figure>
+            <figure class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48405555/file/5f8e1687d141af5e7391127f307164b5.png?resize=1024x561&amp;vertical=center" alt="Final passport verification flow overview"></figure>
+            <figure class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48405552/file/264c6d7653bae60e8ad3fe629b920f3f.png?resize=1024x576&amp;vertical=center" alt="KYC verification framework illustration"></figure>
+          </div>
+          <div class="carousel-thumbs">
+            <label for="kyc-c2-1"><img src="https://cdn.dribbble.com/userupload/48405554/file/e5d4050b9cf1ba6dce1e01c8abd5411e.png?resize=1024x561&amp;vertical=center" alt="Slide 1"></label>
+            <label for="kyc-c2-2"><img src="https://cdn.dribbble.com/userupload/48405555/file/5f8e1687d141af5e7391127f307164b5.png?resize=1024x561&amp;vertical=center" alt="Slide 2"></label>
+            <label for="kyc-c2-3"><img src="https://cdn.dribbble.com/userupload/48405552/file/264c6d7653bae60e8ad3fe629b920f3f.png?resize=1024x576&amp;vertical=center" alt="Slide 3"></label>
+          </div>
         </div>
       </div>
     </section>
@@ -890,6 +1354,12 @@ export const projects: Project[] = [
     <footer class="footer">
       <h2>Thank you</h2>
       <p>ID / Passport Verification Flow is a UX exploration of how guided capture, intelligent validation, and transparent system feedback can make KYC onboarding feel clear and reliable.</p>
+      <div class="footer-sources">
+        
+        <div class="footer-links">
+          <a href="https://www.figma.com/community/file/1610377435924665179" target="_blank" rel="noopener noreferrer">Workspace ↗</a>
+        </div>
+      </div>
     </footer>
   </main>
 </div>`,
