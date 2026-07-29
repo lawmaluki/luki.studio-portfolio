@@ -527,7 +527,7 @@ export const projects: Project[] = [
     tags: ['Product Design', 'Social Platform', 'UX Research'],
     image: 'https://cdn.dribbble.com/userupload/48481724/file/3f5bb96013f0c1ef7876abcd680c8581.png?resize=752x&vertical=center',
     summary: 'A product design case study exploring how video-first conversations can create healthier, more authentic online discussions through behavioral design and reputation mechanics.',
-    year: '2024',
+    year: '2026',
     role: 'Product Designer',
     description: `<style>
   .ak {
