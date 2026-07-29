@@ -521,6 +521,381 @@ export const projects: Project[] = [
       link: 'https://ebooks.rahnuma.org/1690308873-Dune.pdf.html',
     },
   {
+    slug: 'kyc-verification-flow',
+    title: 'ID / Passport Verification Flow',
+    category: 'Project',
+    tags: ['UX Design', 'Fintech', 'Mobile Design'],
+    image: 'https://cdn.dribbble.com/userupload/48405551/file/face702b53244c049e006ae11dec73d7.png?resize=1600x904&vertical=center',
+    summary: 'A modern identity verification experience designed to reduce onboarding friction through guided document capture, live edge detection, intelligent validation, and biometric face matching.',
+    year: '2025',
+    role: 'UX Designer',
+    description: `<style>
+  .kyc {
+    color: #4E4E4E;
+    font-size: 17px;
+    line-height: 1.7;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --ink: #2d2d2d;
+    --muted: #6b7280;
+    --line: #e5e7eb;
+    --panel: #ffffff;
+    --soft: #f3f4f6;
+    --blue: #2563eb;
+    --cyan: #14b8a6;
+    --amber: #f59e0b;
+    --navy: #14213d;
+    --radius: 8px;
+  }
+  .kyc * { box-sizing: border-box; }
+  .kyc img { display: block; width: 100%; height: auto; border-radius: var(--radius); }
+  .kyc a { color: inherit; }
+  .kyc .page { overflow: hidden; }
+  .kyc .section { padding: 84px 24px; }
+  .kyc .section.alt { background: var(--soft); }
+  .kyc .wrap { width: min(1120px, 100%); margin: 0 auto; }
+  .kyc .narrow { width: min(780px, 100%); margin: 0 auto; }
+  .kyc .hero { padding: 64px 24px 48px; }
+  .kyc .hero-cover { margin: 0; }
+  .kyc .hero-cover img { border-radius: 0; max-height: 72vh; object-fit: cover; }
+  .kyc .hero-inner { width: min(1120px, 100%); margin: 0 auto; }
+  .kyc .eyebrow { margin: 0 0 18px; color: var(--blue); font-size: 13px; font-weight: 700; text-transform: uppercase; }
+  .kyc h1, .kyc h2, .kyc h3 { margin: 0; line-height: 1.08; letter-spacing: 0; color: #2d2d2d; }
+  .kyc h1 { max-width: 900px; font-size: clamp(48px, 7vw, 88px); font-weight: 800; }
+  .kyc h2 { margin-bottom: 24px; font-size: clamp(34px, 4.5vw, 58px); font-weight: 700; }
+  .kyc h3 { margin: 0 0 12px; font-size: 23px; }
+  .kyc p { margin: 0 0 18px; }
+  .kyc .lead { max-width: 760px; margin-top: 22px; color: var(--muted); font-size: clamp(20px, 2.4vw, 28px); line-height: 1.36; }
+  .kyc .section-label { margin: 0 0 12px; color: var(--muted); font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+  .kyc .meta { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .kyc .meta-item { min-height: 150px; padding: 28px; background: var(--panel); }
+  .kyc .meta-item span { display: block; margin-bottom: 10px; color: var(--muted); font-size: 13px; font-weight: 700; text-transform: uppercase; }
+  .kyc .meta-item strong { display: block; font-size: 21px; line-height: 1.35; }
+  .kyc .callout { margin: 32px 0; padding: 28px; background: var(--soft); border-radius: var(--radius); font-size: 23px; line-height: 1.42; color: var(--ink); }
+  .kyc .pill-list { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; margin: 22px 0 0; list-style: none; }
+  .kyc .pill-list li { padding: 8px 12px; background: #e9f8f5; border: 1px solid #c8eee8; border-radius: 999px; color: #0f766e; font-size: 14px; font-weight: 600; }
+  .kyc .visual-band { padding: 24px; background: #0b1020; }
+  .kyc .visual-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; align-items: start; }
+  .kyc .visual-grid figure { aspect-ratio: 16/9; overflow: hidden; border-radius: var(--radius); margin: 0; }
+  .kyc .visual-grid figure img { width: 100%; height: 100%; object-fit: cover; border-radius: 0; }
+  .kyc figure { margin: 0; }
+  .kyc figure + figure, .kyc p + figure, .kyc figure + p { margin-top: 30px; }
+  .kyc .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 30px; }
+  .kyc .card { padding: 24px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); }
+  .kyc .card h3 { margin-bottom: 10px; }
+  .kyc .step-grid { display: grid; gap: 18px; margin-top: 30px; counter-reset: step; }
+  .kyc .step { position: relative; padding: 26px 26px 26px 86px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); }
+  .kyc .step::before { counter-increment: step; content: counter(step); position: absolute; top: 24px; left: 26px; display: grid; width: 38px; height: 38px; place-items: center; color: white; background: var(--blue); border-radius: 50%; font-weight: 800; }
+  .kyc .check-list { display: grid; gap: 10px; padding: 0; margin: 16px 0 0; list-style: none; }
+  .kyc .check-list li { position: relative; padding-left: 26px; }
+  .kyc .check-list li::before { content: ""; position: absolute; top: 0.72em; left: 0; width: 9px; height: 9px; background: var(--cyan); border-radius: 50%; }
+  .kyc .principles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 28px; }
+  .kyc .principle { padding: 26px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); }
+  .kyc .framework { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 30px 0; }
+  .kyc .phase { padding: 22px; min-height: 150px; color: white; background: var(--navy); border-radius: var(--radius); }
+  .kyc .phase:nth-child(2) { background: var(--blue); }
+  .kyc .phase:nth-child(3) { background: var(--cyan); color: #062522; }
+  .kyc .phase:nth-child(4) { background: var(--amber); color: #271800; }
+  .kyc .gallery { display: grid; gap: 24px; margin-top: 34px; }
+  .kyc .gallery.two { grid-template-columns: repeat(2, 1fr); align-items: start; }
+  .kyc .gallery.two figure { aspect-ratio: 16/9; overflow: hidden; border-radius: var(--radius); margin: 0; }
+  .kyc .gallery.two figure img { width: 100%; height: 100%; object-fit: cover; border-radius: 0; }
+  .kyc .footer { padding: 80px 24px; background: var(--panel); border-top: 1px solid var(--line); text-align: center; }
+  .kyc .footer h2 { color: var(--ink); }
+  .kyc .footer p { width: min(720px, 100%); margin: 18px auto 0; color: var(--muted); }
+  @media (max-width: 880px) {
+    .kyc .section { padding: 64px 20px; }
+    .kyc .hero { padding: 48px 20px 36px; }
+    .kyc .meta, .kyc .visual-grid, .kyc .cards, .kyc .principles, .kyc .framework, .kyc .gallery.two { grid-template-columns: 1fr; }
+    .kyc .meta-item { min-height: auto; }
+    .kyc .step { padding: 76px 24px 24px; }
+  }
+  .dark .kyc { color: #d1d5db; --ink: #e5e7eb; --panel: #1f2937; --line: #374151; --muted: #9ca3af; --soft: #1f2937; }
+  .dark .kyc h1, .dark .kyc h2, .dark .kyc h3 { color: #f3f4f6; }
+  .dark .kyc p { color: #9ca3af; }
+  .dark .kyc .section.alt { background: #1f2937; }
+  .dark .kyc .meta-item { background: #1f2937; }
+  .dark .kyc .card { background: #1f2937; border-color: #374151; }
+  .dark .kyc .step { background: #1f2937; border-color: #374151; }
+  .dark .kyc .principle { background: #1f2937; border-color: #374151; }
+  .dark .kyc .pill-list li { background: #374151; border-color: #4b5563; color: #d1d5db; }
+</style>
+
+<div class="kyc">
+  <main class="page">
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow">UX Case Study / KYC Flow</p>
+        <h1>ID / Passport Verification Flow</h1>
+        <p class="lead">A modern identity verification experience designed to reduce onboarding friction through guided document capture, live edge detection, intelligent validation, and biometric face matching.</p>
+      </div>
+    </header>
+
+    <figure class="hero-cover">
+      <img src="https://cdn.dribbble.com/userupload/48405551/file/face702b53244c049e006ae11dec73d7.png?resize=1600x904&vertical=center" alt="ID / Passport Verification Flow cover">
+    </figure>
+
+    <section class="meta" aria-label="Project details">
+      <div class="meta-item">
+        <span>Tools</span>
+        <strong>Figma</strong>
+      </div>
+      <div class="meta-item">
+        <span>Detailing</span>
+        <strong>Auto Layout, Components, Variables, Prototyping</strong>
+      </div>
+      <div class="meta-item">
+        <span>Focus</span>
+        <strong>Fintech, HR Tech, KYC, Mobile Design, Identity Verification</strong>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <p class="section-label">Overview</p>
+        <h2>Making Verification Feel Simple, Trustworthy, and Effortless</h2>
+        <p>Identity verification is often the biggest source of friction during onboarding. Many users abandon registration because scanning IDs feels confusing, slow, or unreliable.</p>
+        <p>The goal was to support multiple document types across different regions while helping users complete verification with confidence.</p>
+        <ul class="pill-list">
+          <li>Fast</li>
+          <li>Guided</li>
+          <li>Trustworthy</li>
+          <li>Human</li>
+          <li>Error-resistant</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="visual-band">
+      <div class="wrap visual-grid">
+        <figure>
+          <img src="https://cdn.dribbble.com/userupload/48405556/file/d4147a93c3812b6dacec89b995cce8c6.png?resize=1024x576&amp;vertical=center" alt="KYC verification overview screen">
+        </figure>
+        <figure>
+          <img src="https://cdn.dribbble.com/userupload/48405553/file/3588fa5bd02bdacf8af29c9174d14464.png?resize=1024x576&amp;vertical=center" alt="Identity verification mobile flow screens">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="wrap">
+        <p class="section-label">The Challenge</p>
+        <h2>KYC Is Essential, but It Often Feels Intimidating</h2>
+        <p>Identity verification is one of the first moments where users decide whether to continue with a product or abandon it altogether. Users are expected to capture a perfect photo of their ID without much guidance.</p>
+        <p>They struggle with positioning the document correctly, dealing with glare or poor lighting, and understanding why a scan failed. Even after submitting their document, they are often left staring at a loading screen with no indication of what is happening behind the scenes.</p>
+        <div class="callout">The project reframed verification from a technical requirement into a guided journey that gives users confidence at every step.</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="narrow">
+        <h2>Goals</h2>
+        <p>The experience was designed around five practical goals that prevent failure before it happens.</p>
+        <div class="cards">
+          <article class="card">
+            <h3>Guide Early</h3>
+            <p>Educate users before scanning instead of showing errors afterwards.</p>
+          </article>
+          <article class="card">
+            <h3>Reduce Failed Scans</h3>
+            <p>Provide overlays, edge detection, and lighting guidance.</p>
+          </article>
+          <article class="card">
+            <h3>Build Trust</h3>
+            <p>Show exactly what the system is doing during verification.</p>
+          </article>
+          <article class="card">
+            <h3>Lower Cognitive Load</h3>
+            <p>Break verification into small, manageable steps.</p>
+          </article>
+          <article class="card">
+            <h3>Support Global Documents</h3>
+            <p>Handle national IDs, passports, and residence permits without redesigning the interface.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="wrap">
+        <div class="narrow">
+          <h2>Understanding the UI System Flow</h2>
+          <p>The verification journey is broken into clear stages so each screen answers one user question at a time.</p>
+        </div>
+        <div class="step-grid">
+          <article class="step">
+            <h3>Identity Selection</h3>
+            <p>Users first choose which document they want to verify. Different document types require different capture rules, so selection makes the rest of the flow easier to understand.</p>
+          </article>
+          <article class="step">
+            <h3>Guided Education</h3>
+            <p>Before opening the camera, a quick visual tutorial explains correct placement, proper lighting, full document framing, and glare avoidance.</p>
+          </article>
+          <article class="step">
+            <h3>Live Camera Scanner</h3>
+            <p>The scanner uses auto edge detection, dynamic frame alignment, live document recognition, visual confidence indicators, and automatic capture when quality requirements are met.</p>
+          </article>
+          <article class="step">
+            <h3>Intelligent Validation</h3>
+            <p>The system validates document borders, text visibility, MRZ detection, portrait quality, security features, and resolution.</p>
+          </article>
+          <article class="step">
+            <h3>Processing State</h3>
+            <p>Instead of a static loader, users see plain-language progress states such as reading document, detecting security features, and matching identity.</p>
+          </article>
+          <article class="step">
+            <h3>Selfie Verification</h3>
+            <p>The flow continues with face guidance, automatic positioning, lighting detection, and a neutral expression reminder to improve biometric quality.</p>
+          </article>
+          <article class="step">
+            <h3>Face Matching</h3>
+            <p>The final stage compares the ID photo with the selfie and shows verification progress before confirming success.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="narrow">
+          <h2>Design Process</h2>
+          <p>Key components included verification cards, scanner overlays, progress indicators, detection nodes, success toasts, face scanner patterns, step progress bars, and camera overlays.</p>
+        </div>
+        <div class="gallery two">
+          <figure>
+            <img src="https://cdn.dribbble.com/userupload/48405560/file/e6961040719e91e10fe6b6937fe62d3e.png?resize=1024x576&amp;vertical=center" alt="Document verification component set">
+          </figure>
+          <figure>
+            <img src="https://cdn.dribbble.com/userupload/48405559/file/c6b7d734fa3d6aaa588a4487d0c62f5a.png?resize=1024x576&amp;vertical=center" alt="Camera scanner interaction screens">
+          </figure>
+          <figure>
+            <img src="https://cdn.dribbble.com/userupload/48405557/file/bf8e3fa939853ff4db2d278c125c2b2f.png?resize=1024x561&amp;vertical=center" alt="Selfie verification flow screens">
+          </figure>
+          <figure>
+            <img src="https://cdn.dribbble.com/userupload/48405558/file/223fcdafd186244f26951f6c829fffe1.png?resize=1024x561&amp;vertical=center" alt="KYC success and progress screens">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="wrap">
+        <p class="section-label">UX Principles</p>
+        <h2>Designing for Confidence</h2>
+        <div class="principles">
+          <article class="principle">
+            <h3>Progressive Disclosure</h3>
+            <p>Information appears only when relevant, reducing cognitive overload and keeping users focused on the next action.</p>
+          </article>
+          <article class="principle">
+            <h3>Real-Time Feedback</h3>
+            <p>Live edge detection, green confirmation borders, validation checkpoints, and progress indicators reassure users that the system is working.</p>
+          </article>
+          <article class="principle">
+            <h3>Error Prevention</h3>
+            <p>The interface helps users avoid failed scans instead of relying on error messages after something goes wrong.</p>
+          </article>
+          <article class="principle">
+            <h3>Transparency</h3>
+            <p>Plain-language processing states explain when a document is being analyzed, when facial matching is in progress, and when verification is complete.</p>
+          </article>
+        </div>
+        <div class="callout">The best verification experience is one where users rarely encounter errors because the interface helps them succeed before mistakes happen.</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="narrow">
+          <h2>Outcome</h2>
+          <p>The final experience transforms a traditionally frustrating KYC process into a guided, transparent, and confidence-building journey.</p>
+          <p>By combining visual education, real-time feedback, automatic validation, and progressive disclosure, the flow minimizes user effort while improving trust and increasing the likelihood of successful verification on the first attempt.</p>
+        </div>
+        <div class="gallery">
+          <figure>
+            <img src="https://cdn.dribbble.com/userupload/48405554/file/e5d4050b9cf1ba6dce1e01c8abd5411e.png?resize=1024x561&amp;vertical=center" alt="Final identity verification flow overview">
+          </figure>
+          <figure>
+            <img src="https://cdn.dribbble.com/userupload/48405555/file/5f8e1687d141af5e7391127f307164b5.png?resize=1024x561&amp;vertical=center" alt="Final passport verification flow overview">
+          </figure>
+          <figure>
+            <img src="https://cdn.dribbble.com/userupload/48405552/file/264c6d7653bae60e8ad3fe629b920f3f.png?resize=1024x576&amp;vertical=center" alt="KYC verification framework illustration">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="wrap">
+        <p class="section-label">Framework</p>
+        <h2>KYC Verification Framework</h2>
+        <p>The framework illustrates a streamlined end-to-end identity verification process that balances security, compliance, and user experience. Instead of treating verification as a single step, it breaks the journey into four connected phases.</p>
+        <div class="framework">
+          <article class="phase">
+            <h3>Guide</h3>
+            <p>Prepare users before document capture.</p>
+          </article>
+          <article class="phase">
+            <h3>Capture</h3>
+            <p>Use live feedback to improve scan quality.</p>
+          </article>
+          <article class="phase">
+            <h3>Validate</h3>
+            <p>Analyze document data and biometric quality.</p>
+          </article>
+          <article class="phase">
+            <h3>Confirm</h3>
+            <p>Communicate completion clearly and confidently.</p>
+          </article>
+        </div>
+        <p>Together, these stages minimize onboarding friction while maintaining high standards of identity assurance.</p>
+        <figure>
+          <img src="https://cdn.dribbble.com/userupload/48411004/file/42cadc74a4bd270060b0db3eef9bda29.png?resize=1024x683&amp;vertical=center" alt="KYC framework detailed screen">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <p class="section-label">Takeaways</p>
+        <h2>Takeaways</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Strategic Design Happens Before Pixels</h3>
+            <p>The strongest contribution was questioning why ID and Passport verification needed separate flows. Unifying the experience made it more useful and trustworthy.</p>
+          </article>
+          <article class="card">
+            <h3>High-Fidelity Can Accelerate Alignment</h3>
+            <p>When interactions are novel, realistic UI can help stakeholders understand the concept faster.</p>
+          </article>
+          <article class="card">
+            <h3>Trust Requires Transparency</h3>
+            <p>Users should know when their document is analyzed, when facial matching is in progress, and when verification has been completed.</p>
+          </article>
+        </div>
+        <figure>
+          <img src="https://cdn.dribbble.com/userupload/48411003/file/7506c4f075c9ffa5871a43b2e68abbd1.png?resize=1024x683&amp;vertical=center" alt="Final KYC verification presentation screen">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="narrow">
+        <h2>Final Reflection</h2>
+        <p>The biggest takeaway from this project was that great KYC design is proactive rather than reactive. Instead of relying on error messages after something goes wrong, the experience should prevent mistakes through clear guidance, real-time feedback, and transparent system communication.</p>
+        <p>By balancing usability, security, and trust, the verification process becomes more than a mandatory onboarding step. It becomes an opportunity to build confidence from the very first interaction.</p>
+        <p>A thoughtful KYC experience not only improves completion rates but also establishes the foundation for a long-lasting relationship between users and the product.</p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <h2>Thank you</h2>
+      <p>ID / Passport Verification Flow is a UX exploration of how guided capture, intelligent validation, and transparent system feedback can make KYC onboarding feel clear and reliable.</p>
+    </footer>
+  </main>
+</div>`,
+    link: '',
+  },
+  {
     slug: 'designing-leveragex',
     title: 'Designing LeverageX',
     category: 'Project',
