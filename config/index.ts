@@ -4173,6 +4173,16 @@ System & UI Design,
       <p>2026</p>
     </div>
   </div>
+  <div class="footer-sources">
+    <p class="footer-sources-title">Resources</p>
+    <div class="footer-links">
+      <a href="https://www.figma.com/design/5IHijjCVoWIKTVXbmCME64/Milpress-Brand?node-id=0-1&t=Kr558fRlFCW9LKYp-1" target="_blank" rel="noopener noreferrer">Brand Visual Identity &#8599;</a>
+      <a href="https://www.figma.com/board/tnIQuX9HG2afCWdqlEGKYz/Milpress?node-id=0-1&t=dJs6UkJvGbH9knef-1" target="_blank" rel="noopener noreferrer">Flowchart Workspace &#8599;</a>
+      <a href="https://www.figma.com/design/9Da1wDpstB0sT5F0G4Jb9X/MilPress?node-id=1-2&p=f&t=HPpXO0ejXxKNrEPP-0" target="_blank" rel="noopener noreferrer">Design Workspace &#8599;</a>
+      <a href="https://play.google.com/store/apps/details?id=com.milpress.edu&hl=en" target="_blank" rel="noopener noreferrer">App on Play Store &#8599;</a>
+      <a href="https://milpress.org/" target="_blank" rel="noopener noreferrer">milpress.org &#8599;</a>
+    </div>
+  </div>
 </div>
 
 </div>`,
