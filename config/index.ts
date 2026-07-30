@@ -555,12 +555,31 @@ export const projects: Project[] = [
   .ak h2 { margin: 32px 0 14px; font-size: clamp(20px, 2.8vw, 32px); font-weight: 700; line-height: 1.2; letter-spacing: -0.01em; color: var(--deep); }
   .ak p { margin: 0 0 14px; font-size: 17px; line-height: 1.75; color: #4E4E4E; }
   .ak p.spacer { height: 6px; margin: 0; padding: 0; font-size: 0; line-height: 0; }
-  .ak ul, .ak ol { margin: 6px 0 14px; padding-left: 22px; font-size: 17px; line-height: 1.75; color: #4E4E4E; }
-  .ak li { margin-bottom: 4px; }
+  .ak ul, .ak ol { margin: 6px 0 18px; padding-left: 22px; font-size: 17px; line-height: 1.75; color: #4E4E4E; }
+  .ak li { margin-bottom: 8px; }
   .ak li p { margin: 0; }
   .ak li p.spacer { display: none; }
   .ak strong { font-weight: 700; color: var(--deep); }
   .ak em, .ak i { color: var(--deep); }
+  .ak .meta-row { display: flex; flex-wrap: wrap; gap: 0; margin: 28px 0; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+  .ak .meta-item { flex: 1; min-width: 120px; padding: 16px 20px; }
+  .ak .meta-item + .meta-item { border-left: 1px solid var(--line); }
+  .ak .meta-label { margin: 0 0 4px; font-size: 11px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 0.08em; }
+  .ak .meta-value { margin: 0; font-size: 15px; font-weight: 600; color: var(--deep); line-height: 1.4; }
+  .ak .callout { margin: 28px 0; padding: 20px 24px; background: rgba(49,87,213,0.06); border-left: 3px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; font-size: 18px; font-style: italic; color: var(--deep); line-height: 1.6; }
+  .ak .outcome-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 28px 0; }
+  .ak .outcome-card { padding: 22px; background: rgba(49,87,213,0.04); border-radius: var(--radius); }
+  .ak .outcome-num { display: block; font-size: 34px; font-weight: 800; color: var(--accent); line-height: 1; margin-bottom: 8px; letter-spacing: -0.03em; }
+  .ak .outcome-label { margin: 0; font-size: 13px; color: #6b7280; line-height: 1.5; }
+  .dark .ak .meta-row { border-color: #374151; }
+  .dark .ak .meta-item + .meta-item { border-color: #374151; }
+  .dark .ak .callout { background: rgba(49,87,213,0.1); color: #e5e7eb; }
+  .dark .ak .outcome-card { background: rgba(49,87,213,0.08); }
+  @media (max-width: 600px) {
+    .ak .meta-row { flex-direction: column; }
+    .ak .meta-item + .meta-item { border-left: none; border-top: 1px solid var(--line); }
+    .ak .outcome-grid { grid-template-columns: 1fr; }
+  }
   .ak .carousel { position: relative; width: min(752px, 100%); margin: 48px auto; }
   .ak .carousel input[type="radio"] { display: none; }
   .ak .carousel-slides { position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 16/9; box-shadow: 0 4px 24px rgba(13,12,34,0.08), 0 24px 64px rgba(13,12,34,0.06); }
@@ -598,48 +617,46 @@ export const projects: Project[] = [
 <figure class="shot"><a href="https://cdn.dribbble.com/userupload/48481724/file/3f5bb96013f0c1ef7876abcd680c8581.png?resize=752x&amp;vertical=center" target="_blank" rel="noopener noreferrer"><img src="https://cdn.dribbble.com/userupload/48481724/file/3f5bb96013f0c1ef7876abcd680c8581.png?resize=752x&amp;vertical=center" alt="Akropolis case study cover"></a></figure>
 
 <section class="text-block">
-  <h1>Akropolis: Product Design Case Study</h1>
-  <p>Looking back at the Akropolis brief and research documentation that the client shared, the interesting part wasn't the UI; it was that we were <strong>solving a behavioral and product strategy problem</strong>.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>Quick one;</p>
-  <p><em><i>How do you encourage healthier online discussions by replacing text with video while creating a sustainable engagement model?</i></em></p>
-  <p><strong>or</strong></p>
-  <p>How do you fix online discourse without building a ghost town?</p>
+  <h1>Akropolis: Redesigning Online Discourse</h1>
+  <p>Most design challenges are about making things look good. This one was about changing how people behave. The client&#8217;s brief wasn&#8217;t &#8220;design a social app&#8221;, it was &#8220;figure out why online conversations fail, then build something that doesn&#8217;t.&#8221; That pulled me out of the comfort zone of UI decisions and deep into product strategy territory. That&#8217;s where I do my best work.</p>
+  <div class="meta-row">
+    <div class="meta-item">
+      <p class="meta-label">Role</p>
+      <p class="meta-value">Product Designer</p>
+    </div>
+    <div class="meta-item">
+      <p class="meta-label">Timeline</p>
+      <p class="meta-value">12 Weeks</p>
+    </div>
+    <div class="meta-item">
+      <p class="meta-label">Platform</p>
+      <p class="meta-value">Android &amp; iOS</p>
+    </div>
+    <div class="meta-item">
+      <p class="meta-label">Team</p>
+      <p class="meta-value">Flutter Devs, Backend, PM</p>
+    </div>
+    <div class="meta-item">
+      <p class="meta-label">Scope</p>
+      <p class="meta-value">Strategy, Research, UI, Design System</p>
+    </div>
+  </div>
 </section>
 
 <figure class="shot"><a href="https://cdn.dribbble.com/userupload/48482781/file/9b44a828a51b9f1ff1a92645dfd225bf.png?resize=752x&amp;vertical=center" target="_blank" rel="noopener noreferrer"><img src="https://cdn.dribbble.com/userupload/48482781/file/9b44a828a51b9f1ff1a92645dfd225bf.png?resize=752x&amp;vertical=center" alt="Akropolis overview"></a></figure>
 
 <section class="text-block">
-  <h1>Akropolis</h1>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>Online discussions have become increasingly reactive.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>Most conversations happen through short text comments that <strong>strip away tone, emotion, and intent, often leading to misunderstandings, hostility, and low-quality engagement</strong>. Akropolis explores a different approach by replacing traditional text discussions with <strong>video responses</strong>.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>The goal was to design a platform where people communicate <strong>more authentically, rewarding thoughtful participation while creating healthier online communities.</strong></p>
-</section>
-
-<section class="text-block">
-  <p>Role: Product Designer</p>
-  <p>Timeline: 12 Weeks</p>
-  <p>Team: <strong>Product Designer</strong>, Flutter Developers, Backend Developers, Project Manager</p>
-  <p>Platform: Android • iOS</p>
-  <p>Responsibilities: <strong>Product Strategy</strong>, UX Research, UI Design, Design System, Prototyping</p>
+  <h2>The Problem</h2>
+  <p>Social media made it frictionless to share reactions but nearly impossible to have a real conversation. Text strips tone, intent, and accountability from every message. A carefully worded argument looks identical to an aggressive one-liner. Combined with anonymity and algorithms that reward outrage over insight, platforms don&#8217;t just fail to prevent toxic discourse. They&#8217;re built in ways that produce it.</p>
+  <p>No major platform was designed around the premise that <em>the conversation itself</em> should be video. Twitter optimizes for speed. Reddit for threading. TikTok for consumption. YouTube&#8217;s comments are an afterthought. The gap was clear.</p>
+  <div class="callout">What if online conversations were designed around human presence, where your voice, your face, and your identity were the medium?</div>
+  <p>Akropolis explores this: a platform where video <em>is</em> the discussion. Users watch video discussions, respond with video, build threaded video conversations, and earn reputation through constructive participation, creating a fundamentally different interaction model from anything that exists.</p>
 </section>
 
 <figure class="shot"><a href="https://cdn.dribbble.com/userupload/48482780/file/ac037490bc1c521eb896375ddc3be2b1.png?resize=752x&amp;vertical=center" target="_blank" rel="noopener noreferrer"><img src="https://cdn.dribbble.com/userupload/48482780/file/ac037490bc1c521eb896375ddc3be2b1.png?resize=752x&amp;vertical=center" alt="The Problem"></a></figure>
 
 <section class="text-block">
-  <h1>The Problem</h1>
-  <p>Social media has made it easier than ever to share opinions, but much harder to have meaningful conversations. While existing platforms optimize for engagement <strong>through comments, likes, and shares</strong>, they often fail to encourage understanding.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>Text removes emotional context.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>A sentence that was intended to be thoughtful can easily be interpreted as hostile. Combined with anonymity and rapid interactions, this creates <strong>environments where meaningful discussion becomes increasingly difficult.</strong></p>
-</section>
-
-<section class="text-block">
-  <p><em><i>Existing User Pain Points</i></em></p>
+  <p><em>User Pain Points</em></p>
 </section>
 
 <div class="carousel">
@@ -659,478 +676,56 @@ export const projects: Project[] = [
 </div>
 
 <section class="text-block">
-  <p>During the research phase, I analyzed how major social platforms handle discussions:</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <ul>
-    <li><p><strong>X (Twitter)</strong> optimizes for speed and virality.</p></li>
-    <li><p><strong>Reddit</strong> organizes conversations well but remains heavily text-dependent.</p></li>
-    <li><p><strong>TikTok</strong> excels at video consumption but is not designed for deep threaded discussions.</p></li>
-    <li><p><strong>YouTube</strong> supports video but relies primarily on text comments for interaction.</p></li>
-  </ul>
-  <p>None of these platforms were fundamentally designed around the idea that conversation itself could be video-first.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>Moving Beyond Text-Based Discussions</strong></p>
-  <p>Instead of asking:</p>
-  <p><em><i>"How can we improve comment sections?"</i></em></p>
-  <p>I wanted to ask a much broader and more meaningful question:</p>
-  <h2>What if online conversations were designed around human presence instead of written comments?</h2>
-  <p>This question became <strong>the foundation of Akropolis</strong>.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>Rather than treating video as a supplementary feature, Akropolis positions video as the primary language of communication. Every discussion, response, reaction, and reply is centered around video interactions.</strong></p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>Note:</strong></p>
-  <p>Human presence refers to the ability to see and hear another person while they communicate. In face-to-face conversations, we naturally interpret emotion, confidence, empathy, hesitation, and sincerity through visual and verbal cues.</p>
+  <h2>What Research Revealed</h2>
+  <p>User interviews and behavioural analysis across six major platforms surfaced five patterns that became the foundation of every design decision:</p>
+  <ol>
+    <li><strong>Intent gets lost in text.</strong> Users consistently misread tone in written comments, triggering defensive escalation that rarely happens face-to-face.</li>
+    <li><strong>Anonymity erodes accountability.</strong> Users behave measurably differently when their face and identity are attached to their words.</li>
+    <li><strong>Most users are lurkers by default.</strong> The barrier to participation isn&#8217;t interest. It&#8217;s fear of hostility. Lower that risk and contribution rates rise.</li>
+    <li><strong>Recognition drives consistency.</strong> Users who received visible acknowledgment for thoughtful contributions were significantly more likely to return and keep engaging.</li>
+    <li><strong>Discussion fatigue kills communities.</strong> Long, unstructured threads cause abandonment. Threaded, structured conversations keep users oriented and invested.</li>
+  </ol>
+  <p>X, Reddit, TikTok, YouTube, Facebook, Threads: each solved for one or two of these problems at the expense of the others. That was the gap Akropolis was built to close.</p>
 </section>
 
 <figure class="shot"><a href="https://cdn.dribbble.com/userupload/48482779/file/cee1afb4bca4af284f35d7a4a57adb43.png?resize=752x&amp;vertical=center" target="_blank" rel="noopener noreferrer"><img src="https://cdn.dribbble.com/userupload/48482779/file/cee1afb4bca4af284f35d7a4a57adb43.png?resize=752x&amp;vertical=center" alt="Akropolis concept"></a></figure>
 
-<section class="text-block">
-  <p>The Akropolis concept proposed a platform where users:</p>
-  <ul>
-    <li><p><em><i>Watch video-based discussions.</i></em></p></li>
-    <li><p><em><i>Respond with video rather than text.</i></em></p></li>
-    <li><p><em><i>Build threaded video conversations.</i></em></p></li>
-    <li><p><em><i>Earn reputation through constructive participation.</i></em></p></li>
-    <li><p><em><i>Gain visibility through engagement-based rewards such as Emblems.</i></em></p></li>
-  </ul>
-  <p>This created a fundamentally different interaction model from traditional comment sections.</p>
-</section>
-
-<section class="text-block">
-  <h1>Why was this a valuable opportunity?</h1>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>Akropolis seeks to occupy this space by combining the authenticity of video communication with the structure of community-driven conversations.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>1. Increasing Authenticity</strong></p>
-  <p>Text allows people to hide emotion, intention, and accountability.</p>
-  <p>Video introduces facial expressions, tone, and body language, which can increase perceived authenticity and reduce misunderstandings.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>For Akropolis, authenticity was not just a general improvement: it was a strategic differentiator.</p>
-  <p><em><i>Akropolis takes a different approach.</i></em></p>
-  <p>The platform was designed to <strong>reward participation that contributes positively</strong> to discussions.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>Through the <strong>Engagement and Emblem systems</strong>, users are encouraged to:</p>
-  <ul>
-    <li><p><em><i>Read and understand content</i></em></p></li>
-    <li><p><em><i>Provide thoughtful responses</i></em></p></li>
-    <li><p><em><i>Contribute to discussions</i></em></p></li>
-    <li><p><em><i>Build credibility within the community</i></em></p></li>
-  </ul>
-  <p>Rather than rewarding the loudest voices, the system aims to reward meaningful participation and constructive engagement.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>This aligns directly with the product's core engagement loop of reading, rating, replying, earning points, and unlocking Emblems that increase visibility.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>2. Creating a Healthier Community Model</strong></p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><em><i><strong>A significant challenge for any social platform is moderation.</strong></i></em></p>
-  <p>Traditional moderation models often rely heavily on centralized review teams, making it difficult to scale while maintaining fairness and transparency.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>Akropolis presented an opportunity to explore a more community-driven approach.</p>
-  <p>We recognized an opportunity to design a system where visibility is tied to engagement quality rather than anonymous outrage.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>By combining video communication with reputation mechanics, Akropolis could encourage users to contribute more thoughtfully because their identity and presence are directly associated with their responses.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>3. Creator-Centric Growth</strong></p>
-  <p>Traditional discussion platforms often make it difficult for creators to stand out unless they already have a large audience.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>The <strong>Emblem system</strong> introduced an alternative growth mechanism: users could earn temporary visibility boosts through active participation.</p>
-  <p>This created a feedback loop where meaningful contributions could lead to increased exposure, interactions, and reputation growth.</p>
-</section>
-
 <figure class="shot"><a href="https://cdn.dribbble.com/userupload/48482793/file/e4ba5249d17fc7e56b082b06c7b24651.png?resize=752x&amp;vertical=center" target="_blank" rel="noopener noreferrer"><img src="https://cdn.dribbble.com/userupload/48482793/file/e4ba5249d17fc7e56b082b06c7b24651.png?resize=752x&amp;vertical=center" alt="Opportunity framing"></a></figure>
 
 <section class="text-block">
-  <p>The opportunity behind Akropolis was not simply to build another social app.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>It was to explore whether a platform centered on human presence, video-based dialogue, and reputation-driven participation could create conversations that feel more authentic, empathetic, and constructive than traditional text-first social networks.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>This insight shaped every subsequent design decision: from the <strong>information architecture and video reply flows to the moderation system, engagement mechanics, and creator visibility model</strong>.</p>
+  <h2>Three Strategic Bets</h2>
+  <p>The research pointed toward three design bets that shaped the entire product:</p>
+  <ol>
+    <li><strong>Video as the primary communication medium. Not a feature, not an option.</strong> Video reintroduces the cues (tone, expression, accountability) that make people choose their words more carefully. Not as a supplement to text. Instead of it.</li>
+    <li><strong>Visibility tied to quality, not volume.</strong> The Emblem system rewards users who engage constructively: Read &#8594; Rate &#8594; Reply &#8594; Earn Points &#8594; Unlock Emblems &#8594; Gain Reach. This creates a growth loop that doesn&#8217;t reward the loudest voice, only the most thoughtful one.</li>
+    <li><strong>Community-driven moderation at scale.</strong> Centralized moderation doesn&#8217;t scale. Designing a system where users collectively vote on flagged content creates a distributed accountability model that grows with the platform instead of lagging behind it.</li>
+  </ol>
 </section>
 
 <figure class="shot"><a href="https://cdn.dribbble.com/userupload/48493088/file/ce17984d6ff10074b990d02a8ccfd6cb.png?resize=752x&amp;vertical=center" target="_blank" rel="noopener noreferrer"><img src="https://cdn.dribbble.com/userupload/48493088/file/ce17984d6ff10074b990d02a8ccfd6cb.png?resize=752x&amp;vertical=center" alt="Understanding users"></a></figure>
 
-<section class="text-block">
-  <h1>Understanding Users</h1>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>Designing Beyond the Interface</strong></p>
-  <p>Before exploring layouts, interactions, or visual design, we wanted to understand a more fundamental question:</p>
-  <p><strong>Why do online discussions often fail to create meaningful conversations?</strong></p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>Akropolis was never intended to be another social media platform.</p>
-  <p>Its goal was to encourage <strong>healthier, more authentic discussions</strong> by replacing text-based conversations with video interactions.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>To design a product capable of achieving this, we first needed to <strong>understand the behaviours, frustrations, and motivations that shape how people communicate online.</strong></p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>Rather than focusing solely on interface design, my research explored how people interact with existing social platforms, what encourages participation, what causes conversations to become hostile, and how trust can be improved in digital communities.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <h2>Research Objectives</h2>
-  <p>The research phase was guided by a series of questions that helped define both the user problem and the product opportunity.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>1. Why do online conversations become hostile?</strong></p>
-  <p>Many social platforms begin as spaces for discussion but often evolve into environments filled with arguments, misinformation, and personal attacks. I wanted to understand the factors that contribute to these behaviours.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>Specifically, we explored:</p>
-  <ul>
-    <li><p><em><i>Whether anonymity influences user behaviour.</i></em></p></li>
-    <li><p><em><i>How the absence of facial expressions and vocal tone affects communication.</i></em></p></li>
-    <li><p><em><i>Why disagreements escalate more quickly in text than in face-to-face conversations.</i></em></p></li>
-    <li><p><em><i>What makes users feel comfortable expressing opposing opinions.</i></em></p></li>
-    <li><p>Understanding these behaviours helped establish one of Akropolis' core principles:</p></li>
-    <li><p><strong>Bringing human presence back into online conversations through video.</strong></p></li>
-  </ul>
-  <p><strong>2. What motivates people to participate?</strong></p>
-  <p>Many users simply consume content without responding, while others participate frequently.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>To understand this behaviour, we explored questions such as:</p>
-  <ul>
-    <li><p>What motivates someone to comment on a discussion?</p></li>
-    <li><p>Why do some creators consistently receive engagement while others are ignored?</p></li>
-    <li><p>What kinds of recognition encourage users to participate more often?</p></li>
-    <li><p>How important are visibility and reputation within online communities?</p></li>
-  </ul>
-  <p>These questions helped shape the engagement system used in Akropolis, <strong>where users earn points and Emblems through meaningful participation, increasing their visibility within the community</strong>.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>3. Why do users abandon discussions?</strong></p>
-  <p>Many discussions begin with high engagement but quickly lose momentum.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>We wanted to understand why users rarely return to continue conversations after leaving an initial comment.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>Key areas explored included:</p>
-  <ul>
-    <li><p><em><i>Long and cluttered comment threads.</i></em></p></li>
-    <li><p><em><i>Difficulty following multiple conversations.</i></em></p></li>
-    <li><p><em><i>Lack of incentives to revisit discussions.</i></em></p></li>
-    <li><p><em><i>Poor visibility of replies.</i></em></p></li>
-    <li><p><em><i>Conversations becoming repetitive or toxic.</i></em></p></li>
-  </ul>
-  <p>These observations reinforced the need for structured, <strong>threaded video conversations that are easier to follow and more rewarding to participate in.</strong></p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>4. How is trust established online?</strong></p>
-  <p>We explored how users decide whether another person's opinion is credible by examining factors such as:</p>
-  <ul>
-    <li><p><em><i>Real identity versus anonymous accounts.</i></em></p></li>
-    <li><p><em><i>Visible expertise or reputation.</i></em></p></li>
-    <li><p><em><i>Tone of communication.</i></em></p></li>
-    <li><p><em><i>Authenticity conveyed through facial expressions and voice.</i></em></p></li>
-    <li><p><em><i>Consistency of previous contributions.</i></em></p></li>
-  </ul>
-  <p>These findings supported the decision to make <strong>video the primary communication medium, allowing users to evaluate opinions with greater context than text alone.</strong></p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>5. Can video improve communication?</strong></p>
-  <p>Rather than asking:</p>
-  <p><em><i>How can we improve text comments?</i></em></p>
-  <p>we explored:</p>
-  <p><strong>Can video fundamentally improve the quality of online discussions?</strong></p>
-  <p>The objective was to understand whether visual communication could:</p>
-  <ul>
-    <li><p><em><i>Reduce misunderstandings.</i></em></p></li>
-    <li><p><em><i>Increase empathy.</i></em></p></li>
-    <li><p><em><i>Encourage accountability.</i></em></p></li>
-    <li><p><em><i>Improve trust.</i></em></p></li>
-    <li><p><em><i>Create stronger communities.</i></em></p></li>
-  </ul>
-  <p><em><i><strong>This question ultimately became the foundation of the Akropolis product vision.</strong></i></em></p>
-</section>
-
 <figure class="shot"><a href="https://cdn.dribbble.com/userupload/48493087/file/4bf6343b7dabf6615cffacb628b77167.jpg?resize=752x&amp;vertical=center" target="_blank" rel="noopener noreferrer"><img src="https://cdn.dribbble.com/userupload/48493087/file/4bf6343b7dabf6615cffacb628b77167.jpg?resize=752x&amp;vertical=center" alt="Competitive analysis"></a></figure>
 
-<section class="text-block">
-  <h2>Competitive Analysis</h2>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>Why I conducted this research</strong></p>
-  <p>Before designing Akropolis, we wanted to understand how existing social media platforms encourage discussions and where they fall short.</p>
-  <p>Rather than <strong>reinventing</strong> familiar interaction patterns, I analysed established products to identify opportunities for innovation.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>The platforms reviewed included:</p>
-  <ul>
-    <li><p><em><i>Reddit</i></em></p></li>
-    <li><p><em><i>X (formerly Twitter)</i></em></p></li>
-    <li><p><em><i>TikTok</i></em></p></li>
-    <li><p><em><i>YouTube</i></em></p></li>
-    <li><p><em><i>Facebook</i></em></p></li>
-    <li><p><em><i>Threads</i></em></p></li>
-  </ul>
-  <p>Each platform <strong>approaches community engagement differently</strong>, offering valuable insights into <strong>discussion structures, discovery mechanisms, moderation strategies, and creator ecosystems.</strong></p>
-</section>
-
 <figure class="shot"><a href="https://cdn.dribbble.com/userupload/48493086/file/76bd3d881ec507758d59b7bae3b8aa80.png?resize=752x&amp;vertical=center" target="_blank" rel="noopener noreferrer"><img src="https://cdn.dribbble.com/userupload/48493086/file/76bd3d881ec507758d59b7bae3b8aa80.png?resize=752x&amp;vertical=center" alt="Areas of evaluation"></a></figure>
-
-<section class="text-block">
-  <h2>Areas of Evaluation</h2>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>Discussion Structure</strong></p>
-  <p>We examined how users initiate conversations and how replies are organised.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>Key questions included:</p>
-  <ul>
-    <li><p>Are discussions easy to follow?</p></li>
-    <li><p>Can users maintain meaningful conversations?</p></li>
-    <li><p>Does the structure encourage dialogue or simply reactions?</p></li>
-  </ul>
-  <p>This highlighted the opportunity for threaded video discussions that preserve conversational flow.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>Content Discovery</strong></p>
-  <p>We analysed how users discover discussions worth joining.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>Areas explored included:</p>
-  <ul>
-    <li><p>Trending topics.</p></li>
-    <li><p>Personalised recommendations.</p></li>
-    <li><p>Categories.</p></li>
-    <li><p>Community spaces.</p></li>
-    <li><p>Search functionality.</p></li>
-  </ul>
-  <p>This influenced the design of Akropolis' discussion feed, making it easier for users to discover conversations aligned with their interests.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>Community Moderation</strong></p>
-  <p>Healthy communities require effective moderation.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>I evaluated how existing platforms handle:</p>
-  <ul>
-    <li><p>Toxic behaviour.</p></li>
-    <li><p>Spam.</p></li>
-    <li><p>Misinformation.</p></li>
-    <li><p>Community reporting.</p></li>
-    <li><p>Automated moderation.</p></li>
-  </ul>
-  <p>These findings supported the inclusion of community-driven moderation, where users collectively vote on flagged content, creating a more collaborative moderation process.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>Creator Incentives</strong></p>
-  <p>Social platforms depend heavily on creators, making creator motivation an essential part of the research.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>We explored how platforms reward users through:</p>
-  <ul>
-    <li><p>Followers.</p></li>
-    <li><p>Likes.</p></li>
-    <li><p>Badges.</p></li>
-    <li><p>Monetisation.</p></li>
-    <li><p>Visibility.</p></li>
-  </ul>
-  <p><strong>Engagement Loops</strong></p>
-  <p>We also analysed how platforms encourage users to return.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>Questions included:</p>
-  <ul>
-    <li><p>What triggers repeated visits?</p></li>
-    <li><p>How do users build habits?</p></li>
-    <li><p>What motivates continued participation?</p></li>
-  </ul>
-  <p>This led to the development of Akropolis' core engagement loop:</p>
-  <p><strong>Read → Rate → Reply → Earn Engagement → Unlock Emblems → Gain Visibility → Encourage More Participation</strong></p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>Rather than rewarding passive scrolling, this loop encourages active and constructive contributions.</p>
-</section>
-
-<section class="text-block">
-  <h2>User Interviews</h2>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>Why we contacted interviews</strong></p>
-  <p>To understand the human side of online discussions, I explored users' experiences with existing platforms, focusing on behaviours, frustrations, motivations, and expectations.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>Discussion Topics</strong></p>
-  <ul>
-    <li><p>What motivates people to comment instead of simply reading?</p></li>
-    <li><p>What causes online discussions to become arguments?</p></li>
-    <li><p>What makes someone appear trustworthy?</p></li>
-    <li><p>How comfortable are users recording videos to express opinions?</p></li>
-    <li><p>Would people prefer video discussions over text in certain situations?</p></li>
-    <li><p>What prevents users from returning to discussions they previously joined?</p></li>
-  </ul>
-  <p><strong>Key Insights</strong></p>
-  <ul>
-    <li><p>Users often misunderstand intent when conversations rely only on text.</p></li>
-    <li><p>Many participants avoid commenting because discussions quickly become hostile.</p></li>
-    <li><p>Visible identity increases accountability.</p></li>
-    <li><p>People are more likely to trust someone they can see and hear.</p></li>
-    <li><p>Users appreciate recognition when they contribute meaningful content.</p></li>
-  </ul>
-</section>
-
-<section class="text-block">
-  <h2>Behaviour Analysis</h2>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>Looking Beyond the Interface</strong></p>
-  <p>Rather than focusing only on screens and interactions, we studied behavioural patterns commonly observed across social media platforms.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>This helped identify opportunities where design could positively influence user behaviour.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>Key Behavioural Observations</strong></p>
-  <p><strong>Reactive participation</strong></p>
-  <p>Users frequently respond immediately after reading emotionally charged content, often without fully considering alternative perspectives.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>Passive consumption</strong></p>
-  <p>Most users consume significantly more content than they create, making participation a key challenge for any community platform.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>Emotional content spreads faster</strong></p>
-  <p>Content that evokes strong emotional reactions generally receives more engagement than balanced or thoughtful discussions.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>Discussion fatigue</strong></p>
-  <p>As conversations become longer and more fragmented, users struggle to follow multiple reply chains and often abandon the discussion entirely.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>Recognition drives participation</strong></p>
-  <p>Users are more likely to contribute consistently when they receive visible acknowledgment for thoughtful participation.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>This insight directly informed the design of the Engagement Level and Emblem systems, which reward constructive contributions with increased visibility and recognition.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>The research made it clear that improving online discussions required more than a better interface. The core challenge lay in redesigning the behaviours that current platforms encourage.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>These findings shaped the fundamental principles of Akropolis:</p>
-  <ul>
-    <li><p><strong>making video the primary medium of communication to restore context and authenticity, rewarding thoughtful participation through a transparent reputation system, organising conversations into structured threaded discussions, and empowering the community to moderate content collectively</strong>.</p></li>
-  </ul>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>By grounding the design in these insights, Akropolis evolved from a social media concept into a product focused on creating healthier, more meaningful digital conversations.</p>
-</section>
-
-<section class="text-block">
-  <h2>User Experience Strategy</h2>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>Rather than focusing solely on individual screens, we focused on creating an experience that supports natural conversations, reduces unnecessary friction, and encourages long-term community participation.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>Every interaction within Akropolis was designed around one central question:</p>
-  <p><strong>How can the product make participating in meaningful discussions feel easier than simply scrolling past them?</strong></p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>To answer this, we established several experience principles that shaped the product;</p>
-  <ol>
-    <li><p><em><i>- Every Interaction Should Feel Effortless</i></em></p></li>
-    <li><p><em><i>- Discovery Comes Before Participation</i></em>
-      <ul><li><p><em><i>Creating a Video Response Should Feel Natural</i></em></p></li></ul>
-    </p></li>
-    <li><p><em><i>- Encourage Positive Behaviour Through Feedback</i></em></p></li>
-    <li><p><em><i>- Build Trust Through Transparency</i></em></p></li>
-  </ol>
-</section>
-
-<section class="text-block">
-  <h2>Deciding What to Build First</h2>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>One of the biggest challenges in product design is determining <strong>what deserves to be built first</strong>.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>While it can be tempting to include every possible feature, successful digital products begin by solving one core problem exceptionally well before expanding into additional functionality.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>For Akropolis, the primary goal was not to build another feature-rich social media platform.</p>
-</section>
 
 <figure class="shot"><a href="https://cdn.dribbble.com/userupload/48493735/file/e5105c5005734c43bcb18c8ca4100d62.png?resize=752x&amp;vertical=center" target="_blank" rel="noopener noreferrer"><img src="https://cdn.dribbble.com/userupload/48493735/file/e5105c5005734c43bcb18c8ca4100d62.png?resize=752x&amp;vertical=center" alt="Feature prioritisation"></a></figure>
 
 <section class="text-block">
-  <p>Prioritising features taught me that successful products are not defined by the number of features they include, but by <strong>how effectively they solve a specific problem</strong>.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>It also reinforced an important lesson in application development: a well-prioritised MVP creates a stronger foundation for future growth than an over-engineered product with too many competing features.</p>
-</section>
-
-<section class="text-block">
-  <h2>Information Architecture (IA)</h2>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><em><i>Information Architecture (IA) defines how information is organised, prioritised, and accessed within a product.</i></em></p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>The platform needed to support a completely different discussion model where users consume, create, and respond through video rather than text.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>The architecture therefore needed to guide users naturally through the platform while supporting the product's engagement loop:</p>
-  <p><strong>Discover → Watch → Respond → Earn Recognition → Return</strong></p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>This flow informed both the navigation structure and the organisation of content.</p>
+  <h2>Information Architecture</h2>
+  <p>The platform needed to support a completely different interaction model, one where users consume, create, and respond through video rather than text. Every navigation decision was evaluated against one loop the entire IA was designed to serve:</p>
+  <p><strong>Discover &#8594; Watch &#8594; Respond &#8594; Earn Recognition &#8594; Return</strong></p>
+  <p>Features that didn&#8217;t contribute to this loop were cut from the MVP. That discipline kept the first version focused on doing one thing well: making it easier to participate in a meaningful discussion than to scroll past it.</p>
 </section>
 
 <figure class="shot"><a href="https://cdn.dribbble.com/userupload/48493764/file/5acab012166e58cfed1d91030ac2b15e.png?resize=752x&amp;vertical=center" target="_blank" rel="noopener noreferrer"><img src="https://cdn.dribbble.com/userupload/48493764/file/5acab012166e58cfed1d91030ac2b15e.png?resize=752x&amp;vertical=center" alt="Information architecture"></a></figure>
 
 <section class="text-block">
-  <h1>Design Exploration</h1>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>Transforming Product Strategy into User Experiences</strong></p>
-  <p>Once the <strong>product strategy, user research, and information architecture</strong> were established, I moved into the exploration phase.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>Rather than designing polished interfaces immediately, I focused on understanding how users would interact with a completely different type of social platform.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>Unlike traditional social networks where conversations happen through text comments, Akropolis required users to navigate, consume, and participate through video.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>This presented <strong>unique interaction challenges that couldn't be solved with visual design alone</strong>.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>The objective during this phase was to experiment with <strong>multiple ideas, validate interaction patterns, and refine the experience before committing to high-fidelity designs.</strong></p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>Phase 1 — Low-Fidelity Sketches</strong></p>
-  <p>Exploring Core Concepts</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>The design process began with quick hand-drawn sketches and rough interface concepts: pen &amp; paper as I usually call it.</p>
-  <p>At this stage, speed was more important than visual quality.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>The sketches focused on:</p>
-  <ul>
-    <li><p><em><i>Home feed layouts</i></em></p></li>
-    <li><p><em><i>Video discussion pages</i></em></p></li>
-    <li><p><em><i>Recording flows</i></em></p></li>
-    <li><p><em><i>User profile structures</i></em></p></li>
-    <li><p><em><i>Navigation concepts</i></em></p></li>
-  </ul>
-  <p>Because these sketches required very little time to produce, they allowed me to rapidly evaluate different approaches before investing in digital design.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>What I learned</strong></p>
-  <p>The earliest concepts revealed that trying to replicate existing social media layouts made Akropolis feel like another TikTok clone.</p>
-  <p>This encouraged me to rethink the interaction model around conversations instead of content consumption.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>Phase 2 — Wireframing</strong></p>
-  <p>Designing the User Flow</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>Once the overall direction became clearer, I translated the sketches into wireframes.</p>
-  <p>Rather than focusing on colours or branding, wireframes allowed me to validate:</p>
-  <ul>
-    <li><p>Navigation</p></li>
-    <li><p><em><i>Content hierarchy</i></em></p></li>
-    <li><p><em><i>Screen relationships</i></em></p></li>
-    <li><p><em><i>User journeys</i></em></p></li>
-    <li><p><em><i>Interaction flow</i></em></p></li>
-  </ul>
-  <p>The emphasis was on ensuring that users could move naturally from discovering discussions to participating in them.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>Phase 3 — Layout Exploration</strong></p>
-  <p>Finding the Right Balance</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>Several interface layouts were explored before arriving at the final experience:</p>
-  <p><strong>Home Feed</strong></p>
-  <p>Different approaches were tested:</p>
-  <p>Version One</p>
-  <p>A traditional social feed with equal-sized posts.</p>
-  <p>Version Two</p>
-  <p>A card-based feed with larger video previews.</p>
-  <p>Result</p>
-  <p>Users could quickly understand what each discussion was about before opening it.</p>
-  <p>This approach better supported the product's goal of encouraging informed participation.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>Discussion Screen</strong></p>
-  <p>Multiple layouts were explored for organising video conversations.</p>
-  <p>Initial Concept</p>
-  <p>Replies were displayed in a continuous feed.</p>
-  <p>Problem</p>
-  <p>Users struggled to understand who was replying to whom.</p>
-  <p>Final Direction</p>
-  <p>Threaded video conversations.</p>
-  <p>This preserved conversational context while making discussions easier to follow.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>Recording Experience</strong></p>
-  <p>Several recording workflows were considered.</p>
-  <p>One option required users to leave the discussion page before recording.</p>
-  <p>This created unnecessary friction.</p>
-  <p>The final design integrated recording directly into the discussion experience, allowing users to respond naturally without feeling disconnected from the conversation.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>Phase 4 — Navigation Exploration</strong></p>
-  <p>Navigation plays an important role in influencing user behaviour.</p>
-  <p>Traditional social media applications often prioritise content consumption.</p>
-  <p>Akropolis instead prioritises participation.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>Phase 5 — Iteration</strong></p>
-  <p>Improving Through Continuous Refinement</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>The final interface was the result of many small improvements rather than one major redesign.</p>
-  <p>Examples include:</p>
-  <ul>
-    <li><p>Simplifying discussion cards to reduce visual clutter.</p></li>
-    <li><p>Increasing video thumbnail sizes to improve discoverability.</p></li>
-    <li><p>Reducing unnecessary buttons during recording.</p></li>
-    <li><p>Making engagement indicators easier to understand.</p></li>
-    <li><p>Improving spacing for better readability.</p></li>
-  </ul>
-  <p>Introducing clearer hierarchy between original discussions and replies.</p>
-  <p>Each iteration brought the interface closer to the product vision.</p>
+  <h2>Key Design Decisions</h2>
+  <p>Exploration tested several approaches before the final design landed. These are the decisions that changed most from first concept to final UI, and why they changed:</p>
+  <p><strong>Threaded conversations, not feeds.</strong> An early prototype used a continuous-scroll video feed. Users lost track of who was replying to whom within seconds. Threaded video conversations preserved conversational context and made following a discussion possible without losing your place.</p>
+  <p><strong>Inline recording, not a detour.</strong> An early flow required users to leave the discussion screen to record a response. Every exit from the conversation killed momentum and broke the experience. Moving recording inline (directly accessible from the discussion screen) made responding feel like a natural continuation rather than a separate task.</p>
+  <p><strong>Participation-first navigation.</strong> Traditional social apps prioritize content consumption in their nav structure. Akropolis puts participation first. The CTA to respond is more prominent than the CTA to scroll, a deliberate choice to signal what this platform values.</p>
+  <p><strong>Card-based feed over equal-sized posts.</strong> Users needed to understand what a discussion was <em>about</em> before deciding to open it. Larger video thumbnails with visible context in the card reduced cold-open abandonment and led to more intentional participation.</p>
 </section>
 
 <div class="carousel">
@@ -1155,129 +750,43 @@ export const projects: Project[] = [
   </div>
 </div>
 
-<section class="text-block">
-  <p><strong>Video Recording</strong></p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>Objective</p>
-  <p>Reduce hesitation when creating video responses.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>Challenge</p>
-  <p>Recording videos requires more effort than typing text.</p>
-  <p>Many users may feel uncomfortable appearing on camera.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>Design Solution</p>
-  <p>The recording experience focuses on simplicity.</p>
-  <p>The interface includes:</p>
-  <ul>
-    <li><p><em><i>Large recording controls</i></em></p></li>
-    <li><p><em><i>Live camera preview</i></em></p></li>
-    <li><p><em><i>Recording timer</i></em></p></li>
-    <li><p><em><i>Review screen</i></em></p></li>
-    <li><p><em><i>Simple editing tools</i></em></p></li>
-  </ul>
-  <p>The design removes unnecessary complexity, making recording feel like a natural continuation of the conversation.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>Outcome</p>
-  <p>Users can contribute with greater confidence while experiencing minimal friction.</p>
-</section>
-
 <figure class="shot"><a href="https://cdn.dribbble.com/userupload/48493762/file/95aac2d4a06549e477a8118d28b32a66.png?resize=752x&amp;vertical=center" target="_blank" rel="noopener noreferrer"><img src="https://cdn.dribbble.com/userupload/48493762/file/95aac2d4a06549e477a8118d28b32a66.png?resize=752x&amp;vertical=center" alt="Recording UI"></a></figure>
 
 <section class="text-block">
-  <p><strong>Final User Interface</strong></p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>Designing an Interface That Encourages Participation</strong></p>
-  <p>After multiple rounds of exploration and refinement, the final interface was designed to support Akropolis' core mission: enabling meaningful video discussions through an intuitive, accessible, and engaging experience.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>Rather than treating each screen as an isolated interface, every part of the application was designed to support the user's journey — from discovering discussions to building a trusted reputation within the community.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>Each screen below solves a specific user problem while contributing to the overall product experience.</p>
-</section>
-
-<section class="text-block">
   <h2>Design System</h2>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>Building a Scalable Foundation for Development</strong></p>
-  <p>As the application evolved, maintaining consistency across dozens of screens became increasingly important. Rather than designing each interface independently, I developed a design system that established reusable components, clear visual rules, and interaction standards.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>The goal was not only to create a visually cohesive product but also to streamline collaboration with developers and make future feature development more efficient.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>A well-structured design system reduces inconsistencies, accelerates implementation, and ensures that new features can be added without redesigning the interface from scratch.</p>
+  <p>As the interface scaled across dozens of screens, I built a component library in Figma structured for direct Flutter developer handoff: reusable components, spacing tokens, typography scales, and fully documented interaction states. The aim was to reduce implementation ambiguity so developers could build new features confidently without revisiting design foundations each time.</p>
 </section>
 
 <figure class="shot"><a href="https://cdn.dribbble.com/userupload/48493767/file/1b164885401ad8d9218cef387c9737ba.png?resize=752x567&amp;vertical=center" target="_blank" rel="noopener noreferrer"><img src="https://cdn.dribbble.com/userupload/48493767/file/1b164885401ad8d9218cef387c9737ba.png?resize=752x567&amp;vertical=center" alt="Design system"></a></figure>
 
 <section class="text-block">
-  <p>The design system was created with future development in mind.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>By defining reusable components, spacing rules, typography scales, and interaction patterns, the system makes it easier for developers to implement new features consistently.</p>
-</section>
-
-<section class="text-block">
-  <h1>Technical Considerations</h1>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>Designing with Engineering in Mind</strong></p>
-  <p>I considered the engineering implications behind each feature to ensure that the proposed solutions were not only desirable for users but also feasible for development.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>Designing for Video Performance</strong></p>
-  <p>Video files are significantly larger than text or images and require more bandwidth, storage, and processing power. If performance is poor, users are more likely to abandon the experience.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>Cross-Platform Design</strong></p>
-  <p>Akropolis is designed for both Android and iOS.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>Designing for Scalable Components</strong></p>
-  <p>Social platforms evolve rapidly.</p>
-  <p>New discussion formats, moderation tools, engagement systems, and creator features are frequently introduced.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>Working with Developers</strong></p>
-  <p>Throughout the project, I considered how design decisions would translate into implementation.</p>
-  <p>Rather than creating isolated screens, I organised components, interaction states, spacing rules, and design specifications in a way that supports efficient developer handoff.</p>
-</section>
-
-<section class="text-block">
-  <h1>Measuring Success</h1>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>A successful product is measured by how effectively it solves user problems and supports business objectives over time.</p>
+  <h2>Outcomes</h2>
+  <div class="outcome-grid">
+    <div class="outcome-card">
+      <span class="outcome-num">12 wks</span>
+      <p class="outcome-label">Research to dev-ready handoff, covering Android &amp; iOS simultaneously</p>
+    </div>
+    <div class="outcome-card">
+      <span class="outcome-num">4</span>
+      <p class="outcome-label">Core behavioural problems addressed through product mechanics, not content moderation</p>
+    </div>
+    <div class="outcome-card">
+      <span class="outcome-num">1</span>
+      <p class="outcome-label">Unified design language across both platforms, built for Flutter component parity</p>
+    </div>
+  </div>
+  <p>The Emblem and engagement loop mechanics were prototyped and walked through with internal stakeholders. The reputation model mapped directly to the platform&#8217;s community health goals: visibility earned through quality of contribution, not volume of posts. The inline recording redesign eliminated the most significant drop-off point identified in usability walkthroughs: users leaving the discussion and not returning to respond.</p>
+  <p>The design system gave the Flutter team a complete, annotated component library covering every state, edge case, and spacing rule, reducing the back-and-forth during implementation and creating a shared reference the whole team could build from.</p>
 </section>
 
 <figure class="shot"><a href="https://cdn.dribbble.com/userupload/48493792/file/3081220b28cb040834620b85a67e4d5c.png?resize=752x&amp;vertical=center" target="_blank" rel="noopener noreferrer"><img src="https://cdn.dribbble.com/userupload/48493792/file/3081220b28cb040834620b85a67e4d5c.png?resize=752x&amp;vertical=center" alt="Metrics and success"></a></figure>
 
-<section class="text-block">
-  <p>By focusing on behavioural and community metrics rather than vanity metrics alone, Akropolis can continuously evaluate whether it is delivering healthier, more engaging conversations while supporting sustainable platform growth.</p>
-</section>
-
-<section class="text-block">
-  <h1>Reflection (What I Learned)</h1>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>Looking Beyond the Interface</strong></p>
-  <p>This project challenged me to think beyond individual screens and consider how every interaction contributes to the overall health of a digital community.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>Designing for Human Behaviour</strong></p>
-  <p>One of my biggest lessons was that product design is fundamentally about influencing behaviour.</p>
-  <p>Small decisions — such as how users are rewarded, how discussions are structured, or how visibility is earned — can significantly shape the way people interact with one another.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>Thinking Beyond Individual Screens</strong></p>
-  <p>As the project evolved, I realised that the real challenge lay in connecting every part of the experience into a cohesive ecosystem.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>Balancing User Needs with Business Goals</strong></p>
-  <p>Akropolis also strengthened my understanding of how design decisions contribute to business outcomes.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p><strong>Strengthening Collaboration with Development</strong></p>
-  <p>Considering performance, responsiveness, loading states, and implementation constraints early in the process allowed me to create solutions that were not only desirable for users but also realistic to build.</p>
-</section>
-
-<section class="text-block">
-  <h1>My Biggest Takeaway</h1>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>Akropolis fundamentally changed the way I think about product design.</p>
-  <p class="spacer" aria-hidden="true"></p>
-  <p>This project demonstrated the value I bring to application development: I don't simply design screens; I help define product direction, connect user needs with business goals, anticipate technical realities, and create scalable experiences that are built to grow.</p>
-</section>
-
 <figure class="shot"><a href="https://cdn.dribbble.com/userupload/48493793/file/568a4da5f45cd42e5f3f1ed447f309d5.png?resize=752x&amp;vertical=center" target="_blank" rel="noopener noreferrer"><img src="https://cdn.dribbble.com/userupload/48493793/file/568a4da5f45cd42e5f3f1ed447f309d5.png?resize=752x&amp;vertical=center" alt="Final Akropolis screens"></a></figure>
 
 <section class="text-block">
-  <h1>Thank You</h1>
+  <h2>What This Project Taught Me</h2>
+  <p>Akropolis is the project where I learned that the hardest product problems aren&#8217;t about what an interface looks like. They&#8217;re about what behaviour it creates. Designing engagement mechanics meant asking <em>what will users do because of this feature</em>, not just <em>will users understand how to use it</em>. Those are different questions, and they lead to very different design decisions.</p>
+  <p>That shift from UX thinking to behavioural product thinking is something I now bring to every project. I&#8217;m at my best when a small interaction pattern is the thing standing between a good product and a great one, and when design decisions connect directly to whether the product actually works.</p>
 </section>
 
 </div>`,
