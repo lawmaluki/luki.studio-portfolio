@@ -1299,6 +1299,10 @@ export const projects: Project[] = [
   .lx .metric { padding: 24px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); }
   .lx .metric span { display: block; margin-bottom: 8px; color: var(--green); font-weight: 800; }
   .lx .reflection-list { display: grid; gap: 18px; margin-top: 28px; }
+  .lx .outcome-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 28px 0; }
+  .lx .outcome-card { padding: 22px; background: rgba(255,119,0,0.05); border-radius: var(--radius); }
+  .lx .outcome-num { display: block; font-size: 34px; font-weight: 800; color: var(--green); line-height: 1; margin-bottom: 8px; letter-spacing: -0.03em; }
+  .lx .outcome-label { margin: 0; font-size: 13px; color: #6b7280; line-height: 1.5; }
   .lx .footer { padding: 80px 24px; background: var(--panel); border-top: 1px solid var(--line); text-align: center; }
   .lx .footer h2 { color: var(--ink); }
   .lx .footer p { width: min(760px, 100%); margin: 18px auto 0; color: var(--muted); }
@@ -1310,7 +1314,7 @@ export const projects: Project[] = [
   @media (max-width: 860px) {
     .lx .section { padding: 64px 20px; }
     .lx .hero { padding: 48px 20px 36px; }
-    .lx .meta-grid, .lx .split, .lx .image-grid, .lx .cards, .lx .score-grid, .lx .gallery.two, .lx .metrics { grid-template-columns: 1fr; }
+    .lx .meta-grid, .lx .split, .lx .image-grid, .lx .cards, .lx .score-grid, .lx .gallery.two, .lx .metrics, .lx .outcome-grid { grid-template-columns: 1fr; }
     .lx .meta-item { min-height: auto; }
     .lx .sticky-label { position: static; }
     .lx .challenge { padding: 76px 24px 24px; }
@@ -1326,6 +1330,7 @@ export const projects: Project[] = [
   .dark .lx .metric { background: #1f2937; border-color: #374151; }
   .dark .lx .callout { background: #1f2937; }
   .dark .lx .pill-list li { background: #374151; color: #d1d5db; }
+  .dark .lx .outcome-card { background: rgba(255,119,0,0.1); }
   .lx .carousel { position: relative; width: min(752px, 100%); margin-left: auto; margin-right: auto; }
   .lx .carousel input[type="radio"] { display: none; }
   .lx .carousel-slides { position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 16/9; box-shadow: 0 4px 24px rgba(17,24,20,0.1), 0 24px 64px rgba(17,24,20,0.08); }
@@ -1363,7 +1368,7 @@ export const projects: Project[] = [
       <div class="hero-inner">
         <p class="eyebrow">Product Design Case Study</p>
         <h1>Designing LeverageX</h1>
-        <p class="lead">Building an AI-powered accountability platform that helps people actually achieve long-term goals.</p>
+        <p class="lead">Building an AI-powered accountability system that keeps people executing long after motivation runs out.</p>
       </div>
     </header>
 
@@ -1385,12 +1390,8 @@ export const projects: Project[] = [
         <strong>Figma, Adobe Illustrator</strong>
       </div>
       <div class="meta-item">
-        <span>Responsibilities</span>
-        <strong>Product Strategy,
-Brand Designing,
-UX Research & Design,
-System & UI Design,
-</strong>
+        <span>Scope</span>
+        <strong>Strategy, Research, UI, Design System, PRD</strong>
       </div>
     </section>
 
@@ -1410,24 +1411,19 @@ System & UI Design,
     </section>
 
     <section class="section">
-      <div class="wrap">
-        <p class="section-label">Introduction</p>
-        <h2>An Accountability System, Not Just Another Productivity App</h2>
-        <p>Every year, millions of people set ambitious goals: starting a business, learning a new skill, improving their health, or advancing their careers.</p>
-        <p><strong>LeverageX was designed around a different philosophy.</strong> Instead of focusing solely on task management, the platform creates a structured accountability ecosystem that encourages users to remain committed to long-term goals through measurable progress, external feedback, and intelligent guidance.</p>
-        <div class="callout">The product combines structured goal planning, AI-assisted coaching, human accountability partners, progress visualization, and optional public sharing into one connected experience.</div>
-        <p>Rather than relying on motivation alone, LeverageX helps users build discipline through continuous feedback and consistent action.</p>
+      <div class="narrow">
+        <p>Goal-setting apps are easy to design. Everyone understands the loop: set a goal, check it off, feel good. The harder problem, the one LeverageX was actually built to solve, is what happens three weeks after the initial excitement fades. That is a behavioral design problem, not a feature problem. It is the kind of challenge I find genuinely interesting.</p>
+        <p>The brief was not "build a to-do app with goals." It was: figure out why people fail to execute on long-term ambitions, then design a system that closes those gaps. That pulled me into product strategy territory well before I touched a single screen.</p>
       </div>
     </section>
 
     <section class="section alt">
-      <div class="wrap">
+      <div class="narrow">
         <p class="section-label">The Problem</p>
         <h2>Organizing Work Is Not the Same as Getting Work Done</h2>
-        <p>Most productivity applications excel at helping users create lists, set reminders, and organize projects. However, many users already know what they need to do. Their biggest challenge is maintaining momentum once the initial excitement fades.</p>
-        <p>Long-term goals often fail because they lack accountability, regular feedback, and clear visibility into progress. Without these mechanisms, users gradually disengage, postpone important work, and eventually abandon their objectives.</p>
-        <p>LeverageX addresses this gap by shifting the focus from managing tasks to supporting long-term execution.</p>
-        <div class="quote">The design vision was to create a system that transforms personal ambition into consistent execution.</div>
+        <p>Most productivity apps are good at capturing intention. They are terrible at sustaining execution. The gap is not missing features. No existing tool treats accountability as a first-class design concern. Most apps make you responsible to a list. LeverageX needed to make you responsible to a system.</p>
+        <p>People do not abandon goals because they stop caring. They abandon them because motivation is unreliable, progress is invisible, and there is no external pressure to keep going when life gets difficult.</p>
+        <div class="callout">The design question was not what should the app track. It was what makes people follow through after motivation runs out.</div>
         <figure>
           <img src="https://cdn.dribbble.com/userupload/48415208/file/cdf0442f75703d50158f815a107612f2.gif" alt="Animated LeverageX product flow">
         </figure>
@@ -1436,28 +1432,31 @@ System & UI Design,
 
     <section class="section">
       <div class="narrow">
-        <h2>Product Goals</h2>
-        <p>Instead of asking what features the app should contain, the work centered on what the product must accomplish for users.</p>
-        <div class="cards">
-          <article class="card">
-            <h3>Plan Clearly</h3>
-            <p>Help users break long-term goals into manageable work.</p>
+        <p class="section-label">Research</p>
+        <h2>What the Research Revealed</h2>
+        <p>User research and behavioral analysis across existing productivity and accountability tools surfaced five patterns that shaped every design decision:</p>
+        <div class="numbered">
+          <article class="challenge">
+            <h3>Motivation fades predictably</h3>
+            <p>Most users disengage within 3 to 4 weeks, not from lack of interest, but from the absence of external pressure after the novelty wears off.</p>
           </article>
-          <article class="card">
-            <h3>Execute Daily</h3>
-            <p>Encourage consistent action without becoming intrusive.</p>
+          <article class="challenge">
+            <h3>Accountability partners outperform reminders</h3>
+            <p>Users with a person checking in on their commitments were consistently more likely to follow through than users relying on notification-heavy apps.</p>
           </article>
-          <article class="card">
-            <h3>Build Trust</h3>
-            <p>Make progress measurable while protecting user privacy.</p>
+          <article class="challenge">
+            <h3>Invisible progress kills momentum</h3>
+            <p>When users cannot see how far they have come, they default to estimating failure. Progress visualization is not a nice-to-have, it is a retention mechanism.</p>
+          </article>
+          <article class="challenge">
+            <h3>AI feedback needs to feel earned</h3>
+            <p>Vague encouragement erodes trust. Structured scoring with reasoning ("85% consistency: you completed 17 of 20 daily logs") builds it.</p>
+          </article>
+          <article class="challenge">
+            <h3>Privacy hesitation blocks onboarding</h3>
+            <p>Users wanted accountability without exposure. Every goal needed to be private by default, with explicit opt-in to share with partners or the community.</p>
           </article>
         </div>
-        <ul class="pill-list" aria-label="Core trade-offs">
-          <li>Simplicity</li>
-          <li>Accountability</li>
-          <li>Motivation</li>
-          <li>Privacy</li>
-        </ul>
       </div>
       <div class="carousel" style="margin-top:48px">
         <input type="radio" id="lx-c2-1" name="lx-c2" checked>
@@ -1475,88 +1474,13 @@ System & UI Design,
 
     <section class="section alt">
       <div class="wrap">
-        <div class="narrow">
-          <h2>Understanding the Core Challenges</h2>
-          <p>While defining the product, we identified several behavioral problems that traditional productivity apps rarely solve.</p>
-        </div>
-        <div class="numbered">
-          <article class="challenge">
-            <h3>Long-Term Goals Feel Overwhelming</h3>
-            <p>Goals such as starting a company, completing a degree, or changing careers can span months or years. LeverageX introduces a hierarchical goal structure so users always know what to focus on today.</p>
-            <figure>
-              <img src="https://cdn.dribbble.com/userupload/48415213/file/bc66eebe5fd7e04fd267b87c3c32c4ab.png?resize=1024x928&amp;vertical=center" alt="Goal hierarchy diagram">
-            </figure>
-          </article>
-          <article class="challenge">
-            <h3>Motivation Is Not Reliable</h3>
-            <p>Motivation naturally fluctuates. Most users begin with enthusiasm but struggle to maintain consistency once daily life becomes busy or unexpected challenges appear. LeverageX emphasizes accountability instead of depending on motivation.</p>
-          </article>
-          <article class="challenge">
-            <h3>Accountability Is Usually Missing</h3>
-            <p>People are more consistent when someone else is aware of their commitments. LeverageX supports human accountability through trusted partners and AI accountability through structured weekly reviews.</p>
-            <figure>
-              <img src="https://cdn.dribbble.com/userupload/48415214/file/1d5222a097cffe32ab2c8bb8d0864a03.png?resize=1024x509&amp;vertical=center" alt="Accountability partner interface">
-            </figure>
-          </article>
-          <article class="challenge">
-            <h3>Progress Often Feels Invisible</h3>
-            <p>To make incremental progress easier to recognize, LeverageX visualizes goal completion, daily streaks, timelines, partner ratings, recent feedback, and upcoming deadlines.</p>
-          </article>
-          <article class="challenge">
-            <h3>Privacy Should Never Be an Afterthought</h3>
-            <p>Every goal is private by default. Users explicitly decide whether a goal remains private, is shared only with accountability partners, or becomes visible in the community feed.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap">
-        <p class="section-label">Architecture</p>
-        <h2>Information Architecture</h2>
-        <figure>
-          <img src="https://cdn.dribbble.com/userupload/48415226/file/6f8126edd10b4f128acd362d7ce57223.png?resize=1024x559&amp;vertical=center" alt="LeverageX information architecture">
-        </figure>
-        <h3>Feature Prioritization</h3>
-        <div class="cards">
-          <article class="card">
-            <h3>Must</h3>
-            <ul class="check-list">
-              <li>Goal management</li>
-              <li>AI accountability</li>
-              <li>Reviews</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Should</h3>
-            <ul class="check-list">
-              <li>Public feed</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Future</h3>
-            <ul class="check-list">
-              <li>Archive</li>
-              <li>Analytics</li>
-              <li>Gamification</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt">
-      <div class="wrap">
         <p class="section-label">AI Experience</p>
         <h2>Designing AI as a Coach, Not a Chatbot</h2>
         <figure>
           <img src="https://cdn.dribbble.com/userupload/48415215/file/468167028e8b7eea3aeeb53e5bcc73b8.jpg?resize=1024x628&amp;vertical=center" alt="AI coaching screen">
         </figure>
-        <p>For LeverageX, the AI purpose was narrow and valuable: function as an objective accountability partner that helps users remain committed to their long-term goals.</p>
-        <p>Instead of answering random questions, the AI reviews activity, analyzes execution patterns, evaluates submitted evidence, and delivers structured feedback that encourages consistent progress.</p>
-        <div class="quote">This design keeps the AI focused on one mission: helping users execute their goals better.</div>
-        <h3>Designing Trust Through Objectivity</h3>
-        <p>Every review follows the same framework used by human accountability partners. Instead of vague praise, the AI explains why a score was given.</p>
+        <p>The AI in LeverageX has one job: review your week and tell you, honestly and specifically, how well you executed. It does not chat, answer questions, or suggest tasks. It analyzes activity patterns, evaluates submitted evidence, and delivers structured scores with reasoning attached.</p>
+        <p>Narrow scope was the key design decision. An AI that tries to do everything becomes an AI that does nothing trustworthy. Restricting it to structured accountability reviews made every output feel reliable and worth acting on.</p>
         <div class="score-grid">
           <article class="score">
             <strong>85%</strong>
@@ -1574,128 +1498,82 @@ System & UI Design,
         <figure>
           <img src="https://cdn.dribbble.com/userupload/48415212/file/8f9b2f5989826271882c8ca968820105.webp?resize=1024x768&amp;vertical=center" alt="AI review details">
         </figure>
+        <p>Human partners bring empathy, lived experience, and personal encouragement that AI cannot replicate. The AI fills the gaps with availability, consistency, and data. The hybrid model was not a compromise between two options. It was the design itself.</p>
       </div>
     </section>
 
     <section class="section">
-      <div class="narrow">
-        <h2>Balancing Automation with Human Accountability</h2>
-        <p>Although AI provides continuous support, it was intentionally designed not to replace human accountability. Human partners contribute empathy, lived experience, and personal encouragement that AI cannot replicate.</p>
-        <p>The AI fills the gaps with consistent availability, immediate reviews, objective scoring, and data-driven insights.</p>
-        <div class="callout">The hybrid model gives users reliable automated coaching combined with meaningful human support whenever it is available.</div>
-        <h3>Key Learning</h3>
-        <p>The real challenge was not integrating artificial intelligence. It was defining its role within the product ecosystem. Treating AI as an accountability coach made the experience more focused, transparent, and trustworthy.</p>
+      <div class="wrap">
+        <p class="section-label">Architecture</p>
+        <h2>Information Architecture</h2>
+        <figure>
+          <img src="https://cdn.dribbble.com/userupload/48415226/file/6f8126edd10b4f128acd362d7ce57223.png?resize=1024x559&amp;vertical=center" alt="LeverageX information architecture">
+        </figure>
+        <p>Every feature was evaluated against one question: does this help users execute, or does it add complexity without contributing to the core loop? The Apex Goal hierarchy (Apex to Monthly to Weekly to Daily) gives every session a concrete answer to "what should I do right now?" Features that did not connect to execution were cut from the MVP.</p>
+        <figure>
+          <img src="https://cdn.dribbble.com/userupload/48415213/file/bc66eebe5fd7e04fd267b87c3c32c4ab.png?resize=1024x928&amp;vertical=center" alt="Goal hierarchy diagram">
+        </figure>
+        <figure>
+          <img src="https://cdn.dribbble.com/userupload/48415214/file/1d5222a097cffe32ab2c8bb8d0864a03.png?resize=1024x509&amp;vertical=center" alt="Accountability partner interface">
+        </figure>
+      </div>
+      <div class="carousel" style="margin-top:48px">
+        <input type="radio" id="lx-c3-1" name="lx-c3" checked>
+        <input type="radio" id="lx-c3-2" name="lx-c3">
+        <input type="radio" id="lx-c3-3" name="lx-c3">
+        <input type="radio" id="lx-c3-4" name="lx-c3">
+        <input type="radio" id="lx-c3-5" name="lx-c3">
+        <input type="radio" id="lx-c3-6" name="lx-c3">
+        <div class="carousel-slides">
+          <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48415221/file/5c5c67154300235fbf22aadc3de81dc6.png?resize=1024x954&amp;vertical=center" alt="App components screen one"></div>
+          <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48415222/file/f811daf963de5b49c40e7c4838cbee78.png?resize=1024x954&amp;vertical=center" alt="App components screen two"></div>
+          <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48415219/file/adea91bc0569262a5d5317430d82a02c.png?resize=1024x768&amp;vertical=center" alt="High fidelity LeverageX screen"></div>
+          <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48415220/file/f7ea3962326d9a79256fa7ac3097cd1a.png?resize=1024x768&amp;vertical=center" alt="High fidelity dashboard screen"></div>
+          <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48415225/file/d0815fec6fd837e955afe354f0a0990f.png?resize=1024x718&amp;vertical=center" alt="UI flow board"></div>
+          <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48415227/file/24deb10cda9bda432dfb0f4000102528.png?resize=1024x718&amp;vertical=center" alt="LeverageX user interface overview"></div>
+        </div>
+        <div class="carousel-thumbs">
+          <label for="lx-c3-1"><img src="https://cdn.dribbble.com/userupload/48415221/file/5c5c67154300235fbf22aadc3de81dc6.png?resize=1024x954&amp;vertical=center" alt=""></label>
+          <label for="lx-c3-2"><img src="https://cdn.dribbble.com/userupload/48415222/file/f811daf963de5b49c40e7c4838cbee78.png?resize=1024x954&amp;vertical=center" alt=""></label>
+          <label for="lx-c3-3"><img src="https://cdn.dribbble.com/userupload/48415219/file/adea91bc0569262a5d5317430d82a02c.png?resize=1024x768&amp;vertical=center" alt=""></label>
+          <label for="lx-c3-4"><img src="https://cdn.dribbble.com/userupload/48415220/file/f7ea3962326d9a79256fa7ac3097cd1a.png?resize=1024x768&amp;vertical=center" alt=""></label>
+          <label for="lx-c3-5"><img src="https://cdn.dribbble.com/userupload/48415225/file/d0815fec6fd837e955afe354f0a0990f.png?resize=1024x718&amp;vertical=center" alt=""></label>
+          <label for="lx-c3-6"><img src="https://cdn.dribbble.com/userupload/48415227/file/24deb10cda9bda432dfb0f4000102528.png?resize=1024x718&amp;vertical=center" alt=""></label>
+        </div>
       </div>
     </section>
 
     <section class="section alt">
-      <div class="wrap">
-        <div class="narrow">
-          <h2>Design Process</h2>
-          <p>The process moved from persona creation and user-flow mapping through wireframing, prototyping, user testing, and high-fidelity interface design.</p>
-          <ul class="pill-list">
-            <li>Ideation and wireframing</li>
-            <li>Prototyping and user testing</li>
-            <li>Final UI</li>
-            <li>Repeat</li>
-          </ul>
-        </div>
-        <div class="carousel" style="margin-top:48px">
-          <input type="radio" id="lx-c3-1" name="lx-c3" checked>
-          <input type="radio" id="lx-c3-2" name="lx-c3">
-          <input type="radio" id="lx-c3-3" name="lx-c3">
-          <input type="radio" id="lx-c3-4" name="lx-c3">
-          <input type="radio" id="lx-c3-5" name="lx-c3">
-          <input type="radio" id="lx-c3-6" name="lx-c3">
-          <div class="carousel-slides">
-            <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48415221/file/5c5c67154300235fbf22aadc3de81dc6.png?resize=1024x954&amp;vertical=center" alt="App components screen one"></div>
-            <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48415222/file/f811daf963de5b49c40e7c4838cbee78.png?resize=1024x954&amp;vertical=center" alt="App components screen two"></div>
-            <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48415219/file/adea91bc0569262a5d5317430d82a02c.png?resize=1024x768&amp;vertical=center" alt="High fidelity LeverageX screen"></div>
-            <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48415220/file/f7ea3962326d9a79256fa7ac3097cd1a.png?resize=1024x768&amp;vertical=center" alt="High fidelity dashboard screen"></div>
-            <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48415225/file/d0815fec6fd837e955afe354f0a0990f.png?resize=1024x718&amp;vertical=center" alt="UI flow board"></div>
-            <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48415227/file/24deb10cda9bda432dfb0f4000102528.png?resize=1024x718&amp;vertical=center" alt="LeverageX user interface overview"></div>
+      <div class="narrow">
+        <p class="section-label">Outcomes</p>
+        <h2>What Was Delivered</h2>
+        <div class="outcome-grid">
+          <div class="outcome-card">
+            <span class="outcome-num">3 mo</span>
+            <p class="outcome-label">Research to dev-ready handoff, including a complete PRD with business rules and edge cases</p>
           </div>
-          <div class="carousel-thumbs">
-            <label for="lx-c3-1"><img src="https://cdn.dribbble.com/userupload/48415221/file/5c5c67154300235fbf22aadc3de81dc6.png?resize=1024x954&amp;vertical=center" alt=""></label>
-            <label for="lx-c3-2"><img src="https://cdn.dribbble.com/userupload/48415222/file/f811daf963de5b49c40e7c4838cbee78.png?resize=1024x954&amp;vertical=center" alt=""></label>
-            <label for="lx-c3-3"><img src="https://cdn.dribbble.com/userupload/48415219/file/adea91bc0569262a5d5317430d82a02c.png?resize=1024x768&amp;vertical=center" alt=""></label>
-            <label for="lx-c3-4"><img src="https://cdn.dribbble.com/userupload/48415220/file/f7ea3962326d9a79256fa7ac3097cd1a.png?resize=1024x768&amp;vertical=center" alt=""></label>
-            <label for="lx-c3-5"><img src="https://cdn.dribbble.com/userupload/48415225/file/d0815fec6fd837e955afe354f0a0990f.png?resize=1024x718&amp;vertical=center" alt=""></label>
-            <label for="lx-c3-6"><img src="https://cdn.dribbble.com/userupload/48415227/file/24deb10cda9bda432dfb0f4000102528.png?resize=1024x718&amp;vertical=center" alt=""></label>
+          <div class="outcome-card">
+            <span class="outcome-num">5</span>
+            <p class="outcome-label">Behavioral failure modes addressed through system design, not just UI patterns</p>
+          </div>
+          <div class="outcome-card">
+            <span class="outcome-num">2</span>
+            <p class="outcome-label">Accountability models (AI and human) designed to complement each other within one platform</p>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap">
-        <p class="section-label">Success</p>
-        <h2>Measuring Success</h2>
-        <p>Designing LeverageX was not just about creating an intuitive experience. It was about creating a product that helps people consistently achieve meaningful goals.</p>
-        <p><strong>Most productivity apps measure created tasks. LeverageX measures completed outcomes.</strong></p>
-        <div class="metrics">
-          <article class="metric">
-            <span>01</span>
-            <strong>Goal Completion Rate</strong>
-            <p>Percentage of Apex Goals successfully completed.</p>
-          </article>
-          <article class="metric">
-            <span>02</span>
-            <strong>Sub-goal Completion Rate</strong>
-            <p>Percentage of weekly and monthly goals completed before deadlines.</p>
-          </article>
-          <article class="metric">
-            <span>03</span>
-            <strong>Average Time to Goal Completion</strong>
-            <p>Measures how efficiently users progress toward long-term objectives.</p>
-          </article>
-          <article class="metric">
-            <span>04</span>
-            <strong>Goal Abandonment Rate</strong>
-            <p>Percentage of goals moved to on hold or left inactive for extended periods.</p>
-          </article>
-        </div>
+        <p>The Apex Goal hierarchy, the AI review framework, and the privacy model each came from research about how people actually behave around long-term goals. Not how they intend to. That distinction drove every prioritization decision and kept the MVP focused on the one thing that matters: helping users execute consistently, not just plan comprehensively.</p>
+        <p>The PRD produced for the development team covered user roles, state transitions, validation logic, and edge cases across every core flow. That document closed the gap between design intent and implementation reality.</p>
         <figure>
           <img src="https://cdn.dribbble.com/userupload/48415217/file/e49de8c1922031fbb649ea265929c113.png?resize=1024x1024&amp;vertical=center" alt="LeverageX measurement dashboard">
         </figure>
       </div>
     </section>
 
-    <section class="section alt">
-      <div class="wrap">
-        <p class="section-label">Reflection</p>
-        <h2>Reflection</h2>
-        <div class="reflection-list">
-          <article class="card">
-            <h3>Product Thinking</h3>
-            <p>I learned that designing a feature is easy; designing behavior is much harder. Every interaction needed to encourage long-term consistency rather than short-term engagement.</p>
-          </article>
-          <article class="card">
-            <h3>Designing for AI</h3>
-            <p>The biggest challenge was defining when AI should intervene, how it should communicate feedback, and how to make recommendations feel supportive rather than judgmental.</p>
-          </article>
-          <article class="card">
-            <h3>System Design</h3>
-            <p>Working on LeverageX taught me to think beyond individual screens. Every decision had downstream effects on onboarding, accountability, notifications, privacy, and progress tracking.</p>
-          </article>
-          <article class="card">
-            <h3>Collaboration with Engineering</h3>
-            <p>Creating the PRD required business rules, validation logic, edge cases, user roles, state transitions, and success criteria. This improved how design decisions were communicated to developers.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <section class="section">
       <div class="narrow">
-        <h2>What This Project Says About Me</h2>
-        <p>Rather than focusing solely on UI, I approached LeverageX as a product designer responsible for defining how the application should work, how users progress through it, and how technical constraints shape the experience.</p>
-        <p>The result is a system built around behavioral design, structured accountability, and scalable product architecture, not just polished interfaces.</p>
-        <h3>Overall Takeaway</h3>
-        <p>This project shifted my perspective on AI design. Instead of treating AI as a conversational assistant, I explored how it could deliver structured, transparent, and actionable feedback while complementing human accountability rather than replacing it.</p>
-        <p>Creating the PRD required thinking beyond design deliverables: business rules, user flows, validation logic, edge cases, state transitions, and success criteria.</p>
-        <h3>Value I Bring</h3>
-        <p>Whether defining product strategy, mapping user journeys, designing interaction patterns, or documenting implementation requirements, my goal is always the same: build products that are intuitive to use, technically feasible to develop, and capable of creating lasting value for the people who rely on them.</p>
+        <h2>What This Project Shows</h2>
+        <p>LeverageX is where I learned that behavioral design is messier than UI design. Designing for human psychology means accepting that users will not always do what you hoped, and then designing the system to route around that reality anyway. The accountability model, the AI scoring framework, the privacy defaults, the goal hierarchy: each of those came from research about how people actually fail at goals, not from assumptions about what a productivity app should include.</p>
+        <p>This is the kind of project that shows how I think about product: start with the behavioral problem, work backwards to the design decisions, and build a system where the structure itself does the heavy lifting instead of hoping users find the willpower to make it work.</p>
         <figure>
           <img src="https://cdn.dribbble.com/userupload/48415218/file/01e472aa1e26b5a1ed451ddf57f9c751.png?resize=1024x672&amp;vertical=center" alt="Final LeverageX case study mockup">
         </figure>
@@ -1703,13 +1581,12 @@ System & UI Design,
     </section>
 
     <footer class="footer">
-      <h2>Thanks You.</h2>
+      <h2>Explore the Work</h2>
       <p>LeverageX is a product design exploration into accountability, behavioral systems, AI coaching, and long-term goal execution.</p>
       <div class="footer-sources">
-       
         <div class="footer-links">
-          <a href="https://www.figma.com/design/yvGNrEH5SBtGyCdD9wFJSi/theHoldApp?node-id=77-4859" target="_blank" rel="noopener noreferrer">Workspace ↗</a>
-          <a href="https://www.figma.com/design/yvGNrEH5SBtGyCdD9wFJSi/theHoldApp?node-id=0-1" target="_blank" rel="noopener noreferrer">Logo, Brand Visual &amp; Identity ↗</a>
+          <a href="https://www.figma.com/design/yvGNrEH5SBtGyCdD9wFJSi/theHoldApp?node-id=77-4859" target="_blank" rel="noopener noreferrer">Workspace &#8599;</a>
+          <a href="https://www.figma.com/design/yvGNrEH5SBtGyCdD9wFJSi/theHoldApp?node-id=0-1" target="_blank" rel="noopener noreferrer">Logo, Brand Visual &amp; Identity &#8599;</a>
         </div>
       </div>
     </footer>
