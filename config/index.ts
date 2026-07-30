@@ -582,9 +582,9 @@ export const projects: Project[] = [
   }
   .ak .carousel { position: relative; width: min(752px, 100%); margin: 48px auto; }
   .ak .carousel input[type="radio"] { display: none; }
-  .ak .carousel-slides { position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 16/9; box-shadow: 0 4px 24px rgba(13,12,34,0.08), 0 24px 64px rgba(13,12,34,0.06); }
-  .ak .carousel-slide { position: absolute; inset: 0; opacity: 0; transition: opacity 0.3s ease; }
-  .ak .carousel-slide img { width: 100%; height: 100%; object-fit: cover; }
+  .ak .carousel-slides { display: grid; grid-template-columns: 1fr; border-radius: var(--radius); overflow: hidden; box-shadow: 0 4px 24px rgba(13,12,34,0.08), 0 24px 64px rgba(13,12,34,0.06); }
+  .ak .carousel-slide { grid-column: 1; grid-row: 1; opacity: 0; transition: opacity 0.3s ease; }
+  .ak .carousel-slide img { width: 100%; height: auto; display: block; }
   .ak .carousel-thumbs { display: flex; gap: 8px; justify-content: center; margin-top: 12px; flex-wrap: wrap; }
   .ak .carousel-thumbs label { width: clamp(56px, 15vw, 80px); height: clamp(35px, 9.375vw, 50px); border-radius: 6px; overflow: hidden; border: 2px solid transparent; opacity: 0.5; cursor: pointer; transition: opacity 0.2s, border-color 0.2s; display: block; flex-shrink: 0; }
   .ak .carousel-thumbs label img { width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none; }
@@ -882,9 +882,9 @@ export const projects: Project[] = [
   /* Carousel */
   .kyc .carousel { margin-top: 34px; }
   .kyc .carousel input[type="radio"] { display: none; }
-  .kyc .carousel-slides { position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 16/9; background: var(--soft); }
-  .kyc .carousel-slide { position: absolute; inset: 0; opacity: 0; transition: opacity 0.3s ease; }
-  .kyc .carousel-slide img { width: 100%; height: 100%; object-fit: cover; border-radius: 0; }
+  .kyc .carousel-slides { display: grid; grid-template-columns: 1fr; border-radius: var(--radius); overflow: hidden; background: var(--soft); }
+  .kyc .carousel-slide { grid-column: 1; grid-row: 1; opacity: 0; transition: opacity 0.3s ease; }
+  .kyc .carousel-slide img { width: 100%; height: auto; display: block; border-radius: 0; }
   .kyc .carousel-thumbs { display: flex; gap: 8px; margin-top: 12px; justify-content: center; flex-wrap: wrap; }
   .kyc .carousel-thumbs label { cursor: pointer; border-radius: 6px; overflow: hidden; border: 2px solid transparent; transition: border-color 0.2s; }
   .kyc .carousel-thumbs label img { display: block; width: 80px; height: 54px; object-fit: cover; border-radius: 0; opacity: 0.5; transition: opacity 0.2s; }
@@ -1333,9 +1333,9 @@ export const projects: Project[] = [
   .dark .lx .outcome-card { background: rgba(255,119,0,0.1); }
   .lx .carousel { position: relative; width: min(752px, 100%); margin-left: auto; margin-right: auto; }
   .lx .carousel input[type="radio"] { display: none; }
-  .lx .carousel-slides { position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 16/9; box-shadow: 0 4px 24px rgba(17,24,20,0.1), 0 24px 64px rgba(17,24,20,0.08); }
-  .lx .carousel-slide { position: absolute; inset: 0; opacity: 0; transition: opacity 0.3s ease; }
-  .lx .carousel-slide img { width: 100%; height: 100%; object-fit: cover; }
+  .lx .carousel-slides { display: grid; grid-template-columns: 1fr; border-radius: var(--radius); overflow: hidden; box-shadow: 0 4px 24px rgba(17,24,20,0.1), 0 24px 64px rgba(17,24,20,0.08); }
+  .lx .carousel-slide { grid-column: 1; grid-row: 1; opacity: 0; transition: opacity 0.3s ease; }
+  .lx .carousel-slide img { width: 100%; height: auto; display: block; }
   .lx .carousel-thumbs { display: flex; gap: 8px; justify-content: center; margin-top: 12px; flex-wrap: wrap; }
   .lx .carousel-thumbs label { width: clamp(56px, 15vw, 80px); height: clamp(35px, 9.375vw, 50px); border-radius: 6px; overflow: hidden; border: 2px solid transparent; opacity: 0.5; cursor: pointer; transition: opacity 0.2s, border-color 0.2s; display: block; flex-shrink: 0; }
   .lx .carousel-thumbs label img { width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none; }
@@ -3087,9 +3087,9 @@ export const projects: Project[] = [
   .mil .principle-card p { margin: 0; font-size: 14px; line-height: 1.65; }
   .mil .carousel { position: relative; width: min(752px, 100%); margin: 48px auto; }
   .mil .carousel input[type="radio"] { display: none; }
-  .mil .carousel-slides { position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 16/9; box-shadow: 0 4px 24px rgba(28,21,16,0.08), 0 24px 64px rgba(28,21,16,0.06); }
-  .mil .carousel-slide { position: absolute; inset: 0; opacity: 0; transition: opacity 0.3s ease; }
-  .mil .carousel-slide img { width: 100%; height: 100%; object-fit: cover; }
+  .mil .carousel-slides { display: grid; grid-template-columns: 1fr; border-radius: var(--radius); overflow: hidden; box-shadow: 0 4px 24px rgba(28,21,16,0.08), 0 24px 64px rgba(28,21,16,0.06); }
+  .mil .carousel-slide { grid-column: 1; grid-row: 1; opacity: 0; transition: opacity 0.3s ease; }
+  .mil .carousel-slide img { width: 100%; height: auto; display: block; }
   .mil .carousel-thumbs { display: flex; gap: 8px; justify-content: center; margin-top: 12px; flex-wrap: wrap; }
   .mil .carousel-thumbs label { width: clamp(56px, 15vw, 80px); height: clamp(35px, 9.375vw, 50px); border-radius: 6px; overflow: hidden; border: 2px solid transparent; opacity: 0.5; cursor: pointer; transition: opacity 0.2s, border-color 0.2s; display: block; flex-shrink: 0; }
   .mil .carousel-thumbs label img { width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none; }
