@@ -236,19 +236,19 @@ export const ProjectsSection: React.FC = () => {
 
                         {/* Spotlight image grid — no slug, link is the image URL */}
                         {filtered.some((p) => !p.slug && p.link) && (
-                            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                            <div className="columns-1 sm:columns-2 lg:columns-3 gap-3">
                                 {filtered.filter((p) => !p.slug && p.link).map((project, i) => (
                                     <button
                                         key={i}
                                         type="button"
                                         onClick={() => setLightboxSrc(project.link!)}
-                                        className="group relative aspect-video w-full overflow-hidden rounded-2xl bg-muted cursor-zoom-in"
+                                        className="group block w-full break-inside-avoid mb-3 overflow-hidden rounded-2xl bg-muted cursor-zoom-in"
                                     >
-                                        <Image
+                                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                                        <img
                                             src={project.link!}
                                             alt={project.title || `Spotlight ${i + 1}`}
-                                            fill
-                                            className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                            className="block w-full h-auto transition-transform duration-500 group-hover:scale-105"
                                         />
                                     </button>
                                 ))}
