@@ -816,7 +816,7 @@ export const projects: Project[] = [
     --cyan: #14b8a6;
     --amber: #f59e0b;
     --navy: #14213d;
-    --radius: 8px;
+    --radius: 12px;
   }
   .kyc * { box-sizing: border-box; }
   .kyc img { display: block; width: 100%; height: auto; border-radius: var(--radius); }
@@ -1281,7 +1281,7 @@ export const projects: Project[] = [
     --orange: #ff7700;
     --mint: #e8f5ee;
     --gold: #ff7700;
-    --radius: 8px;
+    --radius: 12px;
   }
   .lx * { box-sizing: border-box; }
   .lx img { display: block; width: 100%; height: auto; border-radius: var(--radius); }
