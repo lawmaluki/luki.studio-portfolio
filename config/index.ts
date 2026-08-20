@@ -804,7 +804,7 @@ export const projects: Project[] = [
     description: `<style>
   .kyc {
     color: #4E4E4E;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1.7;
     font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     --ink: #2d2d2d;
@@ -835,7 +835,7 @@ export const projects: Project[] = [
   .kyc h1 { max-width: 900px; font-size: clamp(48px, 7vw, 88px); font-weight: 800; }
   .kyc h2 { margin-bottom: 24px; font-size: clamp(28px, 3.6vw, 46px); font-weight: 700; }
   .kyc h3 { margin: 0 0 10px; font-size: 18px; font-weight: 700; line-height: 1.3; }
-  .kyc p { margin: 0 0 18px; font-size: 17px; line-height: 1.7; }
+  .kyc p { margin: 0 0 18px; font-size: 16px; line-height: 1.7; }
   .kyc .lead { max-width: 760px; margin-top: 22px; color: var(--muted); font-size: clamp(20px, 2.4vw, 28px); line-height: 1.36; }
   .kyc .section-label { margin: 0 0 12px; color: var(--muted); font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
   .kyc .meta { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
