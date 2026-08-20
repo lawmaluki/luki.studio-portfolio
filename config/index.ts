@@ -842,7 +842,7 @@ export const projects: Project[] = [
   .kyc .meta-item { min-height: 150px; padding: 28px; background: var(--panel); }
   .kyc .meta-item span { display: block; margin-bottom: 10px; color: var(--muted); font-size: 13px; font-weight: 700; text-transform: uppercase; }
   .kyc .meta-item strong { display: block; font-size: 21px; line-height: 1.35; }
-  .kyc .callout { margin: 32px 0; padding: 28px; background: var(--soft); border-radius: var(--radius); font-size: 23px; line-height: 1.42; color: var(--ink); }
+  .kyc .callout { margin: 36px 0; padding: 24px 0; border-top: 2px solid var(--blue); font-size: 20px; line-height: 1.48; color: var(--ink); }
   .kyc .pill-list { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; margin: 22px 0 0; list-style: none; }
   .kyc .pill-list li { padding: 8px 12px; background: #e9f8f5; border: 1px solid #c8eee8; border-radius: 999px; color: #0f766e; font-size: 14px; font-weight: 600; }
   .kyc .visual-band { padding: 24px; background: #0b1020; }
@@ -851,22 +851,39 @@ export const projects: Project[] = [
   .kyc .visual-grid figure img { width: 100%; height: 100%; object-fit: cover; border-radius: 0; }
   .kyc figure { margin: 0; }
   .kyc figure + figure, .kyc p + figure, .kyc figure + p { margin-top: 30px; }
-  .kyc .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 30px; }
-  .kyc .card { padding: 24px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); }
-  .kyc .card h3 { margin-bottom: 10px; }
-  .kyc .step-grid { display: grid; gap: 18px; margin-top: 30px; counter-reset: step; }
-  .kyc .step { position: relative; padding: 26px 26px 26px 86px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); }
-  .kyc .step::before { counter-increment: step; content: counter(step); position: absolute; top: 24px; left: 26px; display: grid; width: 38px; height: 38px; place-items: center; color: white; background: var(--blue); border-radius: 50%; font-weight: 800; }
-  .kyc .check-list { display: grid; gap: 10px; padding: 0; margin: 16px 0 0; list-style: none; }
-  .kyc .check-list li { position: relative; padding-left: 26px; }
-  .kyc .check-list li::before { content: ""; position: absolute; top: 0.72em; left: 0; width: 9px; height: 9px; background: var(--cyan); border-radius: 50%; }
-  .kyc .principles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 28px; }
-  .kyc .principle { padding: 26px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); }
-  .kyc .framework { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 30px 0; }
-  .kyc .phase { padding: 22px; min-height: 150px; color: white; background: var(--navy); border-radius: var(--radius); }
-  .kyc .phase:nth-child(2) { background: var(--blue); }
-  .kyc .phase:nth-child(3) { background: var(--cyan); color: #062522; }
-  .kyc .phase:nth-child(4) { background: var(--amber); color: #271800; }
+  /* goal-list — table-style rows */
+  .kyc .goal-list { list-style: none; padding: 0; margin: 32px 0 0; }
+  .kyc .goal-list li { display: grid; grid-template-columns: 180px 1fr; gap: 32px; padding: 20px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+  .kyc .goal-list li:first-child { border-top: 1px solid var(--line); }
+  .kyc .goal-list strong { font-size: 14px; font-weight: 700; color: var(--ink); }
+  .kyc .goal-list p { margin: 0; font-size: 15px; color: var(--muted); line-height: 1.6; }
+  /* flow-list — numbered vertical steps */
+  .kyc .flow-list { list-style: none; padding: 0; margin: 32px 0 0; }
+  .kyc .flow-list li { display: grid; grid-template-columns: 40px 1fr; gap: 24px; padding: 24px 0; border-bottom: 1px solid var(--line); align-items: start; }
+  .kyc .flow-list li:first-child { border-top: 1px solid var(--line); }
+  .kyc .flow-n { font-size: 12px; font-weight: 700; color: var(--muted); letter-spacing: 0.04em; padding-top: 4px; }
+  .kyc .flow-list h3 { margin: 0 0 8px; font-size: 17px; font-weight: 700; line-height: 1.2; }
+  .kyc .flow-list p { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.6; }
+  /* phase-row — clean bordered grid */
+  .kyc .phase-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin: 36px 0; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+  .kyc .phase-col { padding: 24px 20px; border-right: 1px solid var(--line); }
+  .kyc .phase-col:last-child { border-right: none; }
+  .kyc .phase-tag { display: block; margin-bottom: 10px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--blue); }
+  .kyc .phase-col h3 { margin: 0 0 6px; font-size: 17px; font-weight: 700; line-height: 1.2; }
+  .kyc .phase-col p { margin: 0; font-size: 14px; color: var(--muted); line-height: 1.5; }
+  /* principles-stack — two-column text rows */
+  .kyc .principles-stack { list-style: none; padding: 0; margin: 32px 0 0; }
+  .kyc .principles-stack li { display: grid; grid-template-columns: 1fr 1.6fr; gap: 40px; padding: 24px 0; border-bottom: 1px solid var(--line); align-items: start; }
+  .kyc .principles-stack li:first-child { border-top: 1px solid var(--line); }
+  .kyc .principles-stack h3 { margin: 0; font-size: 16px; font-weight: 700; }
+  .kyc .principles-stack p { margin: 0; font-size: 15px; color: var(--muted); line-height: 1.6; }
+  /* tk-list — numbered takeaways */
+  .kyc .tk-list { list-style: none; padding: 0; margin: 32px 0 0; counter-reset: tk; }
+  .kyc .tk-list li { display: grid; grid-template-columns: 36px 1fr; gap: 24px; padding: 24px 0; border-bottom: 1px solid var(--line); align-items: start; counter-increment: tk; }
+  .kyc .tk-list li:first-child { border-top: 1px solid var(--line); }
+  .kyc .tk-n::before { content: "0" counter(tk); font-size: 12px; font-weight: 700; color: var(--muted); }
+  .kyc .tk-list h3 { margin: 0 0 8px; font-size: 17px; font-weight: 700; }
+  .kyc .tk-list p { margin: 0; font-size: 15px; color: var(--muted); line-height: 1.6; }
   .kyc .gallery { display: grid; gap: 24px; margin-top: 34px; }
   .kyc .gallery.two { grid-template-columns: repeat(2, 1fr); align-items: start; }
   .kyc .gallery.two figure { aspect-ratio: 16/9; overflow: hidden; border-radius: var(--radius); margin: 0; }
@@ -915,18 +932,25 @@ export const projects: Project[] = [
   @media (max-width: 880px) {
     .kyc .section { padding: 64px 20px; }
     .kyc .hero { padding: 48px 20px 36px; }
-    .kyc .meta, .kyc .visual-grid, .kyc .cards, .kyc .principles, .kyc .framework, .kyc .gallery.two { grid-template-columns: 1fr; }
+    .kyc .meta, .kyc .visual-grid, .kyc .gallery.two { grid-template-columns: 1fr; }
     .kyc .meta-item { min-height: auto; }
-    .kyc .step { padding: 76px 24px 24px; }
+    .kyc .phase-row { grid-template-columns: repeat(2, 1fr); }
+    .kyc .phase-col { border-bottom: 1px solid var(--line); }
+    .kyc .goal-list li { grid-template-columns: 1fr; gap: 4px; }
+    .kyc .principles-stack li { grid-template-columns: 1fr; gap: 10px; }
+    .kyc .flow-list li { grid-template-columns: 36px 1fr; gap: 16px; }
+  }
+  @media (max-width: 480px) {
+    .kyc .phase-row { grid-template-columns: 1fr; }
+    .kyc .phase-col { border-right: none; }
   }
   .dark .kyc { color: #d1d5db; --ink: #e5e7eb; --panel: #1f2937; --line: #374151; --muted: #9ca3af; --soft: #1f2937; }
   .dark .kyc h1, .dark .kyc h2, .dark .kyc h3 { color: #f3f4f6; }
   .dark .kyc p { color: #9ca3af; }
   .dark .kyc .section.alt { background: #1f2937; }
   .dark .kyc .meta-item { background: #1f2937; }
-  .dark .kyc .card { background: #1f2937; border-color: #374151; }
-  .dark .kyc .step { background: #1f2937; border-color: #374151; }
-  .dark .kyc .principle { background: #1f2937; border-color: #374151; }
+  .dark .kyc .phase-col { border-color: #374151; }
+  .dark .kyc .phase-row { border-color: #374151; }
   .dark .kyc .pill-list li { background: #374151; border-color: #4b5563; color: #d1d5db; }
 </style>
 
@@ -987,67 +1011,74 @@ export const projects: Project[] = [
 
     <section class="section">
       <div class="narrow">
-        <h2>Goals</h2>
-        <p>The experience was designed around five practical goals that prevent failure before it happens.</p>
-        <div class="cards">
-          <article class="card">
-            <h3>Guide Early</h3>
-            <p>Educate users before scanning instead of showing errors afterwards.</p>
-          </article>
-          <article class="card">
-            <h3>Reduce Failed Scans</h3>
-            <p>Provide overlays, edge detection, and lighting guidance.</p>
-          </article>
-          <article class="card">
-            <h3>Build Trust</h3>
-            <p>Show exactly what the system is doing during verification.</p>
-          </article>
-          <article class="card">
-            <h3>Lower Cognitive Load</h3>
-            <p>Break verification into small, manageable steps.</p>
-          </article>
-          <article class="card">
-            <h3>Support Global Documents</h3>
-            <p>Handle national IDs, passports, and residence permits without redesigning the interface.</p>
-          </article>
-        </div>
+        <p class="section-label">Goals</p>
+        <h2>What We Were Solving For</h2>
+        <ul class="goal-list">
+          <li><strong>Guide Early</strong><p>Educate users before scanning instead of showing errors afterwards.</p></li>
+          <li><strong>Reduce Failed Scans</strong><p>Provide overlays, edge detection, and lighting guidance in real time.</p></li>
+          <li><strong>Build Trust</strong><p>Show exactly what the system is doing during verification.</p></li>
+          <li><strong>Lower Cognitive Load</strong><p>Break verification into small, manageable steps.</p></li>
+          <li><strong>Support Global Documents</strong><p>Handle national IDs, passports, and residence permits without redesigning the interface.</p></li>
+        </ul>
       </div>
     </section>
 
     <section class="section alt">
       <div class="wrap">
+        <p class="section-label">UI System Flow</p>
         <h2>Understanding the UI System Flow</h2>
         <p>The verification journey is broken into clear stages so each screen answers one user question at a time.</p>
-        <div class="step-grid">
-          <article class="step">
-            <h3>Identity Selection</h3>
-            <p>Users first choose which document they want to verify. Different document types require different capture rules, so selection makes the rest of the flow easier to understand.</p>
-          </article>
-          <article class="step">
-            <h3>Guided Education</h3>
-            <p>Before opening the camera, a quick visual tutorial explains correct placement, proper lighting, full document framing, and glare avoidance.</p>
-          </article>
-          <article class="step">
-            <h3>Live Camera Scanner</h3>
-            <p>The scanner uses auto edge detection, dynamic frame alignment, live document recognition, visual confidence indicators, and automatic capture when quality requirements are met.</p>
-          </article>
-          <article class="step">
-            <h3>Intelligent Validation</h3>
-            <p>The system validates document borders, text visibility, MRZ detection, portrait quality, security features, and resolution.</p>
-          </article>
-          <article class="step">
-            <h3>Processing State</h3>
-            <p>Instead of a static loader, users see plain-language progress states such as reading document, detecting security features, and matching identity.</p>
-          </article>
-          <article class="step">
-            <h3>Selfie Verification</h3>
-            <p>The flow continues with face guidance, automatic positioning, lighting detection, and a neutral expression reminder to improve biometric quality.</p>
-          </article>
-          <article class="step">
-            <h3>Face Matching</h3>
-            <p>The final stage compares the ID photo with the selfie and shows verification progress before confirming success.</p>
-          </article>
-        </div>
+        <ol class="flow-list">
+          <li>
+            <span class="flow-n">01</span>
+            <div>
+              <h3>Identity Selection</h3>
+              <p>Users first choose which document they want to verify. Different document types require different capture rules, so selection makes the rest of the flow easier to understand.</p>
+            </div>
+          </li>
+          <li>
+            <span class="flow-n">02</span>
+            <div>
+              <h3>Guided Education</h3>
+              <p>Before opening the camera, a quick visual tutorial explains correct placement, proper lighting, full document framing, and glare avoidance.</p>
+            </div>
+          </li>
+          <li>
+            <span class="flow-n">03</span>
+            <div>
+              <h3>Live Camera Scanner</h3>
+              <p>The scanner uses auto edge detection, dynamic frame alignment, live document recognition, visual confidence indicators, and automatic capture when quality requirements are met.</p>
+            </div>
+          </li>
+          <li>
+            <span class="flow-n">04</span>
+            <div>
+              <h3>Intelligent Validation</h3>
+              <p>The system validates document borders, text visibility, MRZ detection, portrait quality, security features, and resolution.</p>
+            </div>
+          </li>
+          <li>
+            <span class="flow-n">05</span>
+            <div>
+              <h3>Processing State</h3>
+              <p>Instead of a static loader, users see plain-language progress states such as reading document, detecting security features, and matching identity.</p>
+            </div>
+          </li>
+          <li>
+            <span class="flow-n">06</span>
+            <div>
+              <h3>Selfie Verification</h3>
+              <p>The flow continues with face guidance, automatic positioning, lighting detection, and a neutral expression reminder to improve biometric quality.</p>
+            </div>
+          </li>
+          <li>
+            <span class="flow-n">07</span>
+            <div>
+              <h3>Face Matching</h3>
+              <p>The final stage compares the ID photo with the selfie and shows verification progress before confirming success.</p>
+            </div>
+          </li>
+        </ol>
         <div class="gallery two" style="margin-top:48px">
           <figure>
             <img src="https://cdn.dribbble.com/userupload/48405556/file/d4147a93c3812b6dacec89b995cce8c6.png?resize=1024x576&amp;vertical=center" alt="KYC verification overview screen">
@@ -1090,24 +1121,24 @@ export const projects: Project[] = [
       <div class="wrap">
         <p class="section-label">UX Principles</p>
         <h2>Designing for Confidence</h2>
-        <div class="principles">
-          <article class="principle">
+        <ul class="principles-stack">
+          <li>
             <h3>Progressive Disclosure</h3>
             <p>Information appears only when relevant, reducing cognitive overload and keeping users focused on the next action.</p>
-          </article>
-          <article class="principle">
+          </li>
+          <li>
             <h3>Real-Time Feedback</h3>
             <p>Live edge detection, green confirmation borders, validation checkpoints, and progress indicators reassure users that the system is working.</p>
-          </article>
-          <article class="principle">
+          </li>
+          <li>
             <h3>Error Prevention</h3>
             <p>The interface helps users avoid failed scans instead of relying on error messages after something goes wrong.</p>
-          </article>
-          <article class="principle">
+          </li>
+          <li>
             <h3>Transparency</h3>
             <p>Plain-language processing states explain when a document is being analyzed, when facial matching is in progress, and when verification is complete.</p>
-          </article>
-        </div>
+          </li>
+        </ul>
         <div class="callout">The best verification experience is one where users rarely encounter errors because the interface helps them succeed before mistakes happen.</div>
       </div>
     </section>
@@ -1142,23 +1173,27 @@ export const projects: Project[] = [
         <p class="section-label">Framework</p>
         <h2>KYC Verification Framework</h2>
         <p>The framework illustrates a streamlined end-to-end identity verification process that balances security, compliance, and user experience. Instead of treating verification as a single step, it breaks the journey into four connected phases.</p>
-        <div class="framework">
-          <article class="phase">
+        <div class="phase-row">
+          <div class="phase-col">
+            <span class="phase-tag">Phase 01</span>
             <h3>Guide</h3>
             <p>Prepare users before document capture.</p>
-          </article>
-          <article class="phase">
+          </div>
+          <div class="phase-col">
+            <span class="phase-tag">Phase 02</span>
             <h3>Capture</h3>
             <p>Use live feedback to improve scan quality.</p>
-          </article>
-          <article class="phase">
+          </div>
+          <div class="phase-col">
+            <span class="phase-tag">Phase 03</span>
             <h3>Validate</h3>
             <p>Analyze document data and biometric quality.</p>
-          </article>
-          <article class="phase">
+          </div>
+          <div class="phase-col">
+            <span class="phase-tag">Phase 04</span>
             <h3>Confirm</h3>
             <p>Communicate completion clearly and confidently.</p>
-          </article>
+          </div>
         </div>
         <p>Together, these stages minimize onboarding friction while maintaining high standards of identity assurance.</p>
         <figure>
@@ -1171,21 +1206,30 @@ export const projects: Project[] = [
       <div class="wrap">
         <p class="section-label">Takeaways</p>
         <h2>Takeaways</h2>
-        <div class="cards">
-          <article class="card">
-            <h3>Strategic Design Happens Before Pixels</h3>
-            <p>The strongest contribution was questioning why ID and Passport verification needed separate flows. Unifying the experience made it more useful and trustworthy.</p>
-          </article>
-          <article class="card">
-            <h3>High-Fidelity Can Accelerate Alignment</h3>
-            <p>When interactions are novel, realistic UI can help stakeholders understand the concept faster.</p>
-          </article>
-          <article class="card">
-            <h3>Trust Requires Transparency</h3>
-            <p>Users should know when their document is analyzed, when facial matching is in progress, and when verification has been completed.</p>
-          </article>
-        </div>
-        <figure>
+        <ul class="tk-list">
+          <li>
+            <span class="tk-n"></span>
+            <div>
+              <h3>Strategic Design Happens Before Pixels</h3>
+              <p>The strongest contribution was questioning why ID and Passport verification needed separate flows. Unifying the experience made it more useful and trustworthy.</p>
+            </div>
+          </li>
+          <li>
+            <span class="tk-n"></span>
+            <div>
+              <h3>High-Fidelity Can Accelerate Alignment</h3>
+              <p>When interactions are novel, realistic UI can help stakeholders understand the concept faster.</p>
+            </div>
+          </li>
+          <li>
+            <span class="tk-n"></span>
+            <div>
+              <h3>Trust Requires Transparency</h3>
+              <p>Users should know when their document is analyzed, when facial matching is in progress, and when verification has been completed.</p>
+            </div>
+          </li>
+        </ul>
+        <figure style="margin-top:40px">
           <img src="https://cdn.dribbble.com/userupload/48411003/file/7506c4f075c9ffa5871a43b2e68abbd1.png?resize=1024x683&amp;vertical=center" alt="Final KYC verification presentation screen">
         </figure>
       </div>
