@@ -1270,7 +1270,7 @@ export const projects: Project[] = [
     description: `<style>
   .lx {
     color: #4E4E4E;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1.7;
     font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     --ink: #2d2d2d;
@@ -1300,9 +1300,9 @@ export const projects: Project[] = [
   .lx .eyebrow { margin: 0 0 18px; color: var(--green); font-size: 13px; font-weight: 700; text-transform: uppercase; }
   .lx h1, .lx h2, .lx h3 { margin: 0; line-height: 1.08; letter-spacing: 0; color: #2d2d2d; }
   .lx h1 { max-width: 900px; font-size: clamp(48px, 7vw, 92px); font-weight: 800; }
-  .lx h2 { margin-bottom: 24px; font-size: clamp(34px, 4.5vw, 58px); font-weight: 700; }
-  .lx h3 { margin: 38px 0 14px; font-size: clamp(22px, 3vw, 30px); }
-  .lx p { margin: 0 0 18px; }
+  .lx h2 { margin-bottom: 24px; font-size: clamp(28px, 3.6vw, 46px); font-weight: 700; }
+  .lx h3 { margin: 0 0 10px; font-size: 18px; font-weight: 700; line-height: 1.3; }
+  .lx p { margin: 0 0 18px; font-size: 16px; line-height: 1.7; }
   .lx .lead { max-width: 720px; margin-top: 22px; color: var(--muted); font-size: clamp(20px, 2.4vw, 28px); line-height: 1.35; }
   .lx .meta-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; margin-top: -1px; background: var(--line); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
   .lx .meta-item { min-height: 170px; padding: 28px; background: var(--panel); }
@@ -1311,7 +1311,7 @@ export const projects: Project[] = [
   .lx .split { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 64px; align-items: start; }
   .lx .sticky-label { position: sticky; top: 28px; color: #6b7280; font-size: 14px; font-weight: 700; text-transform: uppercase; }
   .lx .section-label { margin: 0 0 12px; color: #6b7280; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
-  .lx .callout { margin: 34px 0; padding: 28px; background: var(--mint); border-radius: var(--radius); font-size: 20px; line-height: 1.5; }
+  .lx .callout { margin: 36px 0; padding: 24px 0; border-top: 2px solid var(--green); font-size: 20px; line-height: 1.48; color: var(--ink); }
   .lx .image-band { padding: 24px; background: #111814; }
   .lx .image-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; align-items: start; }
   .lx .image-grid figure { aspect-ratio: 4/3; overflow: hidden; border-radius: var(--radius); margin: 0; }
@@ -1319,34 +1319,32 @@ export const projects: Project[] = [
   .lx figure { margin: 0; }
   .lx figure + figure, .lx p + figure, .lx figure + p { margin-top: 28px; }
   .lx figcaption { margin-top: 10px; color: var(--muted); font-size: 14px; line-height: 1.5; }
-  .lx .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 28px; }
-  .lx .card { padding: 24px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); }
-  .lx .card h3 { margin-top: 0; font-size: 22px; }
   .lx .pill-list { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; margin: 20px 0 0; list-style: none; }
   .lx .pill-list li { padding: 8px 12px; background: #eef1f4; border-radius: 999px; color: #344054; font-size: 14px; font-weight: 600; }
-  .lx .numbered { counter-reset: challenge; display: grid; gap: 28px; margin-top: 36px; }
-  .lx .challenge { position: relative; padding: 30px 30px 30px 86px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); }
-  .lx .challenge::before { counter-increment: challenge; content: counter(challenge); position: absolute; top: 28px; left: 28px; display: grid; width: 38px; height: 38px; place-items: center; color: white; background: var(--green); border-radius: 50%; font-weight: 800; }
-  .lx .challenge h3 { margin-top: 0; }
-  .lx .check-list { display: grid; gap: 10px; padding: 0; margin: 18px 0 0; list-style: none; }
-  .lx .check-list li { position: relative; padding-left: 28px; }
-  .lx .check-list li::before { content: ""; position: absolute; top: 0.72em; left: 0; width: 10px; height: 10px; background: var(--green); border-radius: 50%; }
-  .lx .quote { margin: 34px 0; padding: 34px; color: white; background: var(--green-dark); border-radius: var(--radius); font-size: 24px; line-height: 1.42; }
-  .lx .score-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: 24px 0; }
-  .lx .score { padding: 24px; background: #fff; border-radius: var(--radius); box-shadow: 0 10px 35px rgba(18,20,23,0.06); }
-  .lx .score strong { display: block; margin-bottom: 10px; font-size: 24px; }
+  /* flow-list — numbered vertical steps */
+  .lx .flow-list { list-style: none; padding: 0; margin: 32px 0 0; }
+  .lx .flow-list li { display: grid; grid-template-columns: 40px 1fr; gap: 24px; padding: 24px 0; border-bottom: 1px solid var(--line); align-items: start; }
+  .lx .flow-list li:first-child { border-top: 1px solid var(--line); }
+  .lx .flow-n { font-size: 12px; font-weight: 700; color: var(--muted); letter-spacing: 0.04em; padding-top: 4px; }
+  .lx .flow-list h3 { margin: 0 0 8px; }
+  .lx .flow-list p { margin: 0; color: var(--muted); }
+  /* stat-list — AI score rows */
+  .lx .stat-list { list-style: none; padding: 0; margin: 32px 0 0; }
+  .lx .stat-list li { display: grid; grid-template-columns: 72px 1fr; gap: 28px; padding: 24px 0; border-bottom: 1px solid var(--line); align-items: start; }
+  .lx .stat-list li:first-child { border-top: 1px solid var(--line); }
+  .lx .stat-n { font-size: 26px; font-weight: 800; color: var(--green); line-height: 1; padding-top: 2px; letter-spacing: -0.02em; }
+  .lx .stat-list h3 { margin: 0 0 6px; }
+  .lx .stat-list p { margin: 0; color: var(--muted); }
+  /* outcome-list — deliverable rows */
+  .lx .outcome-list { list-style: none; padding: 0; margin: 32px 0 0; }
+  .lx .outcome-list li { display: grid; grid-template-columns: 72px 1fr; gap: 28px; padding: 24px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+  .lx .outcome-list li:first-child { border-top: 1px solid var(--line); }
+  .lx .outcome-n { font-size: 26px; font-weight: 800; color: var(--green); line-height: 1; letter-spacing: -0.02em; }
+  .lx .outcome-list p { margin: 0; color: var(--muted); }
   .lx .gallery { display: grid; gap: 28px; margin-top: 34px; }
   .lx .gallery.two { grid-template-columns: repeat(2, 1fr); align-items: start; }
   .lx .gallery.two figure { aspect-ratio: 4/3; overflow: hidden; border-radius: var(--radius); margin: 0; }
   .lx .gallery.two figure img { width: 100%; height: 100%; object-fit: cover; border-radius: 0; }
-  .lx .metrics { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin: 28px 0; }
-  .lx .metric { padding: 24px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); }
-  .lx .metric span { display: block; margin-bottom: 8px; color: var(--green); font-weight: 800; }
-  .lx .reflection-list { display: grid; gap: 18px; margin-top: 28px; }
-  .lx .outcome-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 28px 0; }
-  .lx .outcome-card { padding: 22px; background: rgba(255,119,0,0.05); border-radius: var(--radius); }
-  .lx .outcome-num { display: block; font-size: 34px; font-weight: 800; color: var(--green); line-height: 1; margin-bottom: 8px; letter-spacing: -0.03em; }
-  .lx .outcome-label { margin: 0; font-size: 13px; color: #6b7280; line-height: 1.5; }
   .lx .footer { padding: 80px 24px; background: var(--panel); border-top: 1px solid var(--line); text-align: center; }
   .lx .footer h2 { color: var(--ink); }
   .lx .footer p { width: min(760px, 100%); margin: 18px auto 0; color: var(--muted); }
@@ -1358,23 +1356,17 @@ export const projects: Project[] = [
   @media (max-width: 860px) {
     .lx .section { padding: 64px 20px; }
     .lx .hero { padding: 48px 20px 36px; }
-    .lx .meta-grid, .lx .split, .lx .image-grid, .lx .cards, .lx .score-grid, .lx .gallery.two, .lx .metrics, .lx .outcome-grid { grid-template-columns: 1fr; }
+    .lx .meta-grid, .lx .split, .lx .image-grid, .lx .gallery.two { grid-template-columns: 1fr; }
     .lx .meta-item { min-height: auto; }
     .lx .sticky-label { position: static; }
-    .lx .challenge { padding: 76px 24px 24px; }
+    .lx .flow-list li { grid-template-columns: 36px 1fr; gap: 16px; }
   }
   .dark .lx { color: #d1d5db; --ink: #e5e7eb; --panel: #1f2937; --line: #374151; --muted: #9ca3af; }
   .dark .lx h1, .dark .lx h2, .dark .lx h3 { color: #f3f4f6; }
   .dark .lx p { color: #9ca3af; }
   .dark .lx .section.alt { background: #1f2937; }
   .dark .lx .meta-item { background: #1f2937; }
-  .dark .lx .card { background: #1f2937; border-color: #374151; }
-  .dark .lx .challenge { background: #1f2937; border-color: #374151; }
-  .dark .lx .score { background: #1f2937; }
-  .dark .lx .metric { background: #1f2937; border-color: #374151; }
-  .dark .lx .callout { background: #1f2937; }
   .dark .lx .pill-list li { background: #374151; color: #d1d5db; }
-  .dark .lx .outcome-card { background: rgba(255,119,0,0.1); }
   .lx .carousel { position: relative; width: min(752px, 100%); margin-left: auto; margin-right: auto; }
   .lx .carousel input[type="radio"] { display: none; }
   .lx .carousel-slides { display: grid; grid-template-columns: 1fr; border-radius: var(--radius); overflow: hidden; box-shadow: 0 4px 24px rgba(17,24,20,0.1), 0 24px 64px rgba(17,24,20,0.08); }
@@ -1479,28 +1471,43 @@ export const projects: Project[] = [
         <p class="section-label">Research</p>
         <h2>What the Research Revealed</h2>
         <p>User research and behavioral analysis across existing productivity and accountability tools surfaced five patterns that shaped every design decision:</p>
-        <div class="numbered">
-          <article class="challenge">
-            <h3>Motivation fades predictably</h3>
-            <p>Most users disengage within 3 to 4 weeks, not from lack of interest, but from the absence of external pressure after the novelty wears off.</p>
-          </article>
-          <article class="challenge">
-            <h3>Accountability partners outperform reminders</h3>
-            <p>Users with a person checking in on their commitments were consistently more likely to follow through than users relying on notification-heavy apps.</p>
-          </article>
-          <article class="challenge">
-            <h3>Invisible progress kills momentum</h3>
-            <p>When users cannot see how far they have come, they default to estimating failure. Progress visualization is not a nice-to-have, it is a retention mechanism.</p>
-          </article>
-          <article class="challenge">
-            <h3>AI feedback needs to feel earned</h3>
-            <p>Vague encouragement erodes trust. Structured scoring with reasoning ("85% consistency: you completed 17 of 20 daily logs") builds it.</p>
-          </article>
-          <article class="challenge">
-            <h3>Privacy hesitation blocks onboarding</h3>
-            <p>Users wanted accountability without exposure. Every goal needed to be private by default, with explicit opt-in to share with partners or the community.</p>
-          </article>
-        </div>
+        <ol class="flow-list">
+          <li>
+            <span class="flow-n">01</span>
+            <div>
+              <h3>Motivation fades predictably</h3>
+              <p>Most users disengage within 3 to 4 weeks, not from lack of interest, but from the absence of external pressure after the novelty wears off.</p>
+            </div>
+          </li>
+          <li>
+            <span class="flow-n">02</span>
+            <div>
+              <h3>Accountability partners outperform reminders</h3>
+              <p>Users with a person checking in on their commitments were consistently more likely to follow through than users relying on notification-heavy apps.</p>
+            </div>
+          </li>
+          <li>
+            <span class="flow-n">03</span>
+            <div>
+              <h3>Invisible progress kills momentum</h3>
+              <p>When users cannot see how far they have come, they default to estimating failure. Progress visualization is not a nice-to-have, it is a retention mechanism.</p>
+            </div>
+          </li>
+          <li>
+            <span class="flow-n">04</span>
+            <div>
+              <h3>AI feedback needs to feel earned</h3>
+              <p>Vague encouragement erodes trust. Structured scoring with reasoning builds it.</p>
+            </div>
+          </li>
+          <li>
+            <span class="flow-n">05</span>
+            <div>
+              <h3>Privacy hesitation blocks onboarding</h3>
+              <p>Users wanted accountability without exposure. Every goal needed to be private by default, with explicit opt-in to share with partners or the community.</p>
+            </div>
+          </li>
+        </ol>
       </div>
       <div class="carousel" style="margin-top:48px">
         <input type="radio" id="lx-c2-1" name="lx-c2" checked>
@@ -1525,20 +1532,29 @@ export const projects: Project[] = [
         </figure>
         <p>The AI in LeverageX has one job: review your week and tell you, honestly and specifically, how well you executed. It does not chat, answer questions, or suggest tasks. It analyzes activity patterns, evaluates submitted evidence, and delivers structured scores with reasoning attached.</p>
         <p>Narrow scope was the key design decision. An AI that tries to do everything becomes an AI that does nothing trustworthy. Restricting it to structured accountability reviews made every output feel reliable and worth acting on.</p>
-        <div class="score-grid">
-          <article class="score">
-            <strong>85%</strong>
-            <p><b>Consistency</b><br>You completed daily logs on 17 of the last 20 days.</p>
-          </article>
-          <article class="score">
-            <strong>72%</strong>
-            <p><b>Impact</b><br>Most completed actions contributed toward your monthly milestone.</p>
-          </article>
-          <article class="score">
-            <strong>90%</strong>
-            <p><b>Follow-through</b><br>Nearly every planned task was completed on schedule.</p>
-          </article>
-        </div>
+        <ul class="stat-list">
+          <li>
+            <span class="stat-n">85%</span>
+            <div>
+              <h3>Consistency</h3>
+              <p>You completed daily logs on 17 of the last 20 days.</p>
+            </div>
+          </li>
+          <li>
+            <span class="stat-n">72%</span>
+            <div>
+              <h3>Impact</h3>
+              <p>Most completed actions contributed toward your monthly milestone.</p>
+            </div>
+          </li>
+          <li>
+            <span class="stat-n">90%</span>
+            <div>
+              <h3>Follow-through</h3>
+              <p>Nearly every planned task was completed on schedule.</p>
+            </div>
+          </li>
+        </ul>
         <figure>
           <img src="https://cdn.dribbble.com/userupload/48415212/file/8f9b2f5989826271882c8ca968820105.webp?resize=1024x768&amp;vertical=center" alt="AI review details">
         </figure>
@@ -1591,20 +1607,20 @@ export const projects: Project[] = [
       <div class="narrow">
         <p class="section-label">Outcomes</p>
         <h2>What Was Delivered</h2>
-        <div class="outcome-grid">
-          <div class="outcome-card">
-            <span class="outcome-num">3 mo</span>
-            <p class="outcome-label">Research to dev-ready handoff, including a complete PRD with business rules and edge cases</p>
-          </div>
-          <div class="outcome-card">
-            <span class="outcome-num">5</span>
-            <p class="outcome-label">Behavioral failure modes addressed through system design, not just UI patterns</p>
-          </div>
-          <div class="outcome-card">
-            <span class="outcome-num">2</span>
-            <p class="outcome-label">Accountability models (AI and human) designed to complement each other within one platform</p>
-          </div>
-        </div>
+        <ul class="outcome-list">
+          <li>
+            <span class="outcome-n">3 mo</span>
+            <p>Research to dev-ready handoff, including a complete PRD with business rules and edge cases.</p>
+          </li>
+          <li>
+            <span class="outcome-n">5</span>
+            <p>Behavioral failure modes addressed through system design, not just UI patterns.</p>
+          </li>
+          <li>
+            <span class="outcome-n">2</span>
+            <p>Accountability models (AI and human) designed to complement each other within one platform.</p>
+          </li>
+        </ul>
         <p>The Apex Goal hierarchy, the AI review framework, and the privacy model each came from research about how people actually behave around long-term goals. Not how they intend to. That distinction drove every prioritization decision and kept the MVP focused on the one thing that matters: helping users execute consistently, not just plan comprehensively.</p>
         <p>The PRD produced for the development team covered user roles, state transitions, validation logic, and edge cases across every core flow. That document closed the gap between design intent and implementation reality.</p>
         <figure>
