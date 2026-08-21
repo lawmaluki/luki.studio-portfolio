@@ -835,14 +835,15 @@ export const projects: Project[] = [
   .kyc h1 { max-width: 900px; font-size: 48px; font-weight: 800; }
   .kyc h2 { margin-bottom: 24px; font-size: 28px; font-weight: 700; }
   .kyc h3 { margin: 0 0 10px; font-size: 18px; font-weight: 700; line-height: 1.3; }
-  .kyc p { margin: 0 0 18px; font-size: 18px; font-weight: 400; line-height: 1.7; }
+  .kyc p { margin: 0 0 18px; font-size: 18px; font-weight: 400; line-height: 1.7; color: var(--ink); }
   .kyc .lead { max-width: 760px; margin-top: 22px; color: #4E4E4E; font-size: 20px; line-height: 1.55; }
   .kyc .section-label { margin: 0 0 12px; color: var(--muted); font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
   .kyc .meta { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
   .kyc .meta-item { min-height: 150px; padding: 28px; background: var(--panel); }
   .kyc .meta-item span { display: block; margin-bottom: 10px; color: var(--muted); font-size: 13px; font-weight: 700; text-transform: uppercase; }
   .kyc .meta-item strong { display: block; font-size: 21px; line-height: 1.35; }
-  .kyc .callout { margin: 36px 0; padding: 24px 0; border-top: 2px solid var(--blue); font-size: 20px; line-height: 1.48; color: var(--ink); }
+  .kyc .callout { margin: 36px 0; padding: 24px 0; border-top: 2px solid var(--line); border-bottom: 2px solid var(--line); font-size: 20px; line-height: 1.48; color: var(--ink); font-style: italic; }
+  .kyc .callout p:last-child { margin-bottom: 0; }
   .kyc .pill-list { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; margin: 22px 0 0; list-style: none; }
   .kyc .pill-list li { padding: 8px 12px; background: var(--soft); border: 1px solid var(--line); border-radius: 999px; color: var(--muted); font-size: 14px; font-weight: 600; }
   .kyc .visual-band { padding: 24px; background: #0b1020; }
@@ -1305,7 +1306,7 @@ export const projects: Project[] = [
   .lx h1 { max-width: 900px; font-size: 48px; font-weight: 800; }
   .lx h2 { margin-bottom: 24px; font-size: 28px; font-weight: 700; }
   .lx h3 { margin: 0 0 10px; font-size: 18px; font-weight: 700; line-height: 1.3; }
-  .lx p { margin: 0 0 18px; font-size: 18px; font-weight: 400; line-height: 1.7; }
+  .lx p { margin: 0 0 18px; font-size: 18px; font-weight: 400; line-height: 1.7; color: var(--ink); }
   .lx .lead { max-width: 720px; margin-top: 22px; color: #4E4E4E; font-size: 20px; line-height: 1.55; }
   .lx .meta-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; margin-top: -1px; background: var(--line); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
   .lx .meta-item { min-height: 170px; padding: 28px; background: var(--panel); }
