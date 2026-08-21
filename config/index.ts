@@ -553,7 +553,7 @@ export const projects: Project[] = [
   .ak .shot img { border-radius: 0; display: block; width: 100%; height: auto; }
   .ak h1 { margin: 0 0 20px; font-size: 48px; font-weight: 800; line-height: 1.12; letter-spacing: -0.02em; color: var(--deep); }
   .ak h2 { margin: 32px 0 14px; font-size: 28px; font-weight: 700; line-height: 1.2; letter-spacing: -0.01em; color: var(--deep); }
-  .ak p { margin: 0 0 14px; font-size: 17px; line-height: 1.75; color: #4E4E4E; }
+  .ak p { margin: 0 0 14px; font-size: 18px; font-weight: 400; line-height: 1.7; color: #4E4E4E; }
   .ak p.spacer { height: 6px; margin: 0; padding: 0; font-size: 0; line-height: 0; }
   .ak ul, .ak ol { margin: 6px 0 18px; padding-left: 22px; font-size: 17px; line-height: 1.75; color: #4E4E4E; }
   .ak li { margin-bottom: 8px; }
@@ -835,7 +835,7 @@ export const projects: Project[] = [
   .kyc h1 { max-width: 900px; font-size: 48px; font-weight: 800; }
   .kyc h2 { margin-bottom: 24px; font-size: 28px; font-weight: 700; }
   .kyc h3 { margin: 0 0 10px; font-size: 18px; font-weight: 700; line-height: 1.3; }
-  .kyc p { margin: 0 0 18px; font-size: 16px; line-height: 1.7; }
+  .kyc p { margin: 0 0 18px; font-size: 18px; font-weight: 400; line-height: 1.7; }
   .kyc .lead { max-width: 760px; margin-top: 22px; color: #4E4E4E; font-size: 20px; line-height: 1.55; }
   .kyc .section-label { margin: 0 0 12px; color: var(--muted); font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
   .kyc .meta { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
@@ -844,7 +844,7 @@ export const projects: Project[] = [
   .kyc .meta-item strong { display: block; font-size: 21px; line-height: 1.35; }
   .kyc .callout { margin: 36px 0; padding: 24px 0; border-top: 2px solid var(--blue); font-size: 20px; line-height: 1.48; color: var(--ink); }
   .kyc .pill-list { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; margin: 22px 0 0; list-style: none; }
-  .kyc .pill-list li { padding: 8px 12px; background: #e9f8f5; border: 1px solid #c8eee8; border-radius: 999px; color: #0f766e; font-size: 14px; font-weight: 600; }
+  .kyc .pill-list li { padding: 8px 12px; background: var(--soft); border: 1px solid var(--line); border-radius: 999px; color: var(--muted); font-size: 14px; font-weight: 600; }
   .kyc .visual-band { padding: 24px; background: #0b1020; }
   .kyc .visual-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; align-items: start; }
   .kyc .visual-grid figure { aspect-ratio: 16/9; overflow: hidden; border-radius: var(--radius); margin: 0; }
@@ -1305,7 +1305,7 @@ export const projects: Project[] = [
   .lx h1 { max-width: 900px; font-size: 48px; font-weight: 800; }
   .lx h2 { margin-bottom: 24px; font-size: 28px; font-weight: 700; }
   .lx h3 { margin: 0 0 10px; font-size: 18px; font-weight: 700; line-height: 1.3; }
-  .lx p { margin: 0 0 18px; font-size: 16px; line-height: 1.7; }
+  .lx p { margin: 0 0 18px; font-size: 18px; font-weight: 400; line-height: 1.7; }
   .lx .lead { max-width: 720px; margin-top: 22px; color: #4E4E4E; font-size: 20px; line-height: 1.55; }
   .lx .meta-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; margin-top: -1px; background: var(--line); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
   .lx .meta-item { min-height: 170px; padding: 28px; background: var(--panel); }
@@ -1323,7 +1323,7 @@ export const projects: Project[] = [
   .lx figure + figure, .lx p + figure, .lx figure + p { margin-top: 28px; }
   .lx figcaption { margin-top: 10px; color: var(--muted); font-size: 14px; line-height: 1.5; }
   .lx .pill-list { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; margin: 20px 0 0; list-style: none; }
-  .lx .pill-list li { padding: 8px 12px; background: #eef1f4; border-radius: 999px; color: #344054; font-size: 14px; font-weight: 600; }
+  .lx .pill-list li { padding: 8px 12px; background: #f3f4f6; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); font-size: 14px; font-weight: 600; }
   /* flow-list — numbered vertical steps */
   .lx .flow-list { list-style: none; padding: 0; margin: 32px 0 0; }
   .lx .flow-list li { display: grid; grid-template-columns: 40px 1fr; gap: 24px; padding: 24px 0; border-bottom: 1px solid var(--line); align-items: start; }
