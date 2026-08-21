@@ -1,9 +1,8 @@
 import { notFound } from 'next/navigation';
-import { ArrowLeft } from 'lucide-react';
-import Link from 'next/link';
 import { projects } from '@/config';
 import { MainLayout } from '@/components/layouts';
 import { ProjectDescription } from '@/components/ProjectDescription';
+import { FloatingBackButton } from '@/components/FloatingBackButton';
 import type { Metadata } from 'next';
 
 interface Props {
@@ -29,19 +28,10 @@ export default async function ProjectPage({ params }: Props) {
     return (
         <MainLayout>
             <article className="mx-auto max-w-5xl px-6 py-14">
-                {/* Back */}
-                <Link
-                    href="/"
-                    className="mb-10 inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
-                >
-                    <ArrowLeft className="h-4 w-4" />
-                    Back to projects
-                </Link>
-
                 {/* Full description */}
                 <ProjectDescription html={project.description} />
-
             </article>
+            <FloatingBackButton />
         </MainLayout>
     );
 }
