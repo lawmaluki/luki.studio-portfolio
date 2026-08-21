@@ -521,6 +521,570 @@ export const projects: Project[] = [
       link: 'https://ebooks.rahnuma.org/1690308873-Dune.pdf.html',
     },
   {
+    slug: 'milpress-adult-literacy',
+    title: 'MilPress: Adult Literacy Platform',
+    category: 'Project',
+    tags: ['Product Design', 'EdTech', 'Accessibility', 'UX Research'],
+    image: 'https://cdn.dribbble.com/userupload/48531860/file/65eec83f6ab4242c727a65c0d52b92f3.png?resize=752x&vertical=center',
+    summary: 'Designing a mobile literacy platform that empowers adult learners through simplicity, dignity, and accessibility-first product thinking.',
+    year: '2026',
+    role: 'Product Designer',
+    description: `<style>
+  .mil {
+    color: #4E4E4E;
+    font-size: 17px;
+    line-height: 1.7;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --muted: #6b7280;
+    --line: #e5e7eb;
+    --panel: #ffffff;
+    --soft: #f9fafb;
+    --accent: #f59e0b;
+    --amber-light: #fffbeb;
+    --deep: #1c1510;
+    --radius: 12px;
+  }
+  .mil * { box-sizing: border-box; }
+  .mil img { display: block; width: 100%; height: auto; }
+  .mil a { color: inherit; text-decoration: none; }
+  .mil .text-block { width: min(720px, 100%); margin: 48px auto; }
+  .mil .shot { width: min(752px, 100%); margin: 48px auto; overflow: hidden; border-radius: var(--radius); box-shadow: 0 4px 24px rgba(28,21,16,0.08), 0 24px 64px rgba(28,21,16,0.06); }
+  .mil .shot img { border-radius: 0; display: block; width: 100%; height: auto; }
+  .mil .image-grid { width: min(752px, 100%); margin: 48px auto; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .mil .image-grid figure { margin: 0; border-radius: var(--radius); overflow: hidden; aspect-ratio: 2/1; }
+  .mil .image-grid figure img { width: 100%; height: 100%; object-fit: cover; }
+  .mil h1 { margin: 0 0 24px; font-size: clamp(28px, 4vw, 46px); font-weight: 800; line-height: 1.12; letter-spacing: -0.02em; color: var(--deep); }
+  .mil h2 { margin: 40px 0 14px; font-size: clamp(20px, 2.8vw, 32px); font-weight: 700; line-height: 1.2; letter-spacing: -0.01em; color: var(--deep); }
+  .mil h3 { margin: 24px 0 8px; font-size: 17px; font-weight: 700; color: var(--deep); }
+  .mil p { margin: 0 0 14px; font-size: 17px; line-height: 1.75; color: #4E4E4E; }
+  .mil ul, .mil ol { margin: 6px 0 14px; padding-left: 22px; font-size: 17px; line-height: 1.75; color: #4E4E4E; }
+  .mil li { margin-bottom: 6px; }
+  .mil li p { margin: 0; }
+  .mil strong { font-weight: 700; color: var(--deep); }
+  .mil em, .mil i { font-style: italic; }
+  .mil .meta-row { display: flex; gap: 0; flex-wrap: wrap; margin: 28px 0; background: var(--soft); border-radius: var(--radius); border: 1px solid var(--line); overflow: hidden; }
+  .mil .meta-item { flex: 1; min-width: 130px; padding: 20px 24px; }
+  .mil .meta-item + .meta-item { border-left: 1px solid var(--line); }
+  .mil .meta-label { margin: 0 0 4px; color: #6b7280; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
+  .mil .meta-value { margin: 0; font-size: 15px; font-weight: 600; color: var(--deep); }
+  .mil .video-wrap { margin: 32px 0; border-radius: var(--radius); overflow: hidden; box-shadow: 0 4px 24px rgba(28,21,16,0.08), 0 24px 64px rgba(28,21,16,0.06); }
+  .mil .video-wrap video { width: 100%; display: block; }
+  .mil .journey-flow { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 24px 0; padding: 24px; background: var(--amber-light); border-radius: var(--radius); border: 1px solid #fde68a; }
+  .mil .journey-step { font-weight: 600; font-size: 13px; color: var(--deep); padding: 7px 14px; background: white; border-radius: 8px; border: 1px solid #fde68a; white-space: nowrap; }
+  .mil .journey-arrow { color: var(--accent); font-size: 14px; font-weight: 800; flex-shrink: 0; }
+  .mil .principles-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+  .mil .principle-card { padding: 20px 24px; background: var(--soft); border-radius: var(--radius); }
+  .mil .principle-card h3 { margin: 0 0 8px; font-size: 14px; font-weight: 700; color: var(--deep); text-transform: uppercase; letter-spacing: 0.04em; }
+  .mil .principle-card p { margin: 0; font-size: 14px; line-height: 1.65; }
+  .mil .eyebrow { margin: 0 0 16px; color: var(--accent); font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
+  .mil .lead { max-width: 620px; margin: 0 0 8px; color: #4E4E4E; font-size: 19px; line-height: 1.6; }
+  .mil .callout { margin: 32px 0; padding: 24px 0; border-top: 2px solid var(--line); border-bottom: 2px solid var(--line); font-size: 19px; line-height: 1.5; color: var(--deep); font-style: italic; }
+  .mil .callout p { margin: 0; font-style: italic; }
+  .mil .flow-list, .mil .tk-list { list-style: none; padding: 0; margin: 20px 0 0; counter-reset: tk; }
+  .mil .flow-list li, .mil .tk-list li { display: grid; grid-template-columns: 36px 1fr; gap: 20px; padding: 20px 0; border-bottom: 1px solid var(--line); align-items: start; counter-increment: tk; }
+  .mil .flow-list li:first-child, .mil .tk-list li:first-child { border-top: 1px solid var(--line); }
+  .mil .flow-n, .mil .tk-n::before { font-size: 12px; font-weight: 700; color: var(--accent); letter-spacing: 0.04em; padding-top: 4px; }
+  .mil .tk-n::before { content: "0" counter(tk); }
+  .mil .flow-list h3, .mil .tk-list h3 { margin: 0 0 6px; }
+  .mil .flow-list p, .mil .tk-list p { margin: 0; }
+  .mil .carousel { position: relative; width: min(752px, 100%); margin: 48px auto; }
+  .mil .carousel input[type="radio"] { display: none; }
+  .mil .carousel-slides { display: grid; grid-template-columns: 1fr; border-radius: var(--radius); overflow: hidden; box-shadow: 0 4px 24px rgba(28,21,16,0.08), 0 24px 64px rgba(28,21,16,0.06); }
+  .mil .carousel-slide { grid-column: 1; grid-row: 1; opacity: 0; transition: opacity 0.3s ease; }
+  .mil .carousel-slide img { width: 100%; height: auto; display: block; }
+  .mil .carousel-thumbs { display: flex; gap: 8px; justify-content: center; margin-top: 12px; flex-wrap: wrap; }
+  .mil .carousel-thumbs label { width: clamp(56px, 15vw, 80px); height: clamp(35px, 9.375vw, 50px); border-radius: 6px; overflow: hidden; border: 2px solid transparent; opacity: 0.5; cursor: pointer; transition: opacity 0.2s, border-color 0.2s; display: block; flex-shrink: 0; }
+  .mil .carousel-thumbs label img { width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none; }
+  #mil-c0-1:checked ~ .carousel-slides .carousel-slide:nth-child(1) { opacity: 1; }
+  #mil-c0-2:checked ~ .carousel-slides .carousel-slide:nth-child(2) { opacity: 1; }
+  #mil-c0-1:checked ~ .carousel-thumbs label:nth-child(1) { border-color: var(--accent); opacity: 1; }
+  #mil-c0-2:checked ~ .carousel-thumbs label:nth-child(2) { border-color: var(--accent); opacity: 1; }
+  #mil-c1-1:checked ~ .carousel-slides .carousel-slide:nth-child(1) { opacity: 1; }
+  #mil-c1-2:checked ~ .carousel-slides .carousel-slide:nth-child(2) { opacity: 1; }
+  #mil-c1-3:checked ~ .carousel-slides .carousel-slide:nth-child(3) { opacity: 1; }
+  #mil-c1-1:checked ~ .carousel-thumbs label:nth-child(1) { border-color: var(--accent); opacity: 1; }
+  #mil-c1-2:checked ~ .carousel-thumbs label:nth-child(2) { border-color: var(--accent); opacity: 1; }
+  #mil-c1-3:checked ~ .carousel-thumbs label:nth-child(3) { border-color: var(--accent); opacity: 1; }
+  #mil-c2-1:checked ~ .carousel-slides .carousel-slide:nth-child(1) { opacity: 1; }
+  #mil-c2-2:checked ~ .carousel-slides .carousel-slide:nth-child(2) { opacity: 1; }
+  #mil-c2-3:checked ~ .carousel-slides .carousel-slide:nth-child(3) { opacity: 1; }
+  #mil-c2-4:checked ~ .carousel-slides .carousel-slide:nth-child(4) { opacity: 1; }
+  #mil-c2-5:checked ~ .carousel-slides .carousel-slide:nth-child(5) { opacity: 1; }
+  #mil-c2-1:checked ~ .carousel-thumbs label:nth-child(1) { border-color: var(--accent); opacity: 1; }
+  #mil-c2-2:checked ~ .carousel-thumbs label:nth-child(2) { border-color: var(--accent); opacity: 1; }
+  #mil-c2-3:checked ~ .carousel-thumbs label:nth-child(3) { border-color: var(--accent); opacity: 1; }
+  #mil-c2-4:checked ~ .carousel-thumbs label:nth-child(4) { border-color: var(--accent); opacity: 1; }
+  #mil-c2-5:checked ~ .carousel-thumbs label:nth-child(5) { border-color: var(--accent); opacity: 1; }
+  #mil-c3-1:checked ~ .carousel-slides .carousel-slide:nth-child(1) { opacity: 1; }
+  #mil-c3-2:checked ~ .carousel-slides .carousel-slide:nth-child(2) { opacity: 1; }
+  #mil-c3-3:checked ~ .carousel-slides .carousel-slide:nth-child(3) { opacity: 1; }
+  #mil-c3-4:checked ~ .carousel-slides .carousel-slide:nth-child(4) { opacity: 1; }
+  #mil-c3-5:checked ~ .carousel-slides .carousel-slide:nth-child(5) { opacity: 1; }
+  #mil-c3-1:checked ~ .carousel-thumbs label:nth-child(1) { border-color: var(--accent); opacity: 1; }
+  #mil-c3-2:checked ~ .carousel-thumbs label:nth-child(2) { border-color: var(--accent); opacity: 1; }
+  #mil-c3-3:checked ~ .carousel-thumbs label:nth-child(3) { border-color: var(--accent); opacity: 1; }
+  #mil-c3-4:checked ~ .carousel-thumbs label:nth-child(4) { border-color: var(--accent); opacity: 1; }
+  #mil-c3-5:checked ~ .carousel-thumbs label:nth-child(5) { border-color: var(--accent); opacity: 1; }
+  .mil .footer { width: min(720px, 100%); margin: 80px auto 0; padding: 40px; background: var(--panel); border-top: 1px solid var(--line); border-radius: var(--radius); }
+  .mil .footer-meta { display: flex; gap: 40px; flex-wrap: wrap; margin-bottom: 32px; }
+  .mil .footer-meta-item .footer-label { margin: 0 0 4px; color: #6b7280; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
+  .mil .footer-meta-item p { margin: 0; font-size: 15px; color: var(--deep); font-weight: 600; }
+  .mil .footer-sources { border-top: 1px solid var(--line); padding-top: 24px; }
+  .mil .footer-sources-title { margin: 0 0 12px; font-size: 11px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 0.1em; }
+  .mil .footer-links { display: flex; flex-wrap: wrap; gap: 10px; }
+  .mil .footer-links a { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; font-size: 14px; font-weight: 500; color: var(--deep); border: 1px solid var(--line); border-radius: 8px; transition: border-color 0.2s; }
+  .mil .footer-links a:hover { border-color: var(--accent); }
+  .dark .mil { color: #d1d5db; --deep: #f3f4f6; --panel: #1f2937; --soft: #374151; --line: #374151; --amber-light: rgba(245,158,11,0.06); }
+  .dark .mil p, .dark .mil ul, .dark .mil ol { color: #9ca3af; }
+  .dark .mil h1, .dark .mil h2, .dark .mil h3, .dark .mil strong { color: #f3f4f6; }
+  .dark .mil .shot { box-shadow: 0 4px 24px rgba(0,0,0,0.3), 0 24px 64px rgba(0,0,0,0.2); }
+  .dark .mil .meta-row { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.08); }
+  .dark .mil .meta-item + .meta-item { border-color: rgba(255,255,255,0.08); }
+  .dark .mil .principle-card { background: rgba(255,255,255,0.04); }
+  .dark .mil .lead { color: #d1d5db; }
+  .dark .mil .callout { color: #f3f4f6; }
+  .dark .mil .journey-step { background: rgba(255,255,255,0.06); border-color: rgba(245,158,11,0.3); }
+  .dark .mil .journey-flow { border-color: rgba(245,158,11,0.2); }
+  .dark .mil .carousel-slides { box-shadow: 0 4px 24px rgba(0,0,0,0.3), 0 24px 64px rgba(0,0,0,0.2); }
+  .dark .mil .footer { border-color: var(--line); }
+  @media (max-width: 600px) {
+    .mil .principles-grid { grid-template-columns: 1fr; }
+    .mil .image-grid { grid-template-columns: 1fr; }
+    .mil .meta-row { flex-direction: column; }
+    .mil .meta-item + .meta-item { border-left: none; border-top: 1px solid var(--line); }
+    .mil .footer-meta { flex-direction: column; gap: 16px; }
+    .mil .journey-flow { gap: 6px; padding: 16px; }
+  }
+</style>
+
+<div class="mil">
+
+<figure class="shot">
+  <img src="https://cdn.dribbble.com/userupload/48531860/file/65eec83f6ab4242c727a65c0d52b92f3.png?resize=752x&amp;vertical=center" alt="MilPress cover" loading="lazy">
+</figure>
+
+<section class="text-block">
+  <p class="eyebrow">Product Design Case Study / EdTech</p>
+  <h1>MilPress: Adult Literacy Platform</h1>
+  <p class="lead">A mobile learning experience designed to help adult learners build reading and writing confidence — with dignity, simplicity, and accessibility at the center of every decision.</p>
+  <div class="meta-row">
+    <div class="meta-item">
+      <p class="meta-label">Product</p>
+      <p class="meta-value">MilPress</p>
+    </div>
+    <div class="meta-item">
+      <p class="meta-label">Role</p>
+      <p class="meta-value">Product Designer</p>
+    </div>
+    <div class="meta-item">
+      <p class="meta-label">Responsibility</p>
+      <p class="meta-value">UX Research &bull; Product Strategy &bull; UI Design &bull; Design System &bull; Prototyping</p>
+    </div>
+  </div>
+
+  <div class="video-wrap">
+    <video src="https://cdn.dribbble.com/userupload/48533589/file/large-5bd0a7ee79827659dde5ebdfaec55a63.mp4" autoplay muted loop playsinline></video>
+  </div>
+
+  <h2>Background</h2>
+  <p>Millions of adults still struggle with reading and writing because they never had access to quality education, or were forced to leave school early. MilPress was created to close that gap &#8212; a mobile learning experience built specifically for adult learners, not adapted from a product designed for children.</p>
+  <p>As Product Designer, my role went beyond interfaces. I had to consider how product decisions influence motivation, accessibility, and long-term engagement &#8212; designing something intuitive enough to reduce friction, and dignified enough to keep adults coming back.</p>
+  <div class="callout">
+    <p>Research only becomes valuable when it changes a decision. Every feature in MilPress had to earn its place by solving a real problem for a real learner.</p>
+  </div>
+</section>
+
+<section class="text-block">
+  <h2>Understanding the Problem</h2>
+  <p>Most literacy apps are built for children, or for users already comfortable with smartphones and gamified UI. Adult learners face a different set of barriers:</p>
+  <ul>
+    <li>Fear of making mistakes</li>
+    <li>Low confidence from past educational experiences</li>
+    <li>Limited digital literacy</li>
+    <li>Poor internet connectivity</li>
+    <li>Visual impairments associated with aging</li>
+    <li>Limited time due to work and family responsibilities</li>
+  </ul>
+  <p>That shifted the core question from &#8220;How do I make learning fun?&#8221; to &#8220;How do I make learning feel <strong>respectful, safe, and achievable?</strong>&#8221; &#8212; the foundation for every decision that followed.</p>
+</section>
+
+<section class="text-block">
+  <h2>Audience</h2>
+  <p>MilPress was designed for <strong>adult learners</strong> &#8212; people who never had the opportunity for formal education, or are returning to it later in life, to become more confident and independent in their communities.</p>
+  <p>Unlike children, they bring life experience and responsibilities into the process, but often carry <strong>embarrassment or fear of making mistakes</strong> from past schooling. Designing for that meant leading with dignity, empathy, and simplicity &#8212; not just usability.</p>
+</section>
+
+<figure class="shot">
+  <img src="https://cdn.dribbble.com/userupload/48533587/file/1820b7b4ac65944a54a7bcb2c055c5ca.png?resize=752x&amp;vertical=center" alt="Audience overview" loading="lazy">
+</figure>
+
+<section class="text-block">
+  <h2>The Opportunity</h2>
+  <p>This was more than a screens project. It was a chance to answer:</p>
+  <ul>
+    <li>How can we reduce friction in key user journeys?</li>
+    <li>How do we simplify complex workflows without losing functionality?</li>
+    <li>How do we design something users understand immediately?</li>
+    <li>How do we build a system developers can efficiently maintain?</li>
+    <li>How can design contribute to growth beyond aesthetics?</li>
+  </ul>
+</section>
+
+<section class="text-block">
+  <h2>My Design Process</h2>
+</section>
+
+<figure class="shot">
+  <img src="https://cdn.dribbble.com/userupload/48533588/file/6fa897dd8dc727d8ccfcee9cf65c5a8c.png?resize=752x&amp;vertical=center" alt="Design process diagram" loading="lazy">
+</figure>
+
+<section class="text-block">
+  <p>Rather than following a rigid UX framework, I adopted an iterative product design process where every stage informed the next. This allowed me to continuously refine the experience based on research, testing, and technical considerations.</p>
+</section>
+
+<section class="text-block">
+  <h2>Research &amp; Discovery</h2>
+  <h3>Understanding Adult Learners</h3>
+  <p>Before designing interfaces, I researched adult literacy challenges, learning psychology, accessibility standards, and existing literacy programs &#8212; to move beyond assumptions and design with empathy.</p>
+  <p><strong>Key questions:</strong></p>
+  <ul>
+    <li>Why do adults stop learning, and what stops them from returning?</li>
+    <li>What motivates them to continue?</li>
+    <li>How comfortable are they with smartphones?</li>
+    <li>What barriers exist beyond literacy itself?</li>
+  </ul>
+
+  <h3>Competitor Analysis</h3>
+  <p>I evaluated <strong>Duolingo</strong>, <strong>Google Read Along</strong>, <strong>Khan Academy</strong>, and local adult education initiatives &#8212; comparing navigation, motivation systems, accessibility, and content hierarchy.</p>
+  <div class="callout">
+    <p>Most educational apps were built for children or digitally confident users. Almost none considered older adults with limited literacy and a need for privacy &#8212; that gap became MilPress&#8217;s biggest opportunity.</p>
+  </div>
+</section>
+
+<section class="text-block">
+  <h2>Defining the Product</h2>
+  <p>Every feature had to solve a specific, research-backed problem &#8212; not just look impressive. I mapped each recurring pain point from adult learners directly to a design decision, keeping the product practical and aligned with both user needs and long-term goals.</p>
+</section>
+
+<figure class="shot">
+  <img src="https://cdn.dribbble.com/userupload/48534455/file/8507f5965e314ffea9f4fc8b012813c4.png?resize=752x&amp;vertical=center" alt="Product definition framework" loading="lazy">
+</figure>
+
+<section class="text-block">
+  <h2>Information Architecture</h2>
+  <p>The biggest challenge was organizing content so learners always understood where they were and what came next. I kept the journey linear in early levels to reduce decision fatigue, gradually introducing flexibility as learners progressed.</p>
+</section>
+
+<div class="carousel">
+  <input type="radio" id="mil-c0-1" name="mil-c0" checked>
+  <input type="radio" id="mil-c0-2" name="mil-c0">
+  <div class="carousel-slides">
+    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534459/file/6fbf4fa41d6cfbc2494cc5c9071c6c7b.png?resize=752x364&amp;vertical=center" alt="IA diagram 1" loading="lazy"></div>
+    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534458/file/d8e6f515adfbd4b75ff4548bab72aa35.png?resize=752x364&amp;vertical=center" alt="IA diagram 2" loading="lazy"></div>
+  </div>
+  <div class="carousel-thumbs">
+    <label for="mil-c0-1"><img src="https://cdn.dribbble.com/userupload/48534459/file/6fbf4fa41d6cfbc2494cc5c9071c6c7b.png?resize=752x364&amp;vertical=center" alt=""></label>
+    <label for="mil-c0-2"><img src="https://cdn.dribbble.com/userupload/48534458/file/d8e6f515adfbd4b75ff4548bab72aa35.png?resize=752x364&amp;vertical=center" alt=""></label>
+  </div>
+</div>
+
+<section class="text-block">
+  <h3>Designing Clear Learning Journeys</h3>
+  <p>Because MilPress serves learners with varying digital confidence, every flow had to be intuitive, predictable, and free of unnecessary complexity.</p>
+</section>
+
+<div class="carousel">
+  <input type="radio" id="mil-c1-1" name="mil-c1" checked>
+  <input type="radio" id="mil-c1-2" name="mil-c1">
+  <input type="radio" id="mil-c1-3" name="mil-c1">
+  <div class="carousel-slides">
+    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534462/file/c5e48ebe17fd8b84cec0ea1fff7bc94b.png?resize=752x409&amp;vertical=center" alt="User flow 1" loading="lazy"></div>
+    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534463/file/1e40292ad8e6c9457fa6c5b2dec29a61.png?resize=752x409&amp;vertical=center" alt="User flow 2" loading="lazy"></div>
+    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534464/file/abbefc90a4ca8e207ccce55a3d1e1f0a.png?resize=752x409&amp;vertical=center" alt="User flow 3" loading="lazy"></div>
+  </div>
+  <div class="carousel-thumbs">
+    <label for="mil-c1-1"><img src="https://cdn.dribbble.com/userupload/48534462/file/c5e48ebe17fd8b84cec0ea1fff7bc94b.png?resize=752x409&amp;vertical=center" alt=""></label>
+    <label for="mil-c1-2"><img src="https://cdn.dribbble.com/userupload/48534463/file/1e40292ad8e6c9457fa6c5b2dec29a61.png?resize=752x409&amp;vertical=center" alt=""></label>
+    <label for="mil-c1-3"><img src="https://cdn.dribbble.com/userupload/48534464/file/abbefc90a4ca8e207ccce55a3d1e1f0a.png?resize=752x409&amp;vertical=center" alt=""></label>
+  </div>
+</div>
+
+<section class="text-block">
+  <p>I designed user flows around the learner&#8217;s emotional journey rather than simply their actions. A typical experience became:</p>
+  <div class="journey-flow">
+    <span class="journey-step">Welcome</span>
+    <span class="journey-arrow">&#8594;</span>
+    <span class="journey-step">Choose Lesson</span>
+    <span class="journey-arrow">&#8594;</span>
+    <span class="journey-step">Watch</span>
+    <span class="journey-arrow">&#8594;</span>
+    <span class="journey-step">Practice</span>
+    <span class="journey-arrow">&#8594;</span>
+    <span class="journey-step">Receive Feedback</span>
+    <span class="journey-arrow">&#8594;</span>
+    <span class="journey-step">Celebrate Progress</span>
+    <span class="journey-arrow">&#8594;</span>
+    <span class="journey-step">Continue Learning</span>
+  </div>
+  <p>Every interaction was designed to encourage confidence instead of reminding users what they didn&#8217;t know.</p>
+</section>
+
+<section class="text-block">
+  <h2>MilPress Visual Identity</h2>
+  <p>The visual concept centered on a clean mobile screen mockup with brand signature, set against <strong>warm, muted tones</strong> with subtle gradient highlights &#8212; communicating approachability and trust from first glance.</p>
+</section>
+
+<figure class="shot">
+  <img src="https://cdn.dribbble.com/userupload/48534460/file/3406cd2e82aca37310a09f200d9f8f81.gif" alt="MilPress prototype animation" loading="lazy">
+</figure>
+
+<div class="carousel">
+  <input type="radio" id="mil-c2-1" name="mil-c2" checked>
+  <input type="radio" id="mil-c2-2" name="mil-c2">
+  <input type="radio" id="mil-c2-3" name="mil-c2">
+  <input type="radio" id="mil-c2-4" name="mil-c2">
+  <input type="radio" id="mil-c2-5" name="mil-c2">
+  <div class="carousel-slides">
+    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534470/file/425473bbfb164fe776347ea73253cadf.png?resize=752x423&amp;vertical=center" alt="Visual identity screen 1" loading="lazy"></div>
+    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534469/file/074dad68fbd5c857900aedac57a606a9.png?resize=752x423&amp;vertical=center" alt="Visual identity screen 2" loading="lazy"></div>
+    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534468/file/3dd59821efbf45ef63fd64108c3d402c.png?resize=752x423&amp;vertical=center" alt="Visual identity screen 3" loading="lazy"></div>
+    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534471/file/4a182c240ddc9271013cad7f47c79850.png?resize=752x423&amp;vertical=center" alt="Visual identity screen 4" loading="lazy"></div>
+    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534472/file/b29f0513c90400f056e63c362d3473c6.png?resize=752x423&amp;vertical=center" alt="Visual identity screen 5" loading="lazy"></div>
+  </div>
+  <div class="carousel-thumbs">
+    <label for="mil-c2-1"><img src="https://cdn.dribbble.com/userupload/48534470/file/425473bbfb164fe776347ea73253cadf.png?resize=752x423&amp;vertical=center" alt=""></label>
+    <label for="mil-c2-2"><img src="https://cdn.dribbble.com/userupload/48534469/file/074dad68fbd5c857900aedac57a606a9.png?resize=752x423&amp;vertical=center" alt=""></label>
+    <label for="mil-c2-3"><img src="https://cdn.dribbble.com/userupload/48534468/file/3dd59821efbf45ef63fd64108c3d402c.png?resize=752x423&amp;vertical=center" alt=""></label>
+    <label for="mil-c2-4"><img src="https://cdn.dribbble.com/userupload/48534471/file/4a182c240ddc9271013cad7f47c79850.png?resize=752x423&amp;vertical=center" alt=""></label>
+    <label for="mil-c2-5"><img src="https://cdn.dribbble.com/userupload/48534472/file/b29f0513c90400f056e63c362d3473c6.png?resize=752x423&amp;vertical=center" alt=""></label>
+  </div>
+</div>
+
+<section class="text-block">
+  <h2>Wireframing &amp; Iteration</h2>
+  <p>I explored multiple layouts before committing to the final interface. Each iteration focused on reducing complexity.</p>
+  <p>Questions I continuously asked included:</p>
+  <ul>
+    <li>Can this screen be simplified?</li>
+    <li>Is every button necessary?</li>
+    <li>Will an older learner immediately understand this?</li>
+    <li>Can the next action be made more obvious?</li>
+  </ul>
+  <p>Rather than adding more features, I consistently removed unnecessary elements until the interface felt calm and focused.</p>
+</section>
+
+<section class="text-block">
+  <h2>Design System</h2>
+  <p>The visual language stayed warm, friendly, and approachable &#8212; never academic. It focused on clear typography, high contrast, consistent spacing, friendly illustration, and large touch targets, all in service of reducing anxiety and building confidence.</p>
+</section>
+
+<figure class="shot">
+  <img src="https://cdn.dribbble.com/userupload/48534456/file/34dfa66201512fc9bc44978cb6bd60d2.png?resize=752x&amp;vertical=center" alt="Design system overview" loading="lazy">
+</figure>
+
+<section class="text-block">
+  <p>The design system was guided by four core principles:</p>
+  <div class="principles-grid">
+    <div class="principle-card">
+      <h3>Simplicity</h3>
+      <p>Adult learners should be able to understand the interface without feeling overwhelmed.</p>
+    </div>
+    <div class="principle-card">
+      <h3>Consistency</h3>
+      <p>Maintaining consistency reduces cognitive load and helps users build confidence as they progress through the application.</p>
+    </div>
+    <div class="principle-card">
+      <h3>Accessibility</h3>
+      <p>Every component was designed with older adults in mind, using readable typography, sufficient color contrast, large touch targets, and intuitive interaction patterns.</p>
+    </div>
+    <div class="principle-card">
+      <h3>Scalability</h3>
+      <p>Built to support future features without requiring significant redesign, allowing the product to grow while preserving a cohesive user experience.</p>
+    </div>
+  </div>
+</section>
+
+<section class="text-block">
+  <h2>Building a Scalable Design</h2>
+  <p>A well-structured design system improves collaboration, speeds up development, and creates a more consistent experience for users &#8212; while designing not just for the current release, but for future growth.</p>
+</section>
+
+<figure class="shot">
+  <img src="https://cdn.dribbble.com/userupload/48534467/file/76db5ed7501abb289a228eb311b52081.png?resize=752x489&amp;vertical=center" alt="Scalable design screens 1" loading="lazy">
+</figure>
+
+<figure class="shot">
+  <img src="https://cdn.dribbble.com/userupload/48534465/file/8569fdd8f4837a7c91de7b461f9cc857.png?resize=752x489&amp;vertical=center" alt="Scalable design screens 2" loading="lazy">
+</figure>
+
+<figure class="shot">
+  <img src="https://cdn.dribbble.com/userupload/48534466/file/1db9703c5df0c9409b15d015105b7e91.png?resize=752x489&amp;vertical=center" alt="Scalable design screens 3" loading="lazy">
+</figure>
+
+<figure class="shot">
+  <img src="https://cdn.dribbble.com/userupload/48534461/file/edc770a6059d1a4923db39090a4fbdd0.png?resize=752x&amp;vertical=center" alt="Component library" loading="lazy">
+</figure>
+
+<section class="text-block">
+  <p>I treated technical feasibility as part of the design process, not a handoff afterthought &#8212; building <em>reusable components</em>, <em>consistent spacing rules</em>, <em>standardized interaction patterns</em>, and <em>clear documentation</em> to reduce ambiguity during implementation.</p>
+
+  <h3>Accessibility</h3>
+  <p>Accessibility wasn&#8217;t a checklist &#8212; it was a core principle from day one, designed around older adults, low digital literacy, limited vision, small devices, and slow connections: <em>large typography</em>, <em>high contrast</em>, <em>clear labels</em>, <em>minimal cognitive load</em>, and <em>offline support</em>.</p>
+  <p>The goal was an <strong>experience users could navigate confidently without feeling overwhelmed.</strong></p>
+</section>
+
+<div class="carousel">
+  <input type="radio" id="mil-c3-1" name="mil-c3" checked>
+  <input type="radio" id="mil-c3-2" name="mil-c3">
+  <input type="radio" id="mil-c3-3" name="mil-c3">
+  <input type="radio" id="mil-c3-4" name="mil-c3">
+  <input type="radio" id="mil-c3-5" name="mil-c3">
+  <div class="carousel-slides">
+    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534473/file/11042c9abcde6734ecff37ab0196e478.png?resize=752x488&amp;vertical=center" alt="Final screen 1" loading="lazy"></div>
+    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534474/file/e8ffdf467bc261bc5ba1897d9f0f0b5a.png?resize=752x488&amp;vertical=center" alt="Final screen 2" loading="lazy"></div>
+    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534475/file/cae6d665401bf07604ce94316294bbcc.png?resize=752x488&amp;vertical=center" alt="Final screen 3" loading="lazy"></div>
+    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534476/file/59f19e99828762741709a6f07149e4ab.png?resize=752x488&amp;vertical=center" alt="Final screen 4" loading="lazy"></div>
+    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534477/file/44d70529ee717a6dff0faf19adb42f01.png?resize=752x488&amp;vertical=center" alt="Final screen 5" loading="lazy"></div>
+  </div>
+  <div class="carousel-thumbs">
+    <label for="mil-c3-1"><img src="https://cdn.dribbble.com/userupload/48534473/file/11042c9abcde6734ecff37ab0196e478.png?resize=752x488&amp;vertical=center" alt=""></label>
+    <label for="mil-c3-2"><img src="https://cdn.dribbble.com/userupload/48534474/file/e8ffdf467bc261bc5ba1897d9f0f0b5a.png?resize=752x488&amp;vertical=center" alt=""></label>
+    <label for="mil-c3-3"><img src="https://cdn.dribbble.com/userupload/48534475/file/cae6d665401bf07604ce94316294bbcc.png?resize=752x488&amp;vertical=center" alt=""></label>
+    <label for="mil-c3-4"><img src="https://cdn.dribbble.com/userupload/48534476/file/59f19e99828762741709a6f07149e4ab.png?resize=752x488&amp;vertical=center" alt=""></label>
+    <label for="mil-c3-5"><img src="https://cdn.dribbble.com/userupload/48534477/file/44d70529ee717a6dff0faf19adb42f01.png?resize=752x488&amp;vertical=center" alt=""></label>
+  </div>
+</div>
+
+<figure class="shot">
+  <img src="https://cdn.dribbble.com/userupload/48534457/file/1865693639982d0a094e5063bcee3408.png?resize=752x&amp;vertical=center" alt="Accessibility design overview" loading="lazy">
+</figure>
+
+<section class="text-block">
+  <h2>AI in My Workflow</h2>
+  <p>AI is most valuable to me when it sharpens critical thinking rather than replacing it. Used alongside user-centered practices, it let me move faster without losing intentionality.</p>
+  <ol class="flow-list">
+    <li>
+      <span class="flow-n">01</span>
+      <div>
+        <h3>Research &amp; Competitive Analysis</h3>
+        <p>Accelerated the research phase &#8212; synthesizing accessibility best practices, comparing competitor learning experiences, and surfacing patterns across educational platforms.</p>
+      </div>
+    </li>
+    <li>
+      <span class="flow-n">02</span>
+      <div>
+        <h3>UX Writing &amp; Content Design</h3>
+        <p>Generated alternative wording for instructions, buttons, and error messages &#8212; keeping microcopy simple, friendly, and encouraging throughout.</p>
+      </div>
+    </li>
+    <li>
+      <span class="flow-n">03</span>
+      <div>
+        <h3>Rapid Design Exploration</h3>
+        <p>Explored multiple layouts and interaction patterns before committing to high-fidelity work, widening the range of ideas I could evaluate before investing significant time.</p>
+      </div>
+    </li>
+  </ol>
+  <p>The result: faster research, more ideas explored, and more confident iteration &#8212; with the user still at the center of every decision.</p>
+</section>
+
+<section class="text-block">
+  <h2>Challenges &amp; How I Solved Them</h2>
+  <p>This project pushed me beyond aesthetics, into decisions that balanced user needs, business objectives, and technical feasibility.</p>
+  <ol class="flow-list">
+    <li>
+      <span class="flow-n">01</span>
+      <div>
+        <h3>Balancing Simplicity with Functionality</h3>
+        <p>Too many options risked discouraging learners with lower digital confidence; oversimplifying risked limiting the product. I prioritized features by <strong>user value, not quantity</strong> &#8212; keeping the interface focused on learning, not figuring out the app.</p>
+      </div>
+    </li>
+    <li>
+      <span class="flow-n">02</span>
+      <div>
+        <h3>Designing for Two Forms of Literacy</h3>
+        <p>Learners needed support for both reading/writing and general digital literacy. I reduced cognitive load with familiar layouts, clear hierarchy, descriptive labels, and predictable patterns &#8212; reinforcing how inclusive design has to account for every kind of confidence gap.</p>
+      </div>
+    </li>
+    <li>
+      <span class="flow-n">03</span>
+      <div>
+        <h3>Maintaining Long-Term Motivation</h3>
+        <p>Adults are motivated differently than children &#8212; consistency is harder than initial engagement. Instead of competitive gamification, I built intrinsic motivation through visible progress, milestone celebrations, and feedback that rewards effort over perfection.</p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<figure class="shot">
+  <img src="https://cdn.dribbble.com/userupload/48534663/file/602e08b495038e491e5a240ff9d7f9de.png?resize=752x&amp;vertical=center" alt="Challenges and solutions" loading="lazy">
+</figure>
+
+<section class="text-block">
+  <h2>Product Impact</h2>
+  <p>MilPress remains a design project, but my contribution went beyond polished interfaces &#8212; it was about building a <strong>foundation for usability, scalability, and efficient collaboration</strong> across the product development lifecycle.</p>
+  <ol class="tk-list">
+    <li>
+      <span class="tk-n"></span>
+      <div>
+        <h3>A More Accessible Learning Experience</h3>
+        <p>Accessibility-first principles shaped an interface that accommodates older adults, first-time smartphone users, and learners with limited literacy &#8212; minimizing cognitive load through clear navigation and readable typography.</p>
+      </div>
+    </li>
+    <li>
+      <span class="tk-n"></span>
+      <div>
+        <h3>Better Collaboration with Developers</h3>
+        <p>Documenting reusable components and consistent standards created a shared language between design and development, reducing ambiguity during implementation.</p>
+      </div>
+    </li>
+    <li>
+      <span class="tk-n"></span>
+      <div>
+        <h3>Product Thinking Over Visual Trends</h3>
+        <p>Every major feature was grounded in research, accessibility requirements, and long-term scalability &#8212; not personal preference &#8212; ensuring design decisions served the product, not just its appearance.</p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<section class="text-block">
+  <h2>Final Reflection</h2>
+  <p>Being a Product Designer here meant more than shipping visually appealing interfaces &#8212; it meant identifying problems, understanding users, simplifying complexity, and building systems that support both people and the teams building the product.</p>
+  <p>The most rewarding part wasn&#8217;t the polished screens &#8212; it was contributing to something with the potential to improve lives through education. That reinforced my commitment to building products that solve real problems, respect users&#8217; dignity, and create lasting value for both the people who use them and the teams that build them.</p>
+</section>
+
+<div class="footer">
+  <div class="footer-meta">
+    <div class="footer-meta-item">
+      <p class="footer-label">Product</p>
+      <p>MilPress</p>
+    </div>
+    <div class="footer-meta-item">
+      <p class="footer-label">Role</p>
+      <p>Product Designer</p>
+    </div>
+    <div class="footer-meta-item">
+      <p class="footer-label">Year</p>
+      <p>2026</p>
+    </div>
+  </div>
+  <div class="footer-sources">
+    <p class="footer-sources-title">Resources</p>
+    <div class="footer-links">
+      <a href="https://www.figma.com/design/5IHijjCVoWIKTVXbmCME64/Milpress-Brand?node-id=0-1&t=Kr558fRlFCW9LKYp-1" target="_blank" rel="noopener noreferrer">Brand Visual Identity &#8599;</a>
+      <a href="https://www.figma.com/board/tnIQuX9HG2afCWdqlEGKYz/Milpress?node-id=0-1&t=dJs6UkJvGbH9knef-1" target="_blank" rel="noopener noreferrer">Flowchart Workspace &#8599;</a>
+      <a href="https://www.figma.com/design/9Da1wDpstB0sT5F0G4Jb9X/MilPress?node-id=1-2&p=f&t=HPpXO0ejXxKNrEPP-0" target="_blank" rel="noopener noreferrer">Design Workspace &#8599;</a>
+      <a href="https://play.google.com/store/apps/details?id=com.milpress.edu&hl=en" target="_blank" rel="noopener noreferrer">App on Play Store &#8599;</a>
+      <a href="https://milpress.org/" target="_blank" rel="noopener noreferrer">milpress.org &#8599;</a>
+    </div>
+  </div>
+</div>
+
+</div>`,
+    link: '',
+  },
+  {
     slug: 'akropolis-product-design',
     title: 'Akropolis: Product Design Case Study',
     category: 'Project',
@@ -3090,552 +3654,6 @@ export const projects: Project[] = [
     </div>
 
   </div>
-</div>`,
-    link: '',
-  },
-
-  {
-    slug: 'milpress-adult-literacy',
-    title: 'MilPress: Adult Literacy Platform',
-    category: 'Project',
-    tags: ['Product Design', 'EdTech', 'Accessibility', 'UX Research'],
-    image: 'https://cdn.dribbble.com/userupload/48531860/file/65eec83f6ab4242c727a65c0d52b92f3.png?resize=752x&vertical=center',
-    summary: 'Designing a mobile literacy platform that empowers adult learners through simplicity, dignity, and accessibility-first product thinking.',
-    year: '2026',
-    role: 'Product Designer',
-    description: `<style>
-  .mil {
-    color: #4E4E4E;
-    font-size: 17px;
-    line-height: 1.7;
-    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    --muted: #6b7280;
-    --line: #e5e7eb;
-    --panel: #ffffff;
-    --soft: #f9fafb;
-    --accent: #f59e0b;
-    --amber-light: #fffbeb;
-    --deep: #1c1510;
-    --radius: 12px;
-  }
-  .mil * { box-sizing: border-box; }
-  .mil img { display: block; width: 100%; height: auto; }
-  .mil a { color: inherit; text-decoration: none; }
-  .mil .text-block { width: min(720px, 100%); margin: 48px auto; }
-  .mil .shot { width: min(752px, 100%); margin: 48px auto; overflow: hidden; border-radius: var(--radius); box-shadow: 0 4px 24px rgba(28,21,16,0.08), 0 24px 64px rgba(28,21,16,0.06); }
-  .mil .shot img { border-radius: 0; display: block; width: 100%; height: auto; }
-  .mil .image-grid { width: min(752px, 100%); margin: 48px auto; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  .mil .image-grid figure { margin: 0; border-radius: var(--radius); overflow: hidden; aspect-ratio: 2/1; }
-  .mil .image-grid figure img { width: 100%; height: 100%; object-fit: cover; }
-  .mil h1 { margin: 0 0 24px; font-size: clamp(28px, 4vw, 46px); font-weight: 800; line-height: 1.12; letter-spacing: -0.02em; color: var(--deep); }
-  .mil h2 { margin: 40px 0 14px; font-size: clamp(20px, 2.8vw, 32px); font-weight: 700; line-height: 1.2; letter-spacing: -0.01em; color: var(--deep); }
-  .mil h3 { margin: 24px 0 8px; font-size: 17px; font-weight: 700; color: var(--deep); }
-  .mil p { margin: 0 0 14px; font-size: 17px; line-height: 1.75; color: #4E4E4E; }
-  .mil ul, .mil ol { margin: 6px 0 14px; padding-left: 22px; font-size: 17px; line-height: 1.75; color: #4E4E4E; }
-  .mil li { margin-bottom: 6px; }
-  .mil li p { margin: 0; }
-  .mil strong { font-weight: 700; color: var(--deep); }
-  .mil em, .mil i { font-style: italic; }
-  .mil .meta-row { display: flex; gap: 0; flex-wrap: wrap; margin: 28px 0; background: var(--soft); border-radius: var(--radius); border: 1px solid var(--line); overflow: hidden; }
-  .mil .meta-item { flex: 1; min-width: 130px; padding: 20px 24px; }
-  .mil .meta-item + .meta-item { border-left: 1px solid var(--line); }
-  .mil .meta-label { margin: 0 0 4px; color: #6b7280; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
-  .mil .meta-value { margin: 0; font-size: 15px; font-weight: 600; color: var(--deep); }
-  .mil .video-wrap { margin: 32px 0; border-radius: var(--radius); overflow: hidden; box-shadow: 0 4px 24px rgba(28,21,16,0.08), 0 24px 64px rgba(28,21,16,0.06); }
-  .mil .video-wrap video { width: 100%; display: block; }
-  .mil .journey-flow { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 24px 0; padding: 24px; background: var(--amber-light); border-radius: var(--radius); border: 1px solid #fde68a; }
-  .mil .journey-step { font-weight: 600; font-size: 13px; color: var(--deep); padding: 7px 14px; background: white; border-radius: 8px; border: 1px solid #fde68a; white-space: nowrap; }
-  .mil .journey-arrow { color: var(--accent); font-size: 14px; font-weight: 800; flex-shrink: 0; }
-  .mil .principles-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
-  .mil .principle-card { padding: 20px 24px; background: var(--soft); border-radius: var(--radius); border-top: 3px solid var(--accent); }
-  .mil .principle-card h3 { margin: 0 0 8px; font-size: 14px; font-weight: 700; color: var(--deep); text-transform: uppercase; letter-spacing: 0.04em; }
-  .mil .principle-card p { margin: 0; font-size: 14px; line-height: 1.65; }
-  .mil .carousel { position: relative; width: min(752px, 100%); margin: 48px auto; }
-  .mil .carousel input[type="radio"] { display: none; }
-  .mil .carousel-slides { display: grid; grid-template-columns: 1fr; border-radius: var(--radius); overflow: hidden; box-shadow: 0 4px 24px rgba(28,21,16,0.08), 0 24px 64px rgba(28,21,16,0.06); }
-  .mil .carousel-slide { grid-column: 1; grid-row: 1; opacity: 0; transition: opacity 0.3s ease; }
-  .mil .carousel-slide img { width: 100%; height: auto; display: block; }
-  .mil .carousel-thumbs { display: flex; gap: 8px; justify-content: center; margin-top: 12px; flex-wrap: wrap; }
-  .mil .carousel-thumbs label { width: clamp(56px, 15vw, 80px); height: clamp(35px, 9.375vw, 50px); border-radius: 6px; overflow: hidden; border: 2px solid transparent; opacity: 0.5; cursor: pointer; transition: opacity 0.2s, border-color 0.2s; display: block; flex-shrink: 0; }
-  .mil .carousel-thumbs label img { width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none; }
-  #mil-c0-1:checked ~ .carousel-slides .carousel-slide:nth-child(1) { opacity: 1; }
-  #mil-c0-2:checked ~ .carousel-slides .carousel-slide:nth-child(2) { opacity: 1; }
-  #mil-c0-1:checked ~ .carousel-thumbs label:nth-child(1) { border-color: var(--accent); opacity: 1; }
-  #mil-c0-2:checked ~ .carousel-thumbs label:nth-child(2) { border-color: var(--accent); opacity: 1; }
-  #mil-c1-1:checked ~ .carousel-slides .carousel-slide:nth-child(1) { opacity: 1; }
-  #mil-c1-2:checked ~ .carousel-slides .carousel-slide:nth-child(2) { opacity: 1; }
-  #mil-c1-3:checked ~ .carousel-slides .carousel-slide:nth-child(3) { opacity: 1; }
-  #mil-c1-1:checked ~ .carousel-thumbs label:nth-child(1) { border-color: var(--accent); opacity: 1; }
-  #mil-c1-2:checked ~ .carousel-thumbs label:nth-child(2) { border-color: var(--accent); opacity: 1; }
-  #mil-c1-3:checked ~ .carousel-thumbs label:nth-child(3) { border-color: var(--accent); opacity: 1; }
-  #mil-c2-1:checked ~ .carousel-slides .carousel-slide:nth-child(1) { opacity: 1; }
-  #mil-c2-2:checked ~ .carousel-slides .carousel-slide:nth-child(2) { opacity: 1; }
-  #mil-c2-3:checked ~ .carousel-slides .carousel-slide:nth-child(3) { opacity: 1; }
-  #mil-c2-4:checked ~ .carousel-slides .carousel-slide:nth-child(4) { opacity: 1; }
-  #mil-c2-5:checked ~ .carousel-slides .carousel-slide:nth-child(5) { opacity: 1; }
-  #mil-c2-1:checked ~ .carousel-thumbs label:nth-child(1) { border-color: var(--accent); opacity: 1; }
-  #mil-c2-2:checked ~ .carousel-thumbs label:nth-child(2) { border-color: var(--accent); opacity: 1; }
-  #mil-c2-3:checked ~ .carousel-thumbs label:nth-child(3) { border-color: var(--accent); opacity: 1; }
-  #mil-c2-4:checked ~ .carousel-thumbs label:nth-child(4) { border-color: var(--accent); opacity: 1; }
-  #mil-c2-5:checked ~ .carousel-thumbs label:nth-child(5) { border-color: var(--accent); opacity: 1; }
-  #mil-c3-1:checked ~ .carousel-slides .carousel-slide:nth-child(1) { opacity: 1; }
-  #mil-c3-2:checked ~ .carousel-slides .carousel-slide:nth-child(2) { opacity: 1; }
-  #mil-c3-3:checked ~ .carousel-slides .carousel-slide:nth-child(3) { opacity: 1; }
-  #mil-c3-4:checked ~ .carousel-slides .carousel-slide:nth-child(4) { opacity: 1; }
-  #mil-c3-5:checked ~ .carousel-slides .carousel-slide:nth-child(5) { opacity: 1; }
-  #mil-c3-1:checked ~ .carousel-thumbs label:nth-child(1) { border-color: var(--accent); opacity: 1; }
-  #mil-c3-2:checked ~ .carousel-thumbs label:nth-child(2) { border-color: var(--accent); opacity: 1; }
-  #mil-c3-3:checked ~ .carousel-thumbs label:nth-child(3) { border-color: var(--accent); opacity: 1; }
-  #mil-c3-4:checked ~ .carousel-thumbs label:nth-child(4) { border-color: var(--accent); opacity: 1; }
-  #mil-c3-5:checked ~ .carousel-thumbs label:nth-child(5) { border-color: var(--accent); opacity: 1; }
-  .mil .footer { margin-top: 80px; padding: 40px; background: var(--panel); border-top: 1px solid var(--line); border-radius: var(--radius); }
-  .mil .footer-meta { display: flex; gap: 40px; flex-wrap: wrap; margin-bottom: 32px; }
-  .mil .footer-meta-item .footer-label { margin: 0 0 4px; color: #6b7280; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
-  .mil .footer-meta-item p { margin: 0; font-size: 15px; color: var(--deep); font-weight: 600; }
-  .mil .footer-sources { border-top: 1px solid var(--line); padding-top: 24px; }
-  .mil .footer-sources-title { margin: 0 0 12px; font-size: 11px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 0.1em; }
-  .mil .footer-links { display: flex; flex-wrap: wrap; gap: 10px; }
-  .mil .footer-links a { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; font-size: 14px; font-weight: 500; color: var(--deep); border: 1px solid var(--line); border-radius: 8px; transition: border-color 0.2s; }
-  .mil .footer-links a:hover { border-color: var(--accent); }
-  .dark .mil { color: #d1d5db; --deep: #f3f4f6; --panel: #1f2937; --soft: #374151; --line: #374151; --amber-light: rgba(245,158,11,0.06); }
-  .dark .mil p, .dark .mil ul, .dark .mil ol { color: #9ca3af; }
-  .dark .mil h1, .dark .mil h2, .dark .mil h3, .dark .mil strong { color: #f3f4f6; }
-  .dark .mil .shot { box-shadow: 0 4px 24px rgba(0,0,0,0.3), 0 24px 64px rgba(0,0,0,0.2); }
-  .dark .mil .meta-row { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.08); }
-  .dark .mil .meta-item + .meta-item { border-color: rgba(255,255,255,0.08); }
-  .dark .mil .principle-card { background: rgba(255,255,255,0.04); }
-  .dark .mil .journey-step { background: rgba(255,255,255,0.06); border-color: rgba(245,158,11,0.3); }
-  .dark .mil .journey-flow { border-color: rgba(245,158,11,0.2); }
-  .dark .mil .carousel-slides { box-shadow: 0 4px 24px rgba(0,0,0,0.3), 0 24px 64px rgba(0,0,0,0.2); }
-  .dark .mil .footer { border-color: var(--line); }
-  @media (max-width: 600px) {
-    .mil .principles-grid { grid-template-columns: 1fr; }
-    .mil .image-grid { grid-template-columns: 1fr; }
-    .mil .meta-row { flex-direction: column; }
-    .mil .meta-item + .meta-item { border-left: none; border-top: 1px solid var(--line); }
-    .mil .footer-meta { flex-direction: column; gap: 16px; }
-    .mil .journey-flow { gap: 6px; padding: 16px; }
-  }
-</style>
-
-<div class="mil">
-
-<figure class="shot">
-  <img src="https://cdn.dribbble.com/userupload/48531860/file/65eec83f6ab4242c727a65c0d52b92f3.png?resize=752x&amp;vertical=center" alt="MilPress cover" loading="lazy">
-</figure>
-
-<section class="text-block">
-  <h1>Designing an Adult Literacy Platform That Empowers Learning Through Simplicity and Accessibility</h1>
-  <div class="meta-row">
-    <div class="meta-item">
-      <p class="meta-label">Product</p>
-      <p class="meta-value">MilPress</p>
-    </div>
-    <div class="meta-item">
-      <p class="meta-label">Role</p>
-      <p class="meta-value">Product Designer</p>
-    </div>
-    <div class="meta-item">
-      <p class="meta-label">Responsibility</p>
-      <p class="meta-value">UX Research &bull; Product Strategy &bull; UI Design &bull; Design System &bull; Prototyping</p>
-    </div>
-  </div>
-
-  <div class="video-wrap">
-    <video src="https://cdn.dribbble.com/userupload/48533589/file/large-5bd0a7ee79827659dde5ebdfaec55a63.mp4" autoplay muted loop playsinline></video>
-  </div>
-
-  <h2>Background</h2>
-  <p>Literacy is one of the most fundamental skills a person can possess, yet millions of adults still struggle with reading and writing because they never had access to quality education or were forced to leave school early.</p>
-  <p>MilPress was created to bridge this gap by providing an engaging mobile learning experience specifically designed for adult learners.</p>
-  <p>Unlike traditional educational applications that are often designed for children or young students, MilPress respects the dignity, experience, and unique learning pace of adults returning to education.</p>
-  <p>As the Product Designer, my responsibility was not only to create visually appealing interfaces but also to design an experience that feels approachable, encouraging, and accessible for people with varying literacy and digital skills.</p>
-  <p>This project challenged me to think beyond interface design and consider how product decisions influence motivation, accessibility, learning outcomes, and long-term user engagement.</p>
-  <p>When I joined this project, the goal wasn&#8217;t simply to design another mobile application &#8212; it was to create a product that solved a genuine user problem while remaining scalable for future growth. My objective was to create an experience that felt intuitive, reduced unnecessary complexity, and encouraged long-term engagement.</p>
-  <p>This project became an opportunity to contribute beyond UI design. It allowed me to think <strong>strategically about product direction, user behavior, usability, accessibility, and how design decisions affect development, business goals, and overall product adoption.</strong></p>
-</section>
-
-<section class="text-block">
-  <h2>Understanding Project</h2>
-  <p>While researching adult literacy, I realized that many educational applications unintentionally exclude older learners. Most existing platforms assume users are already comfortable with smartphones, familiar with modern interface patterns, or motivated by gamified experiences designed primarily for children. However, adult learners have very different needs.</p>
-  <p>Many experience:</p>
-  <ul>
-    <li>Fear of making mistakes.</li>
-    <li>Low confidence due to previous educational experiences.</li>
-    <li>Limited digital literacy.</li>
-    <li>Poor internet connectivity.</li>
-    <li>Visual impairments associated with aging.</li>
-    <li>Limited time because of work and family responsibilities.</li>
-  </ul>
-  <p>Designing for this audience required a shift in perspective. Instead of asking, &#8220;How can I make learning fun?&#8221; I asked, &#8220;How can I make learning feel <strong>respectful, safe, private, and achievable?</strong>&#8221;</p>
-  <p>That question became the foundation of every design decision throughout the project.</p>
-</section>
-
-<section class="text-block">
-  <h2>Audience</h2>
-  <p>MilPress was designed primarily for <strong>adult learners</strong> who either never had the opportunity to receive formal education or are returning to learning later in life. Many of these learners are older adults who want to improve their reading, writing, and communication skills to become more independent, confident, and active in their communities.</p>
-  <p>Unlike children, adult learners bring years of life experience, responsibilities, and personal goals into the learning process.</p>
-  <p>However, many also carry <strong>feelings of embarrassment, fear of making mistakes, or a lack of confidence due to previous educational experiences</strong>. Designing for this audience required a different mindset &#8212; one rooted in dignity, empathy, and simplicity.</p>
-</section>
-
-<figure class="shot">
-  <img src="https://cdn.dribbble.com/userupload/48533587/file/1820b7b4ac65944a54a7bcb2c055c5ca.png?resize=752x&amp;vertical=center" alt="Audience overview" loading="lazy">
-</figure>
-
-<section class="text-block">
-  <h2>The Opportunity</h2>
-  <p>I saw this project as more than designing screens. It was an opportunity to answer questions such as:</p>
-  <ul>
-    <li>How can we reduce friction during key user journeys?</li>
-    <li>How do we simplify complex workflows without sacrificing functionality?</li>
-    <li>How do we create an experience users can understand immediately?</li>
-    <li>How do we design a scalable system that developers can efficiently build and maintain?</li>
-    <li>How can design contribute to product growth beyond aesthetics?</li>
-  </ul>
-  <p>These questions guided every design decision throughout the project.</p>
-</section>
-
-<section class="text-block">
-  <h2>My Design Process</h2>
-</section>
-
-<figure class="shot">
-  <img src="https://cdn.dribbble.com/userupload/48533588/file/6fa897dd8dc727d8ccfcee9cf65c5a8c.png?resize=752x&amp;vertical=center" alt="Design process diagram" loading="lazy">
-</figure>
-
-<section class="text-block">
-  <p>Rather than following a rigid UX framework, I adopted an iterative product design process where every stage informed the next. This allowed me to continuously refine the experience based on research, testing, and technical considerations.</p>
-</section>
-
-<section class="text-block">
-  <h2>Research &amp; Discovery</h2>
-  <h3>Understanding Adult Learners</h3>
-  <p>Before designing interfaces, I focused on understanding the people who would use the application.</p>
-  <p>I explored: adult literacy challenges, learning psychology, accessibility standards, mobile learning behaviours, existing literacy programs, educational technology trends, and inclusive design principles.</p>
-  <p>This research helped me move beyond assumptions and design with empathy.</p>
-  <p><strong>Key Questions</strong></p>
-  <ul>
-    <li>Why do adults stop learning?</li>
-    <li>What prevents them from returning?</li>
-    <li>What motivates them to continue?</li>
-    <li>How comfortable are they using smartphones?</li>
-    <li>What barriers exist beyond literacy itself?</li>
-    <li>How can technology reduce those barriers?</li>
-  </ul>
-
-  <h3>Competitor Analysis</h3>
-  <p>Rather than copying existing products, I analyzed how they approached education. I evaluated <strong>Duolingo</strong>, <strong>Google Read Along</strong>, <strong>Khan Academy</strong>, and <strong>local adult education initiatives</strong>.</p>
-  <p>I compared navigation, lesson structure, motivation systems, accessibility, content hierarchy, progress tracking, and visual language.</p>
-  <p><strong>Key Insight:</strong> Most educational applications were optimized for children or digitally confident users. Very few considered <strong>older adults with limited literacy and privacy-focused design.</strong></p>
-  <p>This became MilPress&#8217;s biggest opportunity.</p>
-</section>
-
-<section class="text-block">
-  <h2>Defining the Product</h2>
-  <p>After gathering research, I translated findings into product decisions. Instead of building features because they looked impressive, every feature solved a specific user problem. <strong>Research only becomes valuable when it influences product decisions.</strong></p>
-  <p>I identified recurring pain points among adult learners and translated each insight into a purposeful design decision.</p>
-</section>
-
-<figure class="shot">
-  <img src="https://cdn.dribbble.com/userupload/48534455/file/8507f5965e314ffea9f4fc8b012813c4.png?resize=752x&amp;vertical=center" alt="Product definition framework" loading="lazy">
-</figure>
-
-<section class="text-block">
-  <p>This approach helped me design a product that is not only visually appealing but also practical, accessible, and aligned with both user needs and the product&#8217;s long-term goals.</p>
-</section>
-
-<section class="text-block">
-  <h2>Information Architecture</h2>
-  <p>One of the biggest challenges was organizing educational content into a structure that felt intuitive and easy to navigate.</p>
-  <p>I designed the information architecture to minimize cognitive load while allowing learners to understand where they were and what came next easily.</p>
-  <p>The learning journey was intentionally linear during early levels to reduce decision fatigue before gradually introducing more flexibility as learners progressed.</p>
-</section>
-
-<div class="carousel">
-  <input type="radio" id="mil-c0-1" name="mil-c0" checked>
-  <input type="radio" id="mil-c0-2" name="mil-c0">
-  <div class="carousel-slides">
-    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534459/file/6fbf4fa41d6cfbc2494cc5c9071c6c7b.png?resize=752x364&amp;vertical=center" alt="IA diagram 1" loading="lazy"></div>
-    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534458/file/d8e6f515adfbd4b75ff4548bab72aa35.png?resize=752x364&amp;vertical=center" alt="IA diagram 2" loading="lazy"></div>
-  </div>
-  <div class="carousel-thumbs">
-    <label for="mil-c0-1"><img src="https://cdn.dribbble.com/userupload/48534459/file/6fbf4fa41d6cfbc2494cc5c9071c6c7b.png?resize=752x364&amp;vertical=center" alt=""></label>
-    <label for="mil-c0-2"><img src="https://cdn.dribbble.com/userupload/48534458/file/d8e6f515adfbd4b75ff4548bab72aa35.png?resize=752x364&amp;vertical=center" alt=""></label>
-  </div>
-</div>
-
-<section class="text-block">
-  <h3>Designing Clear Learning Journeys</h3>
-  <p>After defining the product requirements and information architecture, I focused on mapping the key user journeys that would shape the overall experience. Because MilPress targets adults with varying levels of literacy and digital confidence, every flow had to be intuitive, predictable, and free from unnecessary complexity.</p>
-</section>
-
-<div class="carousel">
-  <input type="radio" id="mil-c1-1" name="mil-c1" checked>
-  <input type="radio" id="mil-c1-2" name="mil-c1">
-  <input type="radio" id="mil-c1-3" name="mil-c1">
-  <div class="carousel-slides">
-    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534462/file/c5e48ebe17fd8b84cec0ea1fff7bc94b.png?resize=752x409&amp;vertical=center" alt="User flow 1" loading="lazy"></div>
-    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534463/file/1e40292ad8e6c9457fa6c5b2dec29a61.png?resize=752x409&amp;vertical=center" alt="User flow 2" loading="lazy"></div>
-    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534464/file/abbefc90a4ca8e207ccce55a3d1e1f0a.png?resize=752x409&amp;vertical=center" alt="User flow 3" loading="lazy"></div>
-  </div>
-  <div class="carousel-thumbs">
-    <label for="mil-c1-1"><img src="https://cdn.dribbble.com/userupload/48534462/file/c5e48ebe17fd8b84cec0ea1fff7bc94b.png?resize=752x409&amp;vertical=center" alt=""></label>
-    <label for="mil-c1-2"><img src="https://cdn.dribbble.com/userupload/48534463/file/1e40292ad8e6c9457fa6c5b2dec29a61.png?resize=752x409&amp;vertical=center" alt=""></label>
-    <label for="mil-c1-3"><img src="https://cdn.dribbble.com/userupload/48534464/file/abbefc90a4ca8e207ccce55a3d1e1f0a.png?resize=752x409&amp;vertical=center" alt=""></label>
-  </div>
-</div>
-
-<section class="text-block">
-  <p>I designed user flows around the learner&#8217;s emotional journey rather than simply their actions. A typical experience became:</p>
-  <div class="journey-flow">
-    <span class="journey-step">Welcome</span>
-    <span class="journey-arrow">&#8594;</span>
-    <span class="journey-step">Choose Lesson</span>
-    <span class="journey-arrow">&#8594;</span>
-    <span class="journey-step">Watch</span>
-    <span class="journey-arrow">&#8594;</span>
-    <span class="journey-step">Practice</span>
-    <span class="journey-arrow">&#8594;</span>
-    <span class="journey-step">Receive Feedback</span>
-    <span class="journey-arrow">&#8594;</span>
-    <span class="journey-step">Celebrate Progress</span>
-    <span class="journey-arrow">&#8594;</span>
-    <span class="journey-step">Continue Learning</span>
-  </div>
-  <p>Every interaction was designed to encourage confidence instead of reminding users what they didn&#8217;t know.</p>
-</section>
-
-<section class="text-block">
-  <h2>MilPress Visual Identity</h2>
-  <p>The visual concept centered on a clean mobile screen mockup with brand signature, set against <strong>warm, muted tones</strong> with subtle gradient highlights &#8212; communicating approachability and trust from first glance.</p>
-</section>
-
-<figure class="shot">
-  <img src="https://cdn.dribbble.com/userupload/48534460/file/3406cd2e82aca37310a09f200d9f8f81.gif" alt="MilPress prototype animation" loading="lazy">
-</figure>
-
-<div class="carousel">
-  <input type="radio" id="mil-c2-1" name="mil-c2" checked>
-  <input type="radio" id="mil-c2-2" name="mil-c2">
-  <input type="radio" id="mil-c2-3" name="mil-c2">
-  <input type="radio" id="mil-c2-4" name="mil-c2">
-  <input type="radio" id="mil-c2-5" name="mil-c2">
-  <div class="carousel-slides">
-    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534470/file/425473bbfb164fe776347ea73253cadf.png?resize=752x423&amp;vertical=center" alt="Visual identity screen 1" loading="lazy"></div>
-    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534469/file/074dad68fbd5c857900aedac57a606a9.png?resize=752x423&amp;vertical=center" alt="Visual identity screen 2" loading="lazy"></div>
-    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534468/file/3dd59821efbf45ef63fd64108c3d402c.png?resize=752x423&amp;vertical=center" alt="Visual identity screen 3" loading="lazy"></div>
-    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534471/file/4a182c240ddc9271013cad7f47c79850.png?resize=752x423&amp;vertical=center" alt="Visual identity screen 4" loading="lazy"></div>
-    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534472/file/b29f0513c90400f056e63c362d3473c6.png?resize=752x423&amp;vertical=center" alt="Visual identity screen 5" loading="lazy"></div>
-  </div>
-  <div class="carousel-thumbs">
-    <label for="mil-c2-1"><img src="https://cdn.dribbble.com/userupload/48534470/file/425473bbfb164fe776347ea73253cadf.png?resize=752x423&amp;vertical=center" alt=""></label>
-    <label for="mil-c2-2"><img src="https://cdn.dribbble.com/userupload/48534469/file/074dad68fbd5c857900aedac57a606a9.png?resize=752x423&amp;vertical=center" alt=""></label>
-    <label for="mil-c2-3"><img src="https://cdn.dribbble.com/userupload/48534468/file/3dd59821efbf45ef63fd64108c3d402c.png?resize=752x423&amp;vertical=center" alt=""></label>
-    <label for="mil-c2-4"><img src="https://cdn.dribbble.com/userupload/48534471/file/4a182c240ddc9271013cad7f47c79850.png?resize=752x423&amp;vertical=center" alt=""></label>
-    <label for="mil-c2-5"><img src="https://cdn.dribbble.com/userupload/48534472/file/b29f0513c90400f056e63c362d3473c6.png?resize=752x423&amp;vertical=center" alt=""></label>
-  </div>
-</div>
-
-<section class="text-block">
-  <h2>Wireframing &amp; Iteration</h2>
-  <p>I explored multiple layouts before committing to the final interface. Each iteration focused on reducing complexity.</p>
-  <p>Questions I continuously asked included:</p>
-  <ul>
-    <li>Can this screen be simplified?</li>
-    <li>Is every button necessary?</li>
-    <li>Will an older learner immediately understand this?</li>
-    <li>Can the next action be made more obvious?</li>
-  </ul>
-  <p>Rather than adding more features, I consistently removed unnecessary elements until the interface felt calm and focused.</p>
-</section>
-
-<section class="text-block">
-  <h2>Design System</h2>
-  <p>The visual language was intentionally warm, friendly, and approachable. Instead of creating an interface that felt academic, I wanted the product to feel welcoming and encouraging.</p>
-  <p>The design system focused on: clear typography, high contrast, consistent spacing, friendly illustrations, reusable components, accessible colours, and large interactive elements.</p>
-  <p>Every design decision aimed to reduce anxiety and increase confidence.</p>
-</section>
-
-<figure class="shot">
-  <img src="https://cdn.dribbble.com/userupload/48534456/file/34dfa66201512fc9bc44978cb6bd60d2.png?resize=752x&amp;vertical=center" alt="Design system overview" loading="lazy">
-</figure>
-
-<section class="text-block">
-  <p>The design system was guided by four core principles:</p>
-  <div class="principles-grid">
-    <div class="principle-card">
-      <h3>Simplicity</h3>
-      <p>Adult learners should be able to understand the interface without feeling overwhelmed.</p>
-    </div>
-    <div class="principle-card">
-      <h3>Consistency</h3>
-      <p>Maintaining consistency reduces cognitive load and helps users build confidence as they progress through the application.</p>
-    </div>
-    <div class="principle-card">
-      <h3>Accessibility</h3>
-      <p>Every component was designed with older adults in mind, using readable typography, sufficient color contrast, large touch targets, and intuitive interaction patterns.</p>
-    </div>
-    <div class="principle-card">
-      <h3>Scalability</h3>
-      <p>Built to support future features without requiring significant redesign, allowing the product to grow while preserving a cohesive user experience.</p>
-    </div>
-  </div>
-</section>
-
-<section class="text-block">
-  <h2>Building a Scalable Design</h2>
-  <p>A well-structured design system improves collaboration, speeds up development, and creates a more consistent experience for users.</p>
-  <p>This project strengthened my ability to think systematically, designing not only for the current release but also for future growth. It taught me how reusable components, clear documentation, and accessibility-first decisions contribute to better products and smoother collaboration across cross-functional teams.</p>
-</section>
-
-<figure class="shot">
-  <img src="https://cdn.dribbble.com/userupload/48534467/file/76db5ed7501abb289a228eb311b52081.png?resize=752x489&amp;vertical=center" alt="Scalable design screens 1" loading="lazy">
-</figure>
-
-<figure class="shot">
-  <img src="https://cdn.dribbble.com/userupload/48534465/file/8569fdd8f4837a7c91de7b461f9cc857.png?resize=752x489&amp;vertical=center" alt="Scalable design screens 2" loading="lazy">
-</figure>
-
-<figure class="shot">
-  <img src="https://cdn.dribbble.com/userupload/48534466/file/1db9703c5df0c9409b15d015105b7e91.png?resize=752x489&amp;vertical=center" alt="Scalable design screens 3" loading="lazy">
-</figure>
-
-<figure class="shot">
-  <img src="https://cdn.dribbble.com/userupload/48534461/file/edc770a6059d1a4923db39090a4fbdd0.png?resize=752x&amp;vertical=center" alt="Component library" loading="lazy">
-</figure>
-
-<section class="text-block">
-  <p>One area where I wanted to add value was ensuring designs could be translated into production efficiently. Instead of treating handoff as the final step, I considered technical feasibility throughout the project.</p>
-  <p>I created: <em>reusable components</em>, <em>consistent spacing rules</em>, <em>standardized interaction patterns</em>, <em>responsive layouts</em>, and <em>clear component documentation</em>.</p>
-  <p>This reduced ambiguity during implementation and helped establish a stronger collaboration between design and development.</p>
-
-  <h3>Accessibility</h3>
-  <p>Accessibility wasn&#8217;t treated as a checklist &#8212; it was a core design principle from the beginning. I intentionally designed for: <em>older adults</em>, <em>low digital literacy</em>, <em>limited vision</em>, <em>small devices</em>, and <em>slow internet connections</em>.</p>
-  <p>Design decisions included: <em>large typography</em>, <em>high contrast</em>, <em>clear button labels</em>, <em>minimal cognitive load</em>, <em>large touch targets</em>, <em>simple language</em>, and <em>offline support</em>.</p>
-  <p>The goal was to create an <strong>experience that users could navigate confidently without feeling overwhelmed.</strong></p>
-</section>
-
-<div class="carousel">
-  <input type="radio" id="mil-c3-1" name="mil-c3" checked>
-  <input type="radio" id="mil-c3-2" name="mil-c3">
-  <input type="radio" id="mil-c3-3" name="mil-c3">
-  <input type="radio" id="mil-c3-4" name="mil-c3">
-  <input type="radio" id="mil-c3-5" name="mil-c3">
-  <div class="carousel-slides">
-    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534473/file/11042c9abcde6734ecff37ab0196e478.png?resize=752x488&amp;vertical=center" alt="Final screen 1" loading="lazy"></div>
-    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534474/file/e8ffdf467bc261bc5ba1897d9f0f0b5a.png?resize=752x488&amp;vertical=center" alt="Final screen 2" loading="lazy"></div>
-    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534475/file/cae6d665401bf07604ce94316294bbcc.png?resize=752x488&amp;vertical=center" alt="Final screen 3" loading="lazy"></div>
-    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534476/file/59f19e99828762741709a6f07149e4ab.png?resize=752x488&amp;vertical=center" alt="Final screen 4" loading="lazy"></div>
-    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534477/file/44d70529ee717a6dff0faf19adb42f01.png?resize=752x488&amp;vertical=center" alt="Final screen 5" loading="lazy"></div>
-  </div>
-  <div class="carousel-thumbs">
-    <label for="mil-c3-1"><img src="https://cdn.dribbble.com/userupload/48534473/file/11042c9abcde6734ecff37ab0196e478.png?resize=752x488&amp;vertical=center" alt=""></label>
-    <label for="mil-c3-2"><img src="https://cdn.dribbble.com/userupload/48534474/file/e8ffdf467bc261bc5ba1897d9f0f0b5a.png?resize=752x488&amp;vertical=center" alt=""></label>
-    <label for="mil-c3-3"><img src="https://cdn.dribbble.com/userupload/48534475/file/cae6d665401bf07604ce94316294bbcc.png?resize=752x488&amp;vertical=center" alt=""></label>
-    <label for="mil-c3-4"><img src="https://cdn.dribbble.com/userupload/48534476/file/59f19e99828762741709a6f07149e4ab.png?resize=752x488&amp;vertical=center" alt=""></label>
-    <label for="mil-c3-5"><img src="https://cdn.dribbble.com/userupload/48534477/file/44d70529ee717a6dff0faf19adb42f01.png?resize=752x488&amp;vertical=center" alt=""></label>
-  </div>
-</div>
-
-<figure class="shot">
-  <img src="https://cdn.dribbble.com/userupload/48534457/file/1865693639982d0a094e5063bcee3408.png?resize=752x&amp;vertical=center" alt="Accessibility design overview" loading="lazy">
-</figure>
-
-<section class="text-block">
-  <h2>AI in My Workflow</h2>
-  <p>For me, AI is <strong>most valuable when it enhances critical thinking rather than replacing it</strong>. By combining AI-assisted exploration with user-centered design practices, I was able to work more efficiently while maintaining a high level of quality and intentionality throughout the project.</p>
-
-  <h3>1. Research &amp; Competitive Analysis</h3>
-  <p>I used AI to accelerate the research phase by gathering insights on adult literacy, inclusive education, accessibility best practices, and existing educational technology platforms. It helped me quickly synthesize information from multiple sources, identify recurring patterns, compare competitor features, and uncover opportunities within the market.</p>
-  <p>Examples: summarizing competitor strengths and weaknesses, comparing learning experiences across educational platforms, identifying accessibility recommendations for older adults, exploring trends in mobile learning applications, and researching best practices in adult education.</p>
-
-  <h3>2. UX Writing &amp; Content Design</h3>
-  <p>AI supported the creation of concise, friendly, and accessible microcopy across the application. It helped generate alternative wording for instructions, buttons, error messages, onboarding content, and lesson descriptions while ensuring the language remained simple and encouraging.</p>
-
-  <h3>3. Rapid Design Exploration</h3>
-  <p>Instead of committing to a single design direction too early, I used AI agent to explore different layouts, interaction patterns, and visual approaches. This enabled me to evaluate multiple possibilities before investing significant time in high-fidelity design work. Rather than replacing creativity, AI expanded the range of ideas I could consider, helping me identify stronger solutions more quickly.</p>
-
-  <p>MilPress transformed the way I integrate AI into my design process. I learned that AI is most effective when used to <strong>enhance thinking rather than replace it</strong>. It allowed me to research faster, explore more ideas, improve communication, and iterate with greater confidence, while keeping the user at the center of every decision.</p>
-</section>
-
-<section class="text-block">
-  <h2>Challenges &amp; How I Solved Them</h2>
-  <p>This project challenged me to think beyond aesthetics and make design decisions that balanced user needs, business objectives, and technical feasibility.</p>
-
-  <h3>Balancing Simplicity with Functionality</h3>
-  <p>Adult learners often have varying levels of digital confidence. Overloading the interface with too many options could easily discourage them, while oversimplifying the experience risked limiting the product&#8217;s effectiveness.</p>
-  <p>To address this, I prioritized <strong>features based on user value rather than feature quantity</strong>. I carefully evaluated each interaction, asking whether it genuinely helped learners achieve their goals or merely added unnecessary complexity. This resulted in a cleaner, more intuitive experience where users could focus on learning instead of figuring out how to use the application.</p>
-
-  <h3>Designing for Two Forms of Literacy</h3>
-  <p>I wasn&#8217;t only designing for people with limited reading and writing skills &#8212; I was also designing for users who may have limited experience using smartphones and digital applications.</p>
-  <p>To create an inclusive experience, I focused on reducing cognitive load by using familiar layouts, clear visual hierarchy, descriptive labels, large touch targets, and predictable interaction patterns. This experience deepened my understanding of inclusive design and reinforced the importance of designing products that are accessible to users with diverse abilities and levels of digital confidence.</p>
-
-  <h3>Maintaining Long-Term Motivation</h3>
-  <p>Adult learners are motivated differently from children. Many are balancing work, family, and personal responsibilities, making consistency more difficult than initial engagement.</p>
-  <p>Rather than relying heavily on points, badges, or competitive gamification, we focused on designing experiences that build intrinsic motivation. I introduced clear progress indicators, milestone celebrations, encouraging feedback, and manageable learning goals that help learners recognize their achievements over time.</p>
-  <p>By making progress visible and rewarding effort instead of perfection, the application encourages users to return with confidence and continue their learning journey.</p>
-  <p>This challenge reinforced my belief that successful products are built around understanding user behavior rather than simply implementing popular design trends.</p>
-</section>
-
-<figure class="shot">
-  <img src="https://cdn.dribbble.com/userupload/48534663/file/602e08b495038e491e5a240ff9d7f9de.png?resize=752x&amp;vertical=center" alt="Challenges and solutions" loading="lazy">
-</figure>
-
-<section class="text-block">
-  <h2>Product Impact</h2>
-  <p>While MilPress remains a design project, my contribution went beyond creating polished interfaces. I focused on building a product <strong>foundation that supports usability, scalability, and efficient collaboration across the product development lifecycle.</strong></p>
-  <p>Rather than measuring success by the number of screens produced, I evaluated the impact of my work through the quality of the product experience and the systems created to support future development.</p>
-
-  <h3>Creating a More Accessible Learning Experience</h3>
-  <p>By applying accessibility-first principles, I designed an experience that accommodates older adults, first-time smartphone users, and individuals with limited literacy skills. The interface minimizes cognitive load through clear navigation, readable typography, consistent layouts, and simple interaction patterns, enabling learners to focus on education rather than technology.</p>
-
-  <h3>Improving Collaboration with Developers</h3>
-  <p>Throughout the project, I considered technical feasibility alongside user experience. By documenting reusable components and establishing consistent design standards, I created a shared language between design and development. This reduces ambiguity during implementation and allows developers to focus more on building functionality rather than interpreting design intent.</p>
-
-  <h3>Applying Product Thinking</h3>
-  <p>One of the most valuable outcomes of this project was strengthening my ability to connect user needs with business objectives. Every major feature was informed by research, educational goals, accessibility requirements, and long-term scalability rather than personal preference or visual trends. This approach ensured that design decisions contributed to the overall success of the product, not just the appearance of the interface.</p>
-</section>
-
-<section class="text-block">
-  <h2>Why This Project Matters to Me</h2>
-  <p>The role of a Product Designer extends far beyond creating visually appealing interfaces. My contribution was about identifying problems, understanding users, simplifying complexity, and designing systems that support both people and the teams building the product.</p>
-  <p>I believe the best products are built through empathy, structured thinking, and close collaboration &#8212; and those are the principles I aim to bring to every team I work with.</p>
-</section>
-
-<section class="text-block">
-  <h2>Reflection</h2>
-  <p>Looking back, the most rewarding part of this project wasn&#8217;t designing polished screens &#8212; it was contributing to a product that has the potential to improve lives through education.</p>
-  <p>That experience reinforced my commitment to building digital products that solve real problems, respect users&#8217; dignity, and create lasting value for both the people who use them and the teams that build them.</p>
-  <p><strong>Thank you.</strong></p>
-</section>
-
-<div class="footer">
-  <div class="footer-meta">
-    <div class="footer-meta-item">
-      <p class="footer-label">Product</p>
-      <p>MilPress</p>
-    </div>
-    <div class="footer-meta-item">
-      <p class="footer-label">Role</p>
-      <p>Product Designer</p>
-    </div>
-    <div class="footer-meta-item">
-      <p class="footer-label">Year</p>
-      <p>2026</p>
-    </div>
-  </div>
-  <div class="footer-sources">
-    <p class="footer-sources-title">Resources</p>
-    <div class="footer-links">
-      <a href="https://www.figma.com/design/5IHijjCVoWIKTVXbmCME64/Milpress-Brand?node-id=0-1&t=Kr558fRlFCW9LKYp-1" target="_blank" rel="noopener noreferrer">Brand Visual Identity &#8599;</a>
-      <a href="https://www.figma.com/board/tnIQuX9HG2afCWdqlEGKYz/Milpress?node-id=0-1&t=dJs6UkJvGbH9knef-1" target="_blank" rel="noopener noreferrer">Flowchart Workspace &#8599;</a>
-      <a href="https://www.figma.com/design/9Da1wDpstB0sT5F0G4Jb9X/MilPress?node-id=1-2&p=f&t=HPpXO0ejXxKNrEPP-0" target="_blank" rel="noopener noreferrer">Design Workspace &#8599;</a>
-      <a href="https://play.google.com/store/apps/details?id=com.milpress.edu&hl=en" target="_blank" rel="noopener noreferrer">App on Play Store &#8599;</a>
-      <a href="https://milpress.org/" target="_blank" rel="noopener noreferrer">milpress.org &#8599;</a>
-    </div>
-  </div>
-</div>
-
 </div>`,
     link: '',
   },

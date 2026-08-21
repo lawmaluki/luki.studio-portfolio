@@ -27,7 +27,7 @@ export default async function ProjectPage({ params }: Props) {
 
     return (
         <MainLayout>
-            <article className="mx-auto max-w-5xl px-6 py-14">
+            <article className="mx-auto max-w-5xl px-6 pt-6 pb-14">
                 {/* Full description */}
                 <ProjectDescription html={project.description} />
             </article>
