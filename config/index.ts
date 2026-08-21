@@ -532,9 +532,9 @@ export const projects: Project[] = [
     description: `<style>
   .ak {
     color: #4E4E4E;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1.7;
-    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
     --ink: #1a1a2e;
     --muted: #6b7280;
     --line: #e5e7eb;
@@ -551,8 +551,8 @@ export const projects: Project[] = [
   .ak .shot { width: min(752px, 100%); margin: 48px auto; overflow: hidden; border-radius: var(--radius); box-shadow: 0 4px 24px rgba(13,12,34,0.08), 0 24px 64px rgba(13,12,34,0.06); }
   .ak .shot a { display: block; }
   .ak .shot img { border-radius: 0; display: block; width: 100%; height: auto; }
-  .ak h1 { margin: 0 0 20px; font-size: clamp(28px, 4vw, 46px); font-weight: 800; line-height: 1.12; letter-spacing: -0.02em; color: var(--deep); }
-  .ak h2 { margin: 32px 0 14px; font-size: clamp(20px, 2.8vw, 32px); font-weight: 700; line-height: 1.2; letter-spacing: -0.01em; color: var(--deep); }
+  .ak h1 { margin: 0 0 20px; font-size: 48px; font-weight: 800; line-height: 1.12; letter-spacing: -0.02em; color: var(--deep); }
+  .ak h2 { margin: 32px 0 14px; font-size: 28px; font-weight: 700; line-height: 1.2; letter-spacing: -0.01em; color: var(--deep); }
   .ak p { margin: 0 0 14px; font-size: 17px; line-height: 1.75; color: #4E4E4E; }
   .ak p.spacer { height: 6px; margin: 0; padding: 0; font-size: 0; line-height: 0; }
   .ak ul, .ak ol { margin: 6px 0 18px; padding-left: 22px; font-size: 17px; line-height: 1.75; color: #4E4E4E; }
@@ -806,7 +806,7 @@ export const projects: Project[] = [
     color: #4E4E4E;
     font-size: 16px;
     line-height: 1.7;
-    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
     --ink: #2d2d2d;
     --muted: #6b7280;
     --line: #e5e7eb;
@@ -832,8 +832,8 @@ export const projects: Project[] = [
   .kyc .hero-inner { width: min(1120px, 100%); margin: 0 auto; }
   .kyc .eyebrow { margin: 0 0 18px; color: var(--blue); font-size: 13px; font-weight: 700; text-transform: uppercase; }
   .kyc h1, .kyc h2, .kyc h3 { margin: 0; line-height: 1.08; letter-spacing: 0; color: #2d2d2d; }
-  .kyc h1 { max-width: 900px; font-size: clamp(48px, 7vw, 88px); font-weight: 800; }
-  .kyc h2 { margin-bottom: 24px; font-size: clamp(28px, 3.6vw, 46px); font-weight: 700; }
+  .kyc h1 { max-width: 900px; font-size: 48px; font-weight: 800; }
+  .kyc h2 { margin-bottom: 24px; font-size: 28px; font-weight: 700; }
   .kyc h3 { margin: 0 0 10px; font-size: 18px; font-weight: 700; line-height: 1.3; }
   .kyc p { margin: 0 0 18px; font-size: 16px; line-height: 1.7; }
   .kyc .lead { max-width: 760px; margin-top: 22px; color: var(--muted); font-size: clamp(20px, 2.4vw, 28px); line-height: 1.36; }
@@ -871,11 +871,10 @@ export const projects: Project[] = [
   .kyc .phase-tag { display: block; margin-bottom: 10px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--blue); }
   .kyc .phase-col h3 { margin: 0 0 6px; }
   .kyc .phase-col p { margin: 0; color: var(--muted); }
-  /* principles-stack — two-column text rows */
-  .kyc .principles-stack { list-style: none; padding: 0; margin: 32px 0 0; }
-  .kyc .principles-stack li { display: grid; grid-template-columns: 1fr 1.6fr; gap: 40px; padding: 24px 0; border-bottom: 1px solid var(--line); align-items: start; }
-  .kyc .principles-stack li:first-child { border-top: 1px solid var(--line); }
-  .kyc .principles-stack h3 { margin: 0; }
+  /* principles-stack — card grid */
+  .kyc .principles-stack { list-style: none; padding: 0; margin: 32px 0 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .kyc .principles-stack li { padding: 24px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); }
+  .kyc .principles-stack h3 { margin: 0 0 10px; }
   .kyc .principles-stack p { margin: 0; color: var(--muted); }
   /* tk-list — numbered takeaways */
   .kyc .tk-list { list-style: none; padding: 0; margin: 32px 0 0; counter-reset: tk; }
@@ -932,12 +931,11 @@ export const projects: Project[] = [
   @media (max-width: 880px) {
     .kyc .section { padding: 64px 20px; }
     .kyc .hero { padding: 48px 20px 36px; }
-    .kyc .meta, .kyc .visual-grid, .kyc .gallery.two { grid-template-columns: 1fr; }
+    .kyc .meta, .kyc .visual-grid, .kyc .gallery.two, .kyc .principles-stack { grid-template-columns: 1fr; }
     .kyc .meta-item { min-height: auto; }
     .kyc .phase-row { grid-template-columns: repeat(2, 1fr); }
     .kyc .phase-col { border-bottom: 1px solid var(--line); }
     .kyc .goal-list li { grid-template-columns: 1fr; gap: 4px; }
-    .kyc .principles-stack li { grid-template-columns: 1fr; gap: 10px; }
     .kyc .flow-list li { grid-template-columns: 36px 1fr; gap: 16px; }
   }
   @media (max-width: 480px) {
@@ -951,6 +949,7 @@ export const projects: Project[] = [
   .dark .kyc .meta-item { background: #1f2937; }
   .dark .kyc .phase-col { border-color: #374151; }
   .dark .kyc .phase-row { border-color: #374151; }
+  .dark .kyc .principles-stack li { background: #1f2937; border-color: #374151; }
   .dark .kyc .pill-list li { background: #374151; border-color: #4b5563; color: #d1d5db; }
 </style>
 
@@ -1272,7 +1271,7 @@ export const projects: Project[] = [
     color: #4E4E4E;
     font-size: 16px;
     line-height: 1.7;
-    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
     --ink: #2d2d2d;
     --muted: #6b7280;
     --line: #e5e7eb;
@@ -1299,8 +1298,8 @@ export const projects: Project[] = [
   .lx .hero-inner { width: min(1120px, 100%); margin: 0 auto; }
   .lx .eyebrow { margin: 0 0 18px; color: var(--green); font-size: 13px; font-weight: 700; text-transform: uppercase; }
   .lx h1, .lx h2, .lx h3 { margin: 0; line-height: 1.08; letter-spacing: 0; color: #2d2d2d; }
-  .lx h1 { max-width: 900px; font-size: clamp(48px, 7vw, 92px); font-weight: 800; }
-  .lx h2 { margin-bottom: 24px; font-size: clamp(28px, 3.6vw, 46px); font-weight: 700; }
+  .lx h1 { max-width: 900px; font-size: 48px; font-weight: 800; }
+  .lx h2 { margin-bottom: 24px; font-size: 28px; font-weight: 700; }
   .lx h3 { margin: 0 0 10px; font-size: 18px; font-weight: 700; line-height: 1.3; }
   .lx p { margin: 0 0 18px; font-size: 16px; line-height: 1.7; }
   .lx .lead { max-width: 720px; margin-top: 22px; color: var(--muted); font-size: clamp(20px, 2.4vw, 28px); line-height: 1.35; }
