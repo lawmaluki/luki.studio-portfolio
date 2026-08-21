@@ -823,7 +823,7 @@ export const projects: Project[] = [
   .kyc a { color: inherit; }
   .kyc .page { overflow: hidden; }
   .kyc .section { padding: 84px 24px; }
-  .kyc .section.alt { background: var(--soft); }
+  .kyc .section.alt { background: var(--soft); margin: 0 12px; border-radius: var(--radius); padding: 44px 34px; }
   .kyc .wrap { width: min(1120px, 100%); margin: 0 auto; }
   .kyc .narrow { width: min(780px, 100%); margin: 0 auto; }
   .kyc .hero { padding: 64px 24px 48px; }
@@ -1078,15 +1078,13 @@ export const projects: Project[] = [
             </div>
           </li>
         </ol>
-        <div class="gallery two" style="margin-top:48px">
-          <figure>
-            <img src="https://cdn.dribbble.com/userupload/48405556/file/d4147a93c3812b6dacec89b995cce8c6.png?resize=1024x576&amp;vertical=center" alt="KYC verification overview screen">
-          </figure>
-          <figure>
-            <img src="https://cdn.dribbble.com/userupload/48405553/file/3588fa5bd02bdacf8af29c9174d14464.png?resize=1024x576&amp;vertical=center" alt="Identity verification mobile flow screens">
-          </figure>
-        </div>
       </div>
+    </section>
+
+    <section class="section" style="margin:0 12px;padding-top:0">
+      <figure>
+        <img src="https://cdn.dribbble.com/userupload/48405556/file/d4147a93c3812b6dacec89b995cce8c6.png?resize=1024x576&amp;vertical=center" alt="KYC verification overview screen">
+      </figure>
     </section>
 
     <section class="section">
@@ -1195,6 +1193,11 @@ export const projects: Project[] = [
           </div>
         </div>
         <p>Together, these stages minimize onboarding friction while maintaining high standards of identity assurance.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
         <figure>
           <img src="https://cdn.dribbble.com/userupload/48411004/file/42cadc74a4bd270060b0db3eef9bda29.png?resize=1024x683&amp;vertical=center" alt="KYC framework detailed screen">
         </figure>
@@ -1287,7 +1290,7 @@ export const projects: Project[] = [
   .lx a { color: inherit; }
   .lx .page { overflow: hidden; }
   .lx .section { padding: 84px 24px; }
-  .lx .section.alt { background: #f3f4f6; }
+  .lx .section.alt { background: #f3f4f6; margin: 0 12px; border-radius: var(--radius); padding: 44px 34px; }
   .lx .wrap { width: min(1120px, 100%); margin: 0 auto; }
   .lx .narrow { width: min(780px, 100%); margin: 0 auto; }
   .lx .hero {
