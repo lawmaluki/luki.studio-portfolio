@@ -687,8 +687,8 @@ export const projects: Project[] = [
   </div>
 
   <h2>Background</h2>
-  <p>Millions of adults still struggle with reading and writing because they never had access to quality education, or were forced to leave school early. MilPress was created to close that gap &#8212; a mobile learning experience built specifically for adult learners, not adapted from a product designed for children.</p>
-  <p>As Product Designer, my role went beyond interfaces. I had to consider how product decisions influence motivation, accessibility, and long-term engagement &#8212; designing something intuitive enough to reduce friction, and dignified enough to keep adults coming back.</p>
+  <p>Millions of adults still struggle with reading and writing because they never had access to quality education, or were forced to leave school early. MilPress was created to close that gap with a mobile learning experience built specifically for adult learners, not adapted from a product designed for children.</p>
+  <p>As Product Designer, my role went beyond interfaces. I had to consider how product decisions influence motivation, accessibility, and long-term engagement, designing something intuitive enough to reduce friction and dignified enough to keep adults coming back.</p>
   <div class="callout">
     <p>Research only becomes valuable when it changes a decision. Every feature in MilPress had to earn its place by solving a real problem for a real learner.</p>
   </div>
@@ -705,13 +705,13 @@ export const projects: Project[] = [
     <li>Visual impairments associated with aging</li>
     <li>Limited time due to work and family responsibilities</li>
   </ul>
-  <p>That shifted the core question from &#8220;How do I make learning fun?&#8221; to &#8220;How do I make learning feel <strong>respectful, safe, and achievable?</strong>&#8221; &#8212; the foundation for every decision that followed.</p>
+  <p>That shifted the core question from &#8220;How do I make learning fun?&#8221; to &#8220;How do I make learning feel <strong>respectful, safe, and achievable?</strong>&#8221; That question became the foundation for every decision that followed.</p>
 </section>
 
 <section class="text-block">
   <h2>Audience</h2>
-  <p>MilPress was designed for <strong>adult learners</strong> &#8212; people who never had the opportunity for formal education, or are returning to it later in life, to become more confident and independent in their communities.</p>
-  <p>Unlike children, they bring life experience and responsibilities into the process, but often carry <strong>embarrassment or fear of making mistakes</strong> from past schooling. Designing for that meant leading with dignity, empathy, and simplicity &#8212; not just usability.</p>
+  <p>MilPress was designed for <strong>adult learners</strong> who never had the opportunity for formal education, or are returning to it later in life, to become more confident and independent in their communities.</p>
+  <p>Unlike children, they bring life experience and responsibilities into the process, but often carry <strong>embarrassment or fear of making mistakes</strong> from past schooling. Designing for that meant leading with dignity, empathy, and simplicity, not just usability.</p>
 </section>
 
 <figure class="shot">
@@ -745,7 +745,7 @@ export const projects: Project[] = [
 <section class="text-block">
   <h2>Research &amp; Discovery</h2>
   <h3>Understanding Adult Learners</h3>
-  <p>Before designing interfaces, I researched adult literacy challenges, learning psychology, accessibility standards, and existing literacy programs &#8212; to move beyond assumptions and design with empathy.</p>
+  <p>Before designing interfaces, I researched adult literacy challenges, learning psychology, accessibility standards, and existing literacy programs, to move beyond assumptions and design with empathy.</p>
   <p><strong>Key questions:</strong></p>
   <ul>
     <li>Why do adults stop learning, and what stops them from returning?</li>
@@ -755,15 +755,15 @@ export const projects: Project[] = [
   </ul>
 
   <h3>Competitor Analysis</h3>
-  <p>I evaluated <strong>Duolingo</strong>, <strong>Google Read Along</strong>, <strong>Khan Academy</strong>, and local adult education initiatives &#8212; comparing navigation, motivation systems, accessibility, and content hierarchy.</p>
+  <p>I evaluated <strong>Duolingo</strong>, <strong>Google Read Along</strong>, <strong>Khan Academy</strong>, and local adult education initiatives, comparing navigation, motivation systems, accessibility, and content hierarchy.</p>
   <div class="callout">
-    <p>Most educational apps were built for children or digitally confident users. Almost none considered older adults with limited literacy and a need for privacy &#8212; that gap became MilPress&#8217;s biggest opportunity.</p>
+    <p>Most educational apps were built for children or digitally confident users. Almost none considered older adults with limited literacy and a need for privacy. That gap became MilPress&#8217;s biggest opportunity.</p>
   </div>
 </section>
 
 <section class="text-block">
   <h2>Defining the Product</h2>
-  <p>Every feature had to solve a specific, research-backed problem &#8212; not just look impressive. I mapped each recurring pain point from adult learners directly to a design decision, keeping the product practical and aligned with both user needs and long-term goals.</p>
+  <p>Every feature had to solve a specific, research-backed problem, not just look impressive. I mapped each recurring pain point from adult learners directly to a design decision, keeping the product practical and aligned with both user needs and long-term goals.</p>
 </section>
 
 <figure class="shot">
@@ -831,7 +831,7 @@ export const projects: Project[] = [
 
 <section class="text-block">
   <h2>MilPress Visual Identity</h2>
-  <p>The visual concept centered on a clean mobile screen mockup with brand signature, set against <strong>warm, muted tones</strong> with subtle gradient highlights &#8212; communicating approachability and trust from first glance.</p>
+  <p>The visual concept centered on a clean mobile screen mockup with brand signature, set against <strong>warm, muted tones</strong> with subtle gradient highlights that communicate approachability and trust from first glance.</p>
 </section>
 
 <figure class="shot">
@@ -875,7 +875,7 @@ export const projects: Project[] = [
 
 <section class="text-block">
   <h2>Design System</h2>
-  <p>The visual language stayed warm, friendly, and approachable &#8212; never academic. It focused on clear typography, high contrast, consistent spacing, friendly illustration, and large touch targets, all in service of reducing anxiety and building confidence.</p>
+  <p>The visual language stayed warm, friendly, and approachable, never academic. It focused on clear typography, high contrast, consistent spacing, friendly illustration, and large touch targets, all in service of reducing anxiety and building confidence.</p>
 </section>
 
 <figure class="shot">
@@ -906,7 +906,7 @@ export const projects: Project[] = [
 
 <section class="text-block">
   <h2>Building a Scalable Design</h2>
-  <p>A well-structured design system improves collaboration, speeds up development, and creates a more consistent experience for users &#8212; while designing not just for the current release, but for future growth.</p>
+  <p>A well-structured design system improves collaboration, speeds up development, and creates a more consistent experience for users, while designing not just for the current release but for future growth.</p>
 </section>
 
 <figure class="shot">
@@ -926,10 +926,10 @@ export const projects: Project[] = [
 </figure>
 
 <section class="text-block">
-  <p>I treated technical feasibility as part of the design process, not a handoff afterthought &#8212; building <em>reusable components</em>, <em>consistent spacing rules</em>, <em>standardized interaction patterns</em>, and <em>clear documentation</em> to reduce ambiguity during implementation.</p>
+  <p>I treated technical feasibility as part of the design process, not a handoff afterthought, building <em>reusable components</em>, <em>consistent spacing rules</em>, <em>standardized interaction patterns</em>, and <em>clear documentation</em> to reduce ambiguity during implementation.</p>
 
   <h3>Accessibility</h3>
-  <p>Accessibility wasn&#8217;t a checklist &#8212; it was a core principle from day one, designed around older adults, low digital literacy, limited vision, small devices, and slow connections: <em>large typography</em>, <em>high contrast</em>, <em>clear labels</em>, <em>minimal cognitive load</em>, and <em>offline support</em>.</p>
+  <p>Accessibility wasn&#8217;t a checklist. It was a core principle from day one, designed around older adults, low digital literacy, limited vision, small devices, and slow connections: <em>large typography</em>, <em>high contrast</em>, <em>clear labels</em>, <em>minimal cognitive load</em>, and <em>offline support</em>.</p>
   <p>The goal was an <strong>experience users could navigate confidently without feeling overwhelmed.</strong></p>
 </section>
 
@@ -967,14 +967,14 @@ export const projects: Project[] = [
       <span class="flow-n">01</span>
       <div>
         <h3>Research &amp; Competitive Analysis</h3>
-        <p>Accelerated the research phase &#8212; synthesizing accessibility best practices, comparing competitor learning experiences, and surfacing patterns across educational platforms.</p>
+        <p>Accelerated the research phase, synthesizing accessibility best practices, comparing competitor learning experiences, and surfacing patterns across educational platforms.</p>
       </div>
     </li>
     <li>
       <span class="flow-n">02</span>
       <div>
         <h3>UX Writing &amp; Content Design</h3>
-        <p>Generated alternative wording for instructions, buttons, and error messages &#8212; keeping microcopy simple, friendly, and encouraging throughout.</p>
+        <p>Generated alternative wording for instructions, buttons, and error messages, keeping microcopy simple, friendly, and encouraging throughout.</p>
       </div>
     </li>
     <li>
@@ -985,7 +985,7 @@ export const projects: Project[] = [
       </div>
     </li>
   </ol>
-  <p>The result: faster research, more ideas explored, and more confident iteration &#8212; with the user still at the center of every decision.</p>
+  <p>The result: faster research, more ideas explored, and more confident iteration, with the user still at the center of every decision.</p>
 </section>
 
 <section class="text-block">
@@ -996,21 +996,21 @@ export const projects: Project[] = [
       <span class="flow-n">01</span>
       <div>
         <h3>Balancing Simplicity with Functionality</h3>
-        <p>Too many options risked discouraging learners with lower digital confidence; oversimplifying risked limiting the product. I prioritized features by <strong>user value, not quantity</strong> &#8212; keeping the interface focused on learning, not figuring out the app.</p>
+        <p>Too many options risked discouraging learners with lower digital confidence; oversimplifying risked limiting the product. I prioritized features by <strong>user value, not quantity</strong>, keeping the interface focused on learning, not figuring out the app.</p>
       </div>
     </li>
     <li>
       <span class="flow-n">02</span>
       <div>
         <h3>Designing for Two Forms of Literacy</h3>
-        <p>Learners needed support for both reading/writing and general digital literacy. I reduced cognitive load with familiar layouts, clear hierarchy, descriptive labels, and predictable patterns &#8212; reinforcing how inclusive design has to account for every kind of confidence gap.</p>
+        <p>Learners needed support for both reading/writing and general digital literacy. I reduced cognitive load with familiar layouts, clear hierarchy, descriptive labels, and predictable patterns, reinforcing how inclusive design has to account for every kind of confidence gap.</p>
       </div>
     </li>
     <li>
       <span class="flow-n">03</span>
       <div>
         <h3>Maintaining Long-Term Motivation</h3>
-        <p>Adults are motivated differently than children &#8212; consistency is harder than initial engagement. Instead of competitive gamification, I built intrinsic motivation through visible progress, milestone celebrations, and feedback that rewards effort over perfection.</p>
+        <p>Adults are motivated differently than children, and consistency is harder than initial engagement. Instead of competitive gamification, I built intrinsic motivation through visible progress, milestone celebrations, and feedback that rewards effort over perfection.</p>
       </div>
     </li>
   </ol>
@@ -1022,13 +1022,13 @@ export const projects: Project[] = [
 
 <section class="text-block">
   <h2>Product Impact</h2>
-  <p>MilPress remains a design project, but my contribution went beyond polished interfaces &#8212; it was about building a <strong>foundation for usability, scalability, and efficient collaboration</strong> across the product development lifecycle.</p>
+  <p>MilPress remains a design project, but my contribution went beyond polished interfaces. It was about building a <strong>foundation for usability, scalability, and efficient collaboration</strong> across the product development lifecycle.</p>
   <ol class="tk-list">
     <li>
       <span class="tk-n"></span>
       <div>
         <h3>A More Accessible Learning Experience</h3>
-        <p>Accessibility-first principles shaped an interface that accommodates older adults, first-time smartphone users, and learners with limited literacy &#8212; minimizing cognitive load through clear navigation and readable typography.</p>
+        <p>Accessibility-first principles shaped an interface that accommodates older adults, first-time smartphone users, and learners with limited literacy, minimizing cognitive load through clear navigation and readable typography.</p>
       </div>
     </li>
     <li>
@@ -1042,7 +1042,7 @@ export const projects: Project[] = [
       <span class="tk-n"></span>
       <div>
         <h3>Product Thinking Over Visual Trends</h3>
-        <p>Every major feature was grounded in research, accessibility requirements, and long-term scalability &#8212; not personal preference &#8212; ensuring design decisions served the product, not just its appearance.</p>
+        <p>Every major feature was grounded in research, accessibility requirements, and long-term scalability, not personal preference, ensuring design decisions served the product, not just its appearance.</p>
       </div>
     </li>
   </ol>
@@ -1050,8 +1050,8 @@ export const projects: Project[] = [
 
 <section class="text-block">
   <h2>Final Reflection</h2>
-  <p>Being a Product Designer here meant more than shipping visually appealing interfaces &#8212; it meant identifying problems, understanding users, simplifying complexity, and building systems that support both people and the teams building the product.</p>
-  <p>The most rewarding part wasn&#8217;t the polished screens &#8212; it was contributing to something with the potential to improve lives through education. That reinforced my commitment to building products that solve real problems, respect users&#8217; dignity, and create lasting value for both the people who use them and the teams that build them.</p>
+  <p>Being a Product Designer here meant more than shipping visually appealing interfaces. It meant identifying problems, understanding users, simplifying complexity, and building systems that support both people and the teams building the product.</p>
+  <p>The most rewarding part wasn&#8217;t the polished screens. It was contributing to something with the potential to improve lives through education. That reinforced my commitment to building products that solve real problems, respect users&#8217; dignity, and create lasting value for both the people who use them and the teams that build them.</p>
 </section>
 
 <div class="footer">
@@ -1872,15 +1872,16 @@ export const projects: Project[] = [
   .lx h3 { margin: 0 0 10px; font-size: 18px; font-weight: 700; line-height: 1.3; }
   .lx p { margin: 0 0 18px; font-size: 18px; font-weight: 400; line-height: 1.7; color: var(--ink); }
   .lx .lead { max-width: 720px; margin-top: 22px; color: #4E4E4E; font-size: 20px; line-height: 1.55; }
-  .lx .meta-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; margin-top: -1px; background: var(--line); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-  .lx .meta-item { min-height: 170px; padding: 28px; background: var(--panel); }
+  .lx .meta-grid { display: flex; flex-wrap: wrap; gap: 0; margin: 32px 12px; background: #f3f4f6; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+  .lx .meta-item { flex: 1; min-width: 170px; padding: 28px; background: transparent; }
+  .lx .meta-item + .meta-item { border-left: 1px solid var(--line); }
   .lx .meta-item span { display: block; margin-bottom: 12px; color: var(--muted); font-size: 13px; font-weight: 700; text-transform: uppercase; }
   .lx .meta-item strong { font-size: 21px; line-height: 1.3; }
   .lx .split { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 64px; align-items: start; }
   .lx .sticky-label { position: sticky; top: 28px; color: #6b7280; font-size: 14px; font-weight: 700; text-transform: uppercase; }
   .lx .section-label { margin: 0 0 12px; color: #6b7280; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
-  .lx .callout { margin: 36px 0; padding: 24px 0; border-top: 2px solid var(--green); font-size: 20px; line-height: 1.48; color: var(--ink); }
-  .lx .image-band { padding: 24px; background: #111814; }
+  .lx .callout { margin: 36px 0; padding: 24px 0; border-top: 2px solid var(--line); font-size: 20px; line-height: 1.48; color: var(--ink); }
+  .lx .image-band { padding: 24px; }
   .lx .image-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; align-items: start; }
   .lx .image-grid figure { aspect-ratio: 4/3; overflow: hidden; border-radius: var(--radius); margin: 0; }
   .lx .image-grid figure img { width: 100%; height: 100%; object-fit: cover; border-radius: 0; }
@@ -1909,6 +1910,9 @@ export const projects: Project[] = [
   .lx .outcome-list li:first-child { border-top: 1px solid var(--line); }
   .lx .outcome-n { font-size: 26px; font-weight: 800; color: var(--green); line-height: 1; letter-spacing: -0.02em; }
   .lx .outcome-list p { margin: 0; color: var(--muted); }
+  .lx .hierarchy-flow { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 24px 0; padding: 20px 24px; background: #f3f4f6; border-radius: var(--radius); }
+  .lx .hierarchy-step { font-weight: 700; font-size: 13px; color: var(--ink); padding: 7px 14px; background: #fff; border-radius: 8px; border: 1px solid var(--line); white-space: nowrap; }
+  .lx .hierarchy-arrow { color: var(--green); font-size: 14px; font-weight: 800; flex-shrink: 0; }
   .lx .gallery { display: grid; gap: 28px; margin-top: 34px; }
   .lx .gallery.two { grid-template-columns: repeat(2, 1fr); align-items: start; }
   .lx .gallery.two figure { aspect-ratio: 4/3; overflow: hidden; border-radius: var(--radius); margin: 0; }
@@ -1924,8 +1928,9 @@ export const projects: Project[] = [
   @media (max-width: 860px) {
     .lx .section { padding: 64px 20px; }
     .lx .hero { padding: 48px 20px 36px; }
-    .lx .meta-grid, .lx .split, .lx .image-grid, .lx .gallery.two { grid-template-columns: 1fr; }
-    .lx .meta-item { min-height: auto; }
+    .lx .split, .lx .image-grid, .lx .gallery.two { grid-template-columns: 1fr; }
+    .lx .meta-grid { flex-direction: column; }
+    .lx .meta-item + .meta-item { border-left: none; border-top: 1px solid var(--line); }
     .lx .sticky-label { position: static; }
     .lx .flow-list li { grid-template-columns: 36px 1fr; gap: 16px; }
   }
@@ -1934,8 +1939,11 @@ export const projects: Project[] = [
   .dark .lx p { color: #9ca3af; }
   .dark .lx .lead { color: #d1d5db; }
   .dark .lx .section.alt { background: #1f2937; }
-  .dark .lx .meta-item { background: #1f2937; }
+  .dark .lx .meta-grid { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.08); }
+  .dark .lx .meta-item + .meta-item { border-color: rgba(255,255,255,0.08); }
   .dark .lx .pill-list li { background: #374151; color: #d1d5db; }
+  .dark .lx .hierarchy-flow { background: #1f2937; }
+  .dark .lx .hierarchy-step { background: #111827; border-color: #374151; }
   .lx .carousel { position: relative; width: min(752px, 100%); margin-left: auto; margin-right: auto; }
   .lx .carousel input[type="radio"] { display: none; }
   .lx .carousel-slides { display: grid; grid-template-columns: 1fr; border-radius: var(--radius); overflow: hidden; box-shadow: 0 4px 24px rgba(17,24,20,0.1), 0 24px 64px rgba(17,24,20,0.08); }
@@ -2029,6 +2037,11 @@ export const projects: Project[] = [
         <p>Most productivity apps are good at capturing intention. They are terrible at sustaining execution. The gap is not missing features. No existing tool treats accountability as a first-class design concern. Most apps make you responsible to a list. LeverageX needed to make you responsible to a system.</p>
         <p>People do not abandon goals because they stop caring. They abandon them because motivation is unreliable, progress is invisible, and there is no external pressure to keep going when life gets difficult.</p>
         <div class="callout">The design question was not what should the app track. It was what makes people follow through after motivation runs out.</div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:48px">
+      <div class="narrow">
         <figure>
           <img src="https://cdn.dribbble.com/userupload/48415208/file/cdf0442f75703d50158f815a107612f2.gif" alt="Animated LeverageX product flow">
         </figure>
@@ -2138,7 +2151,17 @@ export const projects: Project[] = [
         <figure>
           <img src="https://cdn.dribbble.com/userupload/48415226/file/6f8126edd10b4f128acd362d7ce57223.png?resize=1024x559&amp;vertical=center" alt="LeverageX information architecture">
         </figure>
-        <p>Every feature was evaluated against one question: does this help users execute, or does it add complexity without contributing to the core loop? The Apex Goal hierarchy (Apex to Monthly to Weekly to Daily) gives every session a concrete answer to "what should I do right now?" Features that did not connect to execution were cut from the MVP.</p>
+        <p>Every feature was evaluated against one question: does this help users execute, or does it add complexity without contributing to the core loop? The Apex Goal hierarchy gives every session a concrete answer to "what should I do right now?"</p>
+        <div class="hierarchy-flow">
+          <span class="hierarchy-step">Apex</span>
+          <span class="hierarchy-arrow">&#8594;</span>
+          <span class="hierarchy-step">Monthly</span>
+          <span class="hierarchy-arrow">&#8594;</span>
+          <span class="hierarchy-step">Weekly</span>
+          <span class="hierarchy-arrow">&#8594;</span>
+          <span class="hierarchy-step">Daily</span>
+        </div>
+        <p>Features that did not connect to execution were cut from the MVP.</p>
         <figure>
           <img src="https://cdn.dribbble.com/userupload/48415213/file/bc66eebe5fd7e04fd267b87c3c32c4ab.png?resize=1024x928&amp;vertical=center" alt="Goal hierarchy diagram">
         </figure>
@@ -2201,7 +2224,7 @@ export const projects: Project[] = [
     <section class="section">
       <div class="narrow">
         <h2>What This Project Shows</h2>
-        <p>LeverageX is where I learned that behavioral design is messier than UI design. Designing for human psychology means accepting that users will not always do what you hoped, and then designing the system to route around that reality anyway. The accountability model, the AI scoring framework, the privacy defaults, the goal hierarchy: each of those came from research about how people actually fail at goals, not from assumptions about what a productivity app should include.</p>
+        <p>LeverageX is where I learned that behavioral design is messier than UI design. Designing for human psychology means accepting that users will not always do what you hoped, then designing the system to route around that reality anyway. Every core decision, from the accountability model to the AI scoring framework, the privacy defaults, and the goal hierarchy, came from research about how people actually fail at goals, not assumptions about what a productivity app should include.</p>
         <p>This is the kind of project that shows how I think about product: start with the behavioral problem, work backwards to the design decisions, and build a system where the structure itself does the heavy lifting instead of hoping users find the willpower to make it work.</p>
         <figure>
           <img src="https://cdn.dribbble.com/userupload/48415218/file/01e472aa1e26b5a1ed451ddf57f9c751.png?resize=1024x672&amp;vertical=center" alt="Final LeverageX case study mockup">
