@@ -3,6 +3,7 @@ import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import { projects } from '@/config';
 import { MainLayout } from '@/components/layouts';
+import { ProjectDescription } from '@/components/ProjectDescription';
 import type { Metadata } from 'next';
 
 interface Props {
@@ -38,10 +39,7 @@ export default async function ProjectPage({ params }: Props) {
                 </Link>
 
                 {/* Full description */}
-                <div
-                    className="mb-10 max-w-none"
-                    dangerouslySetInnerHTML={{ __html: project.description }}
-                />
+                <ProjectDescription html={project.description} />
 
             </article>
         </MainLayout>
