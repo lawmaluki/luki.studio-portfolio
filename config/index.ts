@@ -836,7 +836,7 @@ export const projects: Project[] = [
   .kyc h2 { margin-bottom: 24px; font-size: 28px; font-weight: 700; }
   .kyc h3 { margin: 0 0 10px; font-size: 18px; font-weight: 700; line-height: 1.3; }
   .kyc p { margin: 0 0 18px; font-size: 16px; line-height: 1.7; }
-  .kyc .lead { max-width: 760px; margin-top: 22px; color: var(--muted); font-size: clamp(20px, 2.4vw, 28px); line-height: 1.36; }
+  .kyc .lead { max-width: 760px; margin-top: 22px; color: #4E4E4E; font-size: 20px; line-height: 1.55; }
   .kyc .section-label { margin: 0 0 12px; color: var(--muted); font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
   .kyc .meta { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
   .kyc .meta-item { min-height: 150px; padding: 28px; background: var(--panel); }
@@ -945,6 +945,7 @@ export const projects: Project[] = [
   .dark .kyc { color: #d1d5db; --ink: #e5e7eb; --panel: #1f2937; --line: #374151; --muted: #9ca3af; --soft: #1f2937; }
   .dark .kyc h1, .dark .kyc h2, .dark .kyc h3 { color: #f3f4f6; }
   .dark .kyc p { color: #9ca3af; }
+  .dark .kyc .lead { color: #d1d5db; }
   .dark .kyc .section.alt { background: #1f2937; }
   .dark .kyc .meta-item { background: #1f2937; }
   .dark .kyc .phase-col { border-color: #374151; }
@@ -1305,7 +1306,7 @@ export const projects: Project[] = [
   .lx h2 { margin-bottom: 24px; font-size: 28px; font-weight: 700; }
   .lx h3 { margin: 0 0 10px; font-size: 18px; font-weight: 700; line-height: 1.3; }
   .lx p { margin: 0 0 18px; font-size: 16px; line-height: 1.7; }
-  .lx .lead { max-width: 720px; margin-top: 22px; color: var(--muted); font-size: clamp(20px, 2.4vw, 28px); line-height: 1.35; }
+  .lx .lead { max-width: 720px; margin-top: 22px; color: #4E4E4E; font-size: 20px; line-height: 1.55; }
   .lx .meta-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; margin-top: -1px; background: var(--line); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
   .lx .meta-item { min-height: 170px; padding: 28px; background: var(--panel); }
   .lx .meta-item span { display: block; margin-bottom: 12px; color: var(--muted); font-size: 13px; font-weight: 700; text-transform: uppercase; }
@@ -1366,6 +1367,7 @@ export const projects: Project[] = [
   .dark .lx { color: #d1d5db; --ink: #e5e7eb; --panel: #1f2937; --line: #374151; --muted: #9ca3af; }
   .dark .lx h1, .dark .lx h2, .dark .lx h3 { color: #f3f4f6; }
   .dark .lx p { color: #9ca3af; }
+  .dark .lx .lead { color: #d1d5db; }
   .dark .lx .section.alt { background: #1f2937; }
   .dark .lx .meta-item { background: #1f2937; }
   .dark .lx .pill-list li { background: #374151; color: #d1d5db; }
