@@ -3,7 +3,7 @@ import { HeroSection, ProjectsSection, TestimonialsSection } from '@/components/
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Luki Studio — Design Partner for Tech Startups',
+  title: 'Lawmaluki Portfolio',
   description: 'Lawrence designs and builds digital products end-to-end from brand identity to fully shipped experiences.',
 };
 

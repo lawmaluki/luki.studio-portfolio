@@ -13,7 +13,7 @@ const sections = [
         label: 'INTRO',
         content: (
             <p>
-                At Luki Studio, I focus on delivering thoughtful, high-quality design work through a collaborative process.
+                I focus on delivering thoughtful, high-quality design work through a collaborative process.
                 These terms outline how projects are handled, including expectations around payments, cancellations,
                 and ownership of work.
             </p>
@@ -62,10 +62,10 @@ const sections = [
         label: 'OWNERSHIP & INTELLECTUAL PROPERTY',
         content: (
             <ul>
-                <li>All design files, concepts, and deliverables created remain the property of Luki Studio until full payment has been received.</li>
+                <li>All design files, concepts, and deliverables created remain the property of lawmaluki until full payment has been received.</li>
                 <li>Upon full payment, ownership of the final deliverables transfers to the client.</li>
                 <li>I reserve the right to display completed work in my portfolio unless a non-disclosure agreement has been signed.</li>
-                <li>Preliminary concepts and explorations not selected for delivery remain the intellectual property of Luki Studio.</li>
+                <li>Preliminary concepts and explorations not selected for delivery remain the intellectual property of lawmaluki.</li>
             </ul>
         ),
     },
