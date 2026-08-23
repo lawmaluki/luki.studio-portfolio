@@ -1402,8 +1402,9 @@ export const projects: Project[] = [
   .kyc p { margin: 0 0 18px; font-size: 18px; font-weight: 400; line-height: 1.7; color: var(--ink); }
   .kyc .lead { max-width: 760px; margin-top: 22px; color: #4E4E4E; font-size: 20px; line-height: 1.55; }
   .kyc .section-label { margin: 0 0 12px; color: var(--muted); font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
-  .kyc .meta { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-  .kyc .meta-item { min-height: 150px; padding: 28px; background: var(--panel); }
+  .kyc .meta { display: flex; flex-wrap: wrap; gap: 0; margin: 32px 12px; background: var(--soft); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+  .kyc .meta-item { flex: 1; min-width: 170px; padding: 28px; background: transparent; }
+  .kyc .meta-item + .meta-item { border-left: 1px solid var(--line); }
   .kyc .meta-item span { display: block; margin-bottom: 10px; color: var(--muted); font-size: 13px; font-weight: 700; text-transform: uppercase; }
   .kyc .meta-item strong { display: block; font-size: 21px; line-height: 1.35; }
   .kyc .callout { margin: 36px 0; padding: 24px 0; border-top: 2px solid var(--line); border-bottom: 2px solid var(--line); font-size: 20px; line-height: 1.48; color: var(--ink); font-style: italic; }
@@ -1496,8 +1497,9 @@ export const projects: Project[] = [
   @media (max-width: 880px) {
     .kyc .section { padding: 64px 20px; }
     .kyc .hero { padding: 48px 20px 36px; }
-    .kyc .meta, .kyc .visual-grid, .kyc .gallery.two, .kyc .principles-stack { grid-template-columns: 1fr; }
-    .kyc .meta-item { min-height: auto; }
+    .kyc .visual-grid, .kyc .gallery.two, .kyc .principles-stack { grid-template-columns: 1fr; }
+    .kyc .meta { flex-direction: column; }
+    .kyc .meta-item + .meta-item { border-left: none; border-top: 1px solid var(--line); }
     .kyc .phase-row { grid-template-columns: repeat(2, 1fr); }
     .kyc .phase-col { border-bottom: 1px solid var(--line); }
     .kyc .goal-list li { grid-template-columns: 1fr; gap: 4px; }
@@ -1512,7 +1514,8 @@ export const projects: Project[] = [
   .dark .kyc p { color: #9ca3af; }
   .dark .kyc .lead { color: #d1d5db; }
   .dark .kyc .section.alt { background: #1f2937; }
-  .dark .kyc .meta-item { background: #1f2937; }
+  .dark .kyc .meta { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.08); }
+  .dark .kyc .meta-item + .meta-item { border-color: rgba(255,255,255,0.08); }
   .dark .kyc .phase-col { border-color: #374151; }
   .dark .kyc .phase-row { border-color: #374151; }
   .dark .kyc .principles-stack li { background: #1f2937; border-color: #374151; }
@@ -1548,7 +1551,7 @@ export const projects: Project[] = [
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" style="padding-top:32px">
       <div class="wrap">
         <p class="section-label">Overview</p>
         <h2>Making Verification Feel Simple, Trustworthy, and Effortless</h2>
@@ -2008,7 +2011,7 @@ export const projects: Project[] = [
       </div>
     </section>
 
-    <section class="image-band">
+    <section class="image-band" style="padding-top:32px">
       <div class="carousel" style="max-width:752px;margin:0 auto;">
         <input type="radio" id="lx-c1-1" name="lx-c1" checked>
         <input type="radio" id="lx-c1-2" name="lx-c1">
