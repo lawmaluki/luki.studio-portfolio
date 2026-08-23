@@ -8,7 +8,7 @@ export const Header: React.FC = () => {
     const { theme, setTheme } = useTheme();
 
     return (
-        <header className="w-full bg-background">
+        <header className="sticky top-0 z-50 w-full bg-background/70 backdrop-blur-md">
             <div className="mx-auto flex max-w-xl items-center justify-between px-6 py-4">
                 {/* Logo */}
                 <Link href="/">
