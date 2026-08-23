@@ -1,5 +1,5 @@
 import { MainLayout } from '@/components/layouts';
-import { HeroSection, ProjectsSection, TestimonialsSection } from '@/components/sections';
+import { HeroSection, ProjectsSection /*, TestimonialsSection */ } from '@/components/sections';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -11,8 +11,8 @@ export default function Home() {
   return (
     <MainLayout>
       <HeroSection />
-      
-      <TestimonialsSection />
+
+      {/* <TestimonialsSection /> */}
       <ProjectsSection />
     </MainLayout>
   );
