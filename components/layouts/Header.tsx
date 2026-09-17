@@ -12,7 +12,7 @@ export const Header: React.FC = () => {
             <div className="mx-auto flex max-w-xl items-center justify-between px-6 py-4">
                 {/* Logo */}
                 <Link href="/">
-                    <Image src="/Logo.svg" alt="luki.studio" width={40} height={40} priority />
+                    <Image src="/Logo.svg" alt="lawmaluki" width={40} height={40} priority />
                 </Link>
 
                 {/* Dark / Light toggle */}

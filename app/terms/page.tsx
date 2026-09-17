@@ -4,7 +4,7 @@ import { MainLayout } from '@/components/layouts';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Terms — Luki Studio',
+    title: 'Terms',
     description: 'How projects are handled, including expectations around payments, cancellations, and ownership of work.',
 };
 

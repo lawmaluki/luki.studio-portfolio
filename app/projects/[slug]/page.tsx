@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { slug } = await params;
     const project = projects.find((p) => p.slug === slug);
     if (!project) return {};
-    return { title: `${project.title} — Luki Studio`, description: project.summary };
+    return { title: project.title, description: project.summary };
 }
 
 export default async function ProjectPage({ params }: Props) {

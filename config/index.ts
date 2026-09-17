@@ -3721,8 +3721,8 @@ export const testimonials: Testimonial[] = [
 ];
 
 export const site = {
-  name: "Luki Studio",
-  url: "https://luki.studio",
+  name: "lawmaluki",
+  url: "https://lawmaluki.com",
   ogImage: "/Logo.png",
   description: "Lawrence designs and builds digital products end-to-end from brand identity to fully shipped experiences. With a design-first approach and AI-powered workflows, he delivers fast, scalable, and production-ready solutions for real users.",
   keywords: [
@@ -3750,7 +3750,7 @@ export const site = {
 }
 
 
-export const EMAIL = 'hello@luki.studio';
+export const EMAIL = 'lawmaluki@gmail.com';
 export const SCHEDULE_URL = 'https://cal.eu/lawmaluki/quick-chat-duration-15';
 export const DRIBBLE_URL = 'https://dribbble.com/Lawmaluki';
 export const FIGMA_URL = 'https://www.figma.com/@lawmaluki';
