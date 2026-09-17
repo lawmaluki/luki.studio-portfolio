@@ -46,7 +46,7 @@ function Lightbox({ src, onClose }: { src: string; onClose: () => void }) {
 type ReadingType = 'All' | 'Reading' | 'Newsletters' | 'Podcasts';
 const READING_FILTERS: ReadingType[] = ['All', 'Reading', 'Newsletters', 'Podcasts'];
 
-function inferReadingType(project: Project): Exclude<ReadingType, 'All'> {
+export function inferReadingType(project: Project): Exclude<ReadingType, 'All'> {
     const url = project.link ?? '';
     if (
         url.includes('spotify.com') ||
