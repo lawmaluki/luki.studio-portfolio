@@ -2,6 +2,7 @@ import { MainLayout } from '@/components/layouts';
 import {
   CaseStudiesSection,
   ContactSection,
+  DopenSSection,
   IntroSection,
   MoreProjectsSection,
   ReadingSection,
@@ -22,6 +23,7 @@ export default function Home() {
         <CaseStudiesSection />
         <MoreProjectsSection />
         <RecentWorksSection />
+        <DopenSSection />
         <ReadingSection />
         <ContactSection />
       </main>
