@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { ArrowUpRight, PenLine } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { projects } from '@/config';
 import { inferReadingType } from './ProjectsSection';
 import { SectionTitle } from './SectionTitle';
@@ -21,7 +21,7 @@ export const ReadingSection: React.FC = () => {
 
     return (
         <section className="flex flex-col gap-6">
-            <SectionTitle icon={PenLine}>Reading list</SectionTitle>
+            <SectionTitle icon="reading">Reading list</SectionTitle>
 
             <div className="flex flex-col gap-8">
                 {groups.map((g) => (

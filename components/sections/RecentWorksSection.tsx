@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
-import { Maximize2, Sparkles } from 'lucide-react';
+import { Maximize2 } from 'lucide-react';
 import { projects } from '@/config';
 import { SectionTitle } from './SectionTitle';
 
@@ -8,7 +8,7 @@ const shots = projects.filter((p) => p.category === 'Spotlight' && p.link).slice
 
 export const RecentWorksSection: React.FC = () => (
     <section className="flex flex-col gap-6">
-        <SectionTitle icon={Sparkles}>Recent works</SectionTitle>
+        <SectionTitle icon="shot">Recent works</SectionTitle>
 
         <Link
             href="/recent-works"

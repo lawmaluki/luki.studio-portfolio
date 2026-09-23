@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
-import { ArrowUpRight, BookOpen, LayoutGrid } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { projects } from '@/config';
 import { SectionTitle } from './SectionTitle';
 
@@ -18,7 +18,7 @@ const others = caseStudies.filter((p) => !FEATURED_SLUGS.includes(p.slug));
 
 export const CaseStudiesSection: React.FC = () => (
     <section className="flex flex-col gap-6">
-        <SectionTitle icon={BookOpen}>Read case studies</SectionTitle>
+        <SectionTitle icon="case">Read case studies</SectionTitle>
 
         <div className="flex flex-col gap-12">
             {featured.map((p) => (
@@ -48,7 +48,7 @@ export const CaseStudiesSection: React.FC = () => (
 
 export const MoreProjectsSection: React.FC = () => (
     <section className="flex flex-col gap-6">
-        <SectionTitle icon={LayoutGrid}>More projects</SectionTitle>
+        <SectionTitle icon="project">More projects</SectionTitle>
 
         <div className="grid grid-cols-1 gap-x-5 gap-y-8 sm:grid-cols-2">
             {others.map((p) => (
