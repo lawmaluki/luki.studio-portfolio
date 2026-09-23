@@ -8,7 +8,7 @@ export const ContactSection: React.FC = () => (
             className="pointer-events-none absolute inset-0 [background-image:radial-gradient(rgba(0,0,0,0.07)_1px,transparent_1px)] [background-size:18px_18px] [mask-image:radial-gradient(ellipse_70%_60%_at_50%_0%,black,transparent)]"
         />
         <div className="relative flex flex-col items-center gap-3">
-            <h2 className="text-[32px] font-medium tracking-[-0.03em] text-black">Just wanna chat?</h2>
+            <h2 className="text-[32px] font-medium tracking-[-0.03em] text-black">Up for a quick chat?</h2>
             <p className="max-w-sm text-[15px] leading-relaxed text-balance text-[#7f7f7f]">
                 Have a product in mind, or a design problem that needs untangling? Let&apos;s bring it to life.
             </p>
