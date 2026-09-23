@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 import { DRIBBLE_URL, FIGMA_URL, SCHEDULE_URL, site } from '@/config';
 
@@ -43,15 +44,24 @@ export const Footer: React.FC = () => (
                         ))}
                     </div>
                 ))}
+
+                <Link
+                    href="/terms"
+                    className="text-[15px] text-[#7f7f7f] underline decoration-[1.5px] underline-offset-[6px] transition-colors hover:text-black"
+                >
+                    Terms
+                </Link>
             </div>
 
-            <button
-                type="button"
-                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                className="text-[15px] text-[#7f7f7f] underline decoration-[1.5px] underline-offset-[6px] transition-colors hover:text-black"
-            >
-                Back to top
-            </button>
+            <div className="flex flex-col items-start gap-3">
+                <button
+                    type="button"
+                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                    className="text-[15px] text-[#7f7f7f] underline decoration-[1.5px] underline-offset-[6px] transition-colors hover:text-black"
+                >
+                    Back to top
+                </button>
+            </div>
         </div>
     </footer>
 );
