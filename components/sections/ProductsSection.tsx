@@ -33,8 +33,8 @@ export const ProductsSection: React.FC = () => {
 
             <div className="flex flex-col gap-6">
                 {products.map((item) => (
-                    <Shell key={item.title} link={item.link} className="flex items-start gap-4">
-                        <div className="w-[140px] shrink-0 overflow-hidden rounded-md border border-[#f2f2f2] bg-[#f6f6f6] sm:w-[200px]">
+                    <Shell key={item.title} link={item.link} className="flex flex-col items-start gap-3 sm:flex-row sm:gap-4">
+                        <div className="w-full shrink-0 overflow-hidden rounded-md border border-[#f2f2f2] bg-[#f6f6f6] sm:w-[200px]">
                             <img
                                 src={item.image}
                                 alt={item.title}

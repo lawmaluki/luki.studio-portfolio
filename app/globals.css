@@ -29,6 +29,38 @@
   }
 }
 
+/*
+ * Phone tuning for case study pages. Their markup ships its own scoped <style>
+ * block, which sits later in the document than this file, so these overrides
+ * need !important to win.
+ */
+@media (max-width: 600px) {
+  .case-doc .text-block,
+  .case-doc .shot,
+  .case-doc .carousel,
+  .case-doc .image-grid {
+    margin-top: 28px !important;
+    margin-bottom: 28px !important;
+  }
+
+  .case-doc .footer {
+    margin-top: 48px !important;
+    padding: 24px !important;
+  }
+
+  .case-doc .footer-links a {
+    width: 100%;
+  }
+
+  .case-doc .meta-item {
+    padding: 16px 20px !important;
+  }
+
+  .case-doc .principle-card {
+    padding: 16px 20px !important;
+  }
+}
+
 @layer components {
   .animate-fade-in {
     animation: fadeIn 0.5s ease-in-out;

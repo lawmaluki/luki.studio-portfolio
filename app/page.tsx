@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <MainLayout>
-      <main className="mx-auto flex w-full max-w-[600px] flex-col gap-16 px-6 pt-20 sm:pt-28">
+      <main className="mx-auto flex w-full max-w-[600px] flex-col gap-12 px-6 pt-20 sm:gap-16 sm:pt-28">
         <IntroSection />
         <ProductsSection />
         <LiveAppsSection />

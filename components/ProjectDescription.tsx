@@ -57,7 +57,7 @@ export function ProjectDescription({ html }: { html: string }) {
         <>
             <div
                 ref={ref}
-                className="mb-10 max-w-none [&_img:not(.carousel-thumb-img)]:cursor-zoom-in"
+                className="case-doc mb-10 max-w-none [&_img:not(.carousel-thumb-img)]:cursor-zoom-in"
                 dangerouslySetInnerHTML={{ __html: html }}
             />
             {lightboxSrc && (

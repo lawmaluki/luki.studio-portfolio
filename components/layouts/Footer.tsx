@@ -26,7 +26,7 @@ const COLUMNS = [
 export const Footer: React.FC = () => (
     <footer className="mx-auto w-full max-w-[600px] px-6 pt-16 pb-12">
         <div className="flex flex-wrap items-start justify-between gap-10 border-t border-[#f2f2f2] pt-10">
-            <div className="flex flex-wrap gap-16">
+            <div className="flex flex-wrap gap-10 sm:gap-16">
                 {COLUMNS.map((col) => (
                     <div key={col.title} className="flex flex-col gap-3">
                         <p className="text-[15px] text-[#7f7f7f]">{col.title}</p>
