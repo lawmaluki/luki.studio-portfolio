@@ -3781,11 +3781,18 @@ export const products: Product[] = [
 /** Shipped apps I helped design and build. */
 export const liveApps: Product[] = [
   {
+    title: 'Grubba — Food, Grocery & Delivery',
+    summary: 'A delivery marketplace for discovering and ordering food, groceries, and more from local businesses.',
+    platform: 'Google Play & App Store',
+    image: '/grubba.png',
+    link: 'https://grubba.co.ke',
+  },
+  {
     title: 'MilPress',
     summary: 'Adult literacy platform designed for older adults, first-time smartphone users, and low digital literacy.',
     platform: 'Google Play',
     image: 'https://cdn.dribbble.com/userupload/48531860/file/65eec83f6ab4242c727a65c0d52b92f3.png?resize=752x&vertical=center',
-    // TODO: add the Google Play listing URL
+    link: 'https://play.google.com/store/apps/details?id=com.milpress.edu',
   },
 ];
 
