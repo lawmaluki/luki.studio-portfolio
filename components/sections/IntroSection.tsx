@@ -15,7 +15,7 @@ export const IntroSection: React.FC = () => (
             </div>
         </div>
 
-        <p className="text-base leading-relaxed text-balance text-black">
+        <p className="text-base leading-relaxed text-black">
             I design and build products that solve real problems. I&apos;ve worked with startups, nonprofits,
             community platforms, event platforms, healthcare products, and global technology teams, working on the
             systems, workflows, and decisions underneath the screens: the parts that decide whether a product grows.
