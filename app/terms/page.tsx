@@ -94,24 +94,29 @@ const sections = [
 export default function TermsPage() {
     return (
         <MainLayout>
-            <article className="mx-auto max-w-xl px-6 py-10 md:py-16">
+            <article className="mx-auto w-full max-w-[600px] px-6 pt-20 sm:pt-28">
                 {/* Back link */}
                 <Link
                     href="/"
-                    className="mb-12 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted-foreground transition-colors hover:text-foreground"
+                    className="group inline-flex items-center gap-1.5 text-[15px] text-[#7f7f7f] transition-colors hover:text-black"
                 >
-                    <ArrowLeft className="h-3.5 w-3.5" />
-                    Back to Home
+                    <ArrowLeft className="h-3.5 w-3.5 transition-transform group-hover:-translate-x-0.5" />
+                    Back to home
                 </Link>
 
+                <h1 className="mt-6 text-[32px] font-semibold tracking-[-0.03em] text-black">Terms</h1>
+                <p className="mt-1 text-[15px] text-[#7f7f7f]">
+                    How projects are handled, from payments to ownership of the work.
+                </p>
+
                 {/* Sections */}
-                <div className="space-y-12">
+                <div className="mt-12 flex flex-col gap-10">
                     {sections.map((section) => (
                         <div key={section.label}>
-                            <p className="mb-4 font-mono text-xs uppercase tracking-widest text-muted-foreground">
+                            <p className="mb-3 text-[13px] uppercase tracking-[0.12em] text-[#7f7f7f]">
                                 {section.label}
                             </p>
-                            <div className="text-base leading-relaxed text-foreground [&_ul]:space-y-3 [&_ul]:pl-0 [&_li]:flex [&_li]:gap-3 before:[&_li]:content-['•'] before:[&_li]:text-muted-foreground before:[&_li]:shrink-0">
+                            <div className="text-base leading-relaxed text-black [&_ul]:space-y-3 [&_ul]:pl-0 [&_li]:flex [&_li]:gap-3 [&_li]:before:content-['•'] [&_li]:before:text-[#c4c4c4] [&_li]:before:shrink-0">
                                 {section.content}
                             </div>
                         </div>

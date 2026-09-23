@@ -3750,6 +3750,52 @@ export const site = {
 }
 
 
+export interface Product {
+  title: string;
+  summary: string;
+  /** Where it runs, e.g. "Web Application", "Available on Mac", "Chrome Extension". */
+  platform: string;
+  image: string;
+  /** Omit while a product is unreleased — the card then renders without a link. */
+  link?: string;
+}
+
+/** Products I'm building and developing. */
+export const products: Product[] = [
+  {
+    title: 'Deckwatch Kenya',
+    summary: 'A safety intelligence and reporting platform that helps Kenyans see what’s happening, report incidents safely, and know what to do next.',
+    platform: 'Web Application',
+    image: '/deckwatch.png',
+    link: 'https://deckwatch.vercel.app/',
+  },
+  {
+    title: 'M-Pesa Tracker',
+    summary: 'A GitHub-style activity tracker that visualizes your M-Pesa transactions and lets you explore how active you were on any day.',
+    platform: 'Android App and Web Application',
+    image: '/mpesa.png',
+    // Unreleased — card renders without a link until it ships.
+  },
+];
+
+/** Shipped apps I helped design and build. */
+export const liveApps: Product[] = [
+  {
+    title: 'Grubba — Food, Grocery & Delivery',
+    summary: 'A delivery marketplace for discovering and ordering food, groceries, and more from local businesses.',
+    platform: 'Google Play & App Store',
+    image: '/grubba.png',
+    link: 'https://grubba.co.ke',
+  },
+  {
+    title: 'MilPress',
+    summary: 'Adult literacy platform designed for older adults, first-time smartphone users, and low digital literacy.',
+    platform: 'Google Play',
+    image: 'https://cdn.dribbble.com/userupload/48531860/file/65eec83f6ab4242c727a65c0d52b92f3.png?resize=752x&vertical=center',
+    link: 'https://play.google.com/store/apps/details?id=com.milpress.edu',
+  },
+];
+
 export const EMAIL = 'lawmaluki@gmail.com';
 export const SCHEDULE_URL = 'https://cal.eu/lawmaluki/quick-chat-duration-15';
 export const DRIBBLE_URL = 'https://dribbble.com/Lawmaluki';

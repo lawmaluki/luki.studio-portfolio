@@ -1,30 +1,68 @@
 'use client';
 
-import { useTheme } from 'next-themes';
-import Image from 'next/image';
+import { useState } from 'react';
 import Link from 'next/link';
+import { Menu, X } from 'lucide-react';
+import { EMAIL, SCHEDULE_URL } from '@/config';
+
+const NAV_LINKS = [
+    { label: 'Send a mail', href: `mailto:${EMAIL}`, external: true },
+    { label: 'Book a call', href: SCHEDULE_URL, external: true },
+];
+
+const NavLink = ({ label, href, external }: { label: string; href: string; external?: boolean }) => (
+    <Link
+        href={href}
+        {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+        className="group relative text-[15px] text-[#7f7f7f] transition-colors hover:text-black"
+    >
+        {label}
+        <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-black transition-all duration-300 group-hover:w-full" />
+    </Link>
+);
 
 export const Header: React.FC = () => {
-    const { theme, setTheme } = useTheme();
+    const [open, setOpen] = useState(false);
 
     return (
-        <header className="sticky top-0 z-50 w-full bg-background/70 backdrop-blur-md">
-            <div className="mx-auto flex max-w-xl items-center justify-between px-6 py-4">
-                {/* Logo */}
-                <Link href="/">
-                    <Image src="/Logo.svg" alt="lawmaluki" width={40} height={40} priority />
-                </Link>
+        <header className="sticky top-5 z-50 mx-auto w-[90%] max-w-[640px]">
+            <nav className="rounded-[9px] border border-[#f6f6f6] bg-white px-4 py-2 shadow-[0_1px_8px_1px_rgba(214,222,244,0.05)] sm:rounded-full sm:px-6">
+                <div className="flex items-center justify-between gap-4 py-1">
+                    <Link href="/" className="text-[15px] font-medium text-black">
+                        Lawrence Maluki
+                    </Link>
 
-                {/* Dark / Light toggle */}
-                <button
-                    type="button"
-                    aria-label="Toggle theme"
-                    onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                    className="flex h-7 w-7 items-center justify-center rounded-lg border border-border bg-background text-foreground transition-colors hover:bg-muted"
-                >
-                    <span className="block h-5 w-5 rounded-sm bg-black dark:bg-white" />
-                </button>
-            </div>
+                    {/* Desktop links */}
+                    <div className="hidden items-center gap-5 sm:flex">
+                        {NAV_LINKS.map((l) => (
+                            <NavLink key={l.label} {...l} />
+                        ))}
+                        <span aria-hidden className="h-4 w-px bg-[#e5e5e5]" />
+                        <NavLink label="Recent works" href="/recent-works" />
+                    </div>
+
+                    {/* Mobile toggle */}
+                    <button
+                        type="button"
+                        aria-label={open ? 'Close menu' : 'Open menu'}
+                        aria-expanded={open}
+                        onClick={() => setOpen((o) => !o)}
+                        className="text-black sm:hidden"
+                    >
+                        {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+                    </button>
+                </div>
+
+                {/* Mobile links */}
+                {open && (
+                    <div className="flex flex-col gap-3 pt-3 pb-2 sm:hidden" onClick={() => setOpen(false)}>
+                        {NAV_LINKS.map((l) => (
+                            <NavLink key={l.label} {...l} />
+                        ))}
+                        <NavLink label="Recent works" href="/recent-works" />
+                    </div>
+                )}
+            </nav>
         </header>
     );
 };

@@ -1,14 +1,13 @@
 import "./globals.css"
 import type { Metadata } from "next"
-import { DM_Sans } from "next/font/google";
+import { Geist } from "next/font/google";
 import Script from "next/script";
 import { site } from "@/config";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { ToastProvider } from "@/components/providers/toast-provider";
 
-const dmSans = DM_Sans({
+const geist = Geist({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -66,7 +65,7 @@ const RootLayout = ({
 }) => {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`min-h-screen ${dmSans.className}`}>
+      <body className={`min-h-screen ${geist.className}`}>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-3ZZLHRNHSM"
           strategy="afterInteractive"

@@ -1,5 +1,15 @@
 import { MainLayout } from '@/components/layouts';
-import { HeroSection, ProjectsSection /*, TestimonialsSection */ } from '@/components/sections';
+import {
+  CaseStudiesSection,
+  ContactSection,
+  DopenSSection,
+  IntroSection,
+  LiveAppsSection,
+  MoreProjectsSection,
+  ProductsSection,
+  ReadingSection,
+  RecentWorksSection,
+} from '@/components/sections';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -10,10 +20,17 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <MainLayout>
-      <HeroSection />
-
-      {/* <TestimonialsSection /> */}
-      <ProjectsSection />
+      <main className="mx-auto flex w-full max-w-[600px] flex-col gap-16 px-6 pt-20 sm:pt-28">
+        <IntroSection />
+        <ProductsSection />
+        <LiveAppsSection />
+        <CaseStudiesSection />
+        <MoreProjectsSection />
+        <RecentWorksSection />
+        <ReadingSection />
+        <DopenSSection />
+        <ContactSection />
+      </main>
     </MainLayout>
   );
 }
