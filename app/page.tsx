@@ -27,7 +27,6 @@ export default function Home() {
         <CaseStudiesSection />
         <MoreProjectsSection />
         <RecentWorksSection />
-        <DopenSSection />
         <ReadingSection />
         <DopenSSection />
         <ContactSection />
