@@ -3438,7 +3438,7 @@ export const products: Product[] = [
 /** Shipped apps I helped design and build. */
 export const liveApps: Product[] = [
   {
-    title: 'Grubba — Food, Grocery & Delivery',
+    title: 'Grubba - Food & Delivery',
     summary: 'A delivery marketplace for discovering and ordering food, groceries, and more from local businesses.',
     platform: 'Google Play & App Store',
     image: '/grubba.png',
