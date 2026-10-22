@@ -843,6 +843,10 @@ export const projects: Project[] = [
   <img src="/milpress/feature-banner.png" alt="MilPress launch banner" loading="lazy">
 </figure>
 
+<div class="video-wrap">
+  <video src="/milpress/introvideo.mp4" autoplay muted loop playsinline></video>
+</div>
+
 <section class="text-block">
   <h2>Wireframing &amp; Iteration</h2>
   <p>I explored multiple layouts before committing to the final interface. Each iteration focused on reducing complexity.</p>
