@@ -525,7 +525,7 @@ export const projects: Project[] = [
     title: 'MilPress: Adult Literacy Platform',
     category: 'Project',
     tags: ['Product Design', 'EdTech', 'Accessibility', 'UX Research'],
-    image: 'https://cdn.dribbble.com/userupload/48531860/file/65eec83f6ab4242c727a65c0d52b92f3.png?resize=752x&vertical=center',
+    image: '/milpress/cover.png',
     summary: 'Designing a mobile literacy platform that empowers adult learners through simplicity, dignity, and accessibility-first product thinking.',
     year: '2026',
     role: 'Product Designer',
@@ -3392,7 +3392,7 @@ export const liveApps: Product[] = [
     title: 'MilPress',
     summary: 'Adult literacy platform designed for older adults, first-time smartphone users, and low digital literacy.',
     platform: 'Google Play',
-    image: 'https://cdn.dribbble.com/userupload/48531860/file/65eec83f6ab4242c727a65c0d52b92f3.png?resize=752x&vertical=center',
+    image: '/milpress/homescreen.png',
     link: 'https://play.google.com/store/apps/details?id=com.milpress.edu',
   },
 ];
