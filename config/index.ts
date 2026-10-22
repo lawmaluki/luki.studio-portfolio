@@ -3686,40 +3686,6 @@ export const projects: Project[] = [
 
 ];
 
-export interface Testimonial {
-  id: number;
-  quote: string;
-  name: string;
-  company: string;
-}
-
-export const testimonials: Testimonial[] = [
-  {
-    id: 1,
-    quote: "Lawrence brings clarity to complexity in a way that feels effortless. He approaches every problem with intention, ensuring that each decision serves both the user and the product. Beyond design, he consistently follows through to execution, shipping work that meets a high standard. His precision and thoughtfulness make him a reliable partner on any project.",
-    name: "Richard Penrose",
-    company: "Product Designer",
-  },
-  {
-    id: 2,
-    quote: "Lawrence has a rare ability to bridge design and engineering seamlessly. He takes ideas from rough concepts to fully realized, production-ready products faster than most teams I’ve worked with. His workflow is structured, efficient, and deeply informed by real-world constraints. That combination of speed and quality is hard to find.",
-    name: "Elena Petrova",
-    company: "BCG Entertainment - Product Designer",
-  },
-  {
-    id: 3,
-    quote: "What sets Lawrence apart is how he thinks in systems rather than isolated screens. Every component, interaction, and flow is designed to scale and remain consistent over time. He brings a level of structure that makes collaboration with developers smooth and predictable. The end result is always cohesive and built to last.",
-    name: "Samuel Mwangi",
-    company: "BitNorm",
-  },
-  {
-    id: 4,
-    quote: "Lawrence is fast, sharp, and incredibly dependable under pressure. He delivers work that is not only visually strong but also ready for production without unnecessary back-and-forth. His ability to maintain quality while moving quickly is a huge asset in fast-paced environments. You can trust him to get things done right.",
-    name: "Priya Nair",
-    company: "UI/UX Designer",
-  },
-];
-
 export const site = {
   name: "lawmaluki",
   url: "https://lawmaluki.com",

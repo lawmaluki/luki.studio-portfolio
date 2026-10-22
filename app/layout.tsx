@@ -4,7 +4,6 @@ import { Geist } from "next/font/google";
 import Script from "next/script";
 import { site } from "@/config";
 import { ThemeProvider } from "@/components/providers/theme-provider";
-import { ToastProvider } from "@/components/providers/toast-provider";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -79,7 +78,6 @@ const RootLayout = ({
           `}
         </Script>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
-          <ToastProvider />
           {children}
         </ThemeProvider>
       </body>

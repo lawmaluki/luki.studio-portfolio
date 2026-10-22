@@ -2,11 +2,27 @@
 
 import { useState } from 'react';
 import { ArrowUpRight } from 'lucide-react';
-import { projects } from '@/config';
-import { inferReadingType } from './ProjectsSection';
+import { projects, type Project } from '@/config';
 import { SectionTitle } from './SectionTitle';
 
 const PREVIEW_PER_GROUP = 3;
+
+type ReadingType = 'Reading' | 'Newsletters' | 'Podcasts';
+
+function inferReadingType(project: Project): ReadingType {
+    const url = project.link ?? '';
+    if (
+        url.includes('spotify.com') ||
+        url.includes('podcasts.apple.com') ||
+        url.includes('afripods.africa') ||
+        url.includes('mfmpod.com') ||
+        url.includes('startupsfortherestofus.com') ||
+        url.endsWith('.fm') ||
+        url.includes('.fm/')
+    ) return 'Podcasts';
+    if (url.includes('substack.com') || url.includes('newsletter')) return 'Newsletters';
+    return 'Reading';
+}
 
 const LABELS = { Reading: 'Articles', Newsletters: 'Newsletters', Podcasts: 'Podcasts' } as const;
 const ITEM_LABELS = { Reading: 'Article', Newsletters: 'Newsletter', Podcasts: 'Podcast' } as const;
