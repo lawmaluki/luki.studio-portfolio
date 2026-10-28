@@ -32,13 +32,14 @@ export const ProductsSection: React.FC = () => {
             <SectionTitle icon="build">My Products</SectionTitle>
 
             <div className="flex flex-col gap-6">
-                {products.map((item) => (
+                {products.map((item, i) => (
                     <Shell key={item.title} link={item.link} className="flex items-start gap-4">
                         <div className="w-[140px] shrink-0 overflow-hidden rounded-md border border-[#f2f2f2] bg-[#f6f6f6] sm:w-[200px]">
                             <img
                                 src={item.image}
                                 alt={item.title}
-                                loading="lazy"
+                                loading={i === 0 ? 'eager' : 'lazy'}
+                                fetchPriority={i === 0 ? 'high' : undefined}
                                 className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                             />
                         </div>
