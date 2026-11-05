@@ -525,7 +525,7 @@ export const projects: Project[] = [
     title: 'MilPress: Adult Literacy Platform',
     category: 'Project',
     tags: ['Product Design', 'EdTech', 'Accessibility', 'UX Research'],
-    image: 'https://cdn.dribbble.com/userupload/48531860/file/65eec83f6ab4242c727a65c0d52b92f3.png?resize=752x&vertical=center',
+    image: '/milpress/cover.png',
     summary: 'Designing a mobile literacy platform that empowers adult learners through simplicity, dignity, and accessibility-first product thinking.',
     year: '2026',
     role: 'Product Designer',
@@ -595,36 +595,17 @@ export const projects: Project[] = [
   .mil .carousel-thumbs { display: flex; gap: 8px; justify-content: center; margin-top: 12px; flex-wrap: wrap; }
   .mil .carousel-thumbs label { width: clamp(56px, 15vw, 80px); height: clamp(35px, 9.375vw, 50px); border-radius: 6px; overflow: hidden; border: 2px solid transparent; opacity: 0.5; cursor: pointer; transition: opacity 0.2s, border-color 0.2s; display: block; flex-shrink: 0; }
   .mil .carousel-thumbs label img { width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none; }
-  #mil-c0-1:checked ~ .carousel-slides .carousel-slide:nth-child(1) { opacity: 1; }
-  #mil-c0-2:checked ~ .carousel-slides .carousel-slide:nth-child(2) { opacity: 1; }
-  #mil-c0-1:checked ~ .carousel-thumbs label:nth-child(1) { border-color: var(--accent); opacity: 1; }
-  #mil-c0-2:checked ~ .carousel-thumbs label:nth-child(2) { border-color: var(--accent); opacity: 1; }
-  #mil-c1-1:checked ~ .carousel-slides .carousel-slide:nth-child(1) { opacity: 1; }
-  #mil-c1-2:checked ~ .carousel-slides .carousel-slide:nth-child(2) { opacity: 1; }
-  #mil-c1-3:checked ~ .carousel-slides .carousel-slide:nth-child(3) { opacity: 1; }
-  #mil-c1-1:checked ~ .carousel-thumbs label:nth-child(1) { border-color: var(--accent); opacity: 1; }
-  #mil-c1-2:checked ~ .carousel-thumbs label:nth-child(2) { border-color: var(--accent); opacity: 1; }
-  #mil-c1-3:checked ~ .carousel-thumbs label:nth-child(3) { border-color: var(--accent); opacity: 1; }
-  #mil-c2-1:checked ~ .carousel-slides .carousel-slide:nth-child(1) { opacity: 1; }
-  #mil-c2-2:checked ~ .carousel-slides .carousel-slide:nth-child(2) { opacity: 1; }
-  #mil-c2-3:checked ~ .carousel-slides .carousel-slide:nth-child(3) { opacity: 1; }
-  #mil-c2-4:checked ~ .carousel-slides .carousel-slide:nth-child(4) { opacity: 1; }
-  #mil-c2-5:checked ~ .carousel-slides .carousel-slide:nth-child(5) { opacity: 1; }
-  #mil-c2-1:checked ~ .carousel-thumbs label:nth-child(1) { border-color: var(--accent); opacity: 1; }
-  #mil-c2-2:checked ~ .carousel-thumbs label:nth-child(2) { border-color: var(--accent); opacity: 1; }
-  #mil-c2-3:checked ~ .carousel-thumbs label:nth-child(3) { border-color: var(--accent); opacity: 1; }
-  #mil-c2-4:checked ~ .carousel-thumbs label:nth-child(4) { border-color: var(--accent); opacity: 1; }
-  #mil-c2-5:checked ~ .carousel-thumbs label:nth-child(5) { border-color: var(--accent); opacity: 1; }
-  #mil-c3-1:checked ~ .carousel-slides .carousel-slide:nth-child(1) { opacity: 1; }
-  #mil-c3-2:checked ~ .carousel-slides .carousel-slide:nth-child(2) { opacity: 1; }
-  #mil-c3-3:checked ~ .carousel-slides .carousel-slide:nth-child(3) { opacity: 1; }
-  #mil-c3-4:checked ~ .carousel-slides .carousel-slide:nth-child(4) { opacity: 1; }
-  #mil-c3-5:checked ~ .carousel-slides .carousel-slide:nth-child(5) { opacity: 1; }
-  #mil-c3-1:checked ~ .carousel-thumbs label:nth-child(1) { border-color: var(--accent); opacity: 1; }
-  #mil-c3-2:checked ~ .carousel-thumbs label:nth-child(2) { border-color: var(--accent); opacity: 1; }
-  #mil-c3-3:checked ~ .carousel-thumbs label:nth-child(3) { border-color: var(--accent); opacity: 1; }
-  #mil-c3-4:checked ~ .carousel-thumbs label:nth-child(4) { border-color: var(--accent); opacity: 1; }
-  #mil-c3-5:checked ~ .carousel-thumbs label:nth-child(5) { border-color: var(--accent); opacity: 1; }
+  .mil figcaption { padding: 10px 16px 14px; font-size: 13px; line-height: 1.5; color: #6b7280; text-align: center; background: var(--panel); }
+  #mil-c4-1:checked ~ .carousel-slides .carousel-slide:nth-child(1) { opacity: 1; }
+  #mil-c4-2:checked ~ .carousel-slides .carousel-slide:nth-child(2) { opacity: 1; }
+  #mil-c4-3:checked ~ .carousel-slides .carousel-slide:nth-child(3) { opacity: 1; }
+  #mil-c4-4:checked ~ .carousel-slides .carousel-slide:nth-child(4) { opacity: 1; }
+  #mil-c4-5:checked ~ .carousel-slides .carousel-slide:nth-child(5) { opacity: 1; }
+  #mil-c4-1:checked ~ .carousel-thumbs label:nth-child(1) { border-color: var(--accent); opacity: 1; }
+  #mil-c4-2:checked ~ .carousel-thumbs label:nth-child(2) { border-color: var(--accent); opacity: 1; }
+  #mil-c4-3:checked ~ .carousel-thumbs label:nth-child(3) { border-color: var(--accent); opacity: 1; }
+  #mil-c4-4:checked ~ .carousel-thumbs label:nth-child(4) { border-color: var(--accent); opacity: 1; }
+  #mil-c4-5:checked ~ .carousel-thumbs label:nth-child(5) { border-color: var(--accent); opacity: 1; }
   .mil .footer { width: min(720px, 100%); margin: 80px auto 0; padding: 40px; background: var(--panel); border-top: 1px solid var(--line); border-radius: var(--radius); }
   .mil .footer-meta { display: flex; gap: 40px; flex-wrap: wrap; margin-bottom: 32px; }
   .mil .footer-meta-item .footer-label { margin: 0 0 4px; color: #6b7280; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
@@ -660,7 +641,7 @@ export const projects: Project[] = [
 <div class="mil">
 
 <figure class="shot">
-  <img src="https://cdn.dribbble.com/userupload/48531860/file/65eec83f6ab4242c727a65c0d52b92f3.png?resize=752x&amp;vertical=center" alt="MilPress cover" loading="lazy">
+  <img src="/milpress/cover.png" alt="MilPress letter lesson on a phone" loading="lazy">
 </figure>
 
 <section class="text-block">
@@ -683,12 +664,15 @@ export const projects: Project[] = [
   </div>
 
   <div class="video-wrap">
-    <video src="https://cdn.dribbble.com/userupload/48533589/file/large-5bd0a7ee79827659dde5ebdfaec55a63.mp4" autoplay muted loop playsinline></video>
+    <video src="/milpress/introvideo.mp4" autoplay muted loop playsinline></video>
   </div>
 
   <h2>Background</h2>
   <p>Millions of adults still struggle with reading and writing because they never had access to quality education, or were forced to leave school early. MilPress was created to close that gap with a mobile learning experience built specifically for adult learners, not adapted from a product designed for children.</p>
   <p>As Product Designer, my role went beyond interfaces. I had to consider how product decisions influence motivation, accessibility, and long-term engagement, designing something intuitive enough to reduce friction and dignified enough to keep adults coming back.</p>
+  <figure class="shot" style="margin:32px 0">
+    <img src="/milpress/feature-banner.png" alt="MilPress: learn to read, write, and thrive at your own pace" loading="lazy">
+  </figure>
   <div class="callout">
     <p>Research only becomes valuable when it changes a decision. Every feature in MilPress had to earn its place by solving a real problem for a real learner.</p>
   </div>
@@ -715,7 +699,8 @@ export const projects: Project[] = [
 </section>
 
 <figure class="shot">
-  <img src="https://cdn.dribbble.com/userupload/48533587/file/1820b7b4ac65944a54a7bcb2c055c5ca.png?resize=752x&amp;vertical=center" alt="Audience overview" loading="lazy">
+  <img src="/milpress/learner-welcome.png" alt="MilPress learner welcome and first course screens" loading="lazy">
+  <figcaption>The first thing a learner sees: a plain welcome, a short explainer video, and one course to start.</figcaption>
 </figure>
 
 <section class="text-block">
@@ -735,7 +720,7 @@ export const projects: Project[] = [
 </section>
 
 <figure class="shot">
-  <img src="https://cdn.dribbble.com/userupload/48533588/file/6fa897dd8dc727d8ccfcee9cf65c5a8c.png?resize=752x&amp;vertical=center" alt="Design process diagram" loading="lazy">
+  <img src="/milpress/design-process.png" alt="Design process: research, define, ideate, structure, prototype, validate, design system, developer handoff, reflection" loading="lazy">
 </figure>
 
 <section class="text-block">
@@ -767,7 +752,7 @@ export const projects: Project[] = [
 </section>
 
 <figure class="shot">
-  <img src="https://cdn.dribbble.com/userupload/48534455/file/8507f5965e314ffea9f4fc8b012813c4.png?resize=752x&amp;vertical=center" alt="Product definition framework" loading="lazy">
+  <img src="/milpress/needs-to-decisions.png" alt="User needs mapped to product decisions" loading="lazy">
 </figure>
 
 <section class="text-block">
@@ -775,39 +760,37 @@ export const projects: Project[] = [
   <p>The biggest challenge was organizing content so learners always understood where they were and what came next. I kept the journey linear in early levels to reduce decision fatigue, gradually introducing flexibility as learners progressed.</p>
 </section>
 
-<div class="carousel">
-  <input type="radio" id="mil-c0-1" name="mil-c0" checked>
-  <input type="radio" id="mil-c0-2" name="mil-c0">
-  <div class="carousel-slides">
-    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534459/file/6fbf4fa41d6cfbc2494cc5c9071c6c7b.png?resize=752x364&amp;vertical=center" alt="IA diagram 1" loading="lazy"></div>
-    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534458/file/d8e6f515adfbd4b75ff4548bab72aa35.png?resize=752x364&amp;vertical=center" alt="IA diagram 2" loading="lazy"></div>
-  </div>
-  <div class="carousel-thumbs">
-    <label for="mil-c0-1"><img src="https://cdn.dribbble.com/userupload/48534459/file/6fbf4fa41d6cfbc2494cc5c9071c6c7b.png?resize=752x364&amp;vertical=center" alt=""></label>
-    <label for="mil-c0-2"><img src="https://cdn.dribbble.com/userupload/48534458/file/d8e6f515adfbd4b75ff4548bab72aa35.png?resize=752x364&amp;vertical=center" alt=""></label>
-  </div>
-</div>
+<figure class="shot">
+  <img src="/milpress/sitemap.png" alt="Overall site map (as-is) with main and secondary navigation" loading="lazy">
+  <figcaption>Site map (as-is): the existing structure mapped across main and secondary navigation, with gaps noted.</figcaption>
+</figure>
+<figure class="shot">
+  <img src="/milpress/sitemapcta.png" alt="CTA and actionable items mapping by location, purpose, importance, issue and category" loading="lazy">
+  <figcaption>CTA audit: every actionable item mapped by location, purpose, importance, issue and category.</figcaption>
+</figure>
+
+<figure class="shot">
+  <img src="/milpress/learner-levels.png" alt="Course levels on the learner home screen: one course open, later levels unlock in sequence" loading="lazy">
+  <figcaption>Courses open one at a time. Later levels stay locked until the previous one is finished, keeping the early journey linear.</figcaption>
+</figure>
 
 <section class="text-block">
   <h3>Designing Clear Learning Journeys</h3>
   <p>Because MilPress serves learners with varying digital confidence, every flow had to be intuitive, predictable, and free of unnecessary complexity.</p>
 </section>
 
-<div class="carousel">
-  <input type="radio" id="mil-c1-1" name="mil-c1" checked>
-  <input type="radio" id="mil-c1-2" name="mil-c1">
-  <input type="radio" id="mil-c1-3" name="mil-c1">
-  <div class="carousel-slides">
-    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534462/file/c5e48ebe17fd8b84cec0ea1fff7bc94b.png?resize=752x409&amp;vertical=center" alt="User flow 1" loading="lazy"></div>
-    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534463/file/1e40292ad8e6c9457fa6c5b2dec29a61.png?resize=752x409&amp;vertical=center" alt="User flow 2" loading="lazy"></div>
-    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534464/file/abbefc90a4ca8e207ccce55a3d1e1f0a.png?resize=752x409&amp;vertical=center" alt="User flow 3" loading="lazy"></div>
-  </div>
-  <div class="carousel-thumbs">
-    <label for="mil-c1-1"><img src="https://cdn.dribbble.com/userupload/48534462/file/c5e48ebe17fd8b84cec0ea1fff7bc94b.png?resize=752x409&amp;vertical=center" alt=""></label>
-    <label for="mil-c1-2"><img src="https://cdn.dribbble.com/userupload/48534463/file/1e40292ad8e6c9457fa6c5b2dec29a61.png?resize=752x409&amp;vertical=center" alt=""></label>
-    <label for="mil-c1-3"><img src="https://cdn.dribbble.com/userupload/48534464/file/abbefc90a4ca8e207ccce55a3d1e1f0a.png?resize=752x409&amp;vertical=center" alt=""></label>
-  </div>
-</div>
+<figure class="shot">
+  <img src="/milpress/flow-onboarding.png" alt="Onboarding, authentication and homepage flow" loading="lazy">
+  <figcaption>Onboarding flow: a short placement check across letter recognition, word recognition, sentence comprehension and writing, before sign-up.</figcaption>
+</figure>
+<figure class="shot">
+  <img src="/milpress/flow-letter-recognition.png" alt="Letter recognition placement flow" loading="lazy">
+  <figcaption>Letter recognition: voice-guided questions. An incorrect answer shows the right one and moves on, rather than blocking the learner.</figcaption>
+</figure>
+<figure class="shot">
+  <img src="/milpress/flow-sentence-comprehension.png" alt="Basic sentence comprehension placement flow" loading="lazy">
+  <figcaption>Sentence comprehension: each round ends on a congratulation screen before the next begins.</figcaption>
+</figure>
 
 <section class="text-block">
   <p>I designed user flows around the learner&#8217;s emotional journey rather than simply their actions. A typical experience became:</p>
@@ -829,36 +812,23 @@ export const projects: Project[] = [
   <p>Every interaction was designed to encourage confidence instead of reminding users what they didn&#8217;t know.</p>
 </section>
 
+<figure class="shot">
+  <img src="/milpress/appflow.png" alt="Lesson screens: course progress, sound pronunciation, letter formation" loading="lazy">
+  <figcaption>Inside a lesson: watch and listen to the sound, then trace the letter.</figcaption>
+</figure>
+<figure class="shot">
+  <img src="/milpress/learner-practice.png" alt="Practice screens: pronunciation recording, letter exercise, CVC words" loading="lazy">
+  <figcaption>Practice and feedback: record yourself, pick the items that start with the sound, then build simple words.</figcaption>
+</figure>
+
 <section class="text-block">
   <h2>MilPress Visual Identity</h2>
   <p>The visual concept centered on a clean mobile screen mockup with brand signature, set against <strong>warm, muted tones</strong> with subtle gradient highlights that communicate approachability and trust from first glance.</p>
 </section>
 
 <figure class="shot">
-  <img src="https://cdn.dribbble.com/userupload/48534460/file/3406cd2e82aca37310a09f200d9f8f81.gif" alt="MilPress prototype animation" loading="lazy">
+  <img src="/milpress/homescreen.png" alt="MilPress welcome and course preview screens" loading="lazy">
 </figure>
-
-<div class="carousel">
-  <input type="radio" id="mil-c2-1" name="mil-c2" checked>
-  <input type="radio" id="mil-c2-2" name="mil-c2">
-  <input type="radio" id="mil-c2-3" name="mil-c2">
-  <input type="radio" id="mil-c2-4" name="mil-c2">
-  <input type="radio" id="mil-c2-5" name="mil-c2">
-  <div class="carousel-slides">
-    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534470/file/425473bbfb164fe776347ea73253cadf.png?resize=752x423&amp;vertical=center" alt="Visual identity screen 1" loading="lazy"></div>
-    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534469/file/074dad68fbd5c857900aedac57a606a9.png?resize=752x423&amp;vertical=center" alt="Visual identity screen 2" loading="lazy"></div>
-    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534468/file/3dd59821efbf45ef63fd64108c3d402c.png?resize=752x423&amp;vertical=center" alt="Visual identity screen 3" loading="lazy"></div>
-    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534471/file/4a182c240ddc9271013cad7f47c79850.png?resize=752x423&amp;vertical=center" alt="Visual identity screen 4" loading="lazy"></div>
-    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534472/file/b29f0513c90400f056e63c362d3473c6.png?resize=752x423&amp;vertical=center" alt="Visual identity screen 5" loading="lazy"></div>
-  </div>
-  <div class="carousel-thumbs">
-    <label for="mil-c2-1"><img src="https://cdn.dribbble.com/userupload/48534470/file/425473bbfb164fe776347ea73253cadf.png?resize=752x423&amp;vertical=center" alt=""></label>
-    <label for="mil-c2-2"><img src="https://cdn.dribbble.com/userupload/48534469/file/074dad68fbd5c857900aedac57a606a9.png?resize=752x423&amp;vertical=center" alt=""></label>
-    <label for="mil-c2-3"><img src="https://cdn.dribbble.com/userupload/48534468/file/3dd59821efbf45ef63fd64108c3d402c.png?resize=752x423&amp;vertical=center" alt=""></label>
-    <label for="mil-c2-4"><img src="https://cdn.dribbble.com/userupload/48534471/file/4a182c240ddc9271013cad7f47c79850.png?resize=752x423&amp;vertical=center" alt=""></label>
-    <label for="mil-c2-5"><img src="https://cdn.dribbble.com/userupload/48534472/file/b29f0513c90400f056e63c362d3473c6.png?resize=752x423&amp;vertical=center" alt=""></label>
-  </div>
-</div>
 
 <section class="text-block">
   <h2>Wireframing &amp; Iteration</h2>
@@ -879,7 +849,8 @@ export const projects: Project[] = [
 </section>
 
 <figure class="shot">
-  <img src="https://cdn.dribbble.com/userupload/48534456/file/34dfa66201512fc9bc44978cb6bd60d2.png?resize=752x&amp;vertical=center" alt="Design system overview" loading="lazy">
+  <img src="/milpress/design-system-file.png" alt="MilPress design system in Figma: colour styles, logotype and components" loading="lazy">
+  <figcaption>The working design system file: colour and text styles, logotype versions, and shared components.</figcaption>
 </figure>
 
 <section class="text-block">
@@ -909,21 +880,32 @@ export const projects: Project[] = [
   <p>A well-structured design system improves collaboration, speeds up development, and creates a more consistent experience for users, while designing not just for the current release but for future growth.</p>
 </section>
 
-<figure class="shot">
-  <img src="https://cdn.dribbble.com/userupload/48534467/file/76db5ed7501abb289a228eb311b52081.png?resize=752x489&amp;vertical=center" alt="Scalable design screens 1" loading="lazy">
-</figure>
+<section class="text-block">
+  <h3>The Admin Side</h3>
+  <p>Learners only see lessons that someone has built. Alongside the learner app, I designed the admin dashboard the content team uses to create courses, organise modules and lessons, attach video and audio, and write quiz questions, including the empty states they see before anything exists.</p>
+</section>
 
-<figure class="shot">
-  <img src="https://cdn.dribbble.com/userupload/48534465/file/8569fdd8f4837a7c91de7b461f9cc857.png?resize=752x489&amp;vertical=center" alt="Scalable design screens 2" loading="lazy">
-</figure>
-
-<figure class="shot">
-  <img src="https://cdn.dribbble.com/userupload/48534466/file/1db9703c5df0c9409b15d015105b7e91.png?resize=752x489&amp;vertical=center" alt="Scalable design screens 3" loading="lazy">
-</figure>
-
-<figure class="shot">
-  <img src="https://cdn.dribbble.com/userupload/48534461/file/edc770a6059d1a4923db39090a4fbdd0.png?resize=752x&amp;vertical=center" alt="Component library" loading="lazy">
-</figure>
+<div class="carousel">
+  <input type="radio" id="mil-c4-1" name="mil-c4" checked>
+  <input type="radio" id="mil-c4-2" name="mil-c4">
+  <input type="radio" id="mil-c4-3" name="mil-c4">
+  <input type="radio" id="mil-c4-4" name="mil-c4">
+  <input type="radio" id="mil-c4-5" name="mil-c4">
+  <div class="carousel-slides">
+    <div class="carousel-slide"><img src="/milpress/admin-courses.png" alt="Admin courses view with modules and lessons" loading="lazy"></div>
+    <div class="carousel-slide"><img src="/milpress/admin-courses-empty.png" alt="Admin empty state for a course with no modules" loading="lazy"></div>
+    <div class="carousel-slide"><img src="/milpress/admin-lessons.png" alt="Admin lesson view with video and audio extras" loading="lazy"></div>
+    <div class="carousel-slide"><img src="/milpress/admin-lessons-scroll-1.png" alt="Admin quiz questions with answer options" loading="lazy"></div>
+    <div class="carousel-slide"><img src="/milpress/admin-lessons-scroll-2.png" alt="Admin lesson empty states for content and quizzes" loading="lazy"></div>
+  </div>
+  <div class="carousel-thumbs">
+    <label for="mil-c4-1"><img src="/milpress/admin-courses.png" alt=""></label>
+    <label for="mil-c4-2"><img src="/milpress/admin-courses-empty.png" alt=""></label>
+    <label for="mil-c4-3"><img src="/milpress/admin-lessons.png" alt=""></label>
+    <label for="mil-c4-4"><img src="/milpress/admin-lessons-scroll-1.png" alt=""></label>
+    <label for="mil-c4-5"><img src="/milpress/admin-lessons-scroll-2.png" alt=""></label>
+  </div>
+</div>
 
 <section class="text-block">
   <p>I treated technical feasibility as part of the design process, not a handoff afterthought, building <em>reusable components</em>, <em>consistent spacing rules</em>, <em>standardized interaction patterns</em>, and <em>clear documentation</em> to reduce ambiguity during implementation.</p>
@@ -931,33 +913,13 @@ export const projects: Project[] = [
   <h3>Accessibility</h3>
   <p>Accessibility wasn&#8217;t a checklist. It was a core principle from day one, designed around older adults, low digital literacy, limited vision, small devices, and slow connections: <em>large typography</em>, <em>high contrast</em>, <em>clear labels</em>, <em>minimal cognitive load</em>, and <em>offline support</em>.</p>
   <p>The goal was an <strong>experience users could navigate confidently without feeling overwhelmed.</strong></p>
+  <figure class="shot" style="margin:32px 0">
+    <img src="/milpress/userneeds.png" alt="User needs and the product decisions they led to" loading="lazy">
+  </figure>
+  <div class="video-wrap">
+    <video src="/milpress/how-to-navigate.mp4" controls muted playsinline preload="metadata"></video>
+  </div>
 </section>
-
-<div class="carousel">
-  <input type="radio" id="mil-c3-1" name="mil-c3" checked>
-  <input type="radio" id="mil-c3-2" name="mil-c3">
-  <input type="radio" id="mil-c3-3" name="mil-c3">
-  <input type="radio" id="mil-c3-4" name="mil-c3">
-  <input type="radio" id="mil-c3-5" name="mil-c3">
-  <div class="carousel-slides">
-    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534473/file/11042c9abcde6734ecff37ab0196e478.png?resize=752x488&amp;vertical=center" alt="Final screen 1" loading="lazy"></div>
-    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534474/file/e8ffdf467bc261bc5ba1897d9f0f0b5a.png?resize=752x488&amp;vertical=center" alt="Final screen 2" loading="lazy"></div>
-    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534475/file/cae6d665401bf07604ce94316294bbcc.png?resize=752x488&amp;vertical=center" alt="Final screen 3" loading="lazy"></div>
-    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534476/file/59f19e99828762741709a6f07149e4ab.png?resize=752x488&amp;vertical=center" alt="Final screen 4" loading="lazy"></div>
-    <div class="carousel-slide"><img src="https://cdn.dribbble.com/userupload/48534477/file/44d70529ee717a6dff0faf19adb42f01.png?resize=752x488&amp;vertical=center" alt="Final screen 5" loading="lazy"></div>
-  </div>
-  <div class="carousel-thumbs">
-    <label for="mil-c3-1"><img src="https://cdn.dribbble.com/userupload/48534473/file/11042c9abcde6734ecff37ab0196e478.png?resize=752x488&amp;vertical=center" alt=""></label>
-    <label for="mil-c3-2"><img src="https://cdn.dribbble.com/userupload/48534474/file/e8ffdf467bc261bc5ba1897d9f0f0b5a.png?resize=752x488&amp;vertical=center" alt=""></label>
-    <label for="mil-c3-3"><img src="https://cdn.dribbble.com/userupload/48534475/file/cae6d665401bf07604ce94316294bbcc.png?resize=752x488&amp;vertical=center" alt=""></label>
-    <label for="mil-c3-4"><img src="https://cdn.dribbble.com/userupload/48534476/file/59f19e99828762741709a6f07149e4ab.png?resize=752x488&amp;vertical=center" alt=""></label>
-    <label for="mil-c3-5"><img src="https://cdn.dribbble.com/userupload/48534477/file/44d70529ee717a6dff0faf19adb42f01.png?resize=752x488&amp;vertical=center" alt=""></label>
-  </div>
-</div>
-
-<figure class="shot">
-  <img src="https://cdn.dribbble.com/userupload/48534457/file/1865693639982d0a094e5063bcee3408.png?resize=752x&amp;vertical=center" alt="Accessibility design overview" loading="lazy">
-</figure>
 
 <section class="text-block">
   <h2>AI in My Workflow</h2>
@@ -1017,7 +979,8 @@ export const projects: Project[] = [
 </section>
 
 <figure class="shot">
-  <img src="https://cdn.dribbble.com/userupload/48534663/file/602e08b495038e491e5a240ff9d7f9de.png?resize=752x&amp;vertical=center" alt="Challenges and solutions" loading="lazy">
+  <img src="/milpress/learner-lesson.png" alt="Lesson screens showing visible progress through a letter" loading="lazy">
+  <figcaption>Visible progress at every step: module completion on the course screen and a progress bar inside each letter.</figcaption>
 </figure>
 
 <section class="text-block">
