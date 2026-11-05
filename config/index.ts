@@ -1022,7 +1022,7 @@ export const projects: Project[] = [
 
 <section class="text-block">
   <h2>Product Impact</h2>
-  <p>MilPress remains a design project, but my contribution went beyond polished interfaces. It was about building a <strong>foundation for usability, scalability, and efficient collaboration</strong> across the product development lifecycle.</p>
+  <p>MilPress is now live on Google Play, and my contribution went beyond polished interfaces. It was about building a <strong>foundation for usability, scalability, and efficient collaboration</strong> across the product development lifecycle.</p>
   <ol class="tk-list">
     <li>
       <span class="tk-n"></span>
