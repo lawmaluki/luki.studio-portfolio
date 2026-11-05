@@ -11,14 +11,20 @@ export const IntroSection: React.FC = () => (
             />
             <div>
                 <p className="text-base font-medium text-black">Lawrence Maluki</p>
-                <p className="text-base text-[#7f7f7f]">Product Designer &amp; Design Engineer</p>
+                <p className="text-base text-[#7f7f7f]">Product Designer</p>
             </div>
         </div>
 
         <p className="text-base leading-relaxed text-balance text-black">
-            I design and build products that solve real problems. I&apos;ve worked with startups, nonprofits,
-            community platforms, event platforms, healthcare products, and global technology teams, working on the
-            systems, workflows, and decisions underneath the screens: the parts that decide whether a product grows.
+            I&apos;m a product designer who can design, prototype and build. I specialise in SaaS, AI products,
+            complex workflows and design systems.
+        </p>
+
+        <p className="text-base leading-relaxed text-balance text-black">
+            Design engineering is my edge: I take work from UX research and Figma prototypes through to frontend
+            implementation, using AI-assisted development to get from idea to working product faster. I&apos;ve done
+            this with startups, nonprofits, community and event platforms, healthcare products, and global technology
+            teams.
         </p>
 
         <p className="text-base text-black">
