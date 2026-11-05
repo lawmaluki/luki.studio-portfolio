@@ -1161,6 +1161,12 @@ export const projects: Project[] = [
     .act .decision-grid { grid-template-columns: 1fr; }
     .act .decision-grid dt { padding-top: 0; }
     .act .footer-meta { flex-direction: column; gap: 16px; }
+    .act .text-block { margin: 36px auto; }
+    .act .shot { margin: 32px auto; }
+    .act p, .act ul, .act ol { font-size: 16px; }
+    .act .lead, .act .callout p { font-size: 17px; }
+    .act .footer { margin-top: 56px; padding: 28px 20px; }
+    .act .flow-list li { grid-template-columns: 28px 1fr; gap: 12px; }
   }
 </style>
 
@@ -2237,6 +2243,30 @@ Encourage early engagement with the community. </p>
     .lx .sticky-label { position: static; }
     .lx .flow-list li { grid-template-columns: 36px 1fr; gap: 16px; }
   }
+  @media (max-width: 600px) {
+    .lx .hero { padding: 24px 0 24px; }
+    .lx .section { padding: 48px 0; }
+    .lx .section.alt { margin: 0 -8px; padding: 32px 20px; }
+    .lx .image-band { padding: 16px 0; }
+    .lx .meta-grid { margin: 24px 0; }
+    .lx .meta-item { min-width: 0; padding: 18px 20px; }
+    .lx .meta-item span { margin-bottom: 6px; font-size: 12px; }
+    .lx .meta-item strong { font-size: 17px; }
+    .lx h1 { font-size: 32px; line-height: 1.12; }
+    .lx h2 { margin-bottom: 16px; font-size: 24px; line-height: 1.2; }
+    .lx h3 { font-size: 17px; }
+    .lx p { margin-bottom: 14px; font-size: 16px; line-height: 1.65; }
+    .lx .lead { margin-top: 16px; font-size: 18px; }
+    .lx .callout { margin: 28px 0; padding: 20px 0; font-size: 18px; }
+    .lx .flow-list li { grid-template-columns: 28px 1fr; gap: 12px; padding: 20px 0; }
+    .lx .stat-list li, .lx .outcome-list li { grid-template-columns: 60px 1fr; gap: 16px; padding: 20px 0; }
+    .lx .stat-n, .lx .outcome-n { font-size: 22px; }
+    .lx .hierarchy-flow { padding: 16px; gap: 6px; }
+    .lx .hierarchy-step { padding: 6px 10px; font-size: 12px; }
+    .lx .footer { padding: 56px 0; }
+    .lx .footer-links a { padding: 10px 14px; }
+    .lx p.evidence-note { font-size: 14px; }
+  }
   .dark .lx { color: #d1d5db; --ink: #e5e7eb; --panel: #1f2937; --line: #374151; --muted: #9ca3af; }
   .dark .lx h1, .dark .lx h2, .dark .lx h3 { color: #f3f4f6; }
   .dark .lx p { color: #9ca3af; }
@@ -2275,6 +2305,11 @@ Encourage early engagement with the community. </p>
   #lx-c3-4:checked ~ .carousel-thumbs label:nth-child(4) { border-color: var(--green); opacity: 1; }
   #lx-c3-5:checked ~ .carousel-thumbs label:nth-child(5) { border-color: var(--green); opacity: 1; }
   #lx-c3-6:checked ~ .carousel-thumbs label:nth-child(6) { border-color: var(--green); opacity: 1; }
+  .lx .evidence { display: inline-block; margin: 0 0 10px; padding: 3px 10px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); font-size: 11px; font-weight: 700; line-height: 1.5; letter-spacing: 0.08em; text-transform: uppercase; }
+  .lx .evidence-row { margin: 0 0 4px; }
+  .lx .evidence-legend { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 0 0 8px; color: var(--muted); font-size: 14px; line-height: 1.5; }
+  .lx .evidence-legend .evidence { margin: 0 8px 0 0; }
+  .lx p.evidence-note { margin: 0 0 8px; color: var(--muted); font-size: 15px; line-height: 1.6; }
   .dark .lx .carousel-slides { box-shadow: 0 4px 24px rgba(0,0,0,0.3), 0 24px 64px rgba(0,0,0,0.2); }
 </style>
 
@@ -2355,25 +2390,29 @@ Encourage early engagement with the community. </p>
       <div class="narrow">
         <p class="section-label">Research</p>
         <h2>What the Research Revealed</h2>
-        <p>User research and behavioral analysis across existing productivity and accountability tools surfaced five patterns that shaped every design decision:</p>
+        <p>Five patterns shaped the design. They come from different kinds of evidence: my own user research, published behavioural research, and a review of existing productivity and accountability apps. Each one is labelled with its source.</p>
+        <div class="evidence-legend"><span><span class="evidence ev-research">My user research</span>what people told me or I observed</span><span><span class="evidence ev-published">Published research</span>studies by others</span></div>
         <ol class="flow-list">
           <li>
             <span class="flow-n">01</span>
             <div>
+              <span class="evidence ev-research">My user research</span>
               <h3>Motivation fades predictably</h3>
-              <p>Most users disengage within 3 to 4 weeks, not from lack of interest, but from the absence of external pressure after the novelty wears off.</p>
+              <p>Most of the people I spoke to disengaged within 3 to 4 weeks, not from lack of interest, but from the absence of external pressure after the novelty wears off.</p>
             </div>
           </li>
           <li>
             <span class="flow-n">02</span>
             <div>
+              <span class="evidence ev-published">Published research</span>
               <h3>Accountability partners outperform reminders</h3>
-              <p>Users with a person checking in on their commitments were consistently more likely to follow through than users relying on notification-heavy apps.</p>
+              <p>Studies of goal-setting consistently find that people with someone checking in on their commitments are more likely to follow through than people relying on reminders alone.</p>
             </div>
           </li>
           <li>
             <span class="flow-n">03</span>
             <div>
+              <span class="evidence ev-research">My user research</span>
               <h3>Invisible progress kills momentum</h3>
               <p>When users cannot see how far they have come, they default to estimating failure. Progress visualization is not a nice-to-have, it is a retention mechanism.</p>
             </div>
@@ -2381,6 +2420,7 @@ Encourage early engagement with the community. </p>
           <li>
             <span class="flow-n">04</span>
             <div>
+              <span class="evidence ev-published">Published research</span>
               <h3>AI feedback needs to feel earned</h3>
               <p>Vague encouragement erodes trust. Structured scoring with reasoning builds it.</p>
             </div>
@@ -2388,6 +2428,7 @@ Encourage early engagement with the community. </p>
           <li>
             <span class="flow-n">05</span>
             <div>
+              <span class="evidence ev-research">My user research</span>
               <h3>Privacy hesitation blocks onboarding</h3>
               <p>Users wanted accountability without exposure. Every goal needed to be private by default, with explicit opt-in to share with partners or the community.</p>
             </div>
@@ -2417,6 +2458,8 @@ Encourage early engagement with the community. </p>
         </figure>
         <p>The AI in LeverageX has one job: review your week and tell you, honestly and specifically, how well you executed. It does not chat, answer questions, or suggest tasks. It analyzes activity patterns, evaluates submitted evidence, and delivers structured scores with reasoning attached.</p>
         <p>Narrow scope was the key design decision. An AI that tries to do everything becomes an AI that does nothing trustworthy. Restricting it to structured accountability reviews made every output feel reliable and worth acting on.</p>
+        <div class="evidence-row"><span class="evidence ev-illustrative">Illustrative example</span></div>
+        <p class="evidence-note">The scores below are a sample weekly review for a fictional user, showing the format the AI uses. They are not research results or real user data.</p>
         <ul class="stat-list">
           <li>
             <span class="stat-n">85%</span>
@@ -2443,7 +2486,8 @@ Encourage early engagement with the community. </p>
         <figure>
           <img src="https://cdn.dribbble.com/userupload/48415212/file/8f9b2f5989826271882c8ca968820105.webp?resize=1024x768&amp;vertical=center" alt="AI review details">
         </figure>
-        <p>Human partners bring empathy, lived experience, and personal encouragement that AI cannot replicate. The AI fills the gaps with availability, consistency, and data. The hybrid model was not a compromise between two options. It was the design itself.</p>
+        <div class="evidence-row"><span class="evidence ev-assumption">Design assumption</span></div>
+        <p>Human partners bring empathy, lived experience, and personal encouragement that AI cannot replicate. The AI fills the gaps with availability, consistency, and data. The hybrid model was not a compromise between two options. It was the design itself, and the core hypothesis the product still needs to validate with real users.</p>
       </div>
     </section>
 
@@ -2516,7 +2560,7 @@ Encourage early engagement with the community. </p>
             <p>Accountability models (AI and human) designed to complement each other within one platform.</p>
           </li>
         </ul>
-        <p>The Apex Goal hierarchy, the AI review framework, and the privacy model each came from research about how people actually behave around long-term goals. Not how they intend to. That distinction drove every prioritization decision and kept the MVP focused on the one thing that matters: helping users execute consistently, not just plan comprehensively.</p>
+        <p>The Apex Goal hierarchy, the AI review framework, and the privacy model each respond to evidence about how people actually behave around long-term goals, not how they intend to: findings from my own conversations with users, supported by published research. That distinction drove every prioritization decision and kept the MVP focused on the one thing that matters: helping users execute consistently, not just plan comprehensively.</p>
         <p>The PRD produced for the development team covered user roles, state transitions, validation logic, and edge cases across every core flow. That document closed the gap between design intent and implementation reality.</p>
         <figure>
           <img src="https://cdn.dribbble.com/userupload/48415217/file/e49de8c1922031fbb649ea265929c113.png?resize=1024x1024&amp;vertical=center" alt="LeverageX measurement dashboard">
@@ -2527,7 +2571,7 @@ Encourage early engagement with the community. </p>
     <section class="section">
       <div class="narrow">
         <h2>What This Project Shows</h2>
-        <p>LeverageX is where I learned that behavioral design is messier than UI design. Designing for human psychology means accepting that users will not always do what you hoped, then designing the system to route around that reality anyway. Every core decision, from the accountability model to the AI scoring framework, the privacy defaults, and the goal hierarchy, came from research about how people actually fail at goals, not assumptions about what a productivity app should include.</p>
+        <p>LeverageX is where I learned that behavioral design is messier than UI design. Designing for human psychology means accepting that users will not always do what you hoped, then designing the system to route around that reality anyway. Every core decision, from the accountability model to the AI scoring framework, the privacy defaults, and the goal hierarchy, was grounded in evidence about how people actually fail at goals. Where research ran out, I made the assumption explicit so it could be tested, rather than presenting it as a finding.</p>
         <p>This is the kind of project that shows how I think about product: start with the behavioral problem, work backwards to the design decisions, and build a system where the structure itself does the heavy lifting instead of hoping users find the willpower to make it work.</p>
         <figure>
           <img src="https://cdn.dribbble.com/userupload/48415218/file/01e472aa1e26b5a1ed451ddf57f9c751.png?resize=1024x672&amp;vertical=center" alt="Final LeverageX case study mockup">
