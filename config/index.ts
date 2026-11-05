@@ -1085,6 +1085,306 @@ export const projects: Project[] = [
     link: '',
   },
   {
+    slug: 'acter-onboarding-redesign',
+    title: 'Acter: Redesigning Onboarding for Activist Communities',
+    category: 'Project',
+    tags: ['Product Design', 'UX Research', 'Onboarding', 'Privacy'],
+    image: '/acter/onboarding.png',
+    summary: 'Rebuilding the first-run experience of a secure collaboration platform for activists and NGOs, so new members understand its value, trust it with their data, and finish setup.',
+    year: '2025',
+    role: 'UX/UI Designer',
+    description: `<style>
+  .act {
+    color: #4E4E4E;
+    font-size: 17px;
+    line-height: 1.7;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --line: #e5e7eb;
+    --panel: #ffffff;
+    --soft: #f9fafb;
+    --accent: #2563eb;
+    --accent-light: #eff6ff;
+    --deep: #111827;
+    --radius: 12px;
+  }
+  .act * { box-sizing: border-box; }
+  .act a { color: inherit; text-decoration: none; }
+  .act .text-block { width: min(720px, 100%); margin: 48px auto; }
+  .act img { display: block; width: 100%; height: auto; }
+  .act .shot { width: min(752px, 100%); margin: 48px auto; overflow: hidden; border-radius: var(--radius); box-shadow: 0 4px 24px rgba(17,24,39,0.08), 0 24px 64px rgba(17,24,39,0.06); }
+  .act .shot-sm { width: min(440px, 100%); margin: 32px auto; overflow: hidden; border-radius: var(--radius); }
+  .act figure { padding: 0; }
+  .act figcaption { padding: 10px 4px 0; font-size: 13px; color: #6b7280; text-align: center; }
+  .act .shot-flow { width: min(752px, 100%); margin: 32px auto; }
+  .act .shot-flow a { display: block; overflow: hidden; border-radius: var(--radius); border: 1px solid var(--line); }
+  .act h1 { margin: 0 0 24px; font-size: clamp(28px, 4vw, 46px); font-weight: 800; line-height: 1.12; letter-spacing: -0.02em; color: var(--deep); }
+  .act h2 { margin: 40px 0 14px; font-size: clamp(20px, 2.8vw, 32px); font-weight: 700; line-height: 1.2; letter-spacing: -0.01em; color: var(--deep); }
+  .act h3 { margin: 24px 0 8px; font-size: 17px; font-weight: 700; color: var(--deep); }
+  .act p { margin: 0 0 14px; font-size: 17px; line-height: 1.75; color: #4E4E4E; }
+  .act ul, .act ol { margin: 6px 0 14px; padding-left: 22px; font-size: 17px; line-height: 1.75; color: #4E4E4E; }
+  .act li { margin-bottom: 6px; }
+  .act strong { font-weight: 700; color: var(--deep); }
+  .act .eyebrow { margin: 0 0 16px; color: var(--accent); font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
+  .act .lead { max-width: 620px; margin: 0 0 8px; color: #4E4E4E; font-size: 19px; line-height: 1.6; }
+  .act .meta-row { display: flex; flex-wrap: wrap; margin: 28px 0; background: var(--soft); border-radius: var(--radius); border: 1px solid var(--line); overflow: hidden; }
+  .act .meta-item { flex: 1; min-width: 130px; padding: 20px 24px; }
+  .act .meta-item + .meta-item { border-left: 1px solid var(--line); }
+  .act .meta-label { margin: 0 0 4px; color: #6b7280; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
+  .act .meta-value { margin: 0; font-size: 15px; font-weight: 600; color: var(--deep); }
+  .act .callout { margin: 32px 0; padding: 24px 0; border-top: 2px solid var(--line); border-bottom: 2px solid var(--line); }
+  .act .callout p { margin: 0; font-size: 19px; line-height: 1.5; color: var(--deep); font-style: italic; }
+  .act .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 24px 0; }
+  .act .stat { padding: 20px 24px; background: var(--accent-light); border-radius: var(--radius); }
+  .act .stat-n { margin: 0 0 4px; font-size: 32px; font-weight: 800; line-height: 1.1; color: var(--accent); }
+  .act .stat p:last-child { margin: 0; font-size: 14px; line-height: 1.5; }
+  .act .flow-list { list-style: none; padding: 0; margin: 20px 0 0; }
+  .act .flow-list li { display: grid; grid-template-columns: 36px 1fr; gap: 20px; padding: 20px 0; border-bottom: 1px solid var(--line); align-items: start; }
+  .act .flow-list li:first-child { border-top: 1px solid var(--line); }
+  .act .flow-n { font-size: 12px; font-weight: 700; color: var(--accent); letter-spacing: 0.04em; padding-top: 4px; }
+  .act .flow-list h3 { margin: 0 0 6px; }
+  .act .flow-list p { margin: 0 0 6px; }
+  .act .decision-grid { display: grid; grid-template-columns: 90px 1fr; gap: 4px 16px; margin: 8px 0 0; }
+  .act .decision-grid dt { font-size: 12px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 0.06em; padding-top: 5px; }
+  .act .decision-grid dd { margin: 0 0 8px; font-size: 16px; line-height: 1.65; }
+  .act .footer { width: min(720px, 100%); margin: 80px auto 0; padding: 40px; background: var(--panel); border-top: 1px solid var(--line); border-radius: var(--radius); }
+  .act .footer-meta { display: flex; gap: 40px; flex-wrap: wrap; }
+  .act .footer-label { margin: 0 0 4px; color: #6b7280; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
+  .act .footer-meta p { margin: 0; font-size: 15px; color: var(--deep); font-weight: 600; }
+  .act .footer-meta a { text-decoration: underline; text-underline-offset: 4px; }
+  .dark .act { color: #d1d5db; --deep: #f3f4f6; --panel: #1f2937; --soft: rgba(255,255,255,0.04); --line: #374151; --accent: #60a5fa; --accent-light: rgba(96,165,250,0.08); }
+  .dark .act p, .dark .act ul, .dark .act ol, .dark .act dd { color: #9ca3af; }
+  .dark .act .lead { color: #d1d5db; }
+  @media (max-width: 600px) {
+    .act .stats { grid-template-columns: 1fr; }
+    .act .meta-row { flex-direction: column; }
+    .act .meta-item + .meta-item { border-left: none; border-top: 1px solid var(--line); }
+    .act .decision-grid { grid-template-columns: 1fr; }
+    .act .decision-grid dt { padding-top: 0; }
+    .act .footer-meta { flex-direction: column; gap: 16px; }
+  }
+</style>
+
+<div class="act">
+
+<figure class="shot">
+  <img src="/acter/banner.png" alt="Acter welcome screen: your safe and secure space for digital activism" loading="lazy">
+</figure>
+
+<section class="text-block">
+  <p class="eyebrow">Product Design Case Study / Civic Tech</p>
+  <h1>Acter: Redesigning Onboarding for Activist Communities</h1>
+  <p class="lead">Acter is a platform built for activists, NGOs, and movement leaders to collaborate and communicate securely. However, early analytics showed a significant drop-off during onboarding. New users struggled to understand the platform’s value, felt unsure about data privacy, and often abandoned the flow before completing setup.
+
+This project focused on redesigning Acter’s onboarding experience to:
+
+Communicate Acter’s mission and value clearly
+
+Streamline sign-up and account recovery
+
+Address clarity around data privacy
+
+Encourage early engagement with the community. </p>
+  <div class="meta-row">
+    <div class="meta-item">
+      <p class="meta-label">Platform</p>
+      <p class="meta-value">Mobile App</p>
+    </div>
+    <div class="meta-item">
+      <p class="meta-label">Duration</p>
+      <p class="meta-value">2 months</p>
+    </div>
+    <div class="meta-item">
+      <p class="meta-label">Team</p>
+      <p class="meta-value">3 people</p>
+    </div>
+    <div class="meta-item">
+      <p class="meta-label">Tools</p>
+      <p class="meta-value">Figma &bull; Notion &bull; Useberry</p>
+    </div>
+  </div>
+
+  <h2>Challenge</h2>
+  <p>How might we redesign Acter’s onboarding experience to clearly communicate its value proposition, streamline the sign-up process, address privacy concerns, and enhance user engagement, thereby reducing churn and increasing satisfaction?</p>
+  <p>Early analytics showed exactly that. New users struggled to understand the platform&#8217;s value, were unsure how their data would be used, and often abandoned onboarding before completing setup.</p>
+  <figure class="shot-sm">
+    <img src="/acter/targetaudience.gif" alt="Target audience and their goals: activists, NGOs, and leaders" loading="lazy">
+  </figure>
+  <div class="callout">
+    <p>How might we redesign Acter&#8217;s onboarding to communicate its value clearly, streamline sign-up, address privacy concerns, and get new members engaged with their community?</p>
+  </div>
+</section>
+
+<section class="text-block">
+  <h2>My Role</h2>
+  <p>As the UX/UI Designer, I led the redesign of Acter’s onboarding flow, collaborating closely with developers and the product team. My responsibilities included:</p>
+  <ul>
+    <li>Ran rapid user research and synthesised the findings</li>
+    <li>Mapped the onboarding journey and identified friction points</li>
+    <li>Designed wireframes and interactive prototypes in Figma</li>
+    <li>Tested with Useberry and iterated on the results</li>
+    <li>Kept research, decisions, and insights documented in Notion</li>
+  </ul>
+  <p>Our focus was turning research into concrete design changes, while keeping the flow consistent with a scalable design system.</p>
+</section>
+
+<section class="text-block">
+  <h2>Research &amp; Discovery</h2>
+  <p>Before proposing anything, we ran a short discovery phase to understand <strong>why people were dropping off so early</strong>.</p>
+  <figure class="shot-sm">
+    <img src="/acter/process_no_numbers.gif" alt="Process: problem discovery, observe and synthesise, define and align, design and evaluate" loading="lazy">
+  </figure>
+  <ul>
+    <li><strong>Analytics review:</strong> found a 40% drop-off within the first two minutes of onboarding.</li>
+    <li><strong>User feedback review:</strong> new users said they were unsure what Acter was for, and sceptical about privacy and data sharing.</li>
+    <li><strong>Usability walkthroughs:</strong> showed confusion from unclear guidance, redundant steps, and too much information at once.</li>
+    <li><strong>Benchmarking:</strong> compared onboarding in privacy-conscious and community tools (Signal, Slack, Discord) to see how they handle trust and setup.</li>
+  </ul>
+
+  <h3>Key Insights</h3>
+</section>
+
+<figure class="shot">
+  <img src="/acter/keyinsights.png" alt="Key insight areas: privacy concerns, engagement drop-off, invitation code, reset password flow, complexity overload, bug reporting" loading="lazy">
+</figure>
+
+<section class="text-block">
+  <ul>
+    <li><strong>Purpose wasn&#8217;t landing.</strong> People reached sign-up without understanding why Acter was different from the tools they already used.</li>
+    <li><strong>Privacy was a blocker, not a footnote.</strong> Unclear data practices made users hesitate at exactly the steps that asked for personal information.</li>
+    <li><strong>Too many decisions, too early.</strong> Redundant fields and steps created anxiety before users had seen any value.</li>
+    <li><strong>The invite code felt like a wall.</strong> Without context, a required code read as friction instead of protection.</li>
+  </ul>
+</section>
+
+<section class="text-block">
+  <h2>Core UX Decisions</h2>
+  <p>The redesign starts by leading with purpose: the new welcome screen tells people what Acter is and who they&#8217;ll find there before asking them for anything.</p>
+</section>
+
+<figure class="shot">
+  <img src="/acter/onboarding.png" alt="Redesigned Acter welcome screen" loading="lazy">
+</figure>
+
+<section class="text-block">
+  <ol class="flow-list">
+    <li>
+      <span class="flow-n">01</span>
+      <div>
+        <h3>Simplified Sign-up Flow</h3>
+        <dl class="decision-grid">
+          <dt>Problem</dt><dd>Users were overwhelmed by redundant fields and unclear steps.</dd>
+          <dt>Decision</dt><dd>Consolidated sign-up into a guided sequence with progress indicators.</dd>
+          <dt>Why</dt><dd>Testing showed anxiety about data use and too many decisions upfront.</dd>
+          <dt>Impact</dt><dd><strong>35% higher onboarding completion</strong> in testing.</dd>
+        </dl>
+        <figure class="shot-flow">
+          <a href="/acter/Manual%20%20and%20%20QR%20code%20login%20flow.png" target="_blank" rel="noopener noreferrer"><img src="/acter/Manual%20%20and%20%20QR%20code%20login%20flow.png" alt="Login flow map: manual login and login through QR code" loading="lazy"></a>
+          <figcaption>Login flows mapped end to end: manual login and QR code login. Click to open full size.</figcaption>
+        </figure>
+        <figure class="shot-flow">
+          <a href="/acter/Prototyped%20-%20manually%20login%20flow.png" target="_blank" rel="noopener noreferrer"><img src="/acter/Prototyped%20-%20manually%20login%20flow.png" alt="Prototyped manual login flow" loading="lazy"></a>
+          <figcaption>The prototyped manual login flow, including encryption backup key states. Click to open full size.</figcaption>
+        </figure>
+      </div>
+    </li>
+    <li>
+      <span class="flow-n">02</span>
+      <div>
+        <h3>Enhanced Transparency</h3>
+        <dl class="decision-grid">
+          <dt>Problem</dt><dd>Users hesitated to link personal data, or stopped, because data practices were unclear.</dd>
+          <dt>Decision</dt><dd>Added a plain-language privacy reassurance screen and made email linking optional.</dd>
+          <dt>Why</dt><dd>Transparency is essential for activist communities, who have real reasons to be careful.</dd>
+          <dt>Impact</dt><dd>In testing, the privacy explanation clearly reduced confusion and hesitation.</dd>
+        </dl>
+      </div>
+    </li>
+    <li>
+      <span class="flow-n">03</span>
+      <div>
+        <h3>Reframing the Invite Code</h3>
+        <dl class="decision-grid">
+          <dt>Problem</dt><dd>Users had no context for why an invite code was required.</dd>
+          <dt>Decision</dt><dd>Reframed it as a <strong>community entry key</strong>, emphasising trust, safety, and belonging.</dd>
+          <dt>Why</dt><dd>Activist groups value safe, meaningful connections. How the step is framed changes how it feels.</dd>
+          <dt>Impact</dt><dd><strong>20% higher completion</strong> among users joining through community leaders.</dd>
+        </dl>
+        <figure class="shot-flow">
+          <img src="/acter/Redeem%20Invitation.png" alt="Redeem invitation states: entry, checking availability, incorrect code, and invite details" loading="lazy">
+          <figcaption>Redeem Invitation states: entering a code, checking it, handling an incorrect code, and showing who invited you before you accept.</figcaption>
+        </figure>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<section class="text-block">
+  <h2>Testing &amp; Iteration</h2>
+  <p>We tested the prototypes in Useberry with <strong>12 participants</strong>, all activists and NGO organisers.</p>
+  <h3>What we heard</h3>
+  <ul>
+    <li>Rewriting the privacy explanation significantly reduced confusion</li>
+    <li>Participants wanted to move between screens faster</li>
+    <li>Many skipped the feature intro slides, a sign of cognitive overload</li>
+  </ul>
+  <h3>What we changed</h3>
+  <ul>
+    <li>Shortened and simplified copy throughout onboarding</li>
+    <li>Strengthened the visual hierarchy of primary action buttons</li>
+    <li>Added a <strong>Skip</strong> option to the intro, moving toward progressive onboarding where people learn by doing</li>
+  </ul>
+</section>
+
+<figure class="shot">
+  <img src="/acter/Acter%20App%20iPhone%20Showcase.png" alt="Final Acter screens: recommended spaces, welcome, emoji verification, and encryption key backup" loading="lazy">
+</figure>
+
+<section class="text-block">
+  <h2>Results</h2>
+  <p>Simplifying onboarding and addressing privacy head-on led to stronger first-time engagement, and measurable gains in completion, retention, and speed.</p>
+  <div class="stats">
+    <div class="stat">
+      <p class="stat-n">35%</p>
+      <p>Higher onboarding completion</p>
+    </div>
+    <div class="stat">
+      <p class="stat-n">25%</p>
+      <p>Increase in 90-day retention</p>
+    </div>
+    <div class="stat">
+      <p class="stat-n">40%</p>
+      <p>Faster task completion</p>
+    </div>
+  </div>
+</section>
+
+<section class="text-block">
+  <h2>Final Reflection</h2>
+  <p>This project showed us how much copy tone matters. Privacy reassurance only builds trust when it&#8217;s written in plain, human language. Testing also made it clear that progressive onboarding, where people learn by doing, works far better than long, instruction-heavy tutorials.</p>
+  <p>If we revisited the flow, we would explore adaptive onboarding that adjusts to the type of user, for example NGO organisers versus individual activists. Overall, it strengthened how I design for trust, usability, and motivation, balancing clarity with the emotional context of advocacy-driven communities.</p>
+</section>
+
+<div class="footer">
+  <div class="footer-meta">
+    <div>
+      <p class="footer-label">Product</p>
+      <p>Acter</p>
+    </div>
+    <div>
+      <p class="footer-label">Role</p>
+      <p>UX/UI Designer</p>
+    </div>
+    <div>
+      <p class="footer-label">Designed with</p>
+      <p><a href="https://mirekthedesigner.com/Case-study/acter" target="_blank" rel="noopener noreferrer">Mirek Kolaja &#8599;</a></p>
+    </div>
+  </div>
+</div>
+
+</div>`,
+    link: '',
+  },
+  {
     slug: 'akropolis-product-design',
     title: 'Akropolis: Product Design Case Study',
     category: 'Project',

@@ -8,6 +8,7 @@ import { SectionTitle } from './SectionTitle';
 const FEATURED_SLUGS = [
     'milpress-adult-literacy',
     'akropolis-product-design',
+    'acter-onboarding-redesign',
     'kyc-verification-flow',
     'designing-leveragex',
 ];
