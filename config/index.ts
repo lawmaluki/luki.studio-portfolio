@@ -4064,7 +4064,7 @@ export const liveApps: Product[] = [
     title: 'MilPress',
     summary: 'Adult literacy platform designed for older adults, first-time smartphone users, and low digital literacy.',
     platform: 'Google Play',
-    image: 'https://cdn.dribbble.com/userupload/48531860/file/65eec83f6ab4242c727a65c0d52b92f3.png?resize=752x&vertical=center',
+    image: '/milpress/homescreen.png',
     link: 'https://play.google.com/store/apps/details?id=com.milpress.edu',
   },
 ];
